@@ -114,17 +114,17 @@
 		}
 	}
 	
-	if ([NSApp systemVersion] >= 0x1040) {
-		ProVocSpotlighter *spotlighter = [[[ProVocSpotlighter alloc] init] autorelease];
-		NSArray *paths = [spotlighter allProVocFilesContaining:inString];
-		NSEnumerator *enumerator = [paths objectEnumerator];
-		NSString *path;
-		while (path = [enumerator nextObject])
-			if (![documentPaths containsObject:path]) {
-				[documentPaths addObject:path];
-				if (translations = [self translationsOfString:inString withDocumentAtPath:path])
-					return translations;
+	ProVocSpotlighter *spotlighter = [[[ProVocSpotlighter alloc] init] autorelease];
+	NSArray *paths = [spotlighter allProVocFilesContaining:inString];
+	enumerator = [paths objectEnumerator];
+	NSString *path;
+	while (path = [enumerator nextObject]) {
+		if (![documentPaths containsObject:path]) {
+			[documentPaths addObject:path];
+			if (translations = [self translationsOfString:inString withDocumentAtPath:path]) {
+				return translations;
 			}
+		}
 	}
 	return nil;
 }

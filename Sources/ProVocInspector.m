@@ -97,10 +97,7 @@
 
 -(float)scaleFactor
 {
-	if ([NSApp systemVersion] >= 0x1040)
-		return [[self window] userSpaceScaleFactor];
-	else
-		return 1.0;
+	return [[self window] userSpaceScaleFactor];
 }
 
 -(void)windowDidBecomeKey:(id)inSender
@@ -429,13 +426,6 @@
 #endif
 {
 #ifndef DISABLE_SOUNDRECORDER
-	if ([NSApp systemVersion] < 0x1050) {
-		int result = NSRunAlertPanel(NSLocalizedString(@"Leopard Only Feature Title", @""), NSLocalizedString(@"Leopard Only Feature Message", @""), NSLocalizedString(@"OK", @""), NSLocalizedString(@"Leopard Only Feature Download Button", @""), nil);
-		if (result == NSAlertAlternateReturn) {
-			[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:NSLocalizedString(@"Leopard Only Feature Download URL", @"")]];
-		}
-		return nil;
-	} else
 	return [ARLeopardSoundRecorderController sharedController];
 #else
 	return nil;
@@ -916,12 +906,11 @@ error:
 	path = [[self temporaryDirectory] stringByAppendingPathComponent:inName];
 	if ([[NSFileManager defaultManager] fileExistsAtPath:path])
 		return path;
-	if ([NSApp systemVersion] >= 0x1040) {
-		NSURL *url = [self autosavedContentsFileURL];
-		if (url) {
-			path = [[self mediaPathInBundle:[url path]] stringByAppendingPathComponent:inName];
-			if ([[NSFileManager defaultManager] fileExistsAtPath:path])
-				return path;
+	NSURL *url = [self autosavedContentsFileURL];
+	if (url) {
+		path = [[self mediaPathInBundle:[url path]] stringByAppendingPathComponent:inName];
+		if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
+			return path;
 		}
 	}
 	return nil;
@@ -941,7 +930,7 @@ error:
 		NSString *mediaName;
 		while (mediaName = [mediaEnumerator nextObject]) {
 			NSString *source = [[self mediaPathInBundle:inPath] stringByAppendingPathComponent:mediaName];
-			if ([NSApp systemVersion] >= 0x1040 && ![fileManager fileExistsAtPath:source]) {
+			if (![fileManager fileExistsAtPath:source]) {
 				NSURL *url = [self autosavedContentsFileURL];
 				if (url)
 					source = [[self mediaPathInBundle:[url path]] stringByAppendingPathComponent:mediaName];

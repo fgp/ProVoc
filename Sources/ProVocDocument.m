@@ -265,8 +265,6 @@
 
     [self performSelector:@selector(sortWordsByColumn:) withObject:[mWordTableView tableColumnWithIdentifier:@"Number"] afterDelay:0.0];
 	
-	if ([NSApp systemVersion] < 0x1040)
-		[mWordTableView setAutoresizesAllColumnsToFit:YES];
 	state = [mLoadedParameters objectForKey:@"WordTableColumnStatesV2"];
 	if (!state)
 		state = [mLoadedParameters objectForKey:@"WordTableColumnStates"];
@@ -308,8 +306,6 @@
 	[mMainWindow performSelector:@selector(makeFirstResponder:) withObject:mLoadedParameters ? mPresetTableView : [mMainWindow initialFirstResponder] afterDelay:0.0];
 	
 	[[self undoManager] setLevelsOfUndo:20];
-	if ([NSApp systemVersion] < 0x1040)
-		[self performSelector:@selector(checkOldFormat:) withObject:nil afterDelay:0.0];
 	[self checkWidgetLog];
 }
 
@@ -1857,10 +1853,7 @@ int SORT_BY_DIFFICULT(id left, id right, void *info)
 
 -(id)labelsToTest
 {
-	if ([NSApp systemVersion] < 0x1040)
-		return [mLabelTableView selectedRowIndexes];
-	else
-		return mLabelsToTest;
+	return mLabelsToTest;
 }
 
 -(void)tableViewSelectionDidChange:(NSNotification *)inNotification
@@ -1879,21 +1872,13 @@ int SORT_BY_DIFFICULT(id left, id right, void *info)
 
 -(void)setLabelsToTest:(id)inLabelsToTest
 {
-	if ([NSApp systemVersion] < 0x1040) {
-		if (!mLabelTableView)
-			[self performSelector:_cmd withObject:inLabelsToTest afterDelay:0.0];
-		else if (![[mLabelTableView selectedRowIndexes] isEqual:inLabelsToTest]) {
-			[mLabelTableView selectRowIndexes:inLabelsToTest byExtendingSelection:NO];
-			[self currentPresetValuesDidChange:nil];
-		}
-	} else
-		if (![mLabelsToTest isEqual:inLabelsToTest]) {
-			[self willChangeValueForKey:@"labelsToTest"];	
-			[mLabelsToTest release];
-			mLabelsToTest = [inLabelsToTest retain];
-			[self didChangeValueForKey:@"labelsToTest"];	
-			[self currentPresetValuesDidChange:nil];
-		}
+	if (![mLabelsToTest isEqual:inLabelsToTest]) {
+		[self willChangeValueForKey:@"labelsToTest"];
+		[mLabelsToTest release];
+		mLabelsToTest = [inLabelsToTest retain];
+		[self didChangeValueForKey:@"labelsToTest"];
+		[self currentPresetValuesDidChange:nil];
+	}
 }
 
 -(BOOL)testOldWords
@@ -2403,20 +2388,11 @@ int SORT_BY_DIFFICULT(id left, id right, void *info)
 -(float)rowHeightForFontFamilyName:(NSString *)inFamilyName size:(float)inSize
 {
 	NSFont *font = [[NSFontManager sharedFontManager] fontWithFamily:inFamilyName traits:0 weight:0 size:inSize];
-	if ([NSApp systemVersion] >= 0x1040) {
-		NSString *text = @"WQpgjhl";
-		NSDictionary *attributes = [[NSDictionary alloc] initWithObjectsAndKeys:font, NSFontAttributeName, nil];
-		NSRect r = [text boundingRectWithSize:NSMakeSize(FLT_MAX, FLT_MAX) options:NSStringDrawingUsesFontLeading attributes:attributes];
-		[attributes release];
-		return ceil(r.size.height);
-	} else {
-		NSLayoutManager *layoutManager = [[NSLayoutManager alloc] init];
-		float height = [layoutManager defaultLineHeightForFont:font];
-		float leading = 2;
-		height = MAX(height + 1, ceil([font ascender] - [font descender] + leading));
-		[layoutManager release];
-		return height;
-	}
+	NSString *text = @"WQpgjhl";
+	NSDictionary *attributes = [[NSDictionary alloc] initWithObjectsAndKeys:font, NSFontAttributeName, nil];
+	NSRect r = [text boundingRectWithSize:NSMakeSize(FLT_MAX, FLT_MAX) options:NSStringDrawingUsesFontLeading attributes:attributes];
+	[attributes release];
+	return ceil(r.size.height);
 }
 
 -(float)rowHeight

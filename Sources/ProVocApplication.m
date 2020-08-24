@@ -103,13 +103,5 @@
 	return sharedApplication;
 }
 
--(long)systemVersion
-{
-	static long systemVersion = 0;
-	if (systemVersion == 0)
-		Gestalt(gestaltSystemVersion, &systemVersion);
-	return systemVersion;
-}
-
 @end
 

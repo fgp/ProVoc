@@ -1,3 +1,2 @@
-NSHumanReadableCopyright = "Copyright 2006 Arizona Software.";
 AMName = "Add Files to Vocabulary";
 AMDSummary = "This action adds text files to a ProVoc vocabulary document.";

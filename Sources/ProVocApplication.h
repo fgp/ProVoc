@@ -17,6 +17,4 @@
 
 @interface NSApplication (ProVoc)
 
--(long)systemVersion;
-
 @end

@@ -96,9 +96,9 @@
 
 -(void)toggleTableColumn:(NSTableColumn *)inColumn sizeToFit:(BOOL)inSizeToFit
 {
-	if (mSortingColumn == inColumn)
- 	   [self sortWordsByColumn:[mWordTableView tableColumnWithIdentifier:@"Number"]];
-	
+	if (mSortingColumn == inColumn) {
+		[self sortWordsByColumn:[mWordTableView tableColumnWithIdentifier:@"Number"]];
+	}
 	if ([self isColumnVisible:inColumn]) {
 		[mWordTableView removeTableColumn:inColumn];
 		if (inSizeToFit)

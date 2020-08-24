@@ -272,8 +272,7 @@
 	[[window toolbar] setSelectedItemIdentifier:[mPaneLabels objectAtIndex:inIndex]];
 
 	float factor = 1.0;
-	if ([NSApp systemVersion] >= 0x1040)
-		factor = [window userSpaceScaleFactor];
+	factor = [window userSpaceScaleFactor];
 	NSView *paneView = [mPaneViews objectAtIndex:inIndex];
 	NSView *view = [window contentView];
 	float deltaHeight = [paneView frame].size.height - [view frame].size.height;

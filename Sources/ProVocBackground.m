@@ -14,7 +14,7 @@
 
 +(BOOL)isAvailable
 {
-	return [NSApp systemVersion] >= 0x1040;
+	return YES;
 }
 
 +(ProVocBackground *)sharedBackground
@@ -38,10 +38,11 @@
 		[mWindow setHasShadow:NO];
 		[mView stopRendering];
 		NSString *path = [ProVocBackgroundStyle customBackgroundCompositionPath];
-		if (path)
+		if (path) {
 			[self setCompositionPath:path];
-		else
+		} else {
 			[self setStyle:[ProVocBackgroundStyle currentBackgroundStyle]];
+		}
 	}
 	return self;
 }
@@ -264,18 +265,23 @@
 	NSString *identifier = [[NSUserDefaults standardUserDefaults] objectForKey:PVCurrentBackgroundIdentifier];
 	if (identifier) {
 		NSEnumerator *enumerator = [[self availableBackgroundStyles] objectEnumerator];
-		while (style = [enumerator nextObject])
-			if ([identifier isEqual:[style identifier]])
+		while (style = [enumerator nextObject]) {
+			if ([identifier isEqual:[style identifier]]) {
 				break;
+			}
+		}
 	}
 	if (!style) {
 		NSEnumerator *enumerator = [[self availableBackgroundStyles] objectEnumerator];
-		while (style = [enumerator nextObject])
-			if ([style isDefault])
+		while (style = [enumerator nextObject]) {
+			if ([style isDefault]) {
 				break;
+			}
+		}
 	}
-	if (!style)
+	if (!style && [[self availableBackgroundStyles] count] > 0) {
 		style = [[self availableBackgroundStyles] objectAtIndex:0];
+	}
 	return style;
 }
 

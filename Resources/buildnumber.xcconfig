@@ -1,0 +1,7 @@
+MACOSX_DEPLOYMENT_TARGET = 10.11
+
+VERSION_NUMBER = 4.3.0
+BUILD_NUMBER = 1492
+
+COPYRIGHT = Copyright © 2020 Alexander Lindenstruth. All rights reserved.
+

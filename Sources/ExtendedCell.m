@@ -83,8 +83,8 @@ static NSImage *sRankPatternImage = nil;
 	static NSDictionary *titleAttributes = nil;
 	static NSDictionary *messageAttributes = nil;
 	if (!titleAttributes) {
-		titleAttributes = [[NSDictionary alloc] initWithObjectsAndKeys:[NSFont boldSystemFontOfSize:0], NSFontAttributeName, nil];
-		messageAttributes = [[NSDictionary alloc] initWithObjectsAndKeys:[NSFont systemFontOfSize:[NSFont smallSystemFontSize]], NSFontAttributeName, nil];
+		titleAttributes = [[NSDictionary alloc] initWithObjectsAndKeys:[NSFont boldSystemFontOfSize:0], NSFontAttributeName, [NSColor labelColor], NSForegroundColorAttributeName, nil];
+		messageAttributes = [[NSDictionary alloc] initWithObjectsAndKeys:[NSFont systemFontOfSize:[NSFont systemFontSize]], NSFontAttributeName, [NSColor secondaryLabelColor], NSForegroundColorAttributeName, nil];
 	}
 	NSRect iconFrame;
 	NSRect titleFrame;
@@ -345,8 +345,7 @@ static NSImage *sRankPatternImage = nil;
 
         [image compositeToPoint:imageFrame.origin operation:NSCompositeSourceOver];
     }
-	if ([NSApp systemVersion] >= 0x1040)
-		[self setLineBreakMode:NSLineBreakByTruncatingTail];
+	[self setLineBreakMode:NSLineBreakByTruncatingTail];
     [super drawWithFrame:cellFrame inView:controlView];
 }
 
@@ -437,8 +436,7 @@ static NSImage *sRankPatternImage = nil;
 
         [image compositeToPoint:imageFrame.origin operation:NSCompositeSourceOver];
     }
-	if ([NSApp systemVersion] >= 0x1040)
-		[self setLineBreakMode:NSLineBreakByTruncatingTail];
+	[self setLineBreakMode:NSLineBreakByTruncatingTail];
     [super drawWithFrame:cellFrame inView:controlView];
 }
 

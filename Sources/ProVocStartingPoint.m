@@ -9,7 +9,6 @@
 #import "ProVocStartingPoint.h"
 
 #import "ProVocAppDelegate.h"
-#import "ARAboutDialog.h"
 #import "ProVocInspector.h"
 
 @implementation ProVocStartingPoint
@@ -33,15 +32,12 @@
 -(void)idle
 {
 	if ([[[NSDocumentController sharedDocumentController] documents] count] == 0 && [[NSUserDefaults standardUserDefaults] boolForKey:ProVocShowStartingPoint]) {
-		if ([[[ARAboutDialog sharedAboutDialog] window] isVisible])
-			[self performSelector:_cmd withObject:nil afterDelay:0.5];
-		else {
-			[[ProVocInspector sharedInspector] setPreferredDisplayState:NO];
-			[[self window] center];
-			[[self window] makeKeyAndOrderFront:nil];
-		}
-	} else
+		[[ProVocInspector sharedInspector] setPreferredDisplayState:NO];
+		[[self window] center];
+		[[self window] makeKeyAndOrderFront:nil];
+	} else {
 		[[self window] orderOut:nil];
+	}
 }
 
 -(void)hide

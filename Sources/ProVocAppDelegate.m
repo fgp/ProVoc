@@ -24,7 +24,6 @@
 #import "ProVocCardController.h"
 #import "ProVocServiceProvider.h"
 
-#import "ARAboutDialog.h"
 #import <ARCheckForUpdates/ARCheckForUpdates.h>
 
 @implementation ProVocAppDelegate
@@ -195,11 +194,8 @@
 
 -(void)awakeFromNib
 {
-	if ([NSApp systemVersion] >= 0x1040)
-		[[NSDocumentController sharedDocumentController] setAutosavingDelay:[[NSUserDefaults standardUserDefaults] floatForKey:@"AutosavingDelay"]];
-	//[[ARAboutDialog sharedAboutDialog] show:nil];
+	[[NSDocumentController sharedDocumentController] setAutosavingDelay:[[NSUserDefaults standardUserDefaults] floatForKey:@"AutosavingDelay"]];
 	[[NSUserDefaults standardUserDefaults] upgrade];
-	//[[ARAboutDialog sharedAboutDialog] performSelector:@selector(hide:) withObject:nil afterDelay:3.0];
 	[iPodManager sharedManager];
 }
 
@@ -208,7 +204,7 @@
 	ProVocServiceProvider *serviceProvider = [[ProVocServiceProvider alloc] init];
 	[NSApp setServicesProvider:serviceProvider];
 	
-	if ([NSApp systemVersion] >= 0x1040 && ![[NSFileManager defaultManager] fileExistsAtPath:[@"~/Library/Widgets/ProVoc.wdgt" stringByExpandingTildeInPath]]
+	if (![[NSFileManager defaultManager] fileExistsAtPath:[@"~/Library/Widgets/ProVoc.wdgt" stringByExpandingTildeInPath]]
 				&& ![[NSFileManager defaultManager] fileExistsAtPath:@"/Library/Widgets/ProVocs.wdgt"] && ![[NSUserDefaults standardUserDefaults] boolForKey:@"IgnoreWidgetInstall"]
 				&& [[[NSDocumentController sharedDocumentController] recentDocumentURLs] count] > 0) {
 		NSString *check = [NSString stringWithContentsOfURL:[NSURL URLWithString:NSLocalizedString(@"Install Widget Check URL", @"")]];
@@ -345,11 +341,6 @@
 @end
 
 @implementation NSApplication (About)
-
--(void)orderFrontStandardAboutPanel:(id)inSender
-{
-	[[ARAboutDialog sharedAboutDialog] showAboutWindow];
-}
 
 @end
 
