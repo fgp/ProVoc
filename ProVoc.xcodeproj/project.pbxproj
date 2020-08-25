@@ -2024,6 +2024,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7D2C167324F3F76500CB5F0B /* buildnumber.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "\"$(PROJECT_DIR)/Frameworks\"";
@@ -2050,6 +2051,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7D2C167324F3F76500CB5F0B /* buildnumber.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
 				FRAMEWORK_SEARCH_PATHS = "\"$(PROJECT_DIR)/Frameworks\"";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;

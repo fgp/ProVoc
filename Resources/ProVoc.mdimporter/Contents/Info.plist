@@ -23,6 +23,8 @@
 	<string>6.0</string>
 	<key>CFBundleName</key>
 	<string>ProVoc</string>
+	<key>CFBundleDisplayName</key>
+	<string>ProVoc 5</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>CFPlugInDynamicRegisterFunction</key>
