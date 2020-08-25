@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment version="1030" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -155,7 +155,7 @@
                                 <font key="font" metaFont="cellTitle"/>
                                 <tabViewItems>
                                     <tabViewItem label="Test" identifier="2" id="81">
-                                        <view key="view" id="82">
+                                        <view key="view" ambiguous="YES" id="82">
                                             <rect key="frame" x="0.0" y="0.0" width="737" height="663"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
@@ -419,7 +419,7 @@
                                         </view>
                                     </tabViewItem>
                                     <tabViewItem label="Editing" identifier="1" id="80">
-                                        <view key="view" ambiguous="YES" id="83">
+                                        <view key="view" id="83">
                                             <rect key="frame" x="0.0" y="0.0" width="737" height="663"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
@@ -656,7 +656,7 @@ DQ
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <clipView key="contentView" ambiguous="YES" id="vVQ-Uh-sNb">
                                                                 <rect key="frame" x="1" y="0.0" width="715" height="422"/>
-                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <tableView verticalHuggingPriority="750" tag="1" allowsExpansionToolTips="YES" alternatingRowBackgroundColors="YES" autosaveColumns="NO" headerView="1364" id="85" customClass="ProVocTableView">
                                                                         <rect key="frame" x="0.0" y="0.0" width="813" height="399"/>
@@ -1729,11 +1729,11 @@ DQ
                     <rect key="frame" x="197" y="318" width="115" height="83"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <clipView key="contentView" ambiguous="YES" id="HfA-Ac-ILA">
-                        <rect key="frame" x="1" y="1" width="113" height="81"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <rect key="frame" x="1" y="1" width="99" height="81"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <tableView focusRingType="none" verticalHuggingPriority="750" ambiguous="YES" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" emptySelection="NO" autosaveColumns="NO" rowHeight="14" id="1050">
-                                <rect key="frame" x="0.0" y="0.0" width="113" height="81"/>
+                                <rect key="frame" x="0.0" y="0.0" width="99" height="81"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1751,7 +1751,7 @@ DQ
                                             <binding destination="601" name="value" keyPath="arrangedObjects.image" id="1112"/>
                                         </connections>
                                     </tableColumn>
-                                    <tableColumn editable="NO" width="87" minWidth="4" maxWidth="1000" id="1053">
+                                    <tableColumn editable="NO" width="73" minWidth="4" maxWidth="1000" id="1053">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
                                             <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>

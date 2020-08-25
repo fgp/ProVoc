@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ProVocCardController">
+            <connections>
+                <outlet property="mPreview" destination="34" id="70"/>
+                <outlet property="window" destination="5" id="57"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <window title="Udskriv kort" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="PrintCardWindowV2" animationBehavior="default" id="5" userLabel="Window">
+            <windowStyleMask key="styleMask" titled="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="223" y="328" width="867" height="433"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
+            <view key="contentView" id="6">
+                <rect key="frame" x="0.0" y="0.0" width="867" height="433"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button verticalHuggingPriority="750" tag="1" imageHugsTitle="YES" id="7">
+                        <rect key="frame" x="752" y="12" width="101" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        <buttonCell key="cell" type="push" title="Udskriv…" bezelStyle="rounded" alignment="center" borderStyle="border" tag="1" inset="2" id="224">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="confirm:" target="-2" id="59"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" imageHugsTitle="YES" id="9">
+                        <rect key="frame" x="669" y="12" width="83" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        <buttonCell key="cell" type="push" title="Afbryd" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="225">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="confirm:" target="-2" id="58"/>
+                        </connections>
+                    </button>
+                    <customView id="188">
+                        <rect key="frame" x="460" y="50" width="387" height="373"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                        <subviews>
+                            <slider verticalHuggingPriority="750" id="213">
+                                <rect key="frame" x="287" y="22" width="84" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <sliderCell key="cell" controlSize="small" continuous="YES" alignment="left" minValue="0.10000000000000001" maxValue="1" doubleValue="0.10000000000000001" tickMarkPosition="below" sliderType="linear" id="255">
+                                    <font key="font" size="12" name="Helvetica"/>
+                                </sliderCell>
+                                <connections>
+                                    <action selector="update:" target="34" id="218"/>
+                                    <binding destination="42" name="hidden" keyPath="values.cardDisplayTag" id="222">
+                                        <dictionary key="options">
+                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                        </dictionary>
+                                    </binding>
+                                    <binding destination="42" name="value" keyPath="values.cardTagFraction" id="217"/>
+                                </connections>
+                            </slider>
+                            <textField verticalHuggingPriority="750" id="192">
+                                <rect key="frame" x="169" y="197" width="42" height="19"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="10.00" drawsBackground="YES" id="254">
+                                    <font key="font" metaFont="smallSystem"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="cardRightMargin" id="211">
+                                        <dictionary key="options">
+                                            <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                            <string key="NSValueTransformerName">SizeTransformer</string>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
+                            </textField>
+                            <textField verticalHuggingPriority="750" id="191">
+                                <rect key="frame" x="139" y="174" width="42" height="19"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="10.00" drawsBackground="YES" id="253">
+                                    <font key="font" metaFont="smallSystem"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="cardBottomMargin" id="210">
+                                        <dictionary key="options">
+                                            <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                            <string key="NSValueTransformerName">SizeTransformer</string>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
+                            </textField>
+                            <textField verticalHuggingPriority="750" id="190">
+                                <rect key="frame" x="138" y="220" width="42" height="19"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="10.00" drawsBackground="YES" id="252">
+                                    <font key="font" metaFont="smallSystem"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="cardTopMargin" id="212">
+                                        <dictionary key="options">
+                                            <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                            <string key="NSValueTransformerName">SizeTransformer</string>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
+                            </textField>
+                            <textField verticalHuggingPriority="750" id="175">
+                                <rect key="frame" x="108" y="197" width="42" height="19"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="10.00" drawsBackground="YES" id="251">
+                                    <font key="font" metaFont="smallSystem"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="cardLeftMargin" id="209">
+                                        <dictionary key="options">
+                                            <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                            <string key="NSValueTransformerName">SizeTransformer</string>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
+                            </textField>
+                            <textField verticalHuggingPriority="750" id="174">
+                                <rect key="frame" x="7" y="199" width="95" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Margener:" id="250">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <slider verticalHuggingPriority="750" id="162">
+                                <rect key="frame" x="287" y="78" width="84" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <sliderCell key="cell" controlSize="small" continuous="YES" alignment="left" minValue="0.10000000000000001" maxValue="2" doubleValue="1" tickMarkPosition="below" sliderType="linear" id="249">
+                                    <font key="font" size="12" name="Helvetica"/>
+                                </sliderCell>
+                                <connections>
+                                    <action selector="update:" target="34" id="171"/>
+                                    <binding destination="-2" name="enabled" keyPath="containComments" id="164"/>
+                                    <binding destination="42" name="hidden" keyPath="values.cardDisplayComments" previousBinding="164" id="168">
+                                        <dictionary key="options">
+                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                        </dictionary>
+                                    </binding>
+                                    <binding destination="42" name="value" keyPath="values.cardCommentSize" id="172"/>
+                                </connections>
+                            </slider>
+                            <button imageHugsTitle="YES" id="161">
+                                <rect key="frame" x="245" y="316" width="112" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Opret rammer" bezelStyle="regularSquare" imagePosition="leading" alignment="left" inset="2" id="248">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="update:" target="34" id="173"/>
+                                    <binding destination="42" name="value" keyPath="values.cardDisplayFrames" id="170"/>
+                                </connections>
+                            </button>
+                            <popUpButton verticalHuggingPriority="750" imageHugsTitle="YES" id="150">
+                                <rect key="frame" x="105" y="72" width="177" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <popUpButtonCell key="cell" type="push" title="Nej" bezelStyle="rounded" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="152" id="247">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <menu key="menu" title="OtherViews" id="151">
+                                        <items>
+                                            <menuItem title="Nej" state="on" id="152"/>
+                                            <menuItem title="På forsiden" id="155"/>
+                                            <menuItem title="På bagsiden" id="153"/>
+                                            <menuItem title="På begge sider" id="154"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <action selector="update:" target="34" id="160"/>
+                                    <binding destination="-2" name="enabled" keyPath="containComments" id="157"/>
+                                    <binding destination="42" name="selectedIndex" keyPath="values.cardDisplayComments" id="159"/>
+                                </connections>
+                            </popUpButton>
+                            <textField verticalHuggingPriority="750" id="149">
+                                <rect key="frame" x="7" y="78" width="95" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Kommentarer:" id="246">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" imageHugsTitle="YES" id="139">
+                                <rect key="frame" x="105" y="16" width="177" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <popUpButtonCell key="cell" type="push" title="Ingen" bezelStyle="rounded" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="143" id="245">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <menu key="menu" title="OtherViews" id="140">
+                                        <items>
+                                            <menuItem title="Ingen" state="on" id="143"/>
+                                            <menuItem title="Filnavn" id="144"/>
+                                            <menuItem title="Lektionsnavn" id="141"/>
+                                            <menuItem title="Fil &amp; lektionsnavne" id="142"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <action selector="update:" target="34" id="148"/>
+                                    <binding destination="42" name="selectedIndex" keyPath="values.cardDisplayTag" id="147"/>
+                                </connections>
+                            </popUpButton>
+                            <textField verticalHuggingPriority="750" id="138">
+                                <rect key="frame" x="7" y="22" width="95" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Beskrivelse:" id="244">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <slider verticalHuggingPriority="750" id="122">
+                                <rect key="frame" x="287" y="50" width="84" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <sliderCell key="cell" controlSize="small" continuous="YES" alignment="left" minValue="0.10000000000000001" maxValue="1" doubleValue="0.10000000000000001" tickMarkPosition="below" sliderType="linear" id="243">
+                                    <font key="font" size="12" name="Helvetica"/>
+                                </sliderCell>
+                                <connections>
+                                    <action selector="update:" target="34" id="128"/>
+                                    <binding destination="-2" name="enabled" keyPath="containImages" id="132"/>
+                                    <binding destination="42" name="hidden" keyPath="values.cardDisplayImages" previousBinding="132" id="133">
+                                        <dictionary key="options">
+                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                        </dictionary>
+                                    </binding>
+                                    <binding destination="42" name="value" keyPath="values.cardImageFraction" id="127"/>
+                                </connections>
+                            </slider>
+                            <popUpButton verticalHuggingPriority="750" imageHugsTitle="YES" id="111">
+                                <rect key="frame" x="105" y="44" width="177" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <popUpButtonCell key="cell" type="push" title="Nej" bezelStyle="rounded" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="113" id="242">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <menu key="menu" title="OtherViews" id="112">
+                                        <items>
+                                            <menuItem title="Nej" state="on" id="113"/>
+                                            <menuItem title="På forsiden" id="114"/>
+                                            <menuItem title="På bagsiden" id="115"/>
+                                            <menuItem title="På begge sider" id="121"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <action selector="update:" target="34" id="120"/>
+                                    <binding destination="-2" name="enabled" keyPath="containImages" id="131"/>
+                                    <binding destination="42" name="selectedIndex" keyPath="values.cardDisplayImages" id="118"/>
+                                </connections>
+                            </popUpButton>
+                            <textField verticalHuggingPriority="750" id="110">
+                                <rect key="frame" x="7" y="50" width="95" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Billeder:" id="241">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="-2" name="textColor" keyPath="containImages" id="130">
+                                        <dictionary key="options">
+                                            <string key="NSValueTransformerName">EnabledTextColorTransformer</string>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
+                            </textField>
+                            <textField verticalHuggingPriority="750" id="41">
+                                <rect key="frame" x="333" y="139" width="22" height="11"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Stor" id="240">
+                                    <font key="font" metaFont="miniSystem"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" id="40">
+                                <rect key="frame" x="177" y="139" width="22" height="11"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Lille" id="239">
+                                    <font key="font" metaFont="miniSystem"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <slider verticalHuggingPriority="750" id="39">
+                                <rect key="frame" x="204" y="136" width="124" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <sliderCell key="cell" controlSize="small" continuous="YES" alignment="left" minValue="-2" maxValue="2" tickMarkPosition="below" numberOfTickMarks="5" sliderType="linear" id="238">
+                                    <font key="font" size="12" name="Helvetica"/>
+                                </sliderCell>
+                                <connections>
+                                    <action selector="update:" target="34" id="77"/>
+                                    <binding destination="42" name="value" keyPath="values.cardTextSize" id="54"/>
+                                </connections>
+                            </slider>
+                            <textField verticalHuggingPriority="750" id="38">
+                                <rect key="frame" x="7" y="108" width="95" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Baggrund:" id="237">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <colorWell id="37">
+                                <rect key="frame" x="108" y="104" width="52" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.058130499000000002" green="0.055541898999999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="update:" target="34" id="78"/>
+                                    <binding destination="42" name="value" keyPath="values.cardBackgroundColor" id="56">
+                                        <dictionary key="options">
+                                            <string key="NSValueTransformerName">NSUnarchiveFromData</string>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
+                            </colorWell>
+                            <textField verticalHuggingPriority="750" id="36">
+                                <rect key="frame" x="7" y="136" width="95" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Tekst:" id="236">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <colorWell id="35">
+                                <rect key="frame" x="108" y="132" width="52" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.058130499000000002" green="0.055541898999999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="update:" target="34" id="76"/>
+                                    <binding destination="42" name="value" keyPath="values.cardTextColor" id="53">
+                                        <dictionary key="options">
+                                            <string key="NSValueTransformerName">NSUnarchiveFromData</string>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
+                            </colorWell>
+                            <popUpButton verticalHuggingPriority="750" imageHugsTitle="YES" id="29">
+                                <rect key="frame" x="242" y="253" width="86" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <popUpButtonCell key="cell" type="push" title="mm" bezelStyle="rounded" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="3" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="134" id="235">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <menu key="menu" title="OtherViews" id="30">
+                                        <items>
+                                            <menuItem title="cm" id="31"/>
+                                            <menuItem title="mm" state="on" tag="3" id="134"/>
+                                            <menuItem title="inch" tag="1" id="33"/>
+                                            <menuItem title="pt" tag="2" id="32"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <action selector="sizeUnitDidChange:" target="-2" id="107"/>
+                                    <binding destination="42" name="selectedTag" keyPath="values.sizeUnit" id="136"/>
+                                </connections>
+                            </popUpButton>
+                            <textField verticalHuggingPriority="750" id="28">
+                                <rect key="frame" x="166" y="259" width="12" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="x" id="234">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" id="27">
+                                <rect key="frame" x="183" y="257" width="54" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="100.00" drawsBackground="YES" id="233">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="42" name="enabled" keyPath="values.cardFormat" id="106">
+                                        <dictionary key="options">
+                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                        </dictionary>
+                                    </binding>
+                                    <binding destination="-2" name="value" keyPath="cardHeight" id="84">
+                                        <dictionary key="options">
+                                            <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                            <string key="NSValueTransformerName">SizeTransformer</string>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
+                            </textField>
+                            <textField verticalHuggingPriority="750" id="26">
+                                <rect key="frame" x="107" y="257" width="54" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="10.00" drawsBackground="YES" id="232">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="42" name="enabled" keyPath="values.cardFormat" id="105">
+                                        <dictionary key="options">
+                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                        </dictionary>
+                                    </binding>
+                                    <binding destination="-2" name="value" keyPath="cardWidth" id="83">
+                                        <dictionary key="options">
+                                            <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                            <string key="NSValueTransformerName">SizeTransformer</string>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" imageHugsTitle="YES" id="22">
+                                <rect key="frame" x="104" y="283" width="138" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <popUpButtonCell key="cell" type="push" title="Visitkort" bezelStyle="rounded" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="2" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="103" id="231">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <menu key="menu" title="OtherViews" id="23">
+                                        <items>
+                                            <menuItem title="Normal" id="24"/>
+                                            <menuItem isSeparatorItem="YES" id="108">
+                                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                            </menuItem>
+                                            <menuItem title="Kreditkort" tag="1" id="101"/>
+                                            <menuItem title="Visitkort" state="on" tag="2" id="103"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <action selector="formatDidChange:" target="-2" id="102"/>
+                                    <binding destination="42" name="selectedTag" keyPath="values.cardFormat" id="109"/>
+                                </connections>
+                            </popUpButton>
+                            <textField verticalHuggingPriority="750" id="21">
+                                <rect key="frame" x="7" y="289" width="95" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Kortstr.:" id="230">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" imageHugsTitle="YES" id="17">
+                                <rect key="frame" x="104" y="311" width="138" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <popUpButtonCell key="cell" type="push" title="Vandret" bezelStyle="rounded" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="19" id="229">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <menu key="menu" title="OtherViews" id="18">
+                                        <items>
+                                            <menuItem title="Vandret" state="on" id="19"/>
+                                            <menuItem title="Lodret" id="20"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <action selector="update:" target="34" id="72"/>
+                                    <binding destination="42" name="selectedIndex" keyPath="values.cardFlipDirection" id="45"/>
+                                </connections>
+                            </popUpButton>
+                            <textField verticalHuggingPriority="750" id="16">
+                                <rect key="frame" x="7" y="317" width="95" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Vend kort:" id="228">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" imageHugsTitle="YES" id="11">
+                                <rect key="frame" x="104" y="339" width="138" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <popUpButtonCell key="cell" type="push" title="En-sidet" bezelStyle="rounded" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="1" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="14" id="227">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <menu key="menu" title="OtherViews" id="12">
+                                        <items>
+                                            <menuItem title="En-sidet" state="on" tag="1" id="14"/>
+                                            <menuItem title="To-sidet" tag="2" id="15"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <action selector="update:" target="34" id="71"/>
+                                    <binding destination="42" name="selectedTag" keyPath="values.cardPaperSides" id="87"/>
+                                </connections>
+                            </popUpButton>
+                            <textField verticalHuggingPriority="750" id="10">
+                                <rect key="frame" x="7" y="345" width="95" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Papir:" id="226">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </customView>
+                    <customView id="189">
+                        <rect key="frame" x="10" y="20" width="450" height="403"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" id="90">
+                                <rect key="frame" x="428" y="2" width="13" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <stepperCell key="cell" controlSize="mini" continuous="YES" alignment="left" minValue="1" maxValue="59" doubleValue="1" valueWraps="YES" id="258"/>
+                                <connections>
+                                    <binding destination="-2" name="maxValue" keyPath="wordCount" id="93"/>
+                                    <binding destination="-2" name="value" keyPath="wordIndex" previousBinding="93" id="94"/>
+                                </connections>
+                            </stepper>
+                            <textField verticalHuggingPriority="750" id="89">
+                                <rect key="frame" x="394" y="2" width="31" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" title="1" drawsBackground="YES" id="257">
+                                    <font key="font" metaFont="miniSystem"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="wordIndex" id="95">
+                                        <dictionary key="options">
+                                            <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
+                            </textField>
+                            <textField verticalHuggingPriority="750" id="88">
+                                <rect key="frame" x="326" y="4" width="66" height="11"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="right" title="Prøvese ord:" id="256">
+                                    <font key="font" metaFont="miniSystem"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <customView id="34" customClass="ProVocCardPreview">
+                                <rect key="frame" x="10" y="23" width="430" height="370"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </customView>
+                        </subviews>
+                    </customView>
+                </subviews>
+            </view>
+        </window>
+        <userDefaultsController representsSharedInstance="YES" id="42" userLabel="Shared Defaults"/>
+    </objects>
+</document>

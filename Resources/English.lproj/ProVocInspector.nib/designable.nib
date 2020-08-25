@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment version="1030" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,7 +17,7 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <window title="Inspector" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="5" userLabel="Window" customClass="ProVocInspectorPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" resizable="YES" utility="YES" nonactivatingPanel="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -141,7 +141,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
                     <popUpButtonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" inset="2" pullsDown="YES" preferredEdge="maxY" selectedItem="88" id="328">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
+                        <font key="font" metaFont="menu"/>
                         <menu key="menu" title="OtherViews" id="87">
                             <items>
                                 <menuItem image="NSActionTemplate" hidden="YES" id="88"/>
@@ -180,7 +180,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
                     <popUpButtonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" inset="2" pullsDown="YES" preferredEdge="maxY" selectedItem="83" id="327">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
+                        <font key="font" metaFont="menu"/>
                         <menu key="menu" title="OtherViews" id="79">
                             <items>
                                 <menuItem image="NSActionTemplate" hidden="YES" id="83"/>
@@ -301,7 +301,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                     <popUpButtonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" inset="2" pullsDown="YES" preferredEdge="maxY" selectedItem="134" id="335">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
+                        <font key="font" metaFont="menu"/>
                         <menu key="menu" title="OtherViews" id="133">
                             <items>
                                 <menuItem image="NSActionTemplate" hidden="YES" id="134"/>
@@ -391,7 +391,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
                     <popUpButtonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" inset="2" pullsDown="YES" preferredEdge="maxY" selectedItem="166" id="339">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
+                        <font key="font" metaFont="menu"/>
                         <menu key="menu" title="OtherViews" id="164">
                             <items>
                                 <menuItem image="NSActionTemplate" hidden="YES" id="166"/>
@@ -433,17 +433,17 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                     <connections>
-                        <binding destination="-2" name="alignment" keyPath="commentWritingDirection" id="315">
-                            <dictionary key="options">
-                                <string key="NSValueTransformerName">WritingDirectionToAlignmentTransformer</string>
-                            </dictionary>
-                        </binding>
                         <binding destination="-2" name="enabled" keyPath="canModifyText" id="247"/>
                         <binding destination="-2" name="fontFamilyName" keyPath="commentFontFamilyName" id="274"/>
                         <binding destination="-2" name="fontSize" keyPath="commentFontSize" previousBinding="274" id="275"/>
                         <binding destination="-2" name="value" keyPath="commentText" id="246">
                             <dictionary key="options">
                                 <integer key="NSContinuouslyUpdatesValue" value="1"/>
+                            </dictionary>
+                        </binding>
+                        <binding destination="-2" name="alignment" keyPath="commentWritingDirection" id="315">
+                            <dictionary key="options">
+                                <string key="NSValueTransformerName">WritingDirectionToAlignmentTransformer</string>
                             </dictionary>
                         </binding>
                     </connections>
@@ -473,17 +473,17 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                     <connections>
-                        <binding destination="-2" name="alignment" keyPath="targetWritingDirection" id="313">
-                            <dictionary key="options">
-                                <string key="NSValueTransformerName">WritingDirectionToAlignmentTransformer</string>
-                            </dictionary>
-                        </binding>
                         <binding destination="-2" name="enabled" keyPath="canModifyText" id="232"/>
                         <binding destination="-2" name="fontFamilyName" keyPath="targetFontFamilyName" id="276"/>
                         <binding destination="-2" name="fontSize" keyPath="targetFontSize" previousBinding="276" id="277"/>
                         <binding destination="-2" name="value" keyPath="targetText" id="237">
                             <dictionary key="options">
                                 <integer key="NSContinuouslyUpdatesValue" value="1"/>
+                            </dictionary>
+                        </binding>
+                        <binding destination="-2" name="alignment" keyPath="targetWritingDirection" id="313">
+                            <dictionary key="options">
+                                <string key="NSValueTransformerName">WritingDirectionToAlignmentTransformer</string>
                             </dictionary>
                         </binding>
                     </connections>
@@ -497,17 +497,17 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                     <connections>
-                        <binding destination="-2" name="alignment" keyPath="sourceWritingDirection" id="311">
-                            <dictionary key="options">
-                                <string key="NSValueTransformerName">WritingDirectionToAlignmentTransformer</string>
-                            </dictionary>
-                        </binding>
                         <binding destination="-2" name="enabled" keyPath="canModifyText" id="230"/>
                         <binding destination="-2" name="fontFamilyName" keyPath="sourceFontFamilyName" id="281"/>
                         <binding destination="-2" name="fontSize" keyPath="sourceFontSize" previousBinding="281" id="282"/>
                         <binding destination="-2" name="value" keyPath="sourceText" id="236">
                             <dictionary key="options">
                                 <integer key="NSContinuouslyUpdatesValue" value="1"/>
+                            </dictionary>
+                        </binding>
+                        <binding destination="-2" name="alignment" keyPath="sourceWritingDirection" id="311">
+                            <dictionary key="options">
+                                <string key="NSValueTransformerName">WritingDirectionToAlignmentTransformer</string>
                             </dictionary>
                         </binding>
                     </connections>
