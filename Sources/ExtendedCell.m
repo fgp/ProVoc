@@ -64,6 +64,11 @@ static NSImage *sRankPatternImage = nil;
 
 	[[NSColor colorWithPatternImage:sRankPatternImage] set];
 	[NSBezierPath fillRect:fillFrame];
+	
+	// draw background:
+	[[NSColor tertiaryLabelColor] setFill];
+	fillFrame.size.width = inFrame.size.width;
+	[NSBezierPath fillRect:fillFrame];
 }
 
 
