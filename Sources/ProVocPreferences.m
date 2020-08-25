@@ -182,7 +182,7 @@
     [description setObject:[NSNumber numberWithBool:YES] forKey:PVSpaceSensitive];
 	[self addLanguage:description];
 	int row = [mLanguageTableView numberOfRows] - 1;
-    [mLanguageTableView selectRow:row byExtendingSelection:NO];
+    [mLanguageTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:row] byExtendingSelection:NO];
 	[mLanguageTableView scrollRowToVisible:row];
 	[mLanguageTableView editColumn:0 row:row withEvent:nil select:YES];
 }

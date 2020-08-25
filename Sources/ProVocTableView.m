@@ -40,8 +40,16 @@
 
 -(void)copy:(id)inSender
 {
-    if ([self numberOfSelectedRows] > 0 && [[self dataSource] respondsToSelector:@selector(tableView:writeRows:toPasteboard:)])
-		[[self dataSource] tableView:self writeRows:[[self selectedRowEnumerator] allObjects] toPasteboard:[NSPasteboard generalPasteboard]];
+	if ([self numberOfSelectedRows] > 0 && [[self dataSource] respondsToSelector:@selector(tableView:writeRows:toPasteboard:)]) {
+		NSIndexSet *selectedItems = [self selectedRowIndexes];
+		NSMutableArray *selectedItemsArray = [NSMutableArray array];
+		[selectedItems enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL *stop) {
+			[selectedItemsArray addObject:[NSNumber numberWithInteger:idx]];
+		}];
+		if ([[self dataSource] respondsToSelector:@selector(tableView:writeRows:toPasteboard:)]) {
+			[[self dataSource] tableView:self writeRows:(NSArray*)selectedItemsArray toPasteboard:[NSPasteboard generalPasteboard]];
+		}
+	}
 }
 
 -(void)paste:(id)inSender

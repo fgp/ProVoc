@@ -213,7 +213,8 @@ static NSArray *sDraggedItems = nil;
 	id item;
 	int row = -1;
 	while (item = [enumerator nextObject]) {
-		[mPageOutlineView selectRow:row = [mPageOutlineView rowForItem:item] byExtendingSelection:extend];
+		NSUInteger row = [mPageOutlineView rowForItem:item];
+		[mPageOutlineView selectRowIndexes:[NSIndexSet indexSetWithIndex:row] byExtendingSelection:extend];
 		extend = YES;
 	}
 	[mPageOutlineView scrollRowToVisible:row];
@@ -235,9 +236,11 @@ static NSArray *sDraggedItems = nil;
 		if (!copy && [[inInfo draggingPasteboard] availableTypeFromArray:[NSArray arrayWithObject:ProVocSelfSourcesType]]) {
 			NSEnumerator *enumerator = [draggedItems reverseObjectEnumerator];
 			ProVocSource *draggedItem;
-			while (draggedItem = [enumerator nextObject])
-				if ([draggedItem parent] == item && [[[draggedItem parent] children] indexOfObjectIdenticalTo:draggedItem] <= index)
+			while (draggedItem = [enumerator nextObject]) {
+				if ([draggedItem parent] == item && [[[draggedItem parent] children] indexOfObjectIdenticalTo:draggedItem] <= index) {
 					index--;
+				}
+			}
 			removeFromParents = YES;
 			ok = YES;
 		} else {
@@ -285,7 +288,7 @@ static NSArray *sDraggedItems = nil;
 				[self pagesDidChange];
 				[mPageOutlineView expandItem:page];
 				int row = [mPageOutlineView rowForItem:page];
-				[mPageOutlineView selectRow:row byExtendingSelection:NO];
+				[mPageOutlineView selectRowIndexes:[NSIndexSet indexSetWithIndex:row] byExtendingSelection:NO];
 				[mPageOutlineView scrollRowToVisible:row];
 			}
 			[page addWords:draggedItems];
@@ -355,15 +358,19 @@ static NSArray *sDraggedItems = nil;
 
 -(id)tableView:(NSTableView *)inTableView objectValueForTableColumn:(NSTableColumn *)inTableColumn row:(int)inRowIndex
 {
-	if (inTableView == mPresetTableView)
+	if (inTableView == mPresetTableView) {
 		return [[self presets] objectAtIndex:inRowIndex];
-	if (inRowIndex >= [mVisibleWords count])
+	}
+	if (inRowIndex >= [mVisibleWords count]) {
 		return nil;
+	}
 	ProVocWord *word = [mVisibleWords objectAtIndex:inRowIndex];
-	if ([[inTableColumn identifier] isEqual:@"Difficulty"])
-		return [NSNumber numberWithFloat:([word difficulty] - mMinDifficulty) / (mMaxDifficulty - mMinDifficulty)];
-	else
+	if ([[inTableColumn identifier] isEqual:@"Difficulty"]) {
+		NSNumber *difficulty = [NSNumber numberWithFloat:([word difficulty] - mMinDifficulty) / (mMaxDifficulty - mMinDifficulty)];
+		return difficulty;
+	} else {
 		return [word objectForIdentifier:[inTableColumn identifier]];
+	}
 }
 
 -(void)tableView:(NSTableView *)inTableView setObjectValue:(id)inObject forTableColumn:(NSTableColumn *)inTableColumn row:(int)inRowIndex
@@ -539,7 +546,8 @@ static NSArray *sDraggedItems = nil;
 	int row = -1;
 	ProVocWord *word;
 	while (word = [enumerator nextObject]) {
-		[mWordTableView selectRow:row = [mVisibleWords indexOfObjectIdenticalTo:word] byExtendingSelection:extend];
+		NSUInteger row = [mVisibleWords indexOfObjectIdenticalTo:word];
+		[mWordTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:row] byExtendingSelection:extend];
 		extend = YES;
 	}
 	[mWordTableView scrollRowToVisible:row];
@@ -676,7 +684,7 @@ static NSArray *sDraggedItems = nil;
 {
 	int row = [inTableView rowAtPoint:[inTableView convertPoint:[inEvent locationInWindow] fromView:nil]];
 	if (row >= 0 && row < [mVisibleWords count] && ![[inTableView selectedRowIndexes] containsIndex:row])
-		[inTableView selectRow:row byExtendingSelection:([inEvent modifierFlags] & NSShiftKeyMask) != 0];
+		[inTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:row] byExtendingSelection:([inEvent modifierFlags] & NSShiftKeyMask) != 0];
 	NSMenu *menu = [[[NSMenu alloc] initWithTitle:@""] autorelease];
 	[menu addItemWithTitle:NSLocalizedString(@"Start Speaking", @"") action:@selector(startSpeaking:) keyEquivalent:@""];
 	[menu addItemWithTitle:NSLocalizedString(@"Stop Speaking", @"") action:@selector(stopSpeaking:) keyEquivalent:@""];
@@ -714,7 +722,7 @@ static NSArray *sSelectedWords = nil;
 	while (word = [enumerator nextObject]) {
 		unsigned row = [mVisibleWords indexOfObjectIdenticalTo:word];
 		if (row != NSNotFound) {
-			[mWordTableView selectRow:row byExtendingSelection:extend];
+			[mWordTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:row] byExtendingSelection:extend];
 			lastRow = row;
 			if (!extend) {
 				firstRow = row;
@@ -882,8 +890,10 @@ static NSArray *sSelectedWords = nil;
 	[self willChangeData];
 	[[self allPages] makeObjectsPerformSelector:@selector(removeWords:) withObject:inWords];
 	[self wordsDidChange];
-	if ([mWordTableView selectedRow] >= [mVisibleWords count])
-		[mWordTableView selectRow:[mVisibleWords count] - 1 byExtendingSelection:NO];
+	if ([mWordTableView selectedRow] >= [mVisibleWords count]) {
+		NSUInteger row = ([mVisibleWords count] - 1);
+		[mWordTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:row] byExtendingSelection:NO];
+	}
 	[self selectedWordsDidChange:nil];
 	[self didChangeData];
 }

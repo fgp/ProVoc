@@ -923,7 +923,7 @@ static ProVocDocument *sCurrentDocument = nil;
 	[self pagesDidChange];
 	[mPageOutlineView expandItem:inSource];
 	row = [mPageOutlineView rowForItem:inSource];
-	[mPageOutlineView selectRow:row byExtendingSelection:NO];
+	[mPageOutlineView selectRowIndexes:[NSIndexSet indexSetWithIndex:row] byExtendingSelection:NO];
 	[mPageOutlineView scrollRowToVisible:row];
 	[self didChangeData];
 	[self setMainTab:1];
@@ -1035,7 +1035,7 @@ static int sNewWordLabel = 0;
     
 	unsigned rowIndex = [mVisibleWords indexOfObject:word];
 	if (rowIndex != NSNotFound) {
-//		[mWordTableView selectRow:rowIndex byExtendingSelection:NO];
+//		[mWordTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:rowIndex] byExtendingSelection:NO];
 		[mWordTableView scrollRowToVisible:rowIndex];
 	}
 	[self selectedWordsDidChange:nil];
@@ -1210,7 +1210,8 @@ static int sNewWordLabel = 0;
 		BOOL extend = NO;
 		int row = 0;
 		while (word = [enumerator nextObject]) {
-			[mWordTableView selectRow:row = [mVisibleWords indexOfObjectIdenticalTo:word] byExtendingSelection:extend];
+			NSUInteger row = [mVisibleWords indexOfObjectIdenticalTo:word];
+			[mWordTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:row] byExtendingSelection:extend];
 			extend = YES;
 		}
 		[mWordTableView scrollRowToVisible:row];

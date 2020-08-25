@@ -152,7 +152,6 @@
 		A7285E460A1603D00082642D /* SmallSpeaker.tif in Resources */ = {isa = PBXBuildFile; fileRef = A7285E180A1603D00082642D /* SmallSpeaker.tif */; };
 		A7285E470A1603D00082642D /* SpeakerOff.png in Resources */ = {isa = PBXBuildFile; fileRef = A7285E190A1603D00082642D /* SpeakerOff.png */; };
 		A7285E480A1603D00082642D /* SpeakerOn.png in Resources */ = {isa = PBXBuildFile; fileRef = A7285E1A0A1603D00082642D /* SpeakerOn.png */; };
-		A7285E490A1603D00082642D /* stripe.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7285E1B0A1603D00082642D /* stripe.tiff */; };
 		A7285E4A0A1603D00082642D /* Theme.tif in Resources */ = {isa = PBXBuildFile; fileRef = A7285E1C0A1603D00082642D /* Theme.tif */; };
 		A7285E4B0A1603D00082642D /* unmarkAsFlagged.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7285E1D0A1603D00082642D /* unmarkAsFlagged.tiff */; };
 		A7285E4C0A1603D00082642D /* UpdatePreferences.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7285E1E0A1603D00082642D /* UpdatePreferences.tiff */; };
@@ -1252,7 +1251,6 @@
 				A7285E460A1603D00082642D /* SmallSpeaker.tif in Resources */,
 				A7285E470A1603D00082642D /* SpeakerOff.png in Resources */,
 				A7285E480A1603D00082642D /* SpeakerOn.png in Resources */,
-				A7285E490A1603D00082642D /* stripe.tiff in Resources */,
 				A7285E4A0A1603D00082642D /* Theme.tif in Resources */,
 				A7285E4B0A1603D00082642D /* unmarkAsFlagged.tiff in Resources */,
 				A7285E4C0A1603D00082642D /* UpdatePreferences.tiff in Resources */,
