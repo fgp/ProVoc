@@ -1386,22 +1386,23 @@ error:
 	if (!attributes) {
 		NSMutableParagraphStyle *paragraphStyle = [[[NSParagraphStyle defaultParagraphStyle] mutableCopy] autorelease];
 		[paragraphStyle setAlignment:NSCenterTextAlignment];
-		NSFont *font = [NSFont fontWithName:@"Lucida Grande" size:18];
+		NSFont *font = [NSFont systemFontOfSize:18];
 		font = [[NSFontManager sharedFontManager] convertFont:font toHaveTrait:NSBoldFontMask];
 		attributes = [[NSDictionary alloc] initWithObjectsAndKeys:font, NSFontAttributeName, 
 										paragraphStyle, NSParagraphStyleAttributeName,
-										[NSColor lightGrayColor], NSForegroundColorAttributeName, nil];
+										[NSColor secondaryLabelColor], NSForegroundColorAttributeName, nil];
 	}
 	return attributes;
 }
 
 -(void)drawRect:(NSRect)inRect
 {
+	// draw the movie and image drop area placeholders:
 	NSRect r = [self bounds];
 	NSString *text = [self text];
 	NSAttributedString *string = [[[NSAttributedString alloc] initWithString:text attributes:[self attributes]] autorelease];
 	NSBezierPath *path = [NSBezierPath bezierPathWithRoundRectInRect:NSInsetRect([self bounds], 5, 5) radius:5];
-	const float pattern[2] = {10.0, 4.0};
+	const CGFloat pattern[2] = {10.0, 4.0};
 	[path setLineDash:pattern count:2 phase:18];
 	r = NSInsetRect(r, 10, 10);
 	r.size.height = [string heightForWidth:r.size.width];

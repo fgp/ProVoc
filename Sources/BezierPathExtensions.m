@@ -26,15 +26,16 @@
 
 +(NSBezierPath *)bezierPathWithRoundRectInRect:(NSRect)inRect radius:(float)inRadius
 {
-   NSBezierPath *path = [self bezierPath];
-   float radius = MIN(inRadius, 0.5f * MIN(NSWidth(inRect), NSHeight(inRect)));
-   NSRect rect = NSInsetRect(inRect, radius, radius);
-   [path appendBezierPathWithArcWithCenter:NSMakePoint(NSMinX(rect), NSMinY(rect)) radius:radius startAngle:180.0 endAngle:270.0];
-   [path appendBezierPathWithArcWithCenter:NSMakePoint(NSMaxX(rect), NSMinY(rect)) radius:radius startAngle:270.0 endAngle:360.0];
-   [path appendBezierPathWithArcWithCenter:NSMakePoint(NSMaxX(rect), NSMaxY(rect)) radius:radius startAngle:  0.0 endAngle: 90.0];
-   [path appendBezierPathWithArcWithCenter:NSMakePoint(NSMinX(rect), NSMaxY(rect)) radius:radius startAngle: 90.0 endAngle:180.0];
-   [path closePath];
-   return path;
+	//NSBezierPath *path = [self bezierPathWithRoundedRect:inRect xRadius:inRadius yRadius:inRadius];
+	NSBezierPath *path = [self bezierPath];
+	float radius = MIN(inRadius, 0.5f * MIN(NSWidth(inRect), NSHeight(inRect)));
+	NSRect rect = NSInsetRect(inRect, radius, radius);
+	[path appendBezierPathWithArcWithCenter:NSMakePoint(NSMinX(rect), NSMinY(rect)) radius:radius startAngle:180.0 endAngle:270.0];
+	[path appendBezierPathWithArcWithCenter:NSMakePoint(NSMaxX(rect), NSMinY(rect)) radius:radius startAngle:270.0 endAngle:360.0];
+	[path appendBezierPathWithArcWithCenter:NSMakePoint(NSMaxX(rect), NSMaxY(rect)) radius:radius startAngle:  0.0 endAngle: 90.0];
+	[path appendBezierPathWithArcWithCenter:NSMakePoint(NSMinX(rect), NSMaxY(rect)) radius:radius startAngle: 90.0 endAngle:180.0];
+	[path closePath];
+	return path;
 }
 
 @end

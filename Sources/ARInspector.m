@@ -192,6 +192,7 @@
 		[button setBordered:NO];
 		[button setFocusRingType:NSFocusRingTypeNone];
 		[button setAutoresizingMask:NSViewWidthSizable];
+		[[button cell] setBackgroundColor:[NSColor clearColor]];
 		[info setObject:button forKey:kButton];
 
 		NSView *topView = [[[NSView alloc] initWithFrame:topFrame] autorelease];
