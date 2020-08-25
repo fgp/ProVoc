@@ -1,0 +1,162 @@
+
+/* Class = "NSWindow"; title = "Udskriv kort"; ObjectID = "5"; */
+"5.title" = "Udskriv kort";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "12"; */
+"12.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "En-sidet"; ObjectID = "14"; */
+"14.title" = "En-sidet";
+
+/* Class = "NSMenuItem"; title = "To-sidet"; ObjectID = "15"; */
+"15.title" = "To-sidet";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "18"; */
+"18.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Vandret"; ObjectID = "19"; */
+"19.title" = "Vandret";
+
+/* Class = "NSMenuItem"; title = "Lodret"; ObjectID = "20"; */
+"20.title" = "Lodret";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "23"; */
+"23.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Normal"; ObjectID = "24"; */
+"24.title" = "Normal";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "30"; */
+"30.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "cm"; ObjectID = "31"; */
+"31.title" = "cm";
+
+/* Class = "NSMenuItem"; title = "pt"; ObjectID = "32"; */
+"32.title" = "pt";
+
+/* Class = "NSMenuItem"; title = "inch"; ObjectID = "33"; */
+"33.title" = "inch";
+
+/* Class = "NSMenuItem"; title = "Kreditkort"; ObjectID = "101"; */
+"101.title" = "Kreditkort";
+
+/* Class = "NSMenuItem"; title = "Visitkort"; ObjectID = "103"; */
+"103.title" = "Visitkort";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "112"; */
+"112.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Nej"; ObjectID = "113"; */
+"113.title" = "Nej";
+
+/* Class = "NSMenuItem"; title = "På forsiden"; ObjectID = "114"; */
+"114.title" = "På forsiden";
+
+/* Class = "NSMenuItem"; title = "På bagsiden"; ObjectID = "115"; */
+"115.title" = "På bagsiden";
+
+/* Class = "NSMenuItem"; title = "På begge sider"; ObjectID = "121"; */
+"121.title" = "På begge sider";
+
+/* Class = "NSMenuItem"; title = "mm"; ObjectID = "134"; */
+"134.title" = "mm";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "140"; */
+"140.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Lektionsnavn"; ObjectID = "141"; */
+"141.title" = "Lektionsnavn";
+
+/* Class = "NSMenuItem"; title = "Fil & lektionsnavne"; ObjectID = "142"; */
+"142.title" = "Fil & lektionsnavne";
+
+/* Class = "NSMenuItem"; title = "Ingen"; ObjectID = "143"; */
+"143.title" = "Ingen";
+
+/* Class = "NSMenuItem"; title = "Filnavn"; ObjectID = "144"; */
+"144.title" = "Filnavn";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "151"; */
+"151.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Nej"; ObjectID = "152"; */
+"152.title" = "Nej";
+
+/* Class = "NSMenuItem"; title = "På bagsiden"; ObjectID = "153"; */
+"153.title" = "På bagsiden";
+
+/* Class = "NSMenuItem"; title = "På begge sider"; ObjectID = "154"; */
+"154.title" = "På begge sider";
+
+/* Class = "NSMenuItem"; title = "På forsiden"; ObjectID = "155"; */
+"155.title" = "På forsiden";
+
+/* Class = "NSButtonCell"; title = "Udskriv…"; ObjectID = "224"; */
+"224.title" = "Udskriv…";
+
+/* Class = "NSButtonCell"; title = "Afbryd"; ObjectID = "225"; */
+"225.title" = "Afbryd";
+
+/* Class = "NSTextFieldCell"; title = "Papir:"; ObjectID = "226"; */
+"226.title" = "Papir:";
+
+/* Class = "NSTextFieldCell"; title = "Vend kort:"; ObjectID = "228"; */
+"228.title" = "Vend kort:";
+
+/* Class = "NSTextFieldCell"; title = "Kortstr.:"; ObjectID = "230"; */
+"230.title" = "Kortstr.:";
+
+/* Class = "NSTextFieldCell"; title = "10.00"; ObjectID = "232"; */
+"232.title" = "10.00";
+
+/* Class = "NSTextFieldCell"; title = "100.00"; ObjectID = "233"; */
+"233.title" = "100.00";
+
+/* Class = "NSTextFieldCell"; title = "x"; ObjectID = "234"; */
+"234.title" = "x";
+
+/* Class = "NSTextFieldCell"; title = "Tekst:"; ObjectID = "236"; */
+"236.title" = "Tekst:";
+
+/* Class = "NSTextFieldCell"; title = "Baggrund:"; ObjectID = "237"; */
+"237.title" = "Baggrund:";
+
+/* Class = "NSTextFieldCell"; title = "Lille"; ObjectID = "239"; */
+"239.title" = "Lille";
+
+/* Class = "NSTextFieldCell"; title = "Stor"; ObjectID = "240"; */
+"240.title" = "Stor";
+
+/* Class = "NSTextFieldCell"; title = "Billeder:"; ObjectID = "241"; */
+"241.title" = "Billeder:";
+
+/* Class = "NSTextFieldCell"; title = "Beskrivelse:"; ObjectID = "244"; */
+"244.title" = "Beskrivelse:";
+
+/* Class = "NSTextFieldCell"; title = "Kommentarer:"; ObjectID = "246"; */
+"246.title" = "Kommentarer:";
+
+/* Class = "NSButtonCell"; title = "Opret rammer"; ObjectID = "248"; */
+"248.title" = "Opret rammer";
+
+/* Class = "NSTextFieldCell"; title = "Margener:"; ObjectID = "250"; */
+"250.title" = "Margener:";
+
+/* Class = "NSTextFieldCell"; title = "10.00"; ObjectID = "251"; */
+"251.title" = "10.00";
+
+/* Class = "NSTextFieldCell"; title = "10.00"; ObjectID = "252"; */
+"252.title" = "10.00";
+
+/* Class = "NSTextFieldCell"; title = "10.00"; ObjectID = "253"; */
+"253.title" = "10.00";
+
+/* Class = "NSTextFieldCell"; title = "10.00"; ObjectID = "254"; */
+"254.title" = "10.00";
+
+/* Class = "NSTextFieldCell"; title = "Prøvese ord:"; ObjectID = "256"; */
+"256.title" = "Prøvese ord:";
+
+/* Class = "NSTextFieldCell"; title = "1"; ObjectID = "257"; */
+"257.title" = "1";

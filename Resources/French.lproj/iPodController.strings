@@ -1,0 +1,54 @@
+
+/* Class = "NSWindow"; title = "Window"; ObjectID = "5"; */
+"5.title" = "Window";
+
+/* Class = "NSButtonCell"; title = "Les leçons sélectionnées"; ObjectID = "19"; */
+"19.title" = "Les leçons sélectionnées";
+
+/* Class = "NSButtonCell"; title = "Toutes les leçons"; ObjectID = "20"; */
+"20.title" = "Toutes les leçons";
+
+/* Class = "NSButtonCell"; title = "Questionnaire"; ObjectID = "66"; */
+"66.title" = "Questionnaire";
+
+/* Class = "NSButtonCell"; title = "Glossaire"; ObjectID = "67"; */
+"67.title" = "Glossaire";
+
+/* Class = "NSButtonCell"; title = "Questionnaire & glossaire"; ObjectID = "68"; */
+"68.title" = "Questionnaire & glossaire";
+
+/* Class = "NSTextFieldCell"; title = "Do not localize"; ObjectID = "74"; */
+"74.title" = "Do not localize";
+
+/* Class = "NSTextFieldCell"; title = "Do not localize"; ObjectID = "75"; */
+"75.title" = "Do not localize";
+
+/* Class = "NSButtonCell"; title = "OK"; ObjectID = "76"; */
+"76.title" = "OK";
+
+/* Class = "NSButtonCell"; title = "Éjecter l'iPod"; ObjectID = "77"; */
+"77.title" = "Éjecter l'iPod";
+
+/* Class = "NSTextFieldCell"; title = "Transfert sur l'iPod en cours…"; ObjectID = "78"; */
+"78.title" = "Transfert sur l'iPod en cours…";
+
+/* Class = "NSButtonCell"; title = "Annuler"; ObjectID = "80"; */
+"80.title" = "Annuler";
+
+/* Class = "NSTextFieldCell"; title = "Transférer:"; ObjectID = "82"; */
+"82.title" = "Transférer:";
+
+/* Class = "NSButtonCell"; title = "Transférer sur l'iPod"; ObjectID = "83"; */
+"83.title" = "Transférer sur l'iPod";
+
+/* Class = "NSButtonCell"; title = "Annuler"; ObjectID = "84"; */
+"84.title" = "Annuler";
+
+/* Class = "NSTextFieldCell"; title = "Comme:"; ObjectID = "85"; */
+"85.title" = "Comme:";
+
+/* Class = "NSButtonCell"; title = "Radio"; ObjectID = "86"; */
+"86.title" = "Radio";
+
+/* Class = "NSButtonCell"; title = "Radio"; ObjectID = "87"; */
+"87.title" = "Radio";

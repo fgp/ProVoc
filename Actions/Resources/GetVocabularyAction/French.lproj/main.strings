@@ -1,0 +1,18 @@
+
+/* Class = "AMGroupBox"; title = "Uniquement les leçons sélectionnées"; ObjectID = "159"; */
+"159.title" = "Uniquement les leçons sélectionnées";
+
+/* Class = "AMGroupBox"; title = "Inclure"; ObjectID = "160"; */
+"160.title" = "Inclure";
+
+/* Class = "NSButtonCell"; title = "Uniquement les leçons sélectionnées"; ObjectID = "162"; */
+"162.title" = "Uniquement les leçons sélectionnées";
+
+/* Class = "NSTextFieldCell"; title = "Inclure:"; ObjectID = "163"; */
+"163.title" = "Inclure:";
+
+/* Class = "NSButtonCell"; title = "Noms des leçons"; ObjectID = "164"; */
+"164.title" = "Noms des leçons";
+
+/* Class = "NSButtonCell"; title = "Commentaires"; ObjectID = "165"; */
+"165.title" = "Commentaires";

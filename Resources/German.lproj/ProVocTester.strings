@@ -1,0 +1,159 @@
+
+/* Class = "NSWindow"; title = "ProVoc"; ObjectID = "23"; */
+"23.title" = "ProVoc";
+
+/* Class = "NSTabViewItem"; label = "Tab"; ObjectID = "74"; */
+"74.label" = "Tab";
+
+/* Class = "NSTabViewItem"; label = "View"; ObjectID = "75"; */
+"75.label" = "View";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Mark word"; ObjectID = "83"; */
+"83.ibShadowedToolTip" = "Mark word";
+
+/* Class = "NSWindow"; title = "ProVoc"; ObjectID = "120"; */
+"120.title" = "ProVoc";
+
+/* Class = "NSTabViewItem"; label = "View"; ObjectID = "127"; */
+"127.label" = "View";
+
+/* Class = "NSTabViewItem"; label = "Tab"; ObjectID = "132"; */
+"132.label" = "Tab";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Mark word"; ObjectID = "137"; */
+"137.ibShadowedToolTip" = "Mark word";
+
+/* Class = "NSBox"; title = "Title"; ObjectID = "158"; */
+"158.title" = "Title";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "219"; */
+"219.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "220"; */
+"220.title" = "Item3";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "221"; */
+"221.title" = "Item2";
+
+/* Class = "NSMenuItem"; title = "Item1"; ObjectID = "222"; */
+"222.title" = "Item1";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "234"; */
+"234.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "235"; */
+"235.title" = "Item3";
+
+/* Class = "NSMenuItem"; title = "Item1"; ObjectID = "236"; */
+"236.title" = "Item1";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "237"; */
+"237.title" = "Item2";
+
+/* Class = "NSWindow"; title = "Ihre Antwort:"; ObjectID = "265"; */
+"265.title" = "Ihre Antwort:";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "600"; */
+"600.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Do not localize"; ObjectID = "601"; */
+"601.title" = "Do not localize";
+
+/* Class = "NSButtonCell"; title = "Falsche Antworten nochmals abprüfen"; ObjectID = "632"; */
+"632.title" = "Falsche Antworten nochmals abprüfen";
+
+/* Class = "NSButtonCell"; title = "Fertig"; ObjectID = "633"; */
+"633.title" = "Fertig";
+
+/* Class = "NSTextFieldCell"; title = "Ergebnis"; ObjectID = "634"; */
+"634.title" = "Ergebnis";
+
+/* Class = "NSButtonCell"; title = "Abstempeln als:"; ObjectID = "635"; */
+"635.title" = "Abstempeln als:";
+
+/* Class = "NSButtonCell"; title = "Als Diashow anzeigen"; ObjectID = "637"; */
+"637.title" = "Als Diashow anzeigen";
+
+/* Class = "NSTextFieldCell"; title = "Bevor die falsch beantwortete Vokabeln nochmals abgeprüft werden:"; ObjectID = "638"; */
+"638.title" = "Bevor die falsch beantwortete Vokabeln nochmals abgeprüft werden:";
+
+/* Class = "NSButtonCell"; title = "Abbrechen"; ObjectID = "639"; */
+"639.title" = "Abbrechen";
+
+/* Class = "NSButtonCell"; title = "Überprüfen"; ObjectID = "640"; */
+"640.title" = "Überprüfen";
+
+/* Class = "NSButtonCell"; title = "Hinweis anzeigen"; ObjectID = "641"; */
+"641.title" = "Hinweis anzeigen";
+
+/* Class = "NSTextFieldCell"; title = "999 / 999"; ObjectID = "642"; */
+"642.title" = "999 / 999";
+
+/* Class = "NSTextFieldCell"; title = "Leicht"; ObjectID = "644"; */
+"644.title" = "Leicht";
+
+/* Class = "NSTextFieldCell"; title = "Schwierig"; ObjectID = "645"; */
+"645.title" = "Schwierig";
+
+/* Class = "NSButtonCell"; title = "Editieren"; ObjectID = "648"; */
+"648.title" = "Editieren";
+
+/* Class = "NSButtonCell"; title = "Antwort annehmen"; ObjectID = "649"; */
+"649.title" = "Antwort annehmen";
+
+/* Class = "NSTextFieldCell"; title = "The house"; ObjectID = "650"; */
+"650.title" = "The house";
+
+/* Class = "NSTextFieldCell"; title = "The house"; ObjectID = "651"; */
+"651.title" = "The house";
+
+/* Class = "NSTextFieldCell"; title = "Kommentar"; ObjectID = "652"; */
+"652.title" = "Kommentar";
+
+/* Class = "NSTextFieldCell"; title = "The house"; ObjectID = "655"; */
+"655.title" = "The house";
+
+/* Class = "NSTextFieldCell"; title = "Optiontaste ⌥ drücken für mehr Optionen"; ObjectID = "657"; */
+"657.title" = "Optiontaste ⌥ drücken für mehr Optionen";
+
+/* Class = "NSButtonCell"; title = "Überprüfen"; ObjectID = "659"; */
+"659.title" = "Überprüfen";
+
+/* Class = "NSTextFieldCell"; title = "Schwierig"; ObjectID = "660"; */
+"660.title" = "Schwierig";
+
+/* Class = "NSTextFieldCell"; title = "Leicht"; ObjectID = "662"; */
+"662.title" = "Leicht";
+
+/* Class = "NSTextFieldCell"; title = "999 / 999"; ObjectID = "663"; */
+"663.title" = "999 / 999";
+
+/* Class = "NSButtonCell"; title = "Abbrechen"; ObjectID = "664"; */
+"664.title" = "Abbrechen";
+
+/* Class = "NSButtonCell"; title = "Hinweis anzeigen"; ObjectID = "666"; */
+"666.title" = "Hinweis anzeigen";
+
+/* Class = "NSButtonCell"; title = "Editieren"; ObjectID = "668"; */
+"668.title" = "Editieren";
+
+/* Class = "NSTextFieldCell"; title = "The house"; ObjectID = "669"; */
+"669.title" = "The house";
+
+/* Class = "NSTextFieldCell"; title = "Kommentar"; ObjectID = "670"; */
+"670.title" = "Kommentar";
+
+/* Class = "NSButtonCell"; title = "Antwort annehmen"; ObjectID = "673"; */
+"673.title" = "Antwort annehmen";
+
+/* Class = "NSTextFieldCell"; title = "Optiontaste ⌥ drücken für mehr Optionen"; ObjectID = "674"; */
+"674.title" = "Optiontaste ⌥ drücken für mehr Optionen";
+
+/* Class = "NSTextFieldCell"; title = "Comment"; ObjectID = "676"; */
+"676.title" = "Comment";
+
+/* Class = "NSTextFieldCell"; title = "The house"; ObjectID = "677"; */
+"677.title" = "The house";
+
+/* Class = "NSTextFieldCell"; title = "The house"; ObjectID = "678"; */
+"678.title" = "The house";

@@ -1,0 +1,159 @@
+
+/* Class = "NSWindow"; title = "ProVoc"; ObjectID = "23"; */
+"23.title" = "ProVoc";
+
+/* Class = "NSTabViewItem"; label = "Tabulatore"; ObjectID = "74"; */
+"74.label" = "Tabulatore";
+
+/* Class = "NSTabViewItem"; label = "Vista"; ObjectID = "75"; */
+"75.label" = "Vista";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Segna parola"; ObjectID = "83"; */
+"83.ibShadowedToolTip" = "Segna parola";
+
+/* Class = "NSWindow"; title = "ProVoc"; ObjectID = "120"; */
+"120.title" = "ProVoc";
+
+/* Class = "NSTabViewItem"; label = "Vista"; ObjectID = "127"; */
+"127.label" = "Vista";
+
+/* Class = "NSTabViewItem"; label = "Tabulatore"; ObjectID = "132"; */
+"132.label" = "Tabulatore";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Segna parola"; ObjectID = "137"; */
+"137.ibShadowedToolTip" = "Segna parola";
+
+/* Class = "NSBox"; title = "Titolo"; ObjectID = "158"; */
+"158.title" = "Titolo";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "219"; */
+"219.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "220"; */
+"220.title" = "Item3";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "221"; */
+"221.title" = "Item2";
+
+/* Class = "NSMenuItem"; title = "Item1"; ObjectID = "222"; */
+"222.title" = "Item1";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "234"; */
+"234.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "235"; */
+"235.title" = "Item3";
+
+/* Class = "NSMenuItem"; title = "Item1"; ObjectID = "236"; */
+"236.title" = "Item1";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "237"; */
+"237.title" = "Item2";
+
+/* Class = "NSWindow"; title = "La tua risposta:"; ObjectID = "265"; */
+"265.title" = "La tua risposta:";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "600"; */
+"600.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Do not localize"; ObjectID = "601"; */
+"601.title" = "Do not localize";
+
+/* Class = "NSButtonCell"; title = "Ripeti parole errate"; ObjectID = "632"; */
+"632.title" = "Ripeti parole errate";
+
+/* Class = "NSButtonCell"; title = "Fatto"; ObjectID = "633"; */
+"633.title" = "Fatto";
+
+/* Class = "NSTextFieldCell"; title = "Risultati"; ObjectID = "634"; */
+"634.title" = "Risultati";
+
+/* Class = "NSButtonCell"; title = "Usa etichetta:"; ObjectID = "635"; */
+"635.title" = "Usa etichetta:";
+
+/* Class = "NSButtonCell"; title = "Mostra come slideshow"; ObjectID = "637"; */
+"637.title" = "Mostra come slideshow";
+
+/* Class = "NSTextFieldCell"; title = "Prima di ripetere parole con risposta errata:"; ObjectID = "638"; */
+"638.title" = "Prima di ripetere parole con risposta errata:";
+
+/* Class = "NSButtonCell"; title = "Interrompi"; ObjectID = "639"; */
+"639.title" = "Interrompi";
+
+/* Class = "NSButtonCell"; title = "Continua"; ObjectID = "640"; */
+"640.title" = "Continua";
+
+/* Class = "NSButtonCell"; title = "Dai soluzione"; ObjectID = "641"; */
+"641.title" = "Dai soluzione";
+
+/* Class = "NSTextFieldCell"; title = "999 / 999"; ObjectID = "642"; */
+"642.title" = "999 / 999";
+
+/* Class = "NSTextFieldCell"; title = "Media"; ObjectID = "644"; */
+"644.title" = "Media";
+
+/* Class = "NSTextFieldCell"; title = "Forte"; ObjectID = "645"; */
+"645.title" = "Forte";
+
+/* Class = "NSButtonCell"; title = "Pausa"; ObjectID = "648"; */
+"648.title" = "Pausa";
+
+/* Class = "NSButtonCell"; title = "Accetta risposta"; ObjectID = "649"; */
+"649.title" = "Accetta risposta";
+
+/* Class = "NSTextFieldCell"; title = "La casa"; ObjectID = "650"; */
+"650.title" = "La casa";
+
+/* Class = "NSTextFieldCell"; title = "La casa"; ObjectID = "651"; */
+"651.title" = "La casa";
+
+/* Class = "NSTextFieldCell"; title = "Commento"; ObjectID = "652"; */
+"652.title" = "Commento";
+
+/* Class = "NSTextFieldCell"; title = "La casa"; ObjectID = "655"; */
+"655.title" = "La casa";
+
+/* Class = "NSTextFieldCell"; title = "Tieni premuto tasto Opzione ⌥ per maggiori opzioni"; ObjectID = "657"; */
+"657.title" = "Tieni premuto tasto Opzione ⌥ per maggiori opzioni";
+
+/* Class = "NSButtonCell"; title = "Continua"; ObjectID = "659"; */
+"659.title" = "Continua";
+
+/* Class = "NSTextFieldCell"; title = "Forte"; ObjectID = "660"; */
+"660.title" = "Forte";
+
+/* Class = "NSTextFieldCell"; title = "Media"; ObjectID = "662"; */
+"662.title" = "Media";
+
+/* Class = "NSTextFieldCell"; title = "999 / 999"; ObjectID = "663"; */
+"663.title" = "999 / 999";
+
+/* Class = "NSButtonCell"; title = "Interrompi"; ObjectID = "664"; */
+"664.title" = "Interrompi";
+
+/* Class = "NSButtonCell"; title = "Dai soluzione"; ObjectID = "666"; */
+"666.title" = "Dai soluzione";
+
+/* Class = "NSButtonCell"; title = "Pausa"; ObjectID = "668"; */
+"668.title" = "Pausa";
+
+/* Class = "NSTextFieldCell"; title = "La casa"; ObjectID = "669"; */
+"669.title" = "La casa";
+
+/* Class = "NSTextFieldCell"; title = "Commento"; ObjectID = "670"; */
+"670.title" = "Commento";
+
+/* Class = "NSButtonCell"; title = "Accetta risposta"; ObjectID = "673"; */
+"673.title" = "Accetta risposta";
+
+/* Class = "NSTextFieldCell"; title = "Tieni premuto tasto Opzione ⌥ per maggiori opzioni"; ObjectID = "674"; */
+"674.title" = "Tieni premuto tasto Opzione ⌥ per maggiori opzioni";
+
+/* Class = "NSTextFieldCell"; title = "Commento"; ObjectID = "676"; */
+"676.title" = "Commento";
+
+/* Class = "NSTextFieldCell"; title = "La casa"; ObjectID = "677"; */
+"677.title" = "La casa";
+
+/* Class = "NSTextFieldCell"; title = "La casa"; ObjectID = "678"; */
+"678.title" = "La casa";

@@ -1,0 +1,159 @@
+
+/* Class = "NSWindow"; title = "ProVoc"; ObjectID = "23"; */
+"23.title" = "ProVoc";
+
+/* Class = "NSTabViewItem"; label = "Tab"; ObjectID = "74"; */
+"74.label" = "Tab";
+
+/* Class = "NSTabViewItem"; label = "Vue"; ObjectID = "75"; */
+"75.label" = "Vue";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Marquer le mot"; ObjectID = "83"; */
+"83.ibShadowedToolTip" = "Marquer le mot";
+
+/* Class = "NSWindow"; title = "ProVoc"; ObjectID = "120"; */
+"120.title" = "ProVoc";
+
+/* Class = "NSTabViewItem"; label = "Vue"; ObjectID = "127"; */
+"127.label" = "Vue";
+
+/* Class = "NSTabViewItem"; label = "Tab"; ObjectID = "132"; */
+"132.label" = "Tab";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Marquer le mot"; ObjectID = "137"; */
+"137.ibShadowedToolTip" = "Marquer le mot";
+
+/* Class = "NSBox"; title = "Title"; ObjectID = "158"; */
+"158.title" = "Title";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "219"; */
+"219.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "220"; */
+"220.title" = "Item3";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "221"; */
+"221.title" = "Item2";
+
+/* Class = "NSMenuItem"; title = "Item1"; ObjectID = "222"; */
+"222.title" = "Item1";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "234"; */
+"234.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "235"; */
+"235.title" = "Item3";
+
+/* Class = "NSMenuItem"; title = "Item1"; ObjectID = "236"; */
+"236.title" = "Item1";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "237"; */
+"237.title" = "Item2";
+
+/* Class = "NSWindow"; title = "Votre réponse:"; ObjectID = "265"; */
+"265.title" = "Votre réponse:";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "600"; */
+"600.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Do not localize"; ObjectID = "601"; */
+"601.title" = "Do not localize";
+
+/* Class = "NSButtonCell"; title = "Répéter les mots incorrects"; ObjectID = "632"; */
+"632.title" = "Répéter les mots incorrects";
+
+/* Class = "NSButtonCell"; title = "Terminé"; ObjectID = "633"; */
+"633.title" = "Terminé";
+
+/* Class = "NSTextFieldCell"; title = "Résultats"; ObjectID = "634"; */
+"634.title" = "Résultats";
+
+/* Class = "NSButtonCell"; title = "Indiquer comme:"; ObjectID = "635"; */
+"635.title" = "Indiquer comme:";
+
+/* Class = "NSButtonCell"; title = "Afficher en diaporama"; ObjectID = "637"; */
+"637.title" = "Afficher en diaporama";
+
+/* Class = "NSTextFieldCell"; title = "Avant de répéter les mots incorrects:"; ObjectID = "638"; */
+"638.title" = "Avant de répéter les mots incorrects:";
+
+/* Class = "NSButtonCell"; title = "Abandonner"; ObjectID = "639"; */
+"639.title" = "Abandonner";
+
+/* Class = "NSButtonCell"; title = "Continuer"; ObjectID = "640"; */
+"640.title" = "Continuer";
+
+/* Class = "NSButtonCell"; title = "Donner la solution"; ObjectID = "641"; */
+"641.title" = "Donner la solution";
+
+/* Class = "NSTextFieldCell"; title = "999 / 999"; ObjectID = "642"; */
+"642.title" = "999 / 999";
+
+/* Class = "NSTextFieldCell"; title = "Moyen"; ObjectID = "644"; */
+"644.title" = "Moyen";
+
+/* Class = "NSTextFieldCell"; title = "Difficile"; ObjectID = "645"; */
+"645.title" = "Difficile";
+
+/* Class = "NSButtonCell"; title = "Pause"; ObjectID = "648"; */
+"648.title" = "Pause";
+
+/* Class = "NSButtonCell"; title = "Accepter la réponse"; ObjectID = "649"; */
+"649.title" = "Accepter la réponse";
+
+/* Class = "NSTextFieldCell"; title = "The house"; ObjectID = "650"; */
+"650.title" = "The house";
+
+/* Class = "NSTextFieldCell"; title = "La maison"; ObjectID = "651"; */
+"651.title" = "La maison";
+
+/* Class = "NSTextFieldCell"; title = "Commentaire"; ObjectID = "652"; */
+"652.title" = "Commentaire";
+
+/* Class = "NSTextFieldCell"; title = "The house"; ObjectID = "655"; */
+"655.title" = "The house";
+
+/* Class = "NSTextFieldCell"; title = "Maintenir la touche option ⌥ enfoncée pour plus d'options"; ObjectID = "657"; */
+"657.title" = "Maintenir la touche option ⌥ enfoncée pour plus d'options";
+
+/* Class = "NSButtonCell"; title = "Continuer"; ObjectID = "659"; */
+"659.title" = "Continuer";
+
+/* Class = "NSTextFieldCell"; title = "Difficile"; ObjectID = "660"; */
+"660.title" = "Difficile";
+
+/* Class = "NSTextFieldCell"; title = "Moyen"; ObjectID = "662"; */
+"662.title" = "Moyen";
+
+/* Class = "NSTextFieldCell"; title = "999 / 999"; ObjectID = "663"; */
+"663.title" = "999 / 999";
+
+/* Class = "NSButtonCell"; title = "Abandonner"; ObjectID = "664"; */
+"664.title" = "Abandonner";
+
+/* Class = "NSButtonCell"; title = "Donner la solution"; ObjectID = "666"; */
+"666.title" = "Donner la solution";
+
+/* Class = "NSButtonCell"; title = "Pause"; ObjectID = "668"; */
+"668.title" = "Pause";
+
+/* Class = "NSTextFieldCell"; title = "La maison"; ObjectID = "669"; */
+"669.title" = "La maison";
+
+/* Class = "NSTextFieldCell"; title = "Commentaire"; ObjectID = "670"; */
+"670.title" = "Commentaire";
+
+/* Class = "NSButtonCell"; title = "Accepter la réponse"; ObjectID = "673"; */
+"673.title" = "Accepter la réponse";
+
+/* Class = "NSTextFieldCell"; title = "Maintenir la touche option ⌥ enfoncée pour plus d'options"; ObjectID = "674"; */
+"674.title" = "Maintenir la touche option ⌥ enfoncée pour plus d'options";
+
+/* Class = "NSTextFieldCell"; title = "Comment"; ObjectID = "676"; */
+"676.title" = "Comment";
+
+/* Class = "NSTextFieldCell"; title = "The house"; ObjectID = "677"; */
+"677.title" = "The house";
+
+/* Class = "NSTextFieldCell"; title = "The house"; ObjectID = "678"; */
+"678.title" = "The house";

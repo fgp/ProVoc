@@ -1,0 +1,36 @@
+
+/* Class = "NSTextFieldCell"; title = "Titre:"; ObjectID = "62"; */
+"62.title" = "Titre:";
+
+/* Class = "NSTextFieldCell"; title = "Auteur:"; ObjectID = "64"; */
+"64.title" = "Auteur:";
+
+/* Class = "NSTextFieldCell"; title = "Commentaires:"; ObjectID = "66"; */
+"66.title" = "Commentaires:";
+
+/* Class = "NSButtonCell"; title = "Publier"; ObjectID = "68"; */
+"68.title" = "Publier";
+
+/* Class = "NSButtonCell"; title = "Annuler"; ObjectID = "69"; */
+"69.title" = "Annuler";
+
+/* Class = "NSTextFieldCell"; title = "Publication du document"; ObjectID = "70"; */
+"70.title" = "Publication du document";
+
+/* Class = "NSTextFieldCell"; title = "Merci de ne pas copier du matériel illégalement!"; ObjectID = "71"; */
+"71.title" = "Merci de ne pas copier du matériel illégalement!";
+
+/* Class = "NSTextFieldCell"; title = "Do not localize"; ObjectID = "73"; */
+"73.title" = "Do not localize";
+
+/* Class = "NSButtonCell"; title = "Annuler"; ObjectID = "74"; */
+"74.title" = "Annuler";
+
+/* Class = "NSTextFieldCell"; title = "Document publié avec succès"; ObjectID = "76"; */
+"76.title" = "Document publié avec succès";
+
+/* Class = "NSButtonCell"; title = "OK"; ObjectID = "77"; */
+"77.title" = "OK";
+
+/* Class = "NSTextFieldCell"; title = "Merci de partager votre vocabulaire avec la communauté! Il est à présent disponible au téléchargement en choisissant Télécharger du vocabulaire depuis le menu Partage."; ObjectID = "78"; */
+"78.title" = "Merci de partager votre vocabulaire avec la communauté! Il est à présent disponible au téléchargement en choisissant Télécharger du vocabulaire depuis le menu Partage.";

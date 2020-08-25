@@ -1,0 +1,12 @@
+
+/* Class = "NSWindow"; title = "ProVoc"; ObjectID = "5"; */
+"5.title" = "ProVoc";
+
+/* Class = "NSTextFieldCell"; title = "Opret et nyt dokument"; ObjectID = "29"; */
+"29.title" = "Opret et nyt dokument";
+
+/* Class = "NSTextFieldCell"; title = "Åben et eksisterende dokument"; ObjectID = "30"; */
+"30.title" = "Åben et eksisterende dokument";
+
+/* Class = "NSTextFieldCell"; title = "Download ordbog"; ObjectID = "31"; */
+"31.title" = "Download ordbog";

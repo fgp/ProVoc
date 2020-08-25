@@ -1,0 +1,474 @@
+
+/* Class = "NSWindow"; title = "ProVoc Document"; ObjectID = "29"; */
+"29.title" = "ProVoc Document";
+
+/* Class = "NSTabViewItem"; label = "Editieren"; ObjectID = "80"; */
+"80.label" = "Editieren";
+
+/* Class = "NSTabViewItem"; label = "Abprüfen"; ObjectID = "81"; */
+"81.label" = "Abprüfen";
+
+/* Class = "NSTableColumn"; headerCell.title = "Französisch"; ObjectID = "84"; */
+"84.headerCell.title" = "Französisch";
+
+/* Class = "NSTableColumn"; headerCell.title = "Deutsch"; ObjectID = "87"; */
+"87.headerCell.title" = "Deutsch";
+
+/* Class = "NSWindow"; title = "Rename"; ObjectID = "108"; */
+"108.title" = "Rename";
+
+/* Class = "NSMenuItem"; title = "Allemand"; ObjectID = "212"; */
+"212.title" = "Allemand";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "214"; */
+"214.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Allemand"; ObjectID = "216"; */
+"216.title" = "Allemand";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "218"; */
+"218.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Anglais"; ObjectID = "220"; */
+"220.title" = "Anglais";
+
+/* Class = "NSMenuItem"; title = "Français"; ObjectID = "221"; */
+"221.title" = "Français";
+
+/* Class = "NSMenuItem"; title = "Français"; ObjectID = "222"; */
+"222.title" = "Français";
+
+/* Class = "NSMenuItem"; title = "Anglais"; ObjectID = "223"; */
+"223.title" = "Anglais";
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "282"; */
+"282.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "Kommentare"; ObjectID = "285"; */
+"285.title" = "Kommentare";
+
+/* Class = "NSMenuItem"; title = "Letzte Sucheinträge"; ObjectID = "287"; */
+"287.title" = "Letzte Sucheinträge";
+
+/* Class = "NSMenuItem"; title = "Löschen"; ObjectID = "288"; */
+"288.title" = "Löschen";
+
+/* Class = "NSMenuItem"; title = " "; ObjectID = "290"; */
+"290.title" = " ";
+
+/* Class = "NSMenuItem"; title = "Sources"; ObjectID = "291"; */
+"291.title" = "Sources";
+
+/* Class = "NSMenuItem"; title = "Targets"; ObjectID = "292"; */
+"292.title" = "Targets";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "395"; */
+"395.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "396"; */
+"396.title" = "Item3";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "397"; */
+"397.title" = "Item2";
+
+/* Class = "NSMenuItem"; title = "Item1"; ObjectID = "398"; */
+"398.title" = "Item1";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "514"; */
+"514.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Komma-getrennte Werte (CSV)"; ObjectID = "515"; */
+"515.title" = "Komma-getrennte Werte (CSV)";
+
+/* Class = "NSMenuItem"; title = "Tabulator-getrennter Text"; ObjectID = "517"; */
+"517.title" = "Tabulator-getrennter Text";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "742"; */
+"742.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Neues Kapitel…"; ObjectID = "743"; */
+"743.title" = "Neues Kapitel…";
+
+/* Class = "NSMenuItem"; title = "Löschen"; ObjectID = "744"; */
+"744.title" = "Löschen";
+
+/* Class = "NSMenuItem"; title = "Neue Lektion…"; ObjectID = "746"; */
+"746.title" = "Neue Lektion…";
+
+/* Class = "NSTableColumn"; headerCell.title = "Lektionen"; ObjectID = "750"; */
+"750.headerCell.title" = "Lektionen";
+
+/* Class = "NSTableColumn"; headerCell.title = "Trainingsmoden"; ObjectID = "766"; */
+"766.headerCell.title" = "Trainingsmoden";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "776"; */
+"776.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Löschen"; ObjectID = "778"; */
+"778.title" = "Löschen";
+
+/* Class = "NSMenuItem"; title = "Neu…"; ObjectID = "779"; */
+"779.title" = "Neu…";
+
+/* Class = "NSTableColumn"; headerCell.title = "Nr."; ObjectID = "803"; */
+"803.headerCell.title" = "Nr.";
+
+/* Class = "NSTableColumn"; headerCell.title = "Kommentar"; ObjectID = "804"; */
+"804.headerCell.title" = "Kommentar";
+
+/* Class = "NSTableColumn"; headerCell.title = "Schwierigkeit"; ObjectID = "805"; */
+"805.headerCell.title" = "Schwierigkeit";
+
+/* Class = "NSMenuItem"; title = "Duplizieren"; ObjectID = "811"; */
+"811.title" = "Duplizieren";
+
+/* Class = "NSTabViewItem"; label = "Tab"; ObjectID = "844"; */
+"844.label" = "Tab";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "855"; */
+"855.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Letzte Tage"; ObjectID = "856"; */
+"856.title" = "Letzte Tage";
+
+/* Class = "NSMenuItem"; title = "Letzte Trainings"; ObjectID = "857"; */
+"857.title" = "Letzte Trainings";
+
+/* Class = "NSMenuItem"; title = "Letzte Wochen"; ObjectID = "858"; */
+"858.title" = "Letzte Wochen";
+
+/* Class = "NSMenuItem"; title = "Letzte Monate"; ObjectID = "859"; */
+"859.title" = "Letzte Monate";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "907"; */
+"907.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item1"; ObjectID = "908"; */
+"908.title" = "Item1";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "909"; */
+"909.title" = "Item2";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "910"; */
+"910.title" = "Item3";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "1028"; */
+"1028.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Beide"; ObjectID = "1029"; */
+"1029.title" = "Beide";
+
+/* Class = "NSMenuItem"; title = "Zufällig"; ObjectID = "1031"; */
+"1031.title" = "Zufällig";
+
+/* Class = "NSMenuItem"; title = "Version"; ObjectID = "1032"; */
+"1032.title" = "Version";
+
+/* Class = "NSMenuItem"; title = "Theme"; ObjectID = "1033"; */
+"1033.title" = "Theme";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "1057"; */
+"1057.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Nie zeigen"; ObjectID = "1058"; */
+"1058.title" = "Nie zeigen";
+
+/* Class = "NSMenuItem"; title = "Immer zeigen"; ObjectID = "1059"; */
+"1059.title" = "Immer zeigen";
+
+/* Class = "NSMenuItem"; title = "Mit Lösung zeigen"; ObjectID = "1060"; */
+"1060.title" = "Mit Lösung zeigen";
+
+/* Class = "NSMenuItem"; title = "Mit Quellsprache zeigen"; ObjectID = "1061"; */
+"1061.title" = "Mit Quellsprache zeigen";
+
+/* Class = "NSMenuItem"; title = "Mit Zielsprache zeigen"; ObjectID = "1062"; */
+"1062.title" = "Mit Zielsprache zeigen";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "1064"; */
+"1064.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Durchgehend"; ObjectID = "1065"; */
+"1065.title" = "Durchgehend";
+
+/* Class = "NSMenuItem"; title = "Bis gelernt"; ObjectID = "1066"; */
+"1066.title" = "Bis gelernt";
+
+/* Class = "NSMenuItem"; title = "Normal"; ObjectID = "1067"; */
+"1067.title" = "Normal";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "1071"; */
+"1071.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Immer zeigen"; ObjectID = "1072"; */
+"1072.title" = "Immer zeigen";
+
+/* Class = "NSMenuItem"; title = "Mit Lösung zeigen"; ObjectID = "1073"; */
+"1073.title" = "Mit Lösung zeigen";
+
+/* Class = "NSMenuItem"; title = "Mit Quellsprache zeigen"; ObjectID = "1074"; */
+"1074.title" = "Mit Quellsprache zeigen";
+
+/* Class = "NSMenuItem"; title = "Nie zeigen"; ObjectID = "1075"; */
+"1075.title" = "Nie zeigen";
+
+/* Class = "NSMenuItem"; title = "Mit Zielsprache zeigen"; ObjectID = "1076"; */
+"1076.title" = "Mit Zielsprache zeigen";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "1080"; */
+"1080.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Fragen mit Media nie zeigen"; ObjectID = "1081"; */
+"1081.title" = "Fragen mit Media nie zeigen";
+
+/* Class = "NSMenuItem"; title = "Media nie zeigen"; ObjectID = "1082"; */
+"1082.title" = "Media nie zeigen";
+
+/* Class = "NSMenuItem"; title = "Fragen und Media immer zeigen"; ObjectID = "1083"; */
+"1083.title" = "Fragen und Media immer zeigen";
+
+/* Class = "NSMenuItem"; title = "Fragen nach Media zeigen"; ObjectID = "1084"; */
+"1084.title" = "Fragen nach Media zeigen";
+
+/* Class = "NSMenuItem"; title = "Media nach Fragen zeigen"; ObjectID = "1085"; */
+"1085.title" = "Media nach Fragen zeigen";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "1156"; */
+"1156.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Verbleibende Zeit"; ObjectID = "1157"; */
+"1157.title" = "Verbleibende Zeit";
+
+/* Class = "NSMenuItem"; title = "Kein"; ObjectID = "1160"; */
+"1160.title" = "Kein";
+
+/* Class = "NSMenuItem"; title = "Verstrichene Zeit"; ObjectID = "1161"; */
+"1161.title" = "Verstrichene Zeit";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "1184"; */
+"1184.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Standard"; ObjectID = "1186"; */
+"1186.title" = "Standard";
+
+/* Class = "NSTableColumn"; headerCell.title = "Zuletzt geantwortet"; ObjectID = "1200"; */
+"1200.headerCell.title" = "Zuletzt geantwortet";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "1208"; */
+"1208.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Tagen"; ObjectID = "1209"; */
+"1209.title" = "Tagen";
+
+/* Class = "NSMenuItem"; title = "Wochen"; ObjectID = "1210"; */
+"1210.title" = "Wochen";
+
+/* Class = "NSMenuItem"; title = "Monaten"; ObjectID = "1219"; */
+"1219.title" = "Monaten";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "1225"; */
+"1225.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "zufällige Vokabeln"; ObjectID = "1226"; */
+"1226.title" = "zufällige Vokabeln";
+
+/* Class = "NSMenuItem"; title = "schwierigste Vokabeln"; ObjectID = "1228"; */
+"1228.title" = "schwierigste Vokabeln";
+
+/* Class = "NSTableColumn"; headerCell.title = "Nächste Revision"; ObjectID = "1246"; */
+"1246.headerCell.title" = "Nächste Revision";
+
+/* Class = "NSTextFieldCell"; title = "999 of 999 words"; ObjectID = "1256"; */
+"1256.title" = "999 of 999 words";
+
+/* Class = "NSSearchFieldCell"; placeholderString = "Suchbegriff eingeben"; ObjectID = "1257"; */
+"1257.placeholderString" = "Suchbegriff eingeben";
+
+/* Class = "NSSegmentedCell"; 1258.ibShadowedLabels[0] = "Editieren"; ObjectID = "1258"; */
+"1258.ibShadowedLabels[0]" = "Editieren";
+
+/* Class = "NSSegmentedCell"; 1258.ibShadowedLabels[1] = "Training"; ObjectID = "1258"; */
+"1258.ibShadowedLabels[1]" = "Training";
+
+/* Class = "NSSegmentedCell"; 1258.ibShadowedLabels[2] = "Analyse"; ObjectID = "1258"; */
+"1258.ibShadowedLabels[2]" = "Analyse";
+
+/* Class = "NSTextFieldCell"; title = "Kommentar:"; ObjectID = "1264"; */
+"1264.title" = "Kommentar:";
+
+/* Class = "NSButtonCell"; title = "Hinzufügen"; ObjectID = "1266"; */
+"1266.title" = "Hinzufügen";
+
+/* Class = "NSButtonCell"; title = "Button"; ObjectID = "1267"; */
+"1267.title" = "Button";
+
+/* Class = "NSTextFieldCell"; title = "Seite 2"; ObjectID = "1268"; */
+"1268.title" = "Seite 2";
+
+/* Class = "NSButtonCell"; title = "Vollbild"; ObjectID = "1269"; */
+"1269.title" = "Vollbild";
+
+/* Class = "NSSegmentedCell"; 1273.ibShadowedLabels[0] = "Editieren"; ObjectID = "1273"; */
+"1273.ibShadowedLabels[0]" = "Editieren";
+
+/* Class = "NSSegmentedCell"; 1273.ibShadowedLabels[1] = "Training"; ObjectID = "1273"; */
+"1273.ibShadowedLabels[1]" = "Training";
+
+/* Class = "NSSegmentedCell"; 1273.ibShadowedLabels[2] = "Analyse"; ObjectID = "1273"; */
+"1273.ibShadowedLabels[2]" = "Analyse";
+
+/* Class = "NSButtonCell"; title = "Löschen"; ObjectID = "1278"; */
+"1278.title" = "Löschen";
+
+/* Class = "NSSegmentedCell"; 1280.ibShadowedLabels[0] = "Editieren"; ObjectID = "1280"; */
+"1280.ibShadowedLabels[0]" = "Editieren";
+
+/* Class = "NSSegmentedCell"; 1280.ibShadowedLabels[1] = "Training"; ObjectID = "1280"; */
+"1280.ibShadowedLabels[1]" = "Training";
+
+/* Class = "NSSegmentedCell"; 1280.ibShadowedLabels[2] = "Analyse"; ObjectID = "1280"; */
+"1280.ibShadowedLabels[2]" = "Analyse";
+
+/* Class = "NSTextFieldCell"; title = "Neue Bezeichnung:"; ObjectID = "1283"; */
+"1283.title" = "Neue Bezeichnung:";
+
+/* Class = "NSButtonCell"; title = "Abbrechen"; ObjectID = "1285"; */
+"1285.title" = "Abbrechen";
+
+/* Class = "NSButtonCell"; title = "OK"; ObjectID = "1286"; */
+"1286.title" = "OK";
+
+/* Class = "NSButtonCell"; title = "Kommentare"; ObjectID = "1287"; */
+"1287.title" = "Kommentare";
+
+/* Class = "NSTextFieldCell"; title = "Einfügen:"; ObjectID = "1288"; */
+"1288.title" = "Einfügen:";
+
+/* Class = "NSButtonCell"; title = "Seitennummern"; ObjectID = "1289"; */
+"1289.title" = "Seitennummern";
+
+/* Class = "NSTextFieldCell"; title = "Zeichengröße:"; ObjectID = "1290"; */
+"1290.title" = "Zeichengröße:";
+
+/* Class = "NSTextFieldCell"; title = "-100 pt"; ObjectID = "1291"; */
+"1291.title" = "-100 pt";
+
+/* Class = "NSTextFieldCell"; title = "Textkodierung:"; ObjectID = "1293"; */
+"1293.title" = "Textkodierung:";
+
+/* Class = "NSTextFieldCell"; title = "Format:"; ObjectID = "1295"; */
+"1295.title" = "Format:";
+
+/* Class = "NSButtonCell"; title = "Kommmentare"; ObjectID = "1297"; */
+"1297.title" = "Kommmentare";
+
+/* Class = "NSTextFieldCell"; title = "Einfügen:"; ObjectID = "1298"; */
+"1298.title" = "Einfügen:";
+
+/* Class = "NSButtonCell"; title = "Lektionnamen"; ObjectID = "1299"; */
+"1299.title" = "Lektionnamen";
+
+/* Class = "NSTextFieldCell"; title = "Textkodierung:"; ObjectID = "1301"; */
+"1301.title" = "Textkodierung:";
+
+/* Class = "NSTextFieldCell"; title = "Question in French.\nAnswers in German."; ObjectID = "1302"; */
+"1302.title" = "Question in French.\nAnswers in German.";
+
+/* Class = "NSButtonCell"; title = "Kategorie(n)"; ObjectID = "1305"; */
+"1305.title" = "Kategorie(n)";
+
+/* Class = "NSButtonCell"; title = "MC Fragen (Kreuzchentest)"; ObjectID = "1306"; */
+"1306.title" = "MC Fragen (Kreuzchentest)";
+
+/* Class = "NSTextFieldCell"; title = "10"; ObjectID = "1307"; */
+"1307.title" = "10";
+
+/* Class = "NSTextFieldCell"; title = "Anzahl Antworten:"; ObjectID = "1308"; */
+"1308.title" = "Anzahl Antworten:";
+
+/* Class = "NSTextFieldCell"; title = "Richtung:"; ObjectID = "1310"; */
+"1310.title" = "Richtung:";
+
+/* Class = "NSTextFieldCell"; title = "Testweise:"; ObjectID = "1311"; */
+"1311.title" = "Testweise:";
+
+/* Class = "NSTextFieldCell"; title = "Versuche:"; ObjectID = "1312"; */
+"1312.title" = "Versuche:";
+
+/* Class = "NSTextFieldCell"; title = "Lösung nach"; ObjectID = "1313"; */
+"1313.title" = "Lösung nach";
+
+/* Class = "NSTextFieldCell"; title = "10"; ObjectID = "1314"; */
+"1314.title" = "10";
+
+/* Class = "NSTextFieldCell"; title = "Versuchen angeben"; ObjectID = "1316"; */
+"1316.title" = "Versuchen angeben";
+
+/* Class = "NSButtonCell"; title = "Verzögert"; ObjectID = "1317"; */
+"1317.title" = "Verzögert";
+
+/* Class = "NSButtonCell"; title = "Bedeutung von falschen Antworten anzeigen"; ObjectID = "1318"; */
+"1318.title" = "Bedeutung von falschen Antworten anzeigen";
+
+/* Class = "NSTextFieldCell"; title = "Kommentare:"; ObjectID = "1319"; */
+"1319.title" = "Kommentare:";
+
+/* Class = "NSTextFieldCell"; title = "Do not translate"; ObjectID = "1322"; */
+"1322.title" = "Do not translate";
+
+/* Class = "NSTextFieldCell"; title = "Etiketten:"; ObjectID = "1323"; */
+"1323.title" = "Etiketten:";
+
+/* Class = "NSButtonCell"; title = "Farbiger Fensterhintergrund"; ObjectID = "1325"; */
+"1325.title" = "Farbiger Fensterhintergrund";
+
+/* Class = "NSTextFieldCell"; title = "Media:"; ObjectID = "1326"; */
+"1326.title" = "Media:";
+
+/* Class = "NSButtonCell"; title = "Automatisch wiedergeben"; ObjectID = "1328"; */
+"1328.title" = "Automatisch wiedergeben";
+
+/* Class = "NSButtonCell"; title = "Beginnen mit Diashow neuer Vokabeln"; ObjectID = "1329"; */
+"1329.title" = "Beginnen mit Diashow neuer Vokabeln";
+
+/* Class = "NSButtonCell"; title = "MC Fragen mit Bildern"; ObjectID = "1330"; */
+"1330.title" = "MC Fragen mit Bildern";
+
+/* Class = "NSTextFieldCell"; title = "Timer:"; ObjectID = "1331"; */
+"1331.title" = "Timer:";
+
+/* Class = "NSTextFieldCell"; title = "90:00"; ObjectID = "1333"; */
+"1333.title" = "90:00";
+
+/* Class = "NSTextFieldCell"; title = "m:ss"; ObjectID = "1335"; */
+"1335.title" = "m:ss";
+
+/* Class = "NSTextFieldCell"; title = "Sprachausgabe:"; ObjectID = "1336"; */
+"1336.title" = "Sprachausgabe:";
+
+/* Class = "NSButtonCell"; title = "Englische Vokabeln aussprechen"; ObjectID = "1337"; */
+"1337.title" = "Englische Vokabeln aussprechen";
+
+/* Class = "NSTextFieldCell"; title = "Stimme:"; ObjectID = "1338"; */
+"1338.title" = "Stimme:";
+
+/* Class = "NSTextFieldCell"; title = "Nur:"; ObjectID = "1340"; */
+"1340.title" = "Nur:";
+
+/* Class = "NSButtonCell"; title = "Vokabeln, die nicht beantwortet wurden seit:"; ObjectID = "1341"; */
+"1341.title" = "Vokabeln, die nicht beantwortet wurden seit:";
+
+/* Class = "NSTextFieldCell"; title = "10"; ObjectID = "1342"; */
+"1342.title" = "10";
+
+/* Class = "NSTextFieldCell"; title = "10"; ObjectID = "1346"; */
+"1346.title" = "10";
+
+/* Class = "NSButtonCell"; title = "Etikett-Texte anzeigen"; ObjectID = "1349"; */
+"1349.title" = "Etikett-Texte anzeigen";
+
+/* Class = "NSButtonCell"; title = "Zu revidierende Vokabeln"; ObjectID = "1350"; */
+"1350.title" = "Zu revidierende Vokabeln";
+
+/* Class = "NSButtonCell"; title = "Fragen in zufälliger Reihenfolge"; ObjectID = "1351"; */
+"1351.title" = "Fragen in zufälliger Reihenfolge";

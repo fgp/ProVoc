@@ -1,0 +1,264 @@
+
+/* Class = "NSWindow"; title = "Preferencias"; ObjectID = "5"; */
+"5.title" = "Preferencias";
+
+/* Class = "NSTableColumn"; headerCell.title = "Nombre"; ObjectID = "214"; */
+"214.headerCell.title" = "Nombre";
+
+/* Class = "NSTableColumn"; headerCell.title = "Espacios"; ObjectID = "215"; */
+"215.headerCell.title" = "Espacios";
+
+/* Class = "NSTableColumn"; headerCell.title = "Acentos"; ObjectID = "216"; */
+"216.headerCell.title" = "Acentos";
+
+/* Class = "NSTableColumn"; headerCell.title = "Palabras Opcionales"; ObjectID = "217"; */
+"217.headerCell.title" = "Palabras Opcionales";
+
+/* Class = "NSTableColumn"; headerCell.title = "May.-Minúscula"; ObjectID = "218"; */
+"218.headerCell.title" = "May.-Minúscula";
+
+/* Class = "NSTableColumn"; headerCell.title = "Puntuación"; ObjectID = "219"; */
+"219.headerCell.title" = "Puntuación";
+
+/* Class = "NSButtonCell"; title = "palabras"; ObjectID = "367"; */
+"367.title" = "palabras";
+
+/* Class = "NSButtonCell"; title = "notas"; ObjectID = "368"; */
+"368.title" = "notas";
+
+/* Class = "NSImageView"; ibShadowedToolTip = "El número máximo de notas en el iPod es mayor de (1000)"; ObjectID = "375"; */
+"375.ibShadowedToolTip" = "El número máximo de notas en el iPod es mayor de (1000)";
+
+/* Class = "NSMenu"; title = "Otras Vistas"; ObjectID = "563"; */
+"563.title" = "Otras Vistas";
+
+/* Class = "NSMenuItem"; title = "Do not localize"; ObjectID = "566"; */
+"566.title" = "Do not localize";
+
+/* Class = "NSMenu"; title = "Otras Vistas"; ObjectID = "573"; */
+"573.title" = "Otras Vistas";
+
+/* Class = "NSMenuItem"; title = "De Izquierda a Derecha"; ObjectID = "575"; */
+"575.title" = "De Izquierda a Derecha";
+
+/* Class = "NSMenuItem"; title = "De Derecha a Izquierda"; ObjectID = "576"; */
+"576.title" = "De Derecha a Izquierda";
+
+/* Class = "NSMenu"; title = "Otras Vistas"; ObjectID = "579"; */
+"579.title" = "Otras Vistas";
+
+/* Class = "NSMenuItem"; title = "De Izquierda a Derecha"; ObjectID = "580"; */
+"580.title" = "De Izquierda a Derecha";
+
+/* Class = "NSMenuItem"; title = "De Derecha a Izquierda"; ObjectID = "581"; */
+"581.title" = "De Derecha a Izquierda";
+
+/* Class = "NSMenu"; title = "Otras Vistas"; ObjectID = "583"; */
+"583.title" = "Otras Vistas";
+
+/* Class = "NSMenuItem"; title = "De Izquierda a Derecha"; ObjectID = "584"; */
+"584.title" = "De Izquierda a Derecha";
+
+/* Class = "NSMenuItem"; title = "De Derecha a Izquierda"; ObjectID = "585"; */
+"585.title" = "De Derecha a Izquierda";
+
+/* Class = "NSButtonCell"; title = "Inmediatamente"; ObjectID = "628"; */
+"628.title" = "Inmediatamente";
+
+/* Class = "NSButtonCell"; title = "Después de cierta pausa"; ObjectID = "629"; */
+"629.title" = "Después de cierta pausa";
+
+/* Class = "NSButtonCell"; title = "Utilizar tipo"; ObjectID = "662"; */
+"662.title" = "Utilizar tipo";
+
+/* Class = "NSTextFieldCell"; title = "añadir un comentario a una palabra"; ObjectID = "664"; */
+"664.title" = "añadir un comentario a una palabra";
+
+/* Class = "NSButtonCell"; title = "Utilizar tipo"; ObjectID = "665"; */
+"665.title" = "Utilizar tipo";
+
+/* Class = "NSTextFieldCell"; title = "para separar los sinónimos"; ObjectID = "667"; */
+"667.title" = "para separar los sinónimos";
+
+/* Class = "NSTextFieldCell"; title = "Caracteres Especiales"; ObjectID = "668"; */
+"668.title" = "Caracteres Especiales";
+
+/* Class = "NSTextFieldCell"; title = "Color de fondo:"; ObjectID = "669"; */
+"669.title" = "Color de fondo:";
+
+/* Class = "NSTextFieldCell"; title = "Práctica a Pantalla completa"; ObjectID = "670"; */
+"670.title" = "Práctica a Pantalla completa";
+
+/* Class = "NSButtonCell"; title = "Mostrar barra de menú"; ObjectID = "671"; */
+"671.title" = "Mostrar barra de menú";
+
+/* Class = "NSButtonCell"; title = "Practicar los sinónimos separadamente"; ObjectID = "672"; */
+"672.title" = "Practicar los sinónimos separadamente";
+
+/* Class = "NSTextFieldCell"; title = "Diapositivas"; ObjectID = "673"; */
+"673.title" = "Diapositivas";
+
+/* Class = "NSButtonCell"; title = "Adelantar automaticamente"; ObjectID = "674"; */
+"674.title" = "Adelantar automaticamente";
+
+/* Class = "NSButtonCell"; title = "Mezclar las palabras"; ObjectID = "676"; */
+"676.title" = "Mezclar las palabras";
+
+/* Class = "NSTextFieldCell"; title = "Lento"; ObjectID = "677"; */
+"677.title" = "Lento";
+
+/* Class = "NSTextFieldCell"; title = "Rápido"; ObjectID = "678"; */
+"678.title" = "Rápido";
+
+/* Class = "NSButtonCell"; title = "Fondo con animación:"; ObjectID = "679"; */
+"679.title" = "Fondo con animación:";
+
+/* Class = "NSButtonCell"; title = "Mostrar la ventana de punto de inicio"; ObjectID = "681"; */
+"681.title" = "Mostrar la ventana de punto de inicio";
+
+/* Class = "NSTextFieldCell"; title = "Idiomas"; ObjectID = "684"; */
+"684.title" = "Idiomas";
+
+/* Class = "NSTextFieldCell"; title = "Etiquetas"; ObjectID = "685"; */
+"685.title" = "Etiquetas";
+
+/* Class = "NSButtonCell"; title = "Volver a lo Predeterminado"; ObjectID = "695"; */
+"695.title" = "Volver a lo Predeterminado";
+
+/* Class = "NSTextFieldCell"; title = "Contenido del iPod:"; ObjectID = "696"; */
+"696.title" = "Contenido del iPod:";
+
+/* Class = "NSButtonCell"; title = "Utilizar notas separadas para las soluciones"; ObjectID = "698"; */
+"698.title" = "Utilizar notas separadas para las soluciones";
+
+/* Class = "NSButtonCell"; title = "Permitir que el iPod lea otras notas"; ObjectID = "699"; */
+"699.title" = "Permitir que el iPod lea otras notas";
+
+/* Class = "NSTextFieldCell"; title = "Total:"; ObjectID = "700"; */
+"700.title" = "Total:";
+
+/* Class = "NSButtonCell"; title = "Eliminar Todas las Notas"; ObjectID = "701"; */
+"701.title" = "Eliminar Todas las Notas";
+
+/* Class = "NSTextFieldCell"; title = "1000"; ObjectID = "703"; */
+"703.title" = "1000";
+
+/* Class = "NSButtonCell"; title = "Eliminar Audio no Utilizado"; ObjectID = "704"; */
+"704.title" = "Eliminar Audio no Utilizado";
+
+/* Class = "NSTextFieldCell"; title = "No se encuentra un iPod conectado."; ObjectID = "705"; */
+"705.title" = "No se encuentra un iPod conectado.";
+
+/* Class = "NSTextFieldCell"; title = "100 pt"; ObjectID = "706"; */
+"706.title" = "100 pt";
+
+/* Class = "NSButtonCell"; title = "Colocar…"; ObjectID = "707"; */
+"707.title" = "Colocar…";
+
+/* Class = "NSTextFieldCell"; title = "100 pt"; ObjectID = "708"; */
+"708.title" = "100 pt";
+
+/* Class = "NSButtonCell"; title = "Colocar…"; ObjectID = "709"; */
+"709.title" = "Colocar…";
+
+/* Class = "NSTextFieldCell"; title = "100 pt"; ObjectID = "710"; */
+"710.title" = "100 pt";
+
+/* Class = "NSTextFieldCell"; title = "100 pt"; ObjectID = "711"; */
+"711.title" = "100 pt";
+
+/* Class = "NSTextFieldCell"; title = "Practicando"; ObjectID = "712"; */
+"712.title" = "Practicando";
+
+/* Class = "NSTextFieldCell"; title = "100 pt"; ObjectID = "713"; */
+"713.title" = "100 pt";
+
+/* Class = "NSTextFieldCell"; title = "Commentarios:"; ObjectID = "715"; */
+"715.title" = "Commentarios:";
+
+/* Class = "NSTextFieldCell"; title = "Fuente:"; ObjectID = "716"; */
+"716.title" = "Fuente:";
+
+/* Class = "NSButtonCell"; title = "Colocar…"; ObjectID = "720"; */
+"720.title" = "Colocar…";
+
+/* Class = "NSTextFieldCell"; title = "Editando"; ObjectID = "721"; */
+"721.title" = "Editando";
+
+/* Class = "NSTextFieldCell"; title = "100 pt"; ObjectID = "725"; */
+"725.title" = "100 pt";
+
+/* Class = "NSTextFieldCell"; title = "Objetivo:"; ObjectID = "727"; */
+"727.title" = "Objetivo:";
+
+/* Class = "NSTextFieldCell"; title = "Tipografía & Tamaño"; ObjectID = "729"; */
+"729.title" = "Tipografía & Tamaño";
+
+/* Class = "NSTextFieldCell"; title = "Escribiendo las Indicaciones"; ObjectID = "733"; */
+"733.title" = "Escribiendo las Indicaciones";
+
+/* Class = "NSTextFieldCell"; title = "Objetivo:"; ObjectID = "734"; */
+"734.title" = "Objetivo:";
+
+/* Class = "NSTextFieldCell"; title = "Commentarios:"; ObjectID = "735"; */
+"735.title" = "Commentarios:";
+
+/* Class = "NSTextFieldCell"; title = "Fuente:"; ObjectID = "736"; */
+"736.title" = "Fuente:";
+
+/* Class = "NSTextFieldCell"; title = "Sostener la tecla opción ⌥ oprimida para resetear la tipografía preseleccionada & el tamaño"; ObjectID = "737"; */
+"737.title" = "Sostener la tecla opción ⌥ oprimida para resetear la tipografía preseleccionada & el tamaño";
+
+/* Class = "NSTextFieldCell"; title = "Palabras para Repasar"; ObjectID = "738"; */
+"738.title" = "Palabras para Repasar";
+
+/* Class = "NSTextFieldCell"; title = "Lento"; ObjectID = "739"; */
+"739.title" = "Lento";
+
+/* Class = "NSTextFieldCell"; title = "Rápido"; ObjectID = "740"; */
+"740.title" = "Rápido";
+
+/* Class = "NSTextFieldCell"; title = "Velocidad de Aprendizaje"; ObjectID = "741"; */
+"741.title" = "Velocidad de Aprendizaje";
+
+/* Class = "NSTextFieldCell"; title = "Frecuente"; ObjectID = "743"; */
+"743.title" = "Frecuente";
+
+/* Class = "NSTextFieldCell"; title = "Ocasional"; ObjectID = "744"; */
+"744.title" = "Ocasional";
+
+/* Class = "NSTextFieldCell"; title = "Practicando"; ObjectID = "745"; */
+"745.title" = "Practicando";
+
+/* Class = "NSTextFieldCell"; title = "Método de Aprendizaje “Hasta ser Aprendida”"; ObjectID = "747"; */
+"747.title" = "Método de Aprendizaje “Hasta ser Aprendida”";
+
+/* Class = "NSTextFieldCell"; title = "Continuar practicando cada palabra hasta ser contestada correctamente"; ObjectID = "748"; */
+"748.title" = "Continuar practicando cada palabra hasta ser contestada correctamente";
+
+/* Class = "NSTextFieldCell"; title = "veces consecutivamente"; ObjectID = "749"; */
+"749.title" = "veces consecutivamente";
+
+/* Class = "NSTextFieldCell"; title = "10"; ObjectID = "750"; */
+"750.title" = "10";
+
+/* Class = "NSTextFieldCell"; title = "Repetir las palabras equivocadas:"; ObjectID = "752"; */
+"752.title" = "Repetir las palabras equivocadas:";
+
+/* Class = "NSTextFieldCell"; title = "Una respuesta correcta se compensa con"; ObjectID = "753"; */
+"753.title" = "Una respuesta correcta se compensa con";
+
+/* Class = "NSTextFieldCell"; title = "10.0"; ObjectID = "754"; */
+"754.title" = "10.0";
+
+/* Class = "NSTextFieldCell"; title = "respuestas incorrectas"; ObjectID = "755"; */
+"755.title" = "respuestas incorrectas";
+
+/* Class = "NSTextFieldCell"; title = "Grado de Dificultad de Palabras"; ObjectID = "756"; */
+"756.title" = "Grado de Dificultad de Palabras";
+
+/* Class = "NSButtonCell"; title = "Radio"; ObjectID = "758"; */
+"758.title" = "Radio";
+
+/* Class = "NSButtonCell"; title = "Radio"; ObjectID = "759"; */
+"759.title" = "Radio";

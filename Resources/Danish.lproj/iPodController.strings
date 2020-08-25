@@ -1,0 +1,54 @@
+
+/* Class = "NSWindow"; title = "Window"; ObjectID = "5"; */
+"5.title" = "Window";
+
+/* Class = "NSButtonCell"; title = "Valgte lektioner"; ObjectID = "19"; */
+"19.title" = "Valgte lektioner";
+
+/* Class = "NSButtonCell"; title = "Alle lektioner"; ObjectID = "20"; */
+"20.title" = "Alle lektioner";
+
+/* Class = "NSButtonCell"; title = "Spørgsmålsrække"; ObjectID = "66"; */
+"66.title" = "Spørgsmålsrække";
+
+/* Class = "NSButtonCell"; title = "Ordbog"; ObjectID = "67"; */
+"67.title" = "Ordbog";
+
+/* Class = "NSButtonCell"; title = "Spørgsmålsrække & ordbog"; ObjectID = "68"; */
+"68.title" = "Spørgsmålsrække & ordbog";
+
+/* Class = "NSTextFieldCell"; title = "Do not localize"; ObjectID = "74"; */
+"74.title" = "Do not localize";
+
+/* Class = "NSTextFieldCell"; title = "Do not localize"; ObjectID = "75"; */
+"75.title" = "Do not localize";
+
+/* Class = "NSButtonCell"; title = "OK"; ObjectID = "76"; */
+"76.title" = "OK";
+
+/* Class = "NSButtonCell"; title = "Eject iPod"; ObjectID = "77"; */
+"77.title" = "Eject iPod";
+
+/* Class = "NSTextFieldCell"; title = "Sending to iPod…"; ObjectID = "78"; */
+"78.title" = "Sending to iPod…";
+
+/* Class = "NSButtonCell"; title = "Afbryd"; ObjectID = "80"; */
+"80.title" = "Afbryd";
+
+/* Class = "NSTextFieldCell"; title = "Sendt:"; ObjectID = "82"; */
+"82.title" = "Sendt:";
+
+/* Class = "NSButtonCell"; title = "Send til iPod"; ObjectID = "83"; */
+"83.title" = "Send til iPod";
+
+/* Class = "NSButtonCell"; title = "Afbryd"; ObjectID = "84"; */
+"84.title" = "Afbryd";
+
+/* Class = "NSTextFieldCell"; title = "Som:"; ObjectID = "85"; */
+"85.title" = "Som:";
+
+/* Class = "NSButtonCell"; title = "Radio"; ObjectID = "86"; */
+"86.title" = "Radio";
+
+/* Class = "NSButtonCell"; title = "Radio"; ObjectID = "87"; */
+"87.title" = "Radio";

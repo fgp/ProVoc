@@ -1,0 +1,291 @@
+
+/* Class = "NSMenuItem"; title = "Alle nach vorne bringen"; ObjectID = "5"; */
+"5.title" = "Alle nach vorne bringen";
+
+/* Class = "NSMenuItem"; title = "Fenster"; ObjectID = "19"; */
+"19.title" = "Fenster";
+
+/* Class = "NSMenuItem"; title = "Im Dock ablegen"; ObjectID = "23"; */
+"23.title" = "Im Dock ablegen";
+
+/* Class = "NSMenu"; title = "Fenster"; ObjectID = "24"; */
+"24.title" = "Fenster";
+
+/* Class = "NSMenu"; title = "MainMenu"; ObjectID = "29"; */
+"29.title" = "MainMenu";
+
+/* Class = "NSMenuItem"; title = "ProVoc"; ObjectID = "56"; */
+"56.title" = "ProVoc";
+
+/* Class = "NSMenu"; title = "ProVoc"; ObjectID = "57"; */
+"57.title" = "ProVoc";
+
+/* Class = "NSMenuItem"; title = "Über ProVoc"; ObjectID = "58"; */
+"58.title" = "Über ProVoc";
+
+/* Class = "NSMenuItem"; title = "Öffnen..."; ObjectID = "72"; */
+"72.title" = "Öffnen...";
+
+/* Class = "NSMenuItem"; title = "Schließen"; ObjectID = "73"; */
+"73.title" = "Schließen";
+
+/* Class = "NSMenuItem"; title = "Sichern"; ObjectID = "75"; */
+"75.title" = "Sichern";
+
+/* Class = "NSMenuItem"; title = "Papierformat…"; ObjectID = "77"; */
+"77.title" = "Papierformat…";
+
+/* Class = "NSMenuItem"; title = "Drucken..."; ObjectID = "78"; */
+"78.title" = "Drucken...";
+
+/* Class = "NSMenuItem"; title = "Sichern unter…"; ObjectID = "80"; */
+"80.title" = "Sichern unter…";
+
+/* Class = "NSMenu"; title = "Ablage"; ObjectID = "81"; */
+"81.title" = "Ablage";
+
+/* Class = "NSMenuItem"; title = "Neu"; ObjectID = "82"; */
+"82.title" = "Neu";
+
+/* Class = "NSMenuItem"; title = "Ablage"; ObjectID = "83"; */
+"83.title" = "Ablage";
+
+/* Class = "NSMenuItem"; title = "Hilfe"; ObjectID = "103"; */
+"103.title" = "Hilfe";
+
+/* Class = "NSMenu"; title = "Hilfe"; ObjectID = "106"; */
+"106.title" = "Hilfe";
+
+/* Class = "NSMenuItem"; title = "ProVoc Hilfe"; ObjectID = "111"; */
+"111.title" = "ProVoc Hilfe";
+
+/* Class = "NSMenuItem"; title = "Zurück zur letzten Version"; ObjectID = "112"; */
+"112.title" = "Zurück zur letzten Version";
+
+/* Class = "NSMenuItem"; title = "Benutzte Dokumente"; ObjectID = "124"; */
+"124.title" = "Benutzte Dokumente";
+
+/* Class = "NSMenu"; title = "Benutzte Dokumente"; ObjectID = "125"; */
+"125.title" = "Benutzte Dokumente";
+
+/* Class = "NSMenuItem"; title = "Clear Menu"; ObjectID = "126"; */
+"126.title" = "Clear Menu";
+
+/* Class = "NSMenuItem"; title = "Einstellungen..."; ObjectID = "129"; */
+"129.title" = "Einstellungen...";
+
+/* Class = "NSMenu"; title = "Services"; ObjectID = "130"; */
+"130.title" = "Services";
+
+/* Class = "NSMenuItem"; title = "Services"; ObjectID = "131"; */
+"131.title" = "Services";
+
+/* Class = "NSMenuItem"; title = "ProVoc ausblenden"; ObjectID = "134"; */
+"134.title" = "ProVoc ausblenden";
+
+/* Class = "NSMenuItem"; title = "ProVoc beenden"; ObjectID = "136"; */
+"136.title" = "ProVoc beenden";
+
+/* Class = "NSMenuItem"; title = "Andere ausblenden"; ObjectID = "145"; */
+"145.title" = "Andere ausblenden";
+
+/* Class = "NSMenuItem"; title = "Alle einblenden"; ObjectID = "150"; */
+"150.title" = "Alle einblenden";
+
+/* Class = "NSMenuItem"; title = "Kopieren"; ObjectID = "157"; */
+"157.title" = "Kopieren";
+
+/* Class = "NSMenuItem"; title = "Widerrufen"; ObjectID = "158"; */
+"158.title" = "Widerrufen";
+
+/* Class = "NSMenuItem"; title = "Ausschneiden"; ObjectID = "160"; */
+"160.title" = "Ausschneiden";
+
+/* Class = "NSMenuItem"; title = "Bearbeiten"; ObjectID = "163"; */
+"163.title" = "Bearbeiten";
+
+/* Class = "NSMenuItem"; title = "Löschen"; ObjectID = "164"; */
+"164.title" = "Löschen";
+
+/* Class = "NSMenu"; title = "Bearbeiten"; ObjectID = "169"; */
+"169.title" = "Bearbeiten";
+
+/* Class = "NSMenuItem"; title = "Einsetzen"; ObjectID = "171"; */
+"171.title" = "Einsetzen";
+
+/* Class = "NSMenuItem"; title = "Alles auswählen"; ObjectID = "172"; */
+"172.title" = "Alles auswählen";
+
+/* Class = "NSMenuItem"; title = "Wiederholen"; ObjectID = "173"; */
+"173.title" = "Wiederholen";
+
+/* Class = "NSMenuItem"; title = "Rechtschreibung"; ObjectID = "184"; */
+"184.title" = "Rechtschreibung";
+
+/* Class = "NSMenu"; title = "Rechtschreibung"; ObjectID = "185"; */
+"185.title" = "Rechtschreibung";
+
+/* Class = "NSMenuItem"; title = "Rechtschreibung..."; ObjectID = "187"; */
+"187.title" = "Rechtschreibung...";
+
+/* Class = "NSMenuItem"; title = "Rechtschreibprüfung"; ObjectID = "189"; */
+"189.title" = "Rechtschreibprüfung";
+
+/* Class = "NSMenuItem"; title = "Während der Texteingabe prüfen"; ObjectID = "191"; */
+"191.title" = "Während der Texteingabe prüfen";
+
+/* Class = "NSMenuItem"; title = "Importieren..."; ObjectID = "204"; */
+"204.title" = "Importieren...";
+
+/* Class = "NSMenuItem"; title = "Sprachtausch"; ObjectID = "212"; */
+"212.title" = "Sprachtausch";
+
+/* Class = "NSMenuItem"; title = "Exportieren…"; ObjectID = "225"; */
+"225.title" = "Exportieren…";
+
+/* Class = "NSMenuItem"; title = "Schwierigkeit und letzte Antwort zurücksetzen"; ObjectID = "228"; */
+"228.title" = "Schwierigkeit und letzte Antwort zurücksetzen";
+
+/* Class = "NSMenuItem"; title = "Karten drucken..."; ObjectID = "231"; */
+"231.title" = "Karten drucken...";
+
+/* Class = "NSMenuItem"; title = "Aktualisierung..."; ObjectID = "235"; */
+"235.title" = "Aktualisierung...";
+
+/* Class = "NSMenuItem"; title = "Wortzschatz teilen"; ObjectID = "237"; */
+"237.title" = "Wortzschatz teilen";
+
+/* Class = "NSMenu"; title = "Wortzschatz teilen"; ObjectID = "238"; */
+"238.title" = "Wortzschatz teilen";
+
+/* Class = "NSMenuItem"; title = "Wortschatzdateien online stellen"; ObjectID = "239"; */
+"239.title" = "Wortschatzdateien online stellen";
+
+/* Class = "NSMenuItem"; title = "Wortschatzdateien downloaden..."; ObjectID = "241"; */
+"241.title" = "Wortschatzdateien downloaden...";
+
+/* Class = "NSMenuItem"; title = "Suchen"; ObjectID = "249"; */
+"249.title" = "Suchen";
+
+/* Class = "NSMenuItem"; title = "Verdoppelungen suchen"; ObjectID = "251"; */
+"251.title" = "Verdoppelungen suchen";
+
+/* Class = "NSMenuItem"; title = "Zoomen"; ObjectID = "254"; */
+"254.title" = "Zoomen";
+
+/* Class = "NSMenuItem"; title = "Sprachausgabe"; ObjectID = "258"; */
+"258.title" = "Sprachausgabe";
+
+/* Class = "NSMenu"; title = "Sprachausgabe"; ObjectID = "259"; */
+"259.title" = "Sprachausgabe";
+
+/* Class = "NSMenuItem"; title = "Sprachausgabe starten"; ObjectID = "260"; */
+"260.title" = "Sprachausgabe starten";
+
+/* Class = "NSMenuItem"; title = "Sprachausgabe stoppen"; ObjectID = "261"; */
+"261.title" = "Sprachausgabe stoppen";
+
+/* Class = "NSMenuItem"; title = "Auswahl aufheben"; ObjectID = "264"; */
+"264.title" = "Auswahl aufheben";
+
+/* Class = "NSMenuItem"; title = "Etikett"; ObjectID = "267"; */
+"267.title" = "Etikett";
+
+/* Class = "NSMenu"; title = "Etikett"; ObjectID = "268"; */
+"268.title" = "Etikett";
+
+/* Class = "NSMenuItem"; title = "Kein"; ObjectID = "269"; */
+"269.title" = "Kein";
+
+/* Class = "NSMenuItem"; title = "Label 1"; ObjectID = "271"; */
+"271.title" = "Label 1";
+
+/* Class = "NSMenuItem"; title = "Label 2"; ObjectID = "272"; */
+"272.title" = "Label 2";
+
+/* Class = "NSMenuItem"; title = "Label 3"; ObjectID = "273"; */
+"273.title" = "Label 3";
+
+/* Class = "NSMenuItem"; title = "Label 4"; ObjectID = "274"; */
+"274.title" = "Label 4";
+
+/* Class = "NSMenuItem"; title = "Label 5"; ObjectID = "275"; */
+"275.title" = "Label 5";
+
+/* Class = "NSMenuItem"; title = "Label 6"; ObjectID = "276"; */
+"276.title" = "Label 6";
+
+/* Class = "NSMenuItem"; title = "Label 7"; ObjectID = "284"; */
+"284.title" = "Label 7";
+
+/* Class = "NSMenuItem"; title = "Label 8"; ObjectID = "286"; */
+"286.title" = "Label 8";
+
+/* Class = "NSMenuItem"; title = "Label 8"; ObjectID = "288"; */
+"288.title" = "Label 8";
+
+/* Class = "NSMenuItem"; title = "Ausgewählte Vokabel in eigenen Lektionen anzeigen"; ObjectID = "299"; */
+"299.title" = "Ausgewählte Vokabel in eigenen Lektionen anzeigen";
+
+/* Class = "NSMenuItem"; title = "Sprachtausch"; ObjectID = "302"; */
+"302.title" = "Sprachtausch";
+
+/* Class = "NSMenuItem"; title = "Sprachtausch"; ObjectID = "304"; */
+"304.title" = "Sprachtausch";
+
+/* Class = "NSMenuItem"; title = "Ausgewählte Vokabel markieren"; ObjectID = "306"; */
+"306.title" = "Ausgewählte Vokabel markieren";
+
+/* Class = "NSMenuItem"; title = "Vokabel"; ObjectID = "311"; */
+"311.title" = "Vokabel";
+
+/* Class = "NSMenu"; title = "Vokabel"; ObjectID = "312"; */
+"312.title" = "Vokabel";
+
+/* Class = "NSMenuItem"; title = "Training"; ObjectID = "313"; */
+"313.title" = "Training";
+
+/* Class = "NSMenuItem"; title = "Editieren"; ObjectID = "314"; */
+"314.title" = "Editieren";
+
+/* Class = "NSMenuItem"; title = "Analyse"; ObjectID = "315"; */
+"315.title" = "Analyse";
+
+/* Class = "NSMenuItem"; title = "Abprüfen"; ObjectID = "317"; */
+"317.title" = "Abprüfen";
+
+/* Class = "NSMenuItem"; title = "Auf iPod senden…"; ObjectID = "322"; */
+"322.title" = "Auf iPod senden…";
+
+/* Class = "NSMenuItem"; title = "Inspektor"; ObjectID = "326"; */
+"326.title" = "Inspektor";
+
+/* Class = "NSMenuItem"; title = "Arizona Software Website besuchen"; ObjectID = "328"; */
+"328.title" = "Arizona Software Website besuchen";
+
+/* Class = "NSMenuItem"; title = "Diashow"; ObjectID = "330"; */
+"330.title" = "Diashow";
+
+/* Class = "NSMenuItem"; title = "Fehlerberichte oder Feedback senden"; ObjectID = "333"; */
+"333.title" = "Fehlerberichte oder Feedback senden";
+
+/* Class = "NSMenuItem"; title = "Darstellungsoptionen…"; ObjectID = "415"; */
+"415.title" = "Darstellungsoptionen…";
+
+/* Class = "NSMenuItem"; title = "Funktionen von ProVoc kennenlernen"; ObjectID = "417"; */
+"417.title" = "Funktionen von ProVoc kennenlernen";
+
+/* Class = "NSMenuItem"; title = "Schwierigkeit"; ObjectID = "419"; */
+"419.title" = "Schwierigkeit";
+
+/* Class = "NSMenu"; title = "Schwierigkeit"; ObjectID = "420"; */
+"420.title" = "Schwierigkeit";
+
+/* Class = "NSMenuItem"; title = "Verringern"; ObjectID = "421"; */
+"421.title" = "Verringern";
+
+/* Class = "NSMenuItem"; title = "Erhöhen"; ObjectID = "423"; */
+"423.title" = "Erhöhen";
+
+/* Class = "NSMenuItem"; title = "Zurücksetzen"; ObjectID = "424"; */
+"424.title" = "Zurücksetzen";

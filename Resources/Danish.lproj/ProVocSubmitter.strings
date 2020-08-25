@@ -1,0 +1,36 @@
+
+/* Class = "NSTextFieldCell"; title = "Titel:"; ObjectID = "62"; */
+"62.title" = "Titel:";
+
+/* Class = "NSTextFieldCell"; title = "Autor:"; ObjectID = "64"; */
+"64.title" = "Autor:";
+
+/* Class = "NSTextFieldCell"; title = "Kommentarer:"; ObjectID = "66"; */
+"66.title" = "Kommentarer:";
+
+/* Class = "NSButtonCell"; title = "Send"; ObjectID = "68"; */
+"68.title" = "Send";
+
+/* Class = "NSButtonCell"; title = "Afbryd"; ObjectID = "69"; */
+"69.title" = "Afbryd";
+
+/* Class = "NSTextFieldCell"; title = "Vocabulary Submission"; ObjectID = "70"; */
+"70.title" = "Vocabulary Submission";
+
+/* Class = "NSTextFieldCell"; title = "Please do not copy material illegaly!"; ObjectID = "71"; */
+"71.title" = "Please do not copy material illegaly!";
+
+/* Class = "NSTextFieldCell"; title = "Do not localize"; ObjectID = "73"; */
+"73.title" = "Do not localize";
+
+/* Class = "NSButtonCell"; title = "Afbryd"; ObjectID = "74"; */
+"74.title" = "Afbryd";
+
+/* Class = "NSTextFieldCell"; title = "Afsendelsen er gennemført"; ObjectID = "76"; */
+"76.title" = "Afsendelsen er gennemført";
+
+/* Class = "NSButtonCell"; title = "OK"; ObjectID = "77"; */
+"77.title" = "OK";
+
+/* Class = "NSTextFieldCell"; title = "Tak fordi du deler dine ordbog med os! Den er nu tilgængelig og kan downloades ved at vælge Download ordbog fra Del menuen."; ObjectID = "78"; */
+"78.title" = "Tak fordi du deler dine ordbog med os! Den er nu tilgængelig og kan downloades ved at vælge Download ordbog fra Del menuen.";

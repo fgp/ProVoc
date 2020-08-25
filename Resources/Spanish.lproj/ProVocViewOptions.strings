@@ -1,0 +1,30 @@
+
+/* Class = "NSWindow"; title = "Ver Opciones"; ObjectID = "5"; */
+"5.title" = "Ver Opciones";
+
+/* Class = "NSButtonCell"; title = "Comentario"; ObjectID = "29"; */
+"29.title" = "Comentario";
+
+/* Class = "NSButtonCell"; title = "Dificultad"; ObjectID = "30"; */
+"30.title" = "Dificultad";
+
+/* Class = "NSButtonCell"; title = "Etiqueta"; ObjectID = "31"; */
+"31.title" = "Etiqueta";
+
+/* Class = "NSButtonCell"; title = "Última respuesta"; ObjectID = "32"; */
+"32.title" = "Última respuesta";
+
+/* Class = "NSButtonCell"; title = "Próximo repaso"; ObjectID = "33"; */
+"33.title" = "Próximo repaso";
+
+/* Class = "NSButtonCell"; title = "OK"; ObjectID = "40"; */
+"40.title" = "OK";
+
+/* Class = "NSButtonCell"; title = "Cancelar"; ObjectID = "41"; */
+"41.title" = "Cancelar";
+
+/* Class = "NSTextFieldCell"; title = "Mostrar Columnas:"; ObjectID = "42"; */
+"42.title" = "Mostrar Columnas:";
+
+/* Class = "NSButtonCell"; title = "Comment"; ObjectID = "43"; */
+"43.title" = "Comment";

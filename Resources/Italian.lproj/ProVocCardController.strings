@@ -1,0 +1,162 @@
+
+/* Class = "NSWindow"; title = "Stampa Schede"; ObjectID = "5"; */
+"5.title" = "Stampa Schede";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "12"; */
+"12.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "A un lato"; ObjectID = "14"; */
+"14.title" = "A un lato";
+
+/* Class = "NSMenuItem"; title = "A due lati"; ObjectID = "15"; */
+"15.title" = "A due lati";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "18"; */
+"18.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Orizzontale"; ObjectID = "19"; */
+"19.title" = "Orizzontale";
+
+/* Class = "NSMenuItem"; title = "Verticale"; ObjectID = "20"; */
+"20.title" = "Verticale";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "23"; */
+"23.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Personalizzate"; ObjectID = "24"; */
+"24.title" = "Personalizzate";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "30"; */
+"30.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "cm"; ObjectID = "31"; */
+"31.title" = "cm";
+
+/* Class = "NSMenuItem"; title = "pt"; ObjectID = "32"; */
+"32.title" = "pt";
+
+/* Class = "NSMenuItem"; title = "in"; ObjectID = "33"; */
+"33.title" = "in";
+
+/* Class = "NSMenuItem"; title = "Carta di credito"; ObjectID = "101"; */
+"101.title" = "Carta di credito";
+
+/* Class = "NSMenuItem"; title = "Biglietto da visita"; ObjectID = "103"; */
+"103.title" = "Biglietto da visita";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "112"; */
+"112.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Non includere"; ObjectID = "113"; */
+"113.title" = "Non includere";
+
+/* Class = "NSMenuItem"; title = "Includi sul davanti"; ObjectID = "114"; */
+"114.title" = "Includi sul davanti";
+
+/* Class = "NSMenuItem"; title = "Includi sul retro"; ObjectID = "115"; */
+"115.title" = "Includi sul retro";
+
+/* Class = "NSMenuItem"; title = "Includi su entrambi i lati"; ObjectID = "121"; */
+"121.title" = "Includi su entrambi i lati";
+
+/* Class = "NSMenuItem"; title = "mm"; ObjectID = "134"; */
+"134.title" = "mm";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "140"; */
+"140.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Nome lezione"; ObjectID = "141"; */
+"141.title" = "Nome lezione";
+
+/* Class = "NSMenuItem"; title = "Nome Documento & Lezione"; ObjectID = "142"; */
+"142.title" = "Nome Documento & Lezione";
+
+/* Class = "NSMenuItem"; title = "Nessuno"; ObjectID = "143"; */
+"143.title" = "Nessuno";
+
+/* Class = "NSMenuItem"; title = "Nome documento"; ObjectID = "144"; */
+"144.title" = "Nome documento";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "151"; */
+"151.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Non includere"; ObjectID = "152"; */
+"152.title" = "Non includere";
+
+/* Class = "NSMenuItem"; title = "Includi sul retro"; ObjectID = "153"; */
+"153.title" = "Includi sul retro";
+
+/* Class = "NSMenuItem"; title = "Includi su entrambi i lati"; ObjectID = "154"; */
+"154.title" = "Includi su entrambi i lati";
+
+/* Class = "NSMenuItem"; title = "Includi sul davanti"; ObjectID = "155"; */
+"155.title" = "Includi sul davanti";
+
+/* Class = "NSButtonCell"; title = "Stampa…"; ObjectID = "224"; */
+"224.title" = "Stampa…";
+
+/* Class = "NSButtonCell"; title = "Annulla"; ObjectID = "225"; */
+"225.title" = "Annulla";
+
+/* Class = "NSTextFieldCell"; title = "Scheda:"; ObjectID = "226"; */
+"226.title" = "Scheda:";
+
+/* Class = "NSTextFieldCell"; title = "Gira Schede:"; ObjectID = "228"; */
+"228.title" = "Gira Schede:";
+
+/* Class = "NSTextFieldCell"; title = "Dimensioni scheda:"; ObjectID = "230"; */
+"230.title" = "Dimensioni scheda:";
+
+/* Class = "NSTextFieldCell"; title = "100.00"; ObjectID = "232"; */
+"232.title" = "100.00";
+
+/* Class = "NSTextFieldCell"; title = "100.00"; ObjectID = "233"; */
+"233.title" = "100.00";
+
+/* Class = "NSTextFieldCell"; title = "x"; ObjectID = "234"; */
+"234.title" = "x";
+
+/* Class = "NSTextFieldCell"; title = "Testo:"; ObjectID = "236"; */
+"236.title" = "Testo:";
+
+/* Class = "NSTextFieldCell"; title = "Sfondo:"; ObjectID = "237"; */
+"237.title" = "Sfondo:";
+
+/* Class = "NSTextFieldCell"; title = "Piccolo"; ObjectID = "239"; */
+"239.title" = "Piccolo";
+
+/* Class = "NSTextFieldCell"; title = "Grande"; ObjectID = "240"; */
+"240.title" = "Grande";
+
+/* Class = "NSTextFieldCell"; title = "Immagini:"; ObjectID = "241"; */
+"241.title" = "Immagini:";
+
+/* Class = "NSTextFieldCell"; title = "Contrassegno:"; ObjectID = "244"; */
+"244.title" = "Contrassegno:";
+
+/* Class = "NSTextFieldCell"; title = "Commenti:"; ObjectID = "246"; */
+"246.title" = "Commenti:";
+
+/* Class = "NSButtonCell"; title = "Disegna bordi"; ObjectID = "248"; */
+"248.title" = "Disegna bordi";
+
+/* Class = "NSTextFieldCell"; title = "Margini:"; ObjectID = "250"; */
+"250.title" = "Margini:";
+
+/* Class = "NSTextFieldCell"; title = "10.00"; ObjectID = "251"; */
+"251.title" = "10.00";
+
+/* Class = "NSTextFieldCell"; title = "10.00"; ObjectID = "252"; */
+"252.title" = "10.00";
+
+/* Class = "NSTextFieldCell"; title = "10.00"; ObjectID = "253"; */
+"253.title" = "10.00";
+
+/* Class = "NSTextFieldCell"; title = "10.00"; ObjectID = "254"; */
+"254.title" = "10.00";
+
+/* Class = "NSTextFieldCell"; title = "Anteprima parola:"; ObjectID = "256"; */
+"256.title" = "Anteprima parola:";
+
+/* Class = "NSTextFieldCell"; title = "1"; ObjectID = "257"; */
+"257.title" = "1";
