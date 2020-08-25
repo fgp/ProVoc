@@ -221,8 +221,12 @@
 
 -(BOOL)checkInternetConnection
 {
+	// FIXME: add Reachability check
+	return YES;
+	/*
 	NSString *acknowledge = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://www.arizona-software.ch/~provoc/submission/check.php?action=check"]];
 	return [acknowledge isEqual:@"OK"];
+	*/
 }
 
 -(IBAction)submit:(id)inSender

@@ -14,14 +14,14 @@
 -(id)initWithFrame:(NSRect)inFrameRect pullsDown:(BOOL)inFlag
 {
 	if (self = [super initWithFrame:inFrameRect pullsDown:inFlag]) {
-		[[self cell] setArrowPosition:NSPopUpNoArrow];
+		//[[self cell] setArrowPosition:NSPopUpNoArrow];
 	}
 	return self;
 }
 
 -(void)awakeFromNib
 {
-	[[self cell] setArrowPosition:NSPopUpNoArrow];
+	//[[self cell] setArrowPosition:NSPopUpNoArrow];
 }
 
 @end

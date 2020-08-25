@@ -486,10 +486,10 @@
                                     <action selector="discoverProvoc:" target="209" id="418"/>
                                 </connections>
                             </menuItem>
-                            <menuItem isSeparatorItem="YES" hidden="YES" id="334">
+                            <menuItem isSeparatorItem="YES" id="334">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                             </menuItem>
-                            <menuItem title="Send Bug Report or Feedback" hidden="YES" id="333">
+                            <menuItem title="Send Bug Report or Feedback" id="333">
                                 <connections>
                                     <action selector="reportBug:" target="209" id="335"/>
                                 </connections>

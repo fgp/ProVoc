@@ -321,6 +321,7 @@
 
 -(IBAction)submitDocument:(id)inSender
 {
+#ifndef DISABLE_SUBMITTER
 	if ([[self allWords] count] == 0) {
 		NSRunInformationalAlertPanel(NSLocalizedString(@"No Word To Submit Title", @""), NSLocalizedString(@"No Word To Submit Message", @""), nil, nil, nil);
 		return;
@@ -366,15 +367,18 @@
 							nil]
 			modalForWindow:mMainWindow];
 	}
+#endif
 }
 
 -(void)submitter:(ProVocSubmitter *)inSubmitter updateSubmissionInfo:(NSDictionary *)inInfo
 {
+#ifndef DISABLE_SUBMITTER
 	if (![mSubmissionInfo isEqualToDictionary:inInfo]) {
 		[mSubmissionInfo release];
 		mSubmissionInfo = [inInfo retain];
 		[self saveDocument:nil];
 	}
+#endif
 }
 
 @end
