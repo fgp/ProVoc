@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -481,22 +481,27 @@
                                     <action selector="showHelp:" target="-1" id="253"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Discover ProVoc Features" id="417">
+                            <menuItem title="Discover ProVoc Features" hidden="YES" id="417">
                                 <connections>
                                     <action selector="discoverProvoc:" target="209" id="418"/>
                                 </connections>
                             </menuItem>
-                            <menuItem isSeparatorItem="YES" id="334">
+                            <menuItem isSeparatorItem="YES" hidden="YES" id="334">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                             </menuItem>
-                            <menuItem title="Send Bug Report or Feedback" id="333">
+                            <menuItem title="Send Bug Report or Feedback" hidden="YES" id="333">
                                 <connections>
                                     <action selector="reportBug:" target="209" id="335"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Visit Arizona Software Home Page" id="328">
+                            <menuItem title="Visit Arizona Software Home Page" hidden="YES" id="328">
                                 <connections>
                                     <action selector="visitHomepage:" target="209" id="329"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="ProVoc on Github" id="Ugn-i6-tY4">
+                                <connections>
+                                    <action selector="visitHomepage:" target="209" id="c9T-KL-ez1"/>
                                 </connections>
                             </menuItem>
                         </items>
