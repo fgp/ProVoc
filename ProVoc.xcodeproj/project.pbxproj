@@ -2039,6 +2039,7 @@
 					"-weak_framework",
 					Quartz,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.arizona-software.provoc";
 				PRODUCT_NAME = ProVoc;
 				SDKROOT = macosx;
 				VALID_ARCHS = "$(ARCHS_STANDARD)";
@@ -2064,6 +2065,7 @@
 					"-weak_framework",
 					Quartz,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.arizona-software.provoc";
 				PRODUCT_NAME = ProVoc;
 				SDKROOT = macosx;
 				VALID_ARCHS = "$(ARCHS_STANDARD)";
