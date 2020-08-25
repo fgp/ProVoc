@@ -553,7 +553,6 @@
 		A7285B910A1601AB0082642D /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
 		A7285DF50A1603D00082642D /* action.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = action.tiff; sourceTree = "<group>"; };
 		A7285DF60A1603D00082642D /* add.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = add.tiff; sourceTree = "<group>"; };
-		A7285DF70A1603D00082642D /* album.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = album.tiff; sourceTree = "<group>"; };
 		A7285DF80A1603D00082642D /* ARDisclosureArrowDown.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ARDisclosureArrowDown.tif; sourceTree = "<group>"; };
 		A7285DF90A1603D00082642D /* ARDisclosureArrowRight.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ARDisclosureArrowRight.tif; sourceTree = "<group>"; };
 		A7285DFA0A1603D00082642D /* Both.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Both.tif; sourceTree = "<group>"; };
@@ -574,7 +573,6 @@
 		A7285E0A0A1603D00082642D /* MicPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MicPressed.png; sourceTree = "<group>"; };
 		A7285E0B0A1603D00082642D /* NewDocument.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewDocument.png; sourceTree = "<group>"; };
 		A7285E0C0A1603D00082642D /* OpenDocument.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OpenDocument.png; sourceTree = "<group>"; };
-		A7285E0D0A1603D00082642D /* page.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = page.tif; sourceTree = "<group>"; };
 		A7285E0E0A1603D00082642D /* Play.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Play.tiff; sourceTree = "<group>"; };
 		A7285E0F0A1603D00082642D /* PlayDown.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = PlayDown.tiff; sourceTree = "<group>"; };
 		A7285E100A1603D00082642D /* Preferences.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Preferences.tiff; sourceTree = "<group>"; };
@@ -588,7 +586,6 @@
 		A7285E180A1603D00082642D /* SmallSpeaker.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = SmallSpeaker.tif; sourceTree = "<group>"; };
 		A7285E190A1603D00082642D /* SpeakerOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpeakerOff.png; sourceTree = "<group>"; };
 		A7285E1A0A1603D00082642D /* SpeakerOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpeakerOn.png; sourceTree = "<group>"; };
-		A7285E1B0A1603D00082642D /* stripe.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = stripe.tiff; sourceTree = "<group>"; };
 		A7285E1C0A1603D00082642D /* Theme.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Theme.tif; sourceTree = "<group>"; };
 		A7285E1D0A1603D00082642D /* unmarkAsFlagged.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = unmarkAsFlagged.tiff; sourceTree = "<group>"; };
 		A7285E1E0A1603D00082642D /* UpdatePreferences.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = UpdatePreferences.tiff; sourceTree = "<group>"; };
@@ -973,8 +970,6 @@
 			children = (
 				A7285DF50A1603D00082642D /* action.tiff */,
 				A7285DF60A1603D00082642D /* add.tiff */,
-				A7285DF70A1603D00082642D /* album.tiff */,
-				A7285E0D0A1603D00082642D /* page.tif */,
 				A7285DF80A1603D00082642D /* ARDisclosureArrowDown.tif */,
 				A7285DF90A1603D00082642D /* ARDisclosureArrowRight.tif */,
 				A7285DFA0A1603D00082642D /* Both.tif */,
@@ -1012,7 +1007,6 @@
 				A7285E180A1603D00082642D /* SmallSpeaker.tif */,
 				A7285E190A1603D00082642D /* SpeakerOff.png */,
 				A7285E1A0A1603D00082642D /* SpeakerOn.png */,
-				A7285E1B0A1603D00082642D /* stripe.tiff */,
 				A7285E1C0A1603D00082642D /* Theme.tif */,
 				A7285E1D0A1603D00082642D /* unmarkAsFlagged.tiff */,
 				A7285E1E0A1603D00082642D /* UpdatePreferences.tiff */,
