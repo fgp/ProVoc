@@ -40,7 +40,9 @@
 							NSLocalizedString(@"Font Preference Pane Label", @""),
 							NSLocalizedString(@"Label Preference Pane Label", @""),
 							NSLocalizedString(@"iPod Preference Pane Label", @""),
+#ifndef DISABLE_CHECKFORUPDATES
 							NSLocalizedString(@"Update Preference Pane Label", @""),
+#endif
 						nil];
 
 		[self setupToolbar];

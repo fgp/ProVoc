@@ -21,7 +21,7 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="5" userLabel="Preferences" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -59,7 +59,7 @@
                     <autoresizingMask key="autoresizingMask"/>
                     <popUpButtonCell key="cell" type="push" title="Do not localize" bezelStyle="rounded" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="566" id="693">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
+                        <font key="font" metaFont="menu"/>
                         <menu key="menu" title="OtherViews" id="563">
                             <items>
                                 <menuItem title="Do not localize" state="on" id="566"/>
@@ -80,8 +80,8 @@
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
-                        <binding destination="-2" name="enabled" keyPath="isBackgroundAvailable" id="569"/>
                         <binding destination="-2" name="value" keyPath="enableBackground" id="567"/>
+                        <binding destination="-2" name="enabled" keyPath="isBackgroundAvailable" id="569"/>
                     </connections>
                 </button>
                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="20" translatesAutoresizingMaskIntoConstraints="NO" id="552">
@@ -246,12 +246,12 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                     <connections>
-                        <binding destination="73" name="enabled" keyPath="values.PVPrefsUseSynonymSeparator" id="193"/>
                         <binding destination="73" name="value" keyPath="values.PVPrefSynonymSeparator" id="197">
                             <dictionary key="options">
                                 <integer key="NSContinuouslyUpdatesValue" value="1"/>
                             </dictionary>
                         </binding>
+                        <binding destination="73" name="enabled" keyPath="values.PVPrefsUseSynonymSeparator" id="193"/>
                     </connections>
                 </textField>
                 <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="165">
@@ -283,12 +283,12 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                     <connections>
-                        <binding destination="73" name="enabled" keyPath="values.PVPrefsUseCommentsSeparator" id="195"/>
                         <binding destination="73" name="value" keyPath="values.PVPrefCommentsSeparator" id="199">
                             <dictionary key="options">
                                 <integer key="NSContinuouslyUpdatesValue" value="1"/>
                             </dictionary>
                         </binding>
+                        <binding destination="73" name="enabled" keyPath="values.PVPrefsUseCommentsSeparator" id="195"/>
                     </connections>
                 </textField>
                 <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="155">
@@ -455,6 +455,7 @@
         <customView id="228" userLabel="Updates">
             <rect key="frame" x="0.0" y="0.0" width="580" height="200"/>
             <autoresizingMask key="autoresizingMask"/>
+            <point key="canvasLocation" x="107" y="1198"/>
         </customView>
         <customView id="235" userLabel="Labels">
             <rect key="frame" x="0.0" y="0.0" width="387" height="376"/>
@@ -1027,7 +1028,7 @@
                     <autoresizingMask key="autoresizingMask"/>
                     <popUpButtonCell key="cell" type="push" title="Left to Right" bezelStyle="rounded" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="584" id="745">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
+                        <font key="font" metaFont="menu"/>
                         <menu key="menu" title="OtherViews" id="583">
                             <items>
                                 <menuItem title="Left to Right" state="on" id="584"/>
@@ -1044,7 +1045,7 @@
                     <autoresizingMask key="autoresizingMask"/>
                     <popUpButtonCell key="cell" type="push" title="Left to Right" bezelStyle="rounded" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="580" id="744">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
+                        <font key="font" metaFont="menu"/>
                         <menu key="menu" title="OtherViews" id="579">
                             <items>
                                 <menuItem title="Left to Right" state="on" id="580"/>
@@ -1061,7 +1062,7 @@
                     <autoresizingMask key="autoresizingMask"/>
                     <popUpButtonCell key="cell" type="push" title="Left to Right" bezelStyle="rounded" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="575" id="743">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
+                        <font key="font" metaFont="menu"/>
                         <menu key="menu" title="OtherViews" id="573">
                             <items>
                                 <menuItem title="Left to Right" state="on" id="575"/>
@@ -1153,13 +1154,13 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                     <connections>
+                        <binding destination="-2" name="value" keyPath="commentFontCaption" id="505"/>
                         <binding destination="73" name="fontFamilyName" keyPath="values.commentFontFamilyName" id="514"/>
                         <binding destination="73" name="fontSize" keyPath="values.commentFontSize" previousBinding="514" id="516">
                             <dictionary key="options">
                                 <string key="NSValueTransformerName">SearchFontSizeTransformer</string>
                             </dictionary>
                         </binding>
-                        <binding destination="-2" name="value" keyPath="commentFontCaption" id="505"/>
                     </connections>
                 </textField>
                 <button verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="450">
@@ -1257,13 +1258,13 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                     <connections>
+                        <binding destination="-2" name="value" keyPath="targetFontCaption" id="504"/>
                         <binding destination="73" name="fontFamilyName" keyPath="values.targetFontFamilyName" id="512"/>
                         <binding destination="73" name="fontSize" keyPath="values.targetFontSize" previousBinding="512" id="518">
                             <dictionary key="options">
                                 <string key="NSValueTransformerName">SearchFontSizeTransformer</string>
                             </dictionary>
                         </binding>
-                        <binding destination="-2" name="value" keyPath="targetFontCaption" id="504"/>
                     </connections>
                 </textField>
                 <button verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="481">
@@ -1379,13 +1380,13 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                     <connections>
+                        <binding destination="-2" name="value" keyPath="sourceFontCaption" id="503"/>
                         <binding destination="73" name="fontFamilyName" keyPath="values.sourceFontFamilyName" id="510"/>
                         <binding destination="73" name="fontSize" keyPath="values.sourceFontSize" previousBinding="510" id="520">
                             <dictionary key="options">
                                 <string key="NSValueTransformerName">SearchFontSizeTransformer</string>
                             </dictionary>
                         </binding>
-                        <binding destination="-2" name="value" keyPath="sourceFontCaption" id="503"/>
                     </connections>
                 </textField>
                 <button verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="460">

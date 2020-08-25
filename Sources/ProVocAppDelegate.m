@@ -316,11 +316,18 @@
 -(BOOL)validateMenuItem:(NSMenuItem *)inItem
 {
 	SEL action = [inItem action];
-	if (action == @selector(toggleInspector:))
+	if (action == @selector(toggleInspector:)) {
 		[inItem setState:[[ProVocInspector sharedInspector] isVisible] ? NSOnState : NSOffState];
+	}
 	if (action == @selector(submitDocument:)) {
 		[inItem setTitle:NSLocalizedString(@"Submit Document", @"")];
 		return NO;
+	}
+	if (action == @selector(checkForUpdates:)) {
+#ifdef DISABLE_CHECKFORUPDATES
+		[inItem setHidden:YES];
+		return NO;
+#endif
 	}
 	return [super validateMenuItem:inItem];
 }
