@@ -55,12 +55,14 @@
 {
 	[self hide];
 	[[NSDocumentController sharedDocumentController] openDocument:nil];
-	[self idle];
+	//[self idle];
 }
 
 -(IBAction)downloadDocument:(id)inSender
 {
+#ifndef DISABLE_SUBMITTER
 	[[NSApp delegate] downloadDocuments:nil];
+#endif
 }
 
 @end

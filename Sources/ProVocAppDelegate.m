@@ -26,7 +26,9 @@
 
 #import <ARCheckForUpdates/ARCheckForUpdates.h>
 
-@implementation ProVocAppDelegate
+@implementation ProVocAppDelegate {
+	BOOL _launched;
+}
 
 + (void)initialize
 {
@@ -201,6 +203,7 @@
 
 -(void)applicationDidFinishLaunching:(NSNotification *)inNotification
 {
+	_launched = YES;
 	ProVocServiceProvider *serviceProvider = [[ProVocServiceProvider alloc] init];
 	[NSApp setServicesProvider:serviceProvider];
 	
@@ -244,6 +247,8 @@
 #endif
 }
 
+// old and somewhat strange behaviour from the pre-Lion era:
+/*
 -(BOOL)applicationShouldOpenUntitledFile:(NSApplication *)inSender
 {
 	static BOOL first = YES;
@@ -270,6 +275,44 @@
 		}
 	}
 	return YES;
+}
+*/
+
+- (BOOL)applicationShouldOpenUntitledFile:(NSApplication *)sender
+{
+    // On startup, when asked to open an untitled file, open the last opened
+    // file instead
+	BOOL keepWindows = [[NSUserDefaults standardUserDefaults] boolForKey:@"NSQuitAlwaysKeepsWindows"];
+	if (!keepWindows) {
+		[[ProVocStartingPoint defaultStartingPoint] idle];
+		return NO;
+	}
+    if (!_launched) {
+        // Get the recent documents
+        NSDocumentController *controller = [NSDocumentController sharedDocumentController];
+        NSArray *documents = [controller recentDocumentURLs];
+		
+        // If there is a recent document, try to open it.
+        if ([documents count] > 0) {
+            NSError *error = nil;
+			BOOL thereWereErrrors = NO;
+			for (NSDocument *document in documents) {
+				[controller openDocumentWithContentsOfURL:document display:YES error:&error];
+				// If there was no error, then prevent untitled from appearing.
+				if (error == nil) {
+					thereWereErrrors = YES;
+				}
+			}
+			if (!thereWereErrrors) {
+				return NO;
+			}
+			return NO;
+		} else if([[NSUserDefaults standardUserDefaults] boolForKey:ProVocShowStartingPoint]) {
+			[[ProVocStartingPoint defaultStartingPoint] idle];
+			return NO;
+		}
+    }
+	return NO;
 }
 
 -(id)openDocumentWithContentsOfURL:(NSURL *)inURL display:(BOOL)inDisplay error:(NSError **)outError
