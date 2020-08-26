@@ -59,7 +59,7 @@
 	static NSShadow *shadow = nil;
 	if (!attributes) {
 		attributes = [[NSDictionary alloc] initWithObjectsAndKeys:[NSFont systemFontOfSize:[NSFont smallSystemFontSize]], NSFontAttributeName,
-														[NSColor blackColor], NSForegroundColorAttributeName,
+														[NSColor labelColor], NSForegroundColorAttributeName,
 														nil];
 		shadow = [[NSShadow alloc] init];
 		[shadow setShadowColor:[NSColor colorWithCalibratedWhite:0.0 alpha:0.25]];
@@ -69,15 +69,24 @@
 	[shadow set];
 	NSRect symbol;
 	NSRect legend;
-	float legendWidth = 50;
+	float legendWidth = 26;
 	NSDivideRect(*ioRect, &symbol, &legend, legendWidth, NSMinXEdge);
 	symbol = NSInsetRect(symbol, 6, 4);
+    
+    // fill:
 	[inColor set];
-	[NSBezierPath fillRect:symbol];
-	[NSGraphicsContext restoreGraphicsState];
-	[[NSColor blackColor] set];
-	NSFrameRect(symbol);
+	//[NSBezierPath fillRect:symbol];
+    NSBezierPath *path = [NSBezierPath bezierPathWithRoundedRect:symbol xRadius:legendWidth/2 yRadius:5];
+    [path fill];
+    
+    // border:
+	[[NSColor labelColor] set];
+    [path setLineWidth:1];
+    [path stroke];
+	//NSFrameRect(symbol);
 	
+    [NSGraphicsContext restoreGraphicsState];
+    
 	legend.size.height += 30;
 	legend.origin.y -= 34;
 	[inLegend drawInRect:legend withAttributes:attributes];
@@ -102,7 +111,7 @@
 	rect.size.height = 1;
 	int i;
 	for (i = 0; i <= mTotal; i += yTick) {
-		[(i == 0 ? [NSColor blackColor] : [NSColor lightGrayColor]) set];
+		[(i == 0 ? [NSColor labelColor] : [NSColor secondaryLabelColor]) set];
 		rect.origin.y = round(inRect.origin.y + i * inRect.size.height / mTotal);
 		NSRectFill(rect);
 	}
@@ -112,7 +121,7 @@
 		NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
 		[paragraphStyle setAlignment:NSRightTextAlignment];
 		attributes = [[NSDictionary alloc] initWithObjectsAndKeys:[NSFont systemFontOfSize:0], NSFontAttributeName,
-														[NSColor blackColor], NSForegroundColorAttributeName,
+														[NSColor labelColor], NSForegroundColorAttributeName,
 														paragraphStyle, NSParagraphStyleAttributeName,
 														nil];
 		[paragraphStyle release];
@@ -123,7 +132,7 @@
 	rect.origin.x = inRect.origin.x - rect.size.width - 10;
 	yTick = [self yTickWithDivisions:4];
 	for (i = 0; i <= mTotal; i += yTick) {
-		[(i == 0 ? [NSColor blackColor] : [NSColor lightGrayColor]) set];
+		[(i == 0 ? [NSColor labelColor] : [NSColor secondaryLabelColor]) set];
 		rect.origin.y = round(inRect.origin.y + i * inRect.size.height / mTotal) - rect.size.height + 10;
 		NSString *string = [NSString stringWithFormat:@"%i", i];
 		[string drawInRect:rect withAttributes:attributes];
@@ -132,9 +141,9 @@
 
 -(void)drawRect:(NSRect)inRect
 {
-	[[NSColor whiteColor] set];
+	[[NSColor controlBackgroundColor] set];
 	NSRectFill(inRect);
-	[[NSColor darkGrayColor] set];
+	[[NSColor gridColor] set];
 	NSFrameRect([self bounds]);
 
 	NSRect legendFrame;
@@ -154,7 +163,7 @@
 		NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
 		[paragraphStyle setAlignment:NSRightTextAlignment];
 		attributes = [[NSDictionary alloc] initWithObjectsAndKeys:[NSFont systemFontOfSize:[NSFont smallSystemFontSize]], NSFontAttributeName,
-														[NSColor blackColor], NSForegroundColorAttributeName,
+														[NSColor labelColor], NSForegroundColorAttributeName,
 														paragraphStyle, NSParagraphStyleAttributeName,
 														nil];
 		[paragraphStyle release];
@@ -347,7 +356,7 @@
 		[shadow setShadowOffset:NSMakeSize(4, -4)];
 	}
 	[shadow set];
-	[[NSColor blackColor] set];
+	[[NSColor labelColor] set];
 	[[NSBezierPath bezierPathWithRect:NSInsetRect(rect, -1, -1)] fill];
 	[NSGraphicsContext restoreGraphicsState];
 	int from = 0;
