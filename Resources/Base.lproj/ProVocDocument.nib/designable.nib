@@ -45,27 +45,24 @@
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="53" y="333" width="950" height="663"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1200"/>
-            <value key="minSize" type="size" width="700" height="520"/>
+            <value key="minSize" type="size" width="700" height="400"/>
             <view key="contentView" id="26">
                 <rect key="frame" x="0.0" y="0.0" width="950" height="663"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <splitView fixedFrame="YES" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="785">
+                    <splitView vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="785">
                         <rect key="frame" x="0.0" y="0.0" width="950" height="663"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <customView fixedFrame="YES" id="751">
+                            <customView id="751">
                                 <rect key="frame" x="0.0" y="0.0" width="204" height="663"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                 <subviews>
-                                    <visualEffectView fixedFrame="YES" blendingMode="behindWindow" material="appearanceBased" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="ZS2-Zs-0uM">
+                                    <visualEffectView blendingMode="behindWindow" material="appearanceBased" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="ZS2-Zs-0uM">
                                         <rect key="frame" x="0.0" y="0.0" width="204" height="663"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </visualEffectView>
-                                    <scrollView focusRingType="none" fixedFrame="YES" borderType="none" horizontalLineScroll="23" horizontalPageScroll="10" verticalLineScroll="23" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="748">
+                                    <scrollView focusRingType="none" borderType="none" horizontalLineScroll="23" horizontalPageScroll="10" verticalLineScroll="23" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="748">
                                         <rect key="frame" x="0.0" y="35" width="204" height="606"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="3vB-EX-w3c">
+                                        <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="3vB-EX-w3c">
                                             <rect key="frame" x="0.0" y="0.0" width="204" height="606"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
@@ -108,9 +105,12 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                     </scrollView>
-                                    <popUpButton fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="741" customClass="ProVocActionPopUpButton">
+                                    <popUpButton imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="741" customClass="ProVocActionPopUpButton">
                                         <rect key="frame" x="29" y="5" width="12" height="22"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="12" id="0h6-cz-OPb"/>
+                                            <constraint firstAttribute="height" constant="22" id="SAT-gm-E6Y"/>
+                                        </constraints>
                                         <popUpButtonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="left" lineBreakMode="truncatingTail" inset="2" pullsDown="YES" preferredEdge="maxY" selectedItem="745" id="1281">
                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="menu"/>
@@ -136,9 +136,12 @@
                                             </menu>
                                         </popUpButtonCell>
                                     </popUpButton>
-                                    <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="747">
+                                    <button imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="747">
                                         <rect key="frame" x="0.0" y="5" width="30" height="22"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="6ig-2K-kl8"/>
+                                            <constraint firstAttribute="height" constant="22" id="o3v-BK-ohE"/>
+                                        </constraints>
                                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSAddTemplate" imagePosition="only" alignment="center" inset="2" id="1282">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -148,6 +151,20 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="747" secondAttribute="bottom" constant="5" id="0Nf-Ga-T8n"/>
+                                    <constraint firstItem="748" firstAttribute="leading" secondItem="751" secondAttribute="leading" id="7b6-Kf-QaX"/>
+                                    <constraint firstItem="741" firstAttribute="leading" secondItem="747" secondAttribute="trailing" constant="-1" id="MQj-WS-BKK"/>
+                                    <constraint firstItem="741" firstAttribute="centerY" secondItem="747" secondAttribute="centerY" id="PVX-4s-noh"/>
+                                    <constraint firstAttribute="trailing" secondItem="748" secondAttribute="trailing" id="T6N-1Z-guj"/>
+                                    <constraint firstItem="747" firstAttribute="leading" secondItem="751" secondAttribute="leading" id="YiF-VB-Jk7"/>
+                                    <constraint firstItem="ZS2-Zs-0uM" firstAttribute="top" secondItem="751" secondAttribute="top" id="ZFv-cW-NJf"/>
+                                    <constraint firstAttribute="bottom" secondItem="748" secondAttribute="bottom" constant="35" id="adA-xq-0Om"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZS2-Zs-0uM" secondAttribute="trailing" id="bNt-Fa-zAe"/>
+                                    <constraint firstItem="ZS2-Zs-0uM" firstAttribute="leading" secondItem="751" secondAttribute="leading" id="mEb-Fv-3Xd"/>
+                                    <constraint firstItem="748" firstAttribute="top" secondItem="751" secondAttribute="top" constant="22" id="nMY-J9-GjV"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZS2-Zs-0uM" secondAttribute="bottom" id="szW-Vp-spC"/>
+                                </constraints>
                             </customView>
                             <tabView fixedFrame="YES" type="noTabsNoBorder" id="79">
                                 <rect key="frame" x="213" y="0.0" width="737" height="663"/>
@@ -159,167 +176,84 @@
                                             <rect key="frame" x="0.0" y="0.0" width="737" height="663"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="259">
-                                                    <rect key="frame" x="-2" y="608" width="526" height="14"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                    <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" title="Do not localize" id="1268">
-                                                        <font key="font" metaFont="smallSystem"/>
-                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                    </textFieldCell>
-                                                    <connections>
-                                                        <binding destination="-2" name="value" keyPath="pageSelectionTitle" id="469"/>
-                                                    </connections>
-                                                </textField>
-                                                <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="552">
-                                                    <rect key="frame" x="592" y="607" width="80" height="16"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                                    <buttonCell key="cell" type="check" title="Full screen" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="1269">
-                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                        <font key="font" metaFont="smallSystem"/>
-                                                    </buttonCell>
-                                                    <connections>
-                                                        <binding destination="372" name="value" keyPath="values.dimTestBackground" id="553"/>
-                                                    </connections>
-                                                </button>
-                                                <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="774">
-                                                    <rect key="frame" x="0.0" y="20" width="30" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSAddTemplate" imagePosition="only" alignment="center" borderStyle="border" inset="2" id="1270">
-                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                        <font key="font" metaFont="system"/>
-                                                    </buttonCell>
-                                                    <connections>
-                                                        <action selector="newPreset:" target="-2" id="816"/>
-                                                    </connections>
-                                                </button>
-                                                <popUpButton fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="775" customClass="ProVocActionPopUpButton">
-                                                    <rect key="frame" x="29" y="20" width="35" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <popUpButtonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" inset="2" pullsDown="YES" preferredEdge="maxY" selectedItem="777" id="1271">
-                                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                        <font key="font" metaFont="menu"/>
-                                                        <menu key="menu" title="OtherViews" id="776">
-                                                            <items>
-                                                                <menuItem image="NSActionTemplate" hidden="YES" id="777"/>
-                                                                <menuItem title="New…" id="779">
-                                                                    <connections>
-                                                                        <action selector="newPreset:" target="-2" id="817"/>
-                                                                    </connections>
-                                                                </menuItem>
-                                                                <menuItem title="Duplicate" id="811">
-                                                                    <connections>
-                                                                        <action selector="duplicatePreset:" target="-2" id="819"/>
-                                                                    </connections>
-                                                                </menuItem>
-                                                                <menuItem title="Remove" id="778">
-                                                                    <connections>
-                                                                        <action selector="removePreset:" target="-2" id="820"/>
-                                                                    </connections>
-                                                                </menuItem>
-                                                            </items>
-                                                        </menu>
-                                                    </popUpButtonCell>
-                                                </popUpButton>
-                                                <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="781">
-                                                    <rect key="frame" x="687" y="20" width="30" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSPreferencesGeneral" imagePosition="only" alignment="center" borderStyle="border" inset="2" id="1272">
-                                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
-                                                        <font key="font" metaFont="system"/>
-                                                    </buttonCell>
-                                                    <connections>
-                                                        <binding destination="-2" name="value" keyPath="editingPreset" id="790"/>
-                                                    </connections>
-                                                </button>
-                                                <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="782">
-                                                    <rect key="frame" x="264" y="17" width="210" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <segmentedCell key="cell" borderStyle="border" alignment="left" segmentDistribution="fill" style="rounded" trackingMode="selectOne" id="1273">
-                                                        <font key="font" metaFont="system"/>
-                                                        <segments>
-                                                            <segment label="Editing" imageScaling="none" tag="1"/>
-                                                            <segment label="Training" imageScaling="none"/>
-                                                            <segment label="History" imageScaling="none" tag="2"/>
-                                                        </segments>
-                                                    </segmentedCell>
-                                                    <connections>
-                                                        <binding destination="-2" name="selectedTag" keyPath="mainTab" id="879"/>
-                                                    </connections>
-                                                </segmentedControl>
-                                                <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="831">
-                                                    <rect key="frame" x="685" y="599" width="32" height="32"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Play" imagePosition="only" alignment="center" alternateImage="PlayDown" inset="2" id="1274">
-                                                        <behavior key="behavior" lightByContents="YES"/>
-                                                        <font key="font" metaFont="label"/>
-                                                    </buttonCell>
-                                                    <connections>
-                                                        <action selector="startTest:" target="-2" id="832"/>
-                                                    </connections>
-                                                </button>
-                                                <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="865">
-                                                    <rect key="frame" x="527" y="599" width="38" height="32"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="iPodPreferences" imagePosition="only" alignment="center" inset="2" id="1275">
-                                                        <behavior key="behavior" lightByContents="YES"/>
-                                                        <font key="font" metaFont="label"/>
-                                                    </buttonCell>
-                                                    <connections>
-                                                        <action selector="sendToiPod:" target="-2" id="869"/>
-                                                        <binding destination="-2" name="hidden" keyPath="iPodConnected" id="871">
-                                                            <dictionary key="options">
-                                                                <string key="NSValueTransformerName">NSNegateBoolean</string>
-                                                            </dictionary>
-                                                        </binding>
-                                                        <binding destination="-2" name="image" keyPath="sendToiPodImage" id="866"/>
-                                                    </connections>
-                                                </button>
-                                                <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="870">
-                                                    <rect key="frame" x="607" y="20" width="30" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="ipodsettings" imagePosition="only" alignment="center" borderStyle="border" inset="2" id="1276">
-                                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                        <font key="font" metaFont="system"/>
-                                                    </buttonCell>
-                                                    <connections>
-                                                        <action selector="displayiPodPreferences:" target="-2" id="874"/>
-                                                        <binding destination="-2" name="hidden" keyPath="iPodConnected" id="873">
-                                                            <dictionary key="options">
-                                                                <string key="NSValueTransformerName">NSNegateBoolean</string>
-                                                            </dictionary>
-                                                        </binding>
-                                                    </connections>
-                                                </button>
-                                                <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="875">
-                                                    <rect key="frame" x="647" y="20" width="30" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="ejectipod" imagePosition="only" alignment="center" borderStyle="border" inset="2" id="1277">
-                                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                        <font key="font" metaFont="system"/>
-                                                    </buttonCell>
-                                                    <connections>
-                                                        <action selector="ejectiPod:" target="-2" id="878"/>
-                                                        <binding destination="-2" name="hidden" keyPath="iPodConnected" id="877">
-                                                            <dictionary key="options">
-                                                                <string key="NSValueTransformerName">NSNegateBoolean</string>
-                                                            </dictionary>
-                                                        </binding>
-                                                    </connections>
-                                                </button>
-                                                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="998">
-                                                    <rect key="frame" x="0.0" y="42" width="724" height="554"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <customView translatesAutoresizingMaskIntoConstraints="NO" id="WBj-aB-z8x" userLabel="Header View">
+                                                    <rect key="frame" x="20" y="595" width="697" height="48"/>
                                                     <subviews>
-                                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="994">
-                                                            <rect key="frame" x="377" y="8" width="340" height="536"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" heightSizable="YES"/>
+                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="259">
+                                                            <rect key="frame" x="-2" y="17" width="82" height="14"/>
+                                                            <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" title="Do not localize" id="1268">
+                                                                <font key="font" metaFont="smallSystem"/>
+                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                            <connections>
+                                                                <binding destination="-2" name="value" keyPath="pageSelectionTitle" id="469"/>
+                                                            </connections>
+                                                        </textField>
+                                                        <button imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="552">
+                                                            <rect key="frame" x="539" y="15" width="80" height="18"/>
+                                                            <buttonCell key="cell" type="check" title="Full screen" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="1269">
+                                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                <font key="font" metaFont="smallSystem"/>
+                                                            </buttonCell>
+                                                            <connections>
+                                                                <binding destination="372" name="value" keyPath="values.dimTestBackground" id="553"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="865" userLabel="iPod Button">
+                                                            <rect key="frame" x="625" y="8" width="32" height="32"/>
+                                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="iPodPreferences" imagePosition="only" alignment="center" inset="2" id="1275">
+                                                                <behavior key="behavior" lightByContents="YES"/>
+                                                                <font key="font" metaFont="label"/>
+                                                            </buttonCell>
+                                                            <connections>
+                                                                <action selector="sendToiPod:" target="-2" id="869"/>
+                                                                <binding destination="-2" name="hidden" keyPath="iPodConnected" id="871">
+                                                                    <dictionary key="options">
+                                                                        <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                                    </dictionary>
+                                                                </binding>
+                                                                <binding destination="-2" name="image" keyPath="sendToiPodImage" id="866"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="831" userLabel="Play button">
+                                                            <rect key="frame" x="665" y="8" width="32" height="32"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="32" id="u1I-xA-haU"/>
+                                                                <constraint firstAttribute="width" constant="32" id="yRk-uZ-I2A"/>
+                                                            </constraints>
+                                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Play" imagePosition="only" alignment="center" alternateImage="PlayDown" inset="2" id="1274">
+                                                                <behavior key="behavior" lightByContents="YES"/>
+                                                                <font key="font" metaFont="label"/>
+                                                            </buttonCell>
+                                                            <connections>
+                                                                <action selector="startTest:" target="-2" id="832"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="552" firstAttribute="centerY" secondItem="WBj-aB-z8x" secondAttribute="centerY" id="571-rv-15W"/>
+                                                        <constraint firstAttribute="height" constant="48" id="ErK-k2-RNb"/>
+                                                        <constraint firstItem="865" firstAttribute="leading" secondItem="552" secondAttribute="trailing" constant="8" id="H5k-Zy-QWe"/>
+                                                        <constraint firstItem="865" firstAttribute="centerY" secondItem="WBj-aB-z8x" secondAttribute="centerY" id="LKX-4b-Wtf"/>
+                                                        <constraint firstAttribute="trailing" secondItem="831" secondAttribute="trailing" id="NyB-9B-auN"/>
+                                                        <constraint firstItem="831" firstAttribute="centerY" secondItem="WBj-aB-z8x" secondAttribute="centerY" id="QRU-dl-pYX"/>
+                                                        <constraint firstItem="259" firstAttribute="leading" secondItem="WBj-aB-z8x" secondAttribute="leading" id="WFZ-qT-z5n"/>
+                                                        <constraint firstItem="831" firstAttribute="leading" secondItem="865" secondAttribute="trailing" constant="8" id="i1R-l8-19k"/>
+                                                        <constraint firstItem="259" firstAttribute="centerY" secondItem="WBj-aB-z8x" secondAttribute="centerY" id="pbm-eN-Ccx"/>
+                                                    </constraints>
+                                                </customView>
+                                                <customView translatesAutoresizingMaskIntoConstraints="NO" id="998" userLabel="Content View">
+                                                    <rect key="frame" x="20" y="42" width="697" height="553"/>
+                                                    <subviews>
+                                                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="994">
+                                                            <rect key="frame" x="357" y="0.0" width="340" height="553"/>
                                                             <subviews>
                                                                 <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="952">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="340" height="536"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="340" height="553"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                                                                     <clipView key="contentView" autoresizesSubviews="NO" ambiguous="YES" id="4gd-EU-PSP">
-                                                                        <rect key="frame" x="1" y="1" width="338" height="534"/>
+                                                                        <rect key="frame" x="1" y="1" width="338" height="551"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <subviews>
                                                                             <box fixedFrame="YES" boxType="oldStyle" borderType="none" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="783" customClass="ParameterBox">
@@ -338,14 +272,13 @@
                                                                                 </connections>
                                                                             </box>
                                                                         </subviews>
-                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </clipView>
                                                                     <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" controlSize="small" horizontal="YES" id="1369">
                                                                         <rect key="frame" x="-100" y="-100" width="327" height="15"/>
                                                                         <autoresizingMask key="autoresizingMask"/>
                                                                     </scroller>
                                                                     <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" controlSize="small" horizontal="NO" id="1370">
-                                                                        <rect key="frame" x="325" y="1" width="14" height="534"/>
+                                                                        <rect key="frame" x="325" y="1" width="14" height="551"/>
                                                                         <autoresizingMask key="autoresizingMask"/>
                                                                     </scroller>
                                                                     <connections>
@@ -357,6 +290,9 @@
                                                                     </connections>
                                                                 </scrollView>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="340" id="zC9-tK-Tvh"/>
+                                                            </constraints>
                                                             <connections>
                                                                 <binding destination="-2" name="hidden" keyPath="editingPreset" id="996">
                                                                     <dictionary key="options">
@@ -365,21 +301,20 @@
                                                                 </binding>
                                                             </connections>
                                                         </customView>
-                                                        <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="76" horizontalPageScroll="10" verticalLineScroll="76" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="763">
-                                                            <rect key="frame" x="10" y="8" width="360" height="536"/>
-                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                            <clipView key="contentView" ambiguous="YES" copiesOnScroll="NO" id="hba-uM-Yao">
-                                                                <rect key="frame" x="1" y="0.0" width="358" height="535"/>
+                                                        <scrollView autohidesScrollers="YES" horizontalLineScroll="76" horizontalPageScroll="10" verticalLineScroll="76" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="763">
+                                                            <rect key="frame" x="0.0" y="0.0" width="358" height="553"/>
+                                                            <clipView key="contentView" copiesOnScroll="NO" id="hba-uM-Yao">
+                                                                <rect key="frame" x="1" y="0.0" width="356" height="552"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" rowHeight="74" headerView="1367" id="764" customClass="ProVocDeletableTableView">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="358" height="512"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="356" height="529"/>
                                                                         <autoresizingMask key="autoresizingMask"/>
                                                                         <size key="intercellSpacing" width="3" height="2"/>
                                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                                         <tableColumns>
-                                                                            <tableColumn width="354.56884765625" minWidth="40" maxWidth="1000" id="766" customClass="ProVocPresetTableColumn">
+                                                                            <tableColumn width="352.56884765625" minWidth="40" maxWidth="1000" id="766" customClass="ProVocPresetTableColumn">
                                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Training modes">
                                                                                     <font key="font" metaFont="smallSystem"/>
                                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -409,17 +344,169 @@
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                             </scroller>
                                                             <tableHeaderView key="headerView" id="1367">
-                                                                <rect key="frame" x="0.0" y="0.0" width="358" height="23"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="356" height="23"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                             </tableHeaderView>
                                                         </scrollView>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="994" secondAttribute="trailing" id="2wl-Vm-7Qk"/>
+                                                        <constraint firstAttribute="bottom" secondItem="994" secondAttribute="bottom" id="6Mk-5V-Bql"/>
+                                                        <constraint firstItem="763" firstAttribute="top" secondItem="998" secondAttribute="top" id="Jxp-QN-XSC"/>
+                                                        <constraint firstItem="763" firstAttribute="leading" secondItem="998" secondAttribute="leading" id="Rrt-pf-DbX"/>
+                                                        <constraint firstAttribute="bottom" secondItem="763" secondAttribute="bottom" id="ZWC-LT-vCE"/>
+                                                        <constraint firstItem="994" firstAttribute="top" secondItem="998" secondAttribute="top" id="gjz-Sf-5e4"/>
+                                                        <constraint firstItem="994" firstAttribute="leading" secondItem="763" secondAttribute="trailing" constant="-1" id="hLW-CF-HiS"/>
+                                                    </constraints>
+                                                </customView>
+                                                <customView translatesAutoresizingMaskIntoConstraints="NO" id="1aN-OH-ZsQ" userLabel="Footer View">
+                                                    <rect key="frame" x="0.0" y="0.0" width="737" height="40"/>
+                                                    <subviews>
+                                                        <button imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="774" userLabel="Add Button">
+                                                            <rect key="frame" x="20" y="9" width="30" height="22"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="30" id="mxJ-ve-Cdm"/>
+                                                                <constraint firstAttribute="height" constant="22" id="nSZ-z5-IWP"/>
+                                                            </constraints>
+                                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSAddTemplate" imagePosition="only" alignment="center" borderStyle="border" inset="2" id="1270">
+                                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                <font key="font" metaFont="system"/>
+                                                            </buttonCell>
+                                                            <connections>
+                                                                <action selector="newPreset:" target="-2" id="816"/>
+                                                            </connections>
+                                                        </button>
+                                                        <popUpButton imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="775" customClass="ProVocActionPopUpButton">
+                                                            <rect key="frame" x="49" y="9" width="35" height="22"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="22" id="weM-oM-knT"/>
+                                                                <constraint firstAttribute="width" constant="35" id="xSh-eH-yQ5"/>
+                                                            </constraints>
+                                                            <popUpButtonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" inset="2" pullsDown="YES" preferredEdge="maxY" selectedItem="777" id="1271">
+                                                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                                <font key="font" metaFont="menu"/>
+                                                                <menu key="menu" title="OtherViews" id="776">
+                                                                    <items>
+                                                                        <menuItem image="NSActionTemplate" hidden="YES" id="777"/>
+                                                                        <menuItem title="New…" id="779">
+                                                                            <connections>
+                                                                                <action selector="newPreset:" target="-2" id="817"/>
+                                                                            </connections>
+                                                                        </menuItem>
+                                                                        <menuItem title="Duplicate" id="811">
+                                                                            <connections>
+                                                                                <action selector="duplicatePreset:" target="-2" id="819"/>
+                                                                            </connections>
+                                                                        </menuItem>
+                                                                        <menuItem title="Remove" id="778">
+                                                                            <connections>
+                                                                                <action selector="removePreset:" target="-2" id="820"/>
+                                                                            </connections>
+                                                                        </menuItem>
+                                                                    </items>
+                                                                </menu>
+                                                            </popUpButtonCell>
+                                                        </popUpButton>
+                                                        <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="782">
+                                                            <rect key="frame" x="261" y="8" width="215" height="24"/>
+                                                            <segmentedCell key="cell" borderStyle="border" alignment="left" segmentDistribution="fill" style="rounded" trackingMode="selectOne" id="1273">
+                                                                <font key="font" metaFont="system"/>
+                                                                <segments>
+                                                                    <segment label="Editing" imageScaling="none" tag="1"/>
+                                                                    <segment label="Training" imageScaling="none"/>
+                                                                    <segment label="History" imageScaling="none" tag="2"/>
+                                                                </segments>
+                                                            </segmentedCell>
+                                                            <connections>
+                                                                <binding destination="-2" name="selectedTag" keyPath="mainTab" id="879"/>
+                                                            </connections>
+                                                        </segmentedControl>
+                                                        <button imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="870">
+                                                            <rect key="frame" x="617" y="9" width="30" height="22"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="22" id="PKh-B8-GUd"/>
+                                                                <constraint firstAttribute="width" constant="30" id="SF3-g2-dqN"/>
+                                                            </constraints>
+                                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="ipodsettings" imagePosition="only" alignment="center" borderStyle="border" inset="2" id="1276">
+                                                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                                <font key="font" metaFont="system"/>
+                                                            </buttonCell>
+                                                            <connections>
+                                                                <action selector="displayiPodPreferences:" target="-2" id="874"/>
+                                                                <binding destination="-2" name="hidden" keyPath="iPodConnected" id="873">
+                                                                    <dictionary key="options">
+                                                                        <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                                    </dictionary>
+                                                                </binding>
+                                                            </connections>
+                                                        </button>
+                                                        <button imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="875">
+                                                            <rect key="frame" x="647" y="9" width="30" height="22"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="22" id="Mbs-Ci-fj1"/>
+                                                                <constraint firstAttribute="width" constant="30" id="tIs-EG-csr"/>
+                                                            </constraints>
+                                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="ejectipod" imagePosition="only" alignment="center" borderStyle="border" inset="2" id="1277">
+                                                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                                <font key="font" metaFont="system"/>
+                                                            </buttonCell>
+                                                            <connections>
+                                                                <action selector="ejectiPod:" target="-2" id="878"/>
+                                                                <binding destination="-2" name="hidden" keyPath="iPodConnected" id="877">
+                                                                    <dictionary key="options">
+                                                                        <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                                    </dictionary>
+                                                                </binding>
+                                                            </connections>
+                                                        </button>
+                                                        <button imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="781" userLabel="Pref Button">
+                                                            <rect key="frame" x="687" y="9" width="30" height="22"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="22" id="0xl-y7-Jd1"/>
+                                                                <constraint firstAttribute="width" constant="30" id="RXc-if-jTh"/>
+                                                            </constraints>
+                                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSPreferencesGeneral" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1272">
+                                                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                                                <font key="font" metaFont="system"/>
+                                                            </buttonCell>
+                                                            <connections>
+                                                                <binding destination="-2" name="value" keyPath="editingPreset" id="790"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="781" secondAttribute="trailing" constant="20" id="25Q-AJ-uwO"/>
+                                                        <constraint firstItem="782" firstAttribute="centerY" secondItem="1aN-OH-ZsQ" secondAttribute="centerY" id="36Q-Lx-AIo"/>
+                                                        <constraint firstItem="875" firstAttribute="centerY" secondItem="1aN-OH-ZsQ" secondAttribute="centerY" id="6c9-aC-Zw6"/>
+                                                        <constraint firstItem="875" firstAttribute="leading" secondItem="870" secondAttribute="trailing" id="Kpl-tV-8aU"/>
+                                                        <constraint firstItem="774" firstAttribute="leading" secondItem="1aN-OH-ZsQ" secondAttribute="leading" constant="20" id="Z9r-XB-393"/>
+                                                        <constraint firstItem="775" firstAttribute="leading" secondItem="774" secondAttribute="trailing" constant="-1" id="bFU-q6-dNo"/>
+                                                        <constraint firstItem="870" firstAttribute="centerY" secondItem="1aN-OH-ZsQ" secondAttribute="centerY" id="bZA-vd-9oQ"/>
+                                                        <constraint firstItem="775" firstAttribute="centerY" secondItem="1aN-OH-ZsQ" secondAttribute="centerY" id="dbS-xc-fbW"/>
+                                                        <constraint firstItem="782" firstAttribute="centerX" secondItem="1aN-OH-ZsQ" secondAttribute="centerX" id="eau-FR-WAV"/>
+                                                        <constraint firstItem="774" firstAttribute="centerY" secondItem="1aN-OH-ZsQ" secondAttribute="centerY" id="kAj-gh-djL"/>
+                                                        <constraint firstItem="781" firstAttribute="leading" secondItem="875" secondAttribute="trailing" constant="10" id="mSg-lG-Vhx"/>
+                                                        <constraint firstItem="781" firstAttribute="centerY" secondItem="1aN-OH-ZsQ" secondAttribute="centerY" id="tnp-Bw-H0P"/>
+                                                        <constraint firstAttribute="height" constant="40" id="zw4-XE-y8D"/>
+                                                    </constraints>
                                                 </customView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="998" secondAttribute="trailing" constant="20" id="0Bi-wF-QVr"/>
+                                                <constraint firstAttribute="bottom" secondItem="1aN-OH-ZsQ" secondAttribute="bottom" id="Cuh-mp-8eV"/>
+                                                <constraint firstAttribute="trailing" secondItem="1aN-OH-ZsQ" secondAttribute="trailing" id="FFA-7p-DIV"/>
+                                                <constraint firstItem="1aN-OH-ZsQ" firstAttribute="leading" secondItem="82" secondAttribute="leading" id="MRa-cv-kji"/>
+                                                <constraint firstItem="998" firstAttribute="leading" secondItem="82" secondAttribute="leading" constant="20" id="MVY-wS-PXD"/>
+                                                <constraint firstItem="1aN-OH-ZsQ" firstAttribute="top" secondItem="998" secondAttribute="bottom" constant="2" id="Rgy-LP-BX2"/>
+                                                <constraint firstAttribute="trailing" secondItem="WBj-aB-z8x" secondAttribute="trailing" constant="20" id="ahE-S5-zOC"/>
+                                                <constraint firstItem="998" firstAttribute="top" secondItem="WBj-aB-z8x" secondAttribute="bottom" id="mAc-eb-ESy"/>
+                                                <constraint firstItem="WBj-aB-z8x" firstAttribute="leading" secondItem="82" secondAttribute="leading" constant="20" id="xy3-vv-AGK"/>
+                                                <constraint firstItem="WBj-aB-z8x" firstAttribute="top" secondItem="82" secondAttribute="top" constant="20" id="yVf-Mn-MMK"/>
+                                            </constraints>
                                         </view>
                                     </tabViewItem>
                                     <tabViewItem label="Editing" identifier="1" id="80">
-                                        <view key="view" ambiguous="YES" id="83">
+                                        <view key="view" id="83">
                                             <rect key="frame" x="0.0" y="0.0" width="737" height="663"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
@@ -656,7 +743,7 @@ DQ
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <clipView key="contentView" ambiguous="YES" id="vVQ-Uh-sNb">
                                                                 <rect key="frame" x="1" y="0.0" width="715" height="422"/>
-                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <tableView verticalHuggingPriority="750" tag="1" allowsExpansionToolTips="YES" alternatingRowBackgroundColors="YES" autosaveColumns="NO" headerView="1364" id="85" customClass="ProVocTableView">
                                                                         <rect key="frame" x="0.0" y="0.0" width="813" height="399"/>
@@ -893,12 +980,18 @@ DQ
                         </connections>
                     </splitView>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="785" secondAttribute="trailing" id="Yux-xL-H5e"/>
+                    <constraint firstItem="785" firstAttribute="leading" secondItem="26" secondAttribute="leading" id="ljb-nZ-GCs"/>
+                    <constraint firstItem="785" firstAttribute="top" secondItem="26" secondAttribute="top" id="lti-bC-Ieh"/>
+                    <constraint firstAttribute="bottom" secondItem="785" secondAttribute="bottom" id="v9g-8h-gOB"/>
+                </constraints>
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="74"/>
                 <outlet property="initialFirstResponder" destination="128" id="999"/>
             </connections>
-            <point key="canvasLocation" x="141" y="65.5"/>
+            <point key="canvasLocation" x="424" y="6.5"/>
         </window>
         <window title="Rename" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="108" userLabel="Input" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
