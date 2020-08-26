@@ -91,6 +91,8 @@
 	IBOutlet NSView *mPresetEditView;
 	IBOutlet NSView *mPresetSettingsView;
 	
+    IBOutlet NSLayoutConstraint *mPresetEditingViewWidthConstraint;
+    
 	IBOutlet NSSearchField *mSearchField;
 	IBOutlet NSMenu *mSearchMenu;
 
