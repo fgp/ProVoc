@@ -603,7 +603,7 @@
                                                                     <rect key="frame" x="0.0" y="29" width="703" height="404"/>
                                                                     <clipView key="contentView" id="vVQ-Uh-sNb">
                                                                         <rect key="frame" x="1" y="0.0" width="701" height="403"/>
-                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                        <autoresizingMask key="autoresizingMask"/>
                                                                         <subviews>
                                                                             <tableView verticalHuggingPriority="750" tag="1" allowsExpansionToolTips="YES" alternatingRowBackgroundColors="YES" autosaveColumns="NO" headerView="1364" id="85" customClass="ProVocTableView">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="813" height="380"/>
@@ -1100,7 +1100,7 @@ DQ
                     <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="RyF-Uh-82A"/>
                     <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="xpq-Ll-qrI"/>
                     <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="wuE-RV-W8a"/>
-                    <toolbarItem implicitItemIdentifier="89E7A625-CA72-4094-B265-51FD95ED781F" explicitItemIdentifier="1" label="Vocabulary" paletteLabel="Vocabulary" tag="1" image="NSApplicationIcon" selectable="YES" id="dfJ-YI-Llv">
+                    <toolbarItem implicitItemIdentifier="89E7A625-CA72-4094-B265-51FD95ED781F" explicitItemIdentifier="1" label="Dictionary" paletteLabel="Dictionary" tag="1" image="dictionary" selectable="YES" id="dfJ-YI-Llv">
                         <size key="minSize" width="32" height="32"/>
                         <size key="maxSize" width="32" height="32"/>
                         <connections>
@@ -1114,7 +1114,7 @@ DQ
                             <action selector="didSelectToolbarItem:" target="-2" id="ivj-IH-UAc"/>
                         </connections>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="C16EBFEE-D510-4005-A1A6-AE5C3BE712D0" explicitItemIdentifier="2" label="Scoring" paletteLabel="Scoring" tag="2" image="Hourglass" selectable="YES" id="Uhp-IL-78s">
+                    <toolbarItem implicitItemIdentifier="C16EBFEE-D510-4005-A1A6-AE5C3BE712D0" explicitItemIdentifier="2" label="Your Results" paletteLabel="Your Results" tag="2" image="graduate" selectable="YES" id="Uhp-IL-78s">
                         <size key="minSize" width="24" height="24"/>
                         <size key="maxSize" width="24" height="24"/>
                         <connections>
@@ -2280,17 +2280,17 @@ Answers in German.</string>
         </customView>
     </objects>
     <resources>
-        <image name="Hourglass" width="24" height="24"/>
         <image name="Inspector" width="32" height="32"/>
         <image name="NSActionTemplate" width="14" height="14"/>
         <image name="NSAddTemplate" width="11" height="11"/>
-        <image name="NSApplicationIcon" width="32" height="32"/>
         <image name="NSPreferencesGeneral" width="32" height="32"/>
         <image name="Play" width="29" height="32"/>
         <image name="PlayDown" width="29" height="32"/>
         <image name="TrainingPreferences" width="32" height="32"/>
         <image name="blankpixel" width="1" height="1"/>
+        <image name="dictionary" width="48" height="48"/>
         <image name="ejectipod" width="18" height="17"/>
+        <image name="graduate" width="48" height="48"/>
         <image name="iPodPreferences" width="32" height="32"/>
         <image name="ipodsettings" width="11" height="17"/>
     </resources>
