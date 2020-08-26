@@ -1,7 +1,7 @@
 Thank you for downloading the source code of ProVoc! Please take a moment
 to read the following lines:
 
-- This source code is available under the BSD license (see below)
+- This source code is available under the BSD license (see LICENSE.txt)
 - This code base is really, really old... Please keep in mind that this
     software has grown from a simple vocabulary training app that we've
     written (probably like many of you out there) "just for our own needs".
