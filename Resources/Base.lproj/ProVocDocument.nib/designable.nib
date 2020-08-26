@@ -249,16 +249,17 @@
                                                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="994">
                                                             <rect key="frame" x="357" y="0.0" width="340" height="545"/>
                                                             <subviews>
-                                                                <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="952">
+                                                                <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="952">
                                                                     <rect key="frame" x="0.0" y="0.0" width="340" height="545"/>
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <clipView key="contentView" autoresizesSubviews="NO" id="4gd-EU-PSP">
                                                                         <rect key="frame" x="1" y="1" width="338" height="543"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <subviews>
                                                                             <box boxType="oldStyle" borderType="none" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="783" customClass="ParameterBox">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="327" height="615"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="327" height="700"/>
                                                                                 <view key="contentView" id="jZi-rs-h7F">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="615"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="700"/>
                                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                 </view>
                                                                                 <connections>
@@ -271,7 +272,7 @@
                                                                             </box>
                                                                         </subviews>
                                                                         <constraints>
-                                                                            <constraint firstItem="783" firstAttribute="top" secondItem="4gd-EU-PSP" secondAttribute="top" constant="-72" id="1Rg-LA-9fw"/>
+                                                                            <constraint firstItem="783" firstAttribute="top" secondItem="4gd-EU-PSP" secondAttribute="top" constant="-157" id="1Rg-LA-9fw"/>
                                                                             <constraint firstAttribute="trailing" secondItem="783" secondAttribute="trailing" constant="11" id="7Za-ql-MYa"/>
                                                                             <constraint firstItem="783" firstAttribute="leading" secondItem="4gd-EU-PSP" secondAttribute="leading" id="G0r-54-yjQ"/>
                                                                             <constraint firstAttribute="bottom" secondItem="783" secondAttribute="bottom" id="u6Y-Fo-GSc"/>
@@ -583,8 +584,8 @@
                                                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="1003">
                                                             <rect key="frame" x="0.0" y="0.0" width="697" height="449"/>
                                                             <subviews>
-                                                                <button misplaced="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="440">
-                                                                    <rect key="frame" x="2" y="-5" width="717" height="30"/>
+                                                                <button imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="440">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="697" height="30"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="30" id="Hnn-Lv-6qO"/>
                                                                     </constraints>
@@ -597,14 +598,14 @@
                                                                         <binding destination="-2" name="title" keyPath="editCommentString" id="442"/>
                                                                     </connections>
                                                                 </button>
-                                                                <scrollView misplaced="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" translatesAutoresizingMaskIntoConstraints="NO" id="86">
-                                                                    <rect key="frame" x="2" y="24" width="717" height="423"/>
+                                                                <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" translatesAutoresizingMaskIntoConstraints="NO" id="86">
+                                                                    <rect key="frame" x="0.0" y="29" width="697" height="420"/>
                                                                     <clipView key="contentView" id="vVQ-Uh-sNb">
-                                                                        <rect key="frame" x="1" y="0.0" width="715" height="422"/>
+                                                                        <rect key="frame" x="1" y="0.0" width="695" height="419"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <subviews>
                                                                             <tableView verticalHuggingPriority="750" tag="1" allowsExpansionToolTips="YES" alternatingRowBackgroundColors="YES" autosaveColumns="NO" headerView="1364" id="85" customClass="ProVocTableView">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="813" height="399"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="813" height="396"/>
                                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                                 <size key="intercellSpacing" width="3" height="2"/>
                                                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -741,7 +742,7 @@
                                                                         </subviews>
                                                                     </clipView>
                                                                     <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="1363">
-                                                                        <rect key="frame" x="1" y="406" width="715" height="16"/>
+                                                                        <rect key="frame" x="1" y="403" width="695" height="16"/>
                                                                         <autoresizingMask key="autoresizingMask"/>
                                                                     </scroller>
                                                                     <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="1365">
