@@ -1,8 +1,13 @@
 #import <Cocoa/Cocoa.h>
 
-@interface RankCell : NSCell {
-}
+@interface NSCell(Selection)
 
+@property (nonatomic, getter=isSelected) BOOL selected;
+@end
+
+@interface RankCell : NSCell {
+    
+}
 -(float)floatValue;
 -(void)setFloatValue:(float)inValue;
 
