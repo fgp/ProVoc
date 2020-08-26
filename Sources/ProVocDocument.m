@@ -44,6 +44,8 @@
 #import "SpeechSynthesizerExtensions.h"
 #import "DateExtensions.h"
 
+#import <QuartzCore/QuartzCore.h>
+
 #define ProVocInputFontSizeDidChangeNotification @"ProVocInputFontSizeDidChangeNotification"
 
 @interface NSFont (Extern)
@@ -109,6 +111,8 @@
 		mTestLimitNumber = 20;
 		mTestLimitWhat = 0;
 		
+        mPresetEditingViewWidthConstraint.constant = 0.0;
+        
 		mWords = [[NSMutableArray alloc] initWithCapacity:0];
 		mSortedWords = [[NSMutableArray alloc] initWithCapacity:0];
 		mVisibleWords = [[NSMutableArray alloc] initWithCapacity:0];
@@ -582,7 +586,7 @@
 {
 	return mEditingPreset;
 }
-
+/*
 -(void)animatePresetViewToFrame:(NSRect)inDestinationFrame
 {
 	NSRect sourceFrame = [mPresetView frame];
@@ -607,7 +611,7 @@
 	}
 	[mPresetEditView setFrame:editFrame];
 }
-
+*/
 -(void)setEditingPreset:(BOOL)inEdit
 {
 	if (inEdit && mEditingPreset != inEdit) {
@@ -616,16 +620,36 @@
 		[self didChangeValueForKey:@"editingPreset"];
 	}
 	
+    CGFloat editViewWidth = 1.0;
+    if (inEdit) {
+        editViewWidth = 340.0;
+    }
+    if ([mMainWindow isVisible]) {
+        [NSAnimationContext runAnimationGroup:^(NSAnimationContext * _Nonnull context) {
+            [context setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
+            [context setDuration:0.25];
+            mPresetEditingViewWidthConstraint.animator.constant = editViewWidth;
+        } completionHandler:^{
+            mPresetEditView.hidden = !inEdit;
+        }];
+    } else {
+        mPresetEditingViewWidthConstraint.constant = editViewWidth;
+        mPresetEditView.hidden = !inEdit;
+    }
+    
+    /*
 	NSRect frame = [mPresetView frame];
-	if (inEdit)
+    if (inEdit) {
 		frame.size.width = NSMinX([mPresetEditView frame]) - 9 - NSMinX(frame);
-	else
+    } else {
 		frame.size.width = NSMaxX([mPresetEditView frame]) - NSMinX(frame);
-	if ([mMainWindow isVisible])
+    }
+    if ([mMainWindow isVisible]) {
 		[self animatePresetViewToFrame:frame];
+    }
 	[mPresetView setFrame:frame];
 	[[mPresetView superview] setNeedsDisplay:YES];
-
+    */
 	if (!inEdit && mEditingPreset != inEdit) {
 		[self willChangeValueForKey:@"editingPreset"];
 		mEditingPreset = inEdit;
@@ -1452,10 +1476,11 @@ int SORT_BY_DIFFICULT(id left, id right, void *info)
 
 -(BOOL)tableView:(NSTableView *)inTableView shouldSelectRow:(int)inRowIndex
 {
-	if (inTableView == mPresetTableView)
+    if (inTableView == mPresetTableView) {
 		return [self canModifyTestParameters];
-	else
+    } else {
 		return YES;
+    }
 }
 
 -(NSString *)startTestButtonTitle
@@ -1867,8 +1892,9 @@ int SORT_BY_DIFFICULT(id left, id right, void *info)
 		[self willChangeValueForKey:@"pageSelectionTitle"];
 		[self didChangeValueForKey:@"pageSelectionTitle"];
 		[self currentPresetValuesDidChange:nil];
-	} else if (tableView == mWordTableView)
+    } else if (tableView == mWordTableView) {
 		[self selectedWordsDidChange:nil];
+    }
 }
 
 -(void)setLabelsToTest:(id)inLabelsToTest

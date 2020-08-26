@@ -22,6 +22,7 @@
                 <outlet property="mMainWindow" destination="29" id="78"/>
                 <outlet property="mPageOutlineView" destination="749" id="752"/>
                 <outlet property="mPresetEditView" destination="994" id="997"/>
+                <outlet property="mPresetEditingViewWidthConstraint" destination="zC9-tK-Tvh" id="lZ5-NU-3Be"/>
                 <outlet property="mPresetSettingsView" destination="1018" id="1020"/>
                 <outlet property="mPresetTableView" destination="764" id="797"/>
                 <outlet property="mPresetView" destination="763" id="799"/>
@@ -301,13 +302,13 @@
                                                                 </binding>
                                                             </connections>
                                                         </customView>
-                                                        <scrollView autohidesScrollers="YES" horizontalLineScroll="76" horizontalPageScroll="10" verticalLineScroll="76" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="763">
+                                                        <scrollView focusRingType="none" autohidesScrollers="YES" horizontalLineScroll="76" horizontalPageScroll="10" verticalLineScroll="76" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="763">
                                                             <rect key="frame" x="0.0" y="0.0" width="358" height="553"/>
                                                             <clipView key="contentView" copiesOnScroll="NO" id="hba-uM-Yao">
                                                                 <rect key="frame" x="1" y="0.0" width="356" height="552"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
-                                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" rowHeight="74" headerView="1367" id="764" customClass="ProVocDeletableTableView">
+                                                                    <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" rowHeight="74" headerView="1367" id="764" customClass="ProVocDeletableTableView">
                                                                         <rect key="frame" x="0.0" y="0.0" width="356" height="529"/>
                                                                         <autoresizingMask key="autoresizingMask"/>
                                                                         <size key="intercellSpacing" width="3" height="2"/>
