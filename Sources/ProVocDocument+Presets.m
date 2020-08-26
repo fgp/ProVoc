@@ -179,18 +179,19 @@
 
 -(float)splitView:(NSSplitView *)inSplitView constrainMinCoordinate:(float)inProposedMin ofSubviewAt:(int)inOffset
 {
-	return 150;
+	return 400; // min width for content pane
 }
 
 -(float)splitView:(NSSplitView *)inSplitView constrainMaxCoordinate:(float)inProposedMin ofSubviewAt:(int)inOffset
 {
-	return [[inSplitView window] frame].size.width - ([mPresetEditView frame].size.width + 150);
+	return [[inSplitView window] frame].size.width - ([mPresetEditView frame].size.width + [self splitView:inSplitView constrainMinCoordinate:inProposedMin ofSubviewAt:inOffset]);
 }
 
 -(void)splitViewWillResizeSubviews:(NSNotification *)inNotification
 {
 	NSSplitView *splitView = [inNotification object];
-	float minWidth = [mPresetEditView frame].size.width + 150;
+    CGFloat minPosX = [self splitView:splitView constrainMinCoordinate:0 ofSubviewAt:0];
+	float minWidth = [mPresetEditView frame].size.width + minPosX;
 	NSView *subview = [[splitView subviews] objectAtIndex:1];
 	if ([subview frame].size.width < minWidth) {
 		[subview setFrameSize:NSMakeSize(minWidth, [subview frame].size.height)];

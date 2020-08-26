@@ -54,9 +54,8 @@
                     <splitView vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="785">
                         <rect key="frame" x="0.0" y="0.0" width="950" height="663"/>
                         <subviews>
-                            <customView id="751">
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="751">
                                 <rect key="frame" x="0.0" y="0.0" width="204" height="663"/>
-                                <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                 <subviews>
                                     <visualEffectView blendingMode="behindWindow" material="appearanceBased" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="ZS2-Zs-0uM">
                                         <rect key="frame" x="0.0" y="0.0" width="204" height="663"/>
@@ -167,15 +166,14 @@
                                     <constraint firstAttribute="bottom" secondItem="ZS2-Zs-0uM" secondAttribute="bottom" id="szW-Vp-spC"/>
                                 </constraints>
                             </customView>
-                            <tabView fixedFrame="YES" type="noTabsNoBorder" id="79">
+                            <tabView fixedFrame="YES" type="noTabsNoBorder" translatesAutoresizingMaskIntoConstraints="NO" id="79">
                                 <rect key="frame" x="213" y="0.0" width="737" height="663"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <font key="font" metaFont="cellTitle"/>
                                 <tabViewItems>
                                     <tabViewItem label="Test" identifier="2" id="81">
-                                        <view key="view" id="82">
+                                        <view key="view" translatesAutoresizingMaskIntoConstraints="NO" id="82">
                                             <rect key="frame" x="0.0" y="0.0" width="737" height="663"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="WBj-aB-z8x" userLabel="Header View">
                                                     <rect key="frame" x="20" y="595" width="697" height="48"/>
@@ -507,7 +505,7 @@
                                         </view>
                                     </tabViewItem>
                                     <tabViewItem label="Editing" identifier="1" id="80">
-                                        <view key="view" id="83">
+                                        <view key="view" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="83">
                                             <rect key="frame" x="0.0" y="0.0" width="737" height="663"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
@@ -744,7 +742,7 @@ DQ
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <clipView key="contentView" ambiguous="YES" id="vVQ-Uh-sNb">
                                                                 <rect key="frame" x="1" y="0.0" width="715" height="422"/>
-                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <tableView verticalHuggingPriority="750" tag="1" allowsExpansionToolTips="YES" alternatingRowBackgroundColors="YES" autosaveColumns="NO" headerView="1364" id="85" customClass="ProVocTableView">
                                                                         <rect key="frame" x="0.0" y="0.0" width="813" height="399"/>
@@ -905,7 +903,7 @@ DQ
                                         </connections>
                                     </tabViewItem>
                                     <tabViewItem label="Tab" identifier="" id="844">
-                                        <view key="view" id="845">
+                                        <view key="view" translatesAutoresizingMaskIntoConstraints="NO" id="845">
                                             <rect key="frame" x="0.0" y="0.0" width="737" height="663"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
