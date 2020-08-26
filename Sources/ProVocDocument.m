@@ -64,7 +64,9 @@
 
 @end
 
-@implementation ProVocDocument
+@implementation ProVocDocument {
+    BOOL _finishedLoading;
+}
 
 +(void)initialize
 {
@@ -111,7 +113,7 @@
 		mTestLimitNumber = 20;
 		mTestLimitWhat = 0;
 		
-        mPresetEditingViewWidthConstraint.constant = 0.0;
+        //mPresetEditingViewWidthConstraint.constant = -1.0;
         
 		mWords = [[NSMutableArray alloc] initWithCapacity:0];
 		mSortedWords = [[NSMutableArray alloc] initWithCapacity:0];
@@ -284,7 +286,7 @@
 	state = [mLoadedParameters objectForKey:@"MainSplitViewState"];
 	if (state)
 		[mMainSplitView setSplitViewState:state];
-
+    
 	NSBox *presetBoxView = (NSBox *)[mPresetEditView subviewOfClass:[NSBox class]];
 	[presetBoxView setFrameSize:[mPresetSettingsView frame].size];
 	[[presetBoxView contentView] addSubview:mPresetSettingsView];
@@ -311,6 +313,10 @@
 	
 	[[self undoManager] setLevelsOfUndo:20];
 	[self checkWidgetLog];
+    
+    [toolbar setSelectedItemIdentifier:[NSString stringWithFormat:@"%@",@(mMainTab)]];
+    mMainSplitView.delegate = self;
+    _finishedLoading = YES;
 }
 
 -(void)checkOldFormat:(id)inSender
@@ -620,7 +626,8 @@
 		[self didChangeValueForKey:@"editingPreset"];
 	}
 	
-    CGFloat editViewWidth = 1.0;
+    /*
+    CGFloat editViewWidth = -1.0;
     if (inEdit) {
         editViewWidth = 340.0;
     }
@@ -636,7 +643,8 @@
         mPresetEditingViewWidthConstraint.constant = editViewWidth;
         mPresetEditView.hidden = !inEdit;
     }
-    
+    */
+    mPresetEditView.hidden = !inEdit;
     /*
 	NSRect frame = [mPresetView frame];
     if (inEdit) {
@@ -2734,6 +2742,27 @@ int SORT_BY_DIFFICULT(id left, id right, void *info)
 
 -(void)didChangeLanguages
 {
+}
+
+- (IBAction)didSelectToolbarItem:(NSToolbarItem*)toolbarItem {
+    [self setMainTab:toolbarItem.tag];
+}
+
+#pragma mark NSSplitViewDelegate
+
+// to resize the flexible toolbar item according to the first split view's width:
+- (void)splitViewDidResizeSubviews:(NSNotification *)notification {
+    if (flexibleWithToolbarItem != nil) {
+        if (![flexibleWithToolbarItem view]) {
+            NSButton *btn = [NSButton buttonWithImage:[NSImage imageNamed:@"blankpixel"] target:nil action:nil];
+            [btn setBordered:NO];
+            [flexibleWithToolbarItem setView:btn];
+        }
+        CGFloat width = [mMainSplitView.subviews firstObject].frame.size.width;
+        [flexibleWithToolbarItem.view setFrame:NSMakeRect(0, 0, width, flexibleWithToolbarItem.minSize.height)];
+        flexibleWithToolbarItem.minSize = NSMakeSize(width, flexibleWithToolbarItem.minSize.height);
+        flexibleWithToolbarItem.maxSize = NSMakeSize(width, flexibleWithToolbarItem.maxSize.height);
+    }
 }
 
 @end

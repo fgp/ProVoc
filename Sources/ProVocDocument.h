@@ -66,6 +66,9 @@
 	BOOL mHasVisibleSourceAudio;
 	BOOL mHasVisibleTargetAudio;
 	
+    IBOutlet NSToolbar *toolbar;
+    IBOutlet NSToolbarItem *flexibleWithToolbarItem;
+    
 	IBOutlet NSTableView *mLabelTableView;
     IBOutlet NSTableView *mWordTableView;
 	IBOutlet NSOutlineView *mPageOutlineView;

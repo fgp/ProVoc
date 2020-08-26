@@ -57,7 +57,7 @@
 		}
 		NSArray *colors = [NSArray arrayWithObjects:inColor, [inColor blendedColorWithFraction:0.25 ofColor:[NSColor blackColor]], nil];
 		[bezierPath fillWithColors:colors angleInDegrees:-90];
-		[[NSColor blackColor] set];
+		[[NSColor labelColor] set];
 		[bezierPath setLineWidth:2.0];
 		[bezierPath stroke];
 	}

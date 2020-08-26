@@ -4,6 +4,21 @@
 #import "ProVocDocument+Lists.h"
 #import "TransformerExtensions.h"
 
+#import <objc/runtime.h>
+static void * NSCellIsSelectedKey = &NSCellIsSelectedKey;
+
+@implementation NSCell(Selection)
+
+- (BOOL)isSelected {
+    return [objc_getAssociatedObject(self, NSCellIsSelectedKey) boolValue];
+}
+
+- (void)setSelected:(BOOL)flag {
+    objc_setAssociatedObject(self, NSCellIsSelectedKey, @(flag), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+@end
+
 static NSImage *sRankPatternImage = nil;
 
 @implementation RankCell
@@ -88,7 +103,13 @@ static NSImage *sRankPatternImage = nil;
 	static NSDictionary *titleAttributes = nil;
 	static NSDictionary *messageAttributes = nil;
 	if (!titleAttributes) {
-		titleAttributes = [[NSDictionary alloc] initWithObjectsAndKeys:[NSFont boldSystemFontOfSize:0], NSFontAttributeName, [NSColor labelColor], NSForegroundColorAttributeName, nil];
+        //BOOL isSelected = (self.backgroundStyle == NSBackgroundStyleEmphasized);
+        //NSLog(@"isSelected: %@",@(self.isSelected));
+        if (self.isSelected) {
+            titleAttributes = [[NSDictionary alloc] initWithObjectsAndKeys:[NSFont boldSystemFontOfSize:0], NSFontAttributeName, [NSColor whiteColor], NSForegroundColorAttributeName, nil];
+        } else {
+            titleAttributes = [[NSDictionary alloc] initWithObjectsAndKeys:[NSFont boldSystemFontOfSize:0], NSFontAttributeName, [NSColor labelColor], NSForegroundColorAttributeName, nil];
+        }
 		messageAttributes = [[NSDictionary alloc] initWithObjectsAndKeys:[NSFont systemFontOfSize:[NSFont systemFontSize]], NSFontAttributeName, [NSColor secondaryLabelColor], NSForegroundColorAttributeName, nil];
 	}
 	NSRect iconFrame;

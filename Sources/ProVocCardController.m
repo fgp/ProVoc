@@ -225,7 +225,7 @@
 	[NSBezierPath fillRect:rect];
 	[NSGraphicsContext restoreGraphicsState];
 
-	[[NSColor blackColor] set];
+	[[NSColor labelColor] set];
 	if ([[NSUserDefaults standardUserDefaults] boolForKey:ProVocCardDisplayFrames])
 		NSFrameRect(rect);
 	
