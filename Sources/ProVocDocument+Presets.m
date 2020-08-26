@@ -172,6 +172,18 @@
 
 @implementation ProVocDocument (SplitViewDelegate)
 
+- (BOOL)splitView:(NSSplitView *)splitView canCollapseSubview:(NSView *)subview {
+    if (subview == splitView.arrangedSubviews.firstObject) {
+        return YES;
+    }
+    return NO;
+}
+
+- (CGFloat)splitView:(NSSplitView *)splitView constrainMaxCoordinate:(CGFloat)proposedMaximumPosition ofSubviewAt:(NSInteger)dividerIndex {
+    return splitView.window.contentView.frame.size.width-500;
+}
+
+/*
 -(BOOL)splitView:(NSSplitView *)inSplitView canCollapseSubview:(NSView *)inView
 {
 	return NO;
@@ -198,5 +210,5 @@
 		[splitView adjustSubviews];
 	}
 }
-
+*/
 @end
