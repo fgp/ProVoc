@@ -2756,6 +2756,7 @@ int SORT_BY_DIFFICULT(id left, id right, void *info)
         if (![flexibleWithToolbarItem view]) {
             NSButton *btn = [NSButton buttonWithImage:[NSImage imageNamed:@"blankpixel"] target:nil action:nil];
             [btn setBordered:NO];
+			[btn setEnabled:NO];
             [flexibleWithToolbarItem setView:btn];
         }
         CGFloat width = [mMainSplitView.subviews firstObject].frame.size.width;
