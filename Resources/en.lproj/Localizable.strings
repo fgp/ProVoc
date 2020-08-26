@@ -31,8 +31,7 @@
 "Submit Resaved Message" = "The document needs first to be re-saved in the new format before being submitted.";
 "Submit Save Button" = "Save";
 "Submit Cancel Button" = "Cancel";
-"Questions in Language %@. Answers in Language %@." = "Questions in %@.
-Answers in %@.";
+"Questions in Language %@. Answers in Language %@." = "Questions in %@.\nAnswers in %@.";
 
 
 
@@ -107,9 +106,7 @@ Answers in %@.";
 "Give Hint Button Title" = "Give Hint";
 
 "No iPod Alert Title" = "No iPod Detected";
-"No iPod Alert Message" = "Connect your iPod to the computer and try again.
-
-Note: The iPod must be usable as a disk. If no iPod icon appears on the desktop when the iPod is conntected, open iTunes, select Preferences > iPod > Music and select the “Enable disk use” checkbox.";
+"No iPod Alert Message" = "Connect your iPod to the computer and try again.\n\nNote: The iPod must be usable as a disk. If no iPod icon appears on the desktop when the iPod is conntected, open iTunes, select Preferences > iPod > Music and select the “Enable disk use” checkbox.";
 "Invalid iPod Alert Title" = "Unsupported iPod";
 "Invalid iPod Alert Message (%@)" = "This feature requires the note reader which is not available on this iPod.";
 "iPod Pages Sent with Success Title" = "Lessons successfully sent to iPod";
@@ -117,9 +114,7 @@ Note: The iPod must be usable as a disk. If no iPod icon appears on the desktop 
 "iPod Pages Sent Error Title" = "Could not send lessons to iPod";
 "iPod Pages Sent Error Message (%@)" = "An error (%@) occurred while sending the lessons to iPod.";
 "Too Many iPod Notes Title" = "Maximum number of notes on iPod exceeded";
-"Too Many iPod Notes Message (%i)" = "The number of notes on the connected iPod (%i) exceeds the maximum number of notes supported by the iPod Note Reader (1000). Some vocabulary will not be displayed correctly on the iPod.
-
-Try deleting some lessons from the Preferences dialog, or uncheck the option “Create separate notes for solutions”.";
+"Too Many iPod Notes Message (%i)" = "The number of notes on the connected iPod (%i) exceeds the maximum number of notes supported by the iPod Note Reader (1000). Some vocabulary will not be displayed correctly on the iPod.\n\nTry deleting some lessons from the Preferences dialog, or uncheck the option “Create separate notes for solutions”.";
 
 
 
@@ -166,8 +161,7 @@ Try deleting some lessons from the Preferences dialog, or uncheck the option “
 "Result Wrong Title" = "Wrong";
 "Result Wrong Once Title" = "Wrong Once";
 "Result Wrong Twice Title" = "Wrong Twice";
-"Result Wrong 3+ Title" = "Wrong More
-Than Twice";
+"Result Wrong 3+ Title" = "Wrong More\nThan Twice";
 
 
 "Result Ignored Title" = "Not Tested";

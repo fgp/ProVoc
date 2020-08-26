@@ -31,8 +31,7 @@
 "Submit Resaved Message" = "Le document doit d'abord être enregistré au nouveau format avant d'être envoyé.";
 "Submit Save Button" = "Enregistrer";
 "Submit Cancel Button" = "Annuler";
-"Questions in Language %@. Answers in Language %@." = "Questions en %@.
-Réponses en %@.";
+"Questions in Language %@. Answers in Language %@." = "Questions en %@.\nRéponses en %@.";
 
 
 
@@ -108,9 +107,7 @@ Réponses en %@.";
 "Give Hint Button Title" = "Donner un indice";
 
 "No iPod Alert Title" = "Aucun iPod détecté";
-"No iPod Alert Message" = "Connectez votre iPod à l'ordinateur, puis réessayez.
-
-Note: L'iPod doit être utilisable comme disque dur. Si aucune icône n'apparaît sur le bureau lorsque l'iPod est connecté, ouvrez iTunes, sélectionnez Préférences > iPod > Musique et activez l'option “Activer l'utilisation comme disque dur”.";
+"No iPod Alert Message" = "Connectez votre iPod à l'ordinateur, puis réessayez.\n\nNote: L'iPod doit être utilisable comme disque dur. Si aucune icône n'apparaît sur le bureau lorsque l'iPod est connecté, ouvrez iTunes, sélectionnez Préférences > iPod > Musique et activez l'option “Activer l'utilisation comme disque dur”.";
 
 
 "Invalid iPod Alert Title" = "iPod non supporté";
@@ -120,9 +117,7 @@ Note: L'iPod doit être utilisable comme disque dur. Si aucune icône n'apparaî
 "iPod Pages Sent Error Title" = "Les leçons n'ont pas pu être transférées sur l'iPod";
 "iPod Pages Sent Error Message (%@)" = "Une erreur (%@) est survenue lors du transfert des leçons sur l'iPod.";
 "Too Many iPod Notes Title" = "Nombre maximum des notes sur l'iPod excédé";
-"Too Many iPod Notes Message (%i)" = "Le nombre de notes sur l'iPod (%i) excède le nombre maximum de notes tolérées par le lecteur de notes de l'iPod (1000). Certaines leçons de vocabulaire ne s'afficheront donc pas correctement sur l'iPod.
-
-Essayez de supprimer certaines leçon à partir de la fenêtre Préférences, ou décochez l'option “Créer des notes séparées pour les solutions”.";
+"Too Many iPod Notes Message (%i)" = "Le nombre de notes sur l'iPod (%i) excède le nombre maximum de notes tolérées par le lecteur de notes de l'iPod (1000). Certaines leçons de vocabulaire ne s'afficheront donc pas correctement sur l'iPod.\n\nEssayez de supprimer certaines leçon à partir de la fenêtre Préférences, ou décochez l'option “Créer des notes séparées pour les solutions”.";
 
 
 
@@ -171,8 +166,7 @@ Essayez de supprimer certaines leçon à partir de la fenêtre Préférences, ou
 "Result Wrong Title" = "Incorrect";
 "Result Wrong Once Title" = "Incorrect une fois";
 "Result Wrong Twice Title" = "Incorrect deux fois";
-"Result Wrong 3+ Title" = "Incorrect plus
-de deux fois";
+"Result Wrong 3+ Title" = "Incorrect plus\nde deux fois";
 
 
 
