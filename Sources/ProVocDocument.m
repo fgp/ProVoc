@@ -218,13 +218,15 @@
 {
     [super windowControllerDidLoadNib:inController];
     
-	if (!mLoadedParameters) // new document
+    if (!mLoadedParameters) {// new document
 		[self setMainTab:1];
-	else
-		if ([mLoadedParameters objectForKey:@"MainTab"])
+    } else {
+        if ([mLoadedParameters objectForKey:@"MainTab"]) {
 			[self setMainTab:[[mLoadedParameters objectForKey:@"MainTab"] intValue]];
-		else
+        } else {
 			[self setMainTab:0];
+        }
+    }
 
 	[self performSelector:@selector(updateTestOnlyPopUpMenu) withObject:nil afterDelay:0];
 	
@@ -563,10 +565,11 @@
 
 -(NSString *)displayName
 {
-	if ([self fileName])
-		return [[[self fileName] lastPathComponent] stringByDeletingPathExtension];
-	else
+    if ([self fileURL]) {
+		return [[[self fileURL] lastPathComponent] stringByDeletingPathExtension];
+    } else {
 		return [super displayName];
+    }
 }
 
 -(BOOL)displayPages
@@ -593,6 +596,7 @@
 		[self selectedWordsDidChange:nil];
 	}
 	[[ProVocInspector sharedInspector] setPreferredDisplayState:mMainTab == 1];
+    [toolbar setSelectedItemIdentifier:[NSString stringWithFormat:@"%@",@(mMainTab)]];
 }
 
 -(BOOL)editingPreset
@@ -1379,7 +1383,8 @@ int SORT_BY_DIFFICULT(id left, id right, void *info)
 
 -(IBAction)startTest:(id)inSender
 {
-	[self setMainTab:0];
+	//[self setMainTab:0]; // to be verified, not sure if this has any side effects or other ramifications
+    
 	NSDictionary *parameters = [self parameters];
 	if (mTester) {
 		mTestIsRunning = YES;
@@ -1401,23 +1406,28 @@ int SORT_BY_DIFFICULT(id left, id right, void *info)
 				case NSAlertAlternateReturn:
 					[NSApp showHelp:nil];
 					break;
-				case NSAlertOtherReturn:
+#ifndef DISABLE_SUBMITTER
+                case NSAlertOtherReturn:
 					[[NSApp delegate] downloadDocuments:nil];
 					break;
+#endif
 			}
 			[self setMainTab:1];
-		} else
+        } else {
 			NSRunAlertPanel(NSLocalizedString(@"No Word To Test Alert Title", @""), NSLocalizedString(@"No Word To Test Alert Message", @""), nil, nil, nil);
+        }
         return;
     }
         
     [mTester release];
 	Class tester = [ProVocTester class];
-	if ([[parameters objectForKey:@"testMCQ"] boolValue])
+    if ([[parameters objectForKey:@"testMCQ"] boolValue]) {
 		tester = [ProVocMCQTester class];
+    }
     mTester = [[tester alloc] initWithDocument:self];
-	if ([mTester respondsToSelector:@selector(setAnswerWords:withParameters:)])
+    if ([mTester respondsToSelector:@selector(setAnswerWords:withParameters:)]) {
 		[(id)mTester setAnswerWords:[self wordsForMCQAnswers] withParameters:parameters];
+    }
 	mTestIsRunning = YES;
 	[mTester beginTestWithWords:words parameters:parameters sourceLanguage:[self sourceLanguage] targetLanguage:[self targetLanguage]];
 }
@@ -2741,16 +2751,4 @@ int SORT_BY_DIFFICULT(id left, id right, void *info)
     }
 }
 
-- (void)tableView:(NSTableView *)tableView didClickTableColumn:(NSTableColumn *)tableColumn {
-
-NSLog(@"tableView:didClickTableColumn: %@, titleString: %@", [tableColumn identifier], [[tableColumn headerCell] stringValue]);
-
-}
-
-
-- (void)tableView:(NSTableView *)tableView mouseDownInHeaderOfTableColumn:(NSTableColumn *)tableColumn {
-
-NSLog(@"tableView:mouseDownInHeaderOfTableColumn: %@, titleString: %@", [tableColumn identifier], [[tableColumn headerCell] stringValue]);
-
-}
 @end

@@ -25,6 +25,7 @@
 
 /* Begin PBXBuildFile section */
 		7D4B966524F51AA9005B0617 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D4B966424F51AA9005B0617 /* Images.xcassets */; };
+		7D607B3824F7E29D00843E6C /* PlugIns in Resources */ = {isa = PBXBuildFile; fileRef = A72859E60A1601170082642D /* PlugIns */; };
 		7DDF7ED521886B4D002ECD2B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDF7ED421886B4D002ECD2B /* AVFoundation.framework */; };
 		7DDF7ED721886C3F002ECD2B /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDF7ED621886C3F002ECD2B /* AVKit.framework */; };
 		7DDF7ED921886CD2002ECD2B /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDF7ED821886CD2002ECD2B /* QTKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -1239,6 +1240,7 @@
 				A7285E4D0A1603D00082642D /* Version.tif in Resources */,
 				7D4B966524F51AA9005B0617 /* Images.xcassets in Resources */,
 				A7285E4E0A1603D00082642D /* Video.png in Resources */,
+				7D607B3824F7E29D00843E6C /* PlugIns in Resources */,
 				A7285E4F0A1603D00082642D /* VideoPressed.png in Resources */,
 				A76349B50A16054E00054021 /* ProVoc.icns in Resources */,
 				A76349B60A16054E00054021 /* ProVocFile.icns in Resources */,
