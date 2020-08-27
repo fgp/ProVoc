@@ -219,7 +219,7 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="32" id="u8I-Bo-IYm"/>
                                                             </constraints>
-                                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Inspector" imagePosition="only" alignment="center" inset="2" id="1259">
+                                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSInfo" imagePosition="only" alignment="center" inset="2" id="1259">
                                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                 <font key="font" metaFont="system"/>
                                                             </buttonCell>
@@ -2193,8 +2193,8 @@ Answers in German.</string>
         </customView>
     </objects>
     <resources>
-        <image name="Inspector" width="32" height="32"/>
         <image name="NSAddTemplate" width="11" height="11"/>
+        <image name="NSInfo" width="32" height="32"/>
         <image name="Play" width="29" height="32"/>
         <image name="PlayDown" width="29" height="32"/>
         <image name="TrainingPreferences" width="32" height="32"/>
