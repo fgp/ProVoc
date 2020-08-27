@@ -76,13 +76,15 @@
     // fill:
 	[inColor set];
 	//[NSBezierPath fillRect:symbol];
-    NSBezierPath *path = [NSBezierPath bezierPathWithRoundedRect:symbol xRadius:legendWidth/2 yRadius:5];
+    NSBezierPath *path = [NSBezierPath bezierPathWithRoundedRect:symbol xRadius:legendWidth/2 yRadius:legendWidth/2];
     [path fill];
     
     // border:
-	[[NSColor labelColor] set];
-    [path setLineWidth:1];
-    [path stroke];
+    [path setLineWidth:0];
+    if([path lineWidth] > 0) {
+        [[NSColor labelColor] set];
+        [path stroke];
+    }
 	//NSFrameRect(symbol);
 	
     [NSGraphicsContext restoreGraphicsState];
@@ -91,7 +93,7 @@
 	legend.origin.y -= 34;
 	[inLegend drawInRect:legend withAttributes:attributes];
 	float width = [inLegend widthWithAttributes:attributes];
-	width = ceil(width + legendWidth + 20);
+	width = ceil(width + legendWidth + 8);
 	ioRect->origin.x += width;
 	ioRect->size.width -= width;
 }

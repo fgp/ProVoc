@@ -413,7 +413,10 @@ static NSArray *sDraggedItems = nil;
 -(BOOL)tableView:(NSTableView *)inTableView shouldEditTableColumn:(NSTableColumn *)inTableColumn row:(int)inRowIndex
 {
 	if (inTableView == mPresetTableView) {
-		//[self setEditingPreset:!mEditingPreset];
+		[self setEditingPreset:!mEditingPreset];
+        
+        // TODO: do not open the popover this way but by using a button inside the cells (to be added)
+        
         if (mPresetSettingsEntryPopover && [mPresetSettingsEntryPopover isShown]) {
             [mPresetSettingsEntryPopover close];
             return NO;
@@ -427,8 +430,6 @@ static NSArray *sDraggedItems = nil;
         [mPresetSettingsEntryPopover setContentViewController:viewController];
         NSRect rect = [inTableView rectOfRow:inRowIndex];//[inTableView frameOfCellAtColumn:inTableColumn row:inRowIndex];
         NSView *sourceView = inTableView;
-        //NSRect rect = [sender convertRect:sender.bounds toView:[[NSApp mainWindow] contentView]];
-        //NSView sourceView = [[NSApp mainWindow] contentView];
         [mPresetSettingsEntryPopover showRelativeToRect:rect ofView:sourceView preferredEdge:NSMaxXEdge];
 		return YES;
 	}
