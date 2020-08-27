@@ -142,7 +142,6 @@
 		A7285E3D0A1603D00082642D /* PlayDown.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7285E0F0A1603D00082642D /* PlayDown.tiff */; };
 		A7285E3E0A1603D00082642D /* Preferences.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7285E100A1603D00082642D /* Preferences.tiff */; };
 		A7285E3F0A1603D00082642D /* Question.tif in Resources */ = {isa = PBXBuildFile; fileRef = A7285E110A1603D00082642D /* Question.tif */; };
-		A7285E400A1603D00082642D /* remove.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7285E120A1603D00082642D /* remove.tiff */; };
 		A7285E410A1603D00082642D /* send.tif in Resources */ = {isa = PBXBuildFile; fileRef = A7285E130A1603D00082642D /* send.tif */; };
 		A7285E420A1603D00082642D /* settings.tif in Resources */ = {isa = PBXBuildFile; fileRef = A7285E140A1603D00082642D /* settings.tif */; };
 		A7285E430A1603D00082642D /* SmallBlank.tif in Resources */ = {isa = PBXBuildFile; fileRef = A7285E150A1603D00082642D /* SmallBlank.tif */; };
@@ -157,7 +156,6 @@
 		A7285E4D0A1603D00082642D /* Version.tif in Resources */ = {isa = PBXBuildFile; fileRef = A7285E1F0A1603D00082642D /* Version.tif */; };
 		A7285E4E0A1603D00082642D /* Video.png in Resources */ = {isa = PBXBuildFile; fileRef = A7285E200A1603D00082642D /* Video.png */; };
 		A7285E4F0A1603D00082642D /* VideoPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = A7285E210A1603D00082642D /* VideoPressed.png */; };
-		A7285E500A1603D00082642D /* Warning.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7285E220A1603D00082642D /* Warning.tiff */; };
 		A7285E530A1604190082642D /* iPod.scpt in Resources */ = {isa = PBXBuildFile; fileRef = A72857D90A1600000082642D /* iPod.scpt */; };
 		A73068450A1D941000B7A808 /* main.applescript in Sources */ = {isa = PBXBuildFile; fileRef = A73068270A1D938300B7A808 /* main.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
 		A730684A0A1D943500B7A808 /* Automator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B125FC0A1D559F003B68B0 /* Automator.framework */; };
@@ -549,8 +547,6 @@
 		A7285B8F0A1601AB0082642D /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		A7285B900A1601AB0082642D /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = /System/Library/Frameworks/Quartz.framework; sourceTree = "<absolute>"; };
 		A7285B910A1601AB0082642D /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
-		A7285DF50A1603D00082642D /* action.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = action.tiff; sourceTree = "<group>"; };
-		A7285DF60A1603D00082642D /* add.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = add.tiff; sourceTree = "<group>"; };
 		A7285DF80A1603D00082642D /* ARDisclosureArrowDown.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ARDisclosureArrowDown.tif; sourceTree = "<group>"; };
 		A7285DF90A1603D00082642D /* ARDisclosureArrowRight.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ARDisclosureArrowRight.tif; sourceTree = "<group>"; };
 		A7285DFA0A1603D00082642D /* Both.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Both.tif; sourceTree = "<group>"; };
@@ -575,7 +571,6 @@
 		A7285E0F0A1603D00082642D /* PlayDown.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = PlayDown.tiff; sourceTree = "<group>"; };
 		A7285E100A1603D00082642D /* Preferences.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Preferences.tiff; sourceTree = "<group>"; };
 		A7285E110A1603D00082642D /* Question.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Question.tif; sourceTree = "<group>"; };
-		A7285E120A1603D00082642D /* remove.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = remove.tiff; sourceTree = "<group>"; };
 		A7285E130A1603D00082642D /* send.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = send.tif; sourceTree = "<group>"; };
 		A7285E140A1603D00082642D /* settings.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = settings.tif; sourceTree = "<group>"; };
 		A7285E150A1603D00082642D /* SmallBlank.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = SmallBlank.tif; sourceTree = "<group>"; };
@@ -751,22 +746,9 @@
 			children = (
 				7D4B966424F51AA9005B0617 /* Images.xcassets */,
 				A7285DF00A1603C10082642D /* Images */,
+				7D607B3724F7BAF100843E6C /* Interface */,
 				A72857E20A1600670082642D /* Localizable.strings */,
 				A72857DE0A1600670082642D /* ARLocalizable.strings */,
-				A72859890A1600E30082642D /* MainMenu.nib */,
-				A728598D0A1600E30082642D /* ProVocDocument.nib */,
-				A72859950A1600E30082642D /* ProVocTester.nib */,
-				A72857E40A1600670082642D /* Preferences.nib */,
-				A72857E00A1600670082642D /* iPodController.nib */,
-				A72857E60A1600670082642D /* ProVocAction.nib */,
-				A72857EA0A1600670082642D /* ProVocBackground.nib */,
-				A728598B0A1600E30082642D /* ProVocCardController.nib */,
-				A728598F0A1600E30082642D /* ProVocInspector.nib */,
-				A72859910A1600E30082642D /* ProVocStartingPoint.nib */,
-				A72859930A1600E30082642D /* ProVocSubmitter.nib */,
-				A7572B210A1880AC00E4912F /* ProVocSpotlighter.nib */,
-				A7572EBF0A18CE2700E4912F /* ProVocTimer.nib */,
-				A760F1C40A288B9B00C6128B /* ProVocViewOptions.nib */,
 				A72859A30A16010A0082642D /* ProVoc Help */,
 				A72859E60A1601170082642D /* PlugIns */,
 				A750180D0DED23CE00A83E3A /* ProVoc.mdimporter */,
@@ -798,6 +780,27 @@
 				1058C7A8FEA54F5311CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7D607B3724F7BAF100843E6C /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				A72859890A1600E30082642D /* MainMenu.nib */,
+				A728598D0A1600E30082642D /* ProVocDocument.nib */,
+				A72859950A1600E30082642D /* ProVocTester.nib */,
+				A72857E40A1600670082642D /* Preferences.nib */,
+				A72857E00A1600670082642D /* iPodController.nib */,
+				A72857E60A1600670082642D /* ProVocAction.nib */,
+				A72857EA0A1600670082642D /* ProVocBackground.nib */,
+				A728598B0A1600E30082642D /* ProVocCardController.nib */,
+				A728598F0A1600E30082642D /* ProVocInspector.nib */,
+				A72859910A1600E30082642D /* ProVocStartingPoint.nib */,
+				A72859930A1600E30082642D /* ProVocSubmitter.nib */,
+				A7572B210A1880AC00E4912F /* ProVocSpotlighter.nib */,
+				A7572EBF0A18CE2700E4912F /* ProVocTimer.nib */,
+				A760F1C40A288B9B00C6128B /* ProVocViewOptions.nib */,
+			);
+			name = Interface;
 			sourceTree = "<group>";
 		};
 		A72856AE0A15FF5C0082642D /* Controllers */ = {
@@ -965,8 +968,6 @@
 		A7285DF00A1603C10082642D /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				A7285DF50A1603D00082642D /* action.tiff */,
-				A7285DF60A1603D00082642D /* add.tiff */,
 				A7285DF80A1603D00082642D /* ARDisclosureArrowDown.tif */,
 				A7285DF90A1603D00082642D /* ARDisclosureArrowRight.tif */,
 				A7285DFA0A1603D00082642D /* Both.tif */,
@@ -995,7 +996,6 @@
 				A7285E0F0A1603D00082642D /* PlayDown.tiff */,
 				A7285E100A1603D00082642D /* Preferences.tiff */,
 				A7285E110A1603D00082642D /* Question.tif */,
-				A7285E120A1603D00082642D /* remove.tiff */,
 				A7285E130A1603D00082642D /* send.tif */,
 				A7285E140A1603D00082642D /* settings.tif */,
 				A7285E150A1603D00082642D /* SmallBlank.tif */,
@@ -1233,7 +1233,6 @@
 				A7285E3D0A1603D00082642D /* PlayDown.tiff in Resources */,
 				A7285E3E0A1603D00082642D /* Preferences.tiff in Resources */,
 				A7285E3F0A1603D00082642D /* Question.tif in Resources */,
-				A7285E400A1603D00082642D /* remove.tiff in Resources */,
 				A7285E410A1603D00082642D /* send.tif in Resources */,
 				A7285E420A1603D00082642D /* settings.tif in Resources */,
 				A7285E430A1603D00082642D /* SmallBlank.tif in Resources */,
@@ -1249,7 +1248,6 @@
 				7D4B966524F51AA9005B0617 /* Images.xcassets in Resources */,
 				A7285E4E0A1603D00082642D /* Video.png in Resources */,
 				A7285E4F0A1603D00082642D /* VideoPressed.png in Resources */,
-				A7285E500A1603D00082642D /* Warning.tiff in Resources */,
 				A76349B50A16054E00054021 /* ProVoc.icns in Resources */,
 				A76349B60A16054E00054021 /* ProVocFile.icns in Resources */,
 				A7572B230A1880AC00E4912F /* ProVocSpotlighter.nib in Resources */,
