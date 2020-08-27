@@ -403,24 +403,9 @@ static NSArray *sDraggedItems = nil;
 }
 
 -(BOOL)tableView:(NSTableView *)inTableView shouldSelectRow:(NSInteger)row {
-    if (inTableView == mPresetTableView) {
-        // TODO: show content in NSPopOver and remove the settings button:
-        /*
-        NSViewController *viewController = [[NSViewController alloc] init];
-        viewController.view = [NSView new];
-        NSPopover *entryPopover = [[NSPopover alloc] init];
-        [entryPopover setContentSize:NSMakeSize(200.0, 200.0)];
-        [entryPopover setBehavior:NSPopoverBehaviorTransient];
-        [entryPopover setAnimates:YES];
-        [entryPopover setContentViewController:viewController];
-        
-        NSRect rect = [inTableView rectOfRow:row];//[inTableView frameOfCellAtColumn:inTableColumn row:inRowIndex];
-        NSView *sourceView = inTableView;
-        //NSRect rect = [sender convertRect:sender.bounds toView:[[NSApp mainWindow] contentView]];
-        //NSView sourceView = [[NSApp mainWindow] contentView];
-        [entryPopover showRelativeToRect:rect ofView:sourceView preferredEdge:NSMaxXEdge];
-        return YES;
-        */
+    if (mPresetSettingsEntryPopover && [mPresetSettingsEntryPopover isShown]) {
+        [mPresetSettingsEntryPopover close];
+        return NO;
     }
     return YES;
 }
@@ -428,9 +413,24 @@ static NSArray *sDraggedItems = nil;
 -(BOOL)tableView:(NSTableView *)inTableView shouldEditTableColumn:(NSTableColumn *)inTableColumn row:(int)inRowIndex
 {
 	if (inTableView == mPresetTableView) {
-        // TODO: show content in NSPopOver and remove the settings button as well as the existing code:
-		[self setEditingPreset:!mEditingPreset];
-		return NO;
+		//[self setEditingPreset:!mEditingPreset];
+        if (mPresetSettingsEntryPopover && [mPresetSettingsEntryPopover isShown]) {
+            [mPresetSettingsEntryPopover close];
+            return NO;
+        }
+        NSViewController *viewController = [[NSViewController alloc] init];
+        viewController.view = mPresetSettingsView;
+        mPresetSettingsEntryPopover = [[NSPopover alloc] init];
+        [mPresetSettingsEntryPopover setContentSize:[mPresetSettingsView frame].size];
+        [mPresetSettingsEntryPopover setBehavior:NSPopoverBehaviorTransient];
+        [mPresetSettingsEntryPopover setAnimates:YES];
+        [mPresetSettingsEntryPopover setContentViewController:viewController];
+        NSRect rect = [inTableView rectOfRow:inRowIndex];//[inTableView frameOfCellAtColumn:inTableColumn row:inRowIndex];
+        NSView *sourceView = inTableView;
+        //NSRect rect = [sender convertRect:sender.bounds toView:[[NSApp mainWindow] contentView]];
+        //NSView sourceView = [[NSApp mainWindow] contentView];
+        [mPresetSettingsEntryPopover showRelativeToRect:rect ofView:sourceView preferredEdge:NSMaxXEdge];
+		return YES;
 	}
     if (inTableView == mWordTableView && [[inTableColumn identifier] isEqualTo:@"Mark"]) {
 		NSEvent *event = [NSApp currentEvent];

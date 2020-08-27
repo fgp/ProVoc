@@ -291,10 +291,6 @@
 		[mMainSplitView setSplitViewState:state];
     }
     
-	NSBox *presetBoxView = (NSBox *)[mPresetEditView subviewOfClass:[NSBox class]];
-	[presetBoxView setFrameSize:[mPresetSettingsView frame].size];
-	[[presetBoxView contentView] addSubview:mPresetSettingsView];
-
 	[self setPresetSettings:[mLoadedParameters objectForKey:@"PresetSettings"]];
 	[self setEditingPreset:[[mLoadedParameters objectForKey:@"EditingPreset"] boolValue]];
 	
@@ -603,32 +599,7 @@
 {
 	return mEditingPreset;
 }
-/*
--(void)animatePresetViewToFrame:(NSRect)inDestinationFrame
-{
-	NSRect sourceFrame = [mPresetView frame];
-	NSRect editFrame = [mPresetEditView frame];
-	NSTimeInterval begin = [NSDate timeIntervalSinceReferenceDate];
-	for (;;) {
-		float t = MIN(1.0, ([NSDate timeIntervalSinceReferenceDate] - begin) / 0.25);
-		t = t < 0.5 ? 2.0 * t * t : 1.0 - 2.0 * (1.0 - t) * (1.0 - t);
-		
-		NSRect frame = sourceFrame;
-		frame.size.width = t * inDestinationFrame.size.width + (1.0 - t) * sourceFrame.size.width;
-		[mPresetView setFrame:frame];
-		
-		NSRect edit = editFrame;
-		edit.origin.x = NSMaxX(frame) + 9;
-		edit.size.width = NSMaxX(editFrame) - edit.origin.x;
-		[mPresetEditView setFrame:edit];
-		
-		[[mPresetView superview] display];
-		if (t >= 1.0)
-			break;
-	}
-	[mPresetEditView setFrame:editFrame];
-}
-*/
+
 -(void)setEditingPreset:(BOOL)inEdit
 {
 	if (inEdit && mEditingPreset != inEdit) {
@@ -637,38 +608,6 @@
 		[self didChangeValueForKey:@"editingPreset"];
 	}
 	
-    /*
-    CGFloat editViewWidth = -1.0;
-    if (inEdit) {
-        editViewWidth = 340.0;
-    }
-    if ([mMainWindow isVisible]) {
-        [NSAnimationContext runAnimationGroup:^(NSAnimationContext * _Nonnull context) {
-            [context setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
-            [context setDuration:0.25];
-            mPresetEditingViewWidthConstraint.animator.constant = editViewWidth;
-        } completionHandler:^{
-            mPresetEditView.hidden = !inEdit;
-        }];
-    } else {
-        mPresetEditingViewWidthConstraint.constant = editViewWidth;
-        mPresetEditView.hidden = !inEdit;
-    }
-    */
-    mPresetEditView.hidden = !inEdit;
-    /*
-	NSRect frame = [mPresetView frame];
-    if (inEdit) {
-		frame.size.width = NSMinX([mPresetEditView frame]) - 9 - NSMinX(frame);
-    } else {
-		frame.size.width = NSMaxX([mPresetEditView frame]) - NSMinX(frame);
-    }
-    if ([mMainWindow isVisible]) {
-		[self animatePresetViewToFrame:frame];
-    }
-	[mPresetView setFrame:frame];
-	[[mPresetView superview] setNeedsDisplay:YES];
-    */
 	if (!inEdit && mEditingPreset != inEdit) {
 		[self willChangeValueForKey:@"editingPreset"];
 		mEditingPreset = inEdit;

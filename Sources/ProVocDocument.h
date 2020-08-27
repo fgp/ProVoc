@@ -139,6 +139,8 @@
 	int mLinesReadInWidgetLog;
 	ProVocHistory *mCurrentWidgetLogHistory;
 	id mCurrentWidgetRepetitions;
+    
+    NSPopover *mPresetSettingsEntryPopover;
 }
 
 -(NSWindow *)window;
