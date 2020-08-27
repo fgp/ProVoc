@@ -472,9 +472,9 @@ static NSArray *sDraggedItems = nil;
         NSAlert *alert = [[NSAlert alloc] init];
         [alert setMessageText:NSLocalizedString(@"Remove selection", nil)];
         if ([[self selectedWords] count] > 1) {
-            [alert setInformativeText:NSLocalizedString(@"Do you really want to remove the selected entries from this dictionary? This cannot be undone later!", nil)];
+            [alert setInformativeText:NSLocalizedString(@"Do you really want to remove the selected entries from this dictionary?", nil)];
         } else {
-            [alert setInformativeText:NSLocalizedString(@"Do you really want to remove the selected entry from this dictionary? This cannot be undone later!", nil)];
+            [alert setInformativeText:NSLocalizedString(@"Do you really want to remove the selected entry from this dictionary?", nil)];
         }
         [alert addButtonWithTitle:NSLocalizedString(@"Yes", nil)];
         [alert addButtonWithTitle:NSLocalizedString(@"No", nil)];

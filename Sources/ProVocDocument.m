@@ -992,7 +992,7 @@ static ProVocDocument *sCurrentDocument = nil;
     NSAlert *alert = [[NSAlert alloc] init];
     [alert setMessageText:NSLocalizedString(@"Remove selection", nil)];
     //[alert setInformativeText:NSLocalizedString(@"Do you really want to remove the selected lesson from this dictionary? This cannot be undone later!", nil)];
-    [alert setInformativeText:NSLocalizedString(@"Do you really want to remove the selected pages/chapters from this dictionary? This cannot be undone later!", nil)];
+    [alert setInformativeText:NSLocalizedString(@"Do you really want to remove the selected pages/chapters from this dictionary?", nil)];
     [alert addButtonWithTitle:NSLocalizedString(@"Yes", nil)];
     [alert addButtonWithTitle:NSLocalizedString(@"No", nil)];
     [alert beginSheetModalForWindow:self.window completionHandler:^(NSModalResponse returnCode) {
