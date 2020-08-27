@@ -1,3 +1,12 @@
+ProVoc 5
+===========
+
+The dev branch contains an updated version of the original version 4.2.4 code base, which has been abandoned about 13 years ago by its original developer and maintainer Arizona Software. That means that the dev branch doesn't contain the changes committed to the master branch by mikecsh, at least not yet. It'll stay there until deemed stable enough to be merged to the master branch.
+
+More informations about the status of this branch is to be found in the Project's Wiki.
+
+-- hagbarðr
+
 ProVoc
 ===========
 
