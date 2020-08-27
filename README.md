@@ -10,7 +10,7 @@ More informations about the status of this branch is to be found in the Project'
 ProVoc 4
 ===========
 
-A vocabulary trainer for Mac OS X, originally written by Arizona Software (http://www.arizona-software.ch).
+A vocabulary trainer for Mac OS X, originally written by Arizona Software (www.arizona-software.ch).
 
 *Please be aware that this project is currently unstable as I am modernising a large legacy codebase.*
 
