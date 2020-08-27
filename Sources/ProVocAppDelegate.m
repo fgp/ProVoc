@@ -233,12 +233,10 @@
     [[ProVocPreferences sharedPreferences] showWindow:self];
 }
 
-/*
 -(IBAction)showHelp:(id)inSender
 {
-	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://www.arizona-software.ch/provoc/help"]];
+	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://www.github.com/lindenstruth/provoc/wiki"]];
 }
-*/
 
 -(IBAction)checkForUpdates:(id)inSender
 {
