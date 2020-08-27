@@ -138,11 +138,15 @@
 
 -(void)presetsDidChange:(id)inSender
 {
-	[self willChangeValueForKey:@"presetName"];
-	[mPresetTableView reloadData];
-	[mPresetTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:mIndexOfCurrentPresets] byExtendingSelection:NO];
-	[self didChangeValueForKey:@"presetName"];
-	[self setParameters:[[mPresets objectAtIndex:mIndexOfCurrentPresets] parameters]];
+    if (mIndexOfCurrentPresets == NSNotFound) {
+        [mPresetTableView selectRowIndexes:[NSIndexSet indexSet] byExtendingSelection:NO];
+        return;
+    }
+    [self willChangeValueForKey:@"presetName"];
+    [mPresetTableView reloadData];
+    [mPresetTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:mIndexOfCurrentPresets] byExtendingSelection:NO];
+    [self didChangeValueForKey:@"presetName"];
+    [self setParameters:[[mPresets objectAtIndex:mIndexOfCurrentPresets] parameters]];
 }
 
 -(id)presetSettings

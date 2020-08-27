@@ -143,8 +143,9 @@
 {
 	[[NSColor controlBackgroundColor] set];
 	NSRectFill(inRect);
-	[[NSColor gridColor] set];
-	NSFrameRect([self bounds]);
+    
+	//[[NSColor gridColor] set];
+	//NSFrameRect([self bounds]);
 
 	NSRect legendFrame;
 	NSRect frame;

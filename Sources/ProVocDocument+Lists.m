@@ -581,13 +581,14 @@ static NSArray *sDraggedItems = nil;
 {
 	if (inTableView == mPresetTableView) {
 		NSData *data = [[inInfo draggingPasteboard] dataForType:PRESET_PBOARD_TYPE];
-		if (data) {
+		if (data && mIndexOfCurrentPresets != NSNotFound) {
 			[self willChangePresets];
 			NSArray *rows = [NSKeyedUnarchiver unarchiveObjectWithData:data];
 			int from = [[rows objectAtIndex:0] intValue];
 			int to = inRow;
-			if (to > from)
+            if (to > from) {
 				to--;
+            }
 			id preset = [[[mPresets objectAtIndex:from] retain] autorelease];
 			[mPresets removeObjectAtIndex:from];
 			[mPresets insertObject:preset atIndex:to];
@@ -595,8 +596,9 @@ static NSArray *sDraggedItems = nil;
 			[self presetsDidChange:nil];
 			[self didChangePresets];
 			return YES;
-		} else
+        } else {
 			return NO;
+        }
 	} else if (inTableView == mWordTableView) {
 		id draggedWords = [sDraggedItems autorelease];
 		sDraggedItems = nil;
