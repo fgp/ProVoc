@@ -128,7 +128,6 @@
 		A7285E2D0A1603D00082642D /* ejectipod.tif in Resources */ = {isa = PBXBuildFile; fileRef = A7285DFF0A1603D00082642D /* ejectipod.tif */; };
 		A7285E2E0A1603D00082642D /* flagged.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7285E000A1603D00082642D /* flagged.tiff */; };
 		A7285E2F0A1603D00082642D /* FontPreferences.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7285E010A1603D00082642D /* FontPreferences.tiff */; };
-		A7285E300A1603D00082642D /* Inspector.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7285E020A1603D00082642D /* Inspector.tiff */; };
 		A7285E310A1603D00082642D /* iPodPreferences.tif in Resources */ = {isa = PBXBuildFile; fileRef = A7285E030A1603D00082642D /* iPodPreferences.tif */; };
 		A7285E320A1603D00082642D /* ipodsettings.tif in Resources */ = {isa = PBXBuildFile; fileRef = A7285E040A1603D00082642D /* ipodsettings.tif */; };
 		A7285E340A1603D00082642D /* LanguagePreferences.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7285E060A1603D00082642D /* LanguagePreferences.tiff */; };
@@ -556,7 +555,6 @@
 		A7285DFF0A1603D00082642D /* ejectipod.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ejectipod.tif; sourceTree = "<group>"; };
 		A7285E000A1603D00082642D /* flagged.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = flagged.tiff; sourceTree = "<group>"; };
 		A7285E010A1603D00082642D /* FontPreferences.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = FontPreferences.tiff; sourceTree = "<group>"; };
-		A7285E020A1603D00082642D /* Inspector.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Inspector.tiff; sourceTree = "<group>"; };
 		A7285E030A1603D00082642D /* iPodPreferences.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = iPodPreferences.tif; sourceTree = "<group>"; };
 		A7285E040A1603D00082642D /* ipodsettings.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ipodsettings.tif; sourceTree = "<group>"; };
 		A7285E060A1603D00082642D /* LanguagePreferences.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = LanguagePreferences.tiff; sourceTree = "<group>"; };
@@ -976,7 +974,6 @@
 				A7285DFF0A1603D00082642D /* ejectipod.tif */,
 				A7285E000A1603D00082642D /* flagged.tiff */,
 				A7285E010A1603D00082642D /* FontPreferences.tiff */,
-				A7285E020A1603D00082642D /* Inspector.tiff */,
 				A7285E030A1603D00082642D /* iPodPreferences.tif */,
 				A7285E040A1603D00082642D /* ipodsettings.tif */,
 				A7227D450AD56E8F00DF738C /* TrainingPreferences.tif */,
@@ -1216,7 +1213,6 @@
 				A7285E2D0A1603D00082642D /* ejectipod.tif in Resources */,
 				A7285E2E0A1603D00082642D /* flagged.tiff in Resources */,
 				A7285E2F0A1603D00082642D /* FontPreferences.tiff in Resources */,
-				A7285E300A1603D00082642D /* Inspector.tiff in Resources */,
 				A7285E310A1603D00082642D /* iPodPreferences.tif in Resources */,
 				A7285E320A1603D00082642D /* ipodsettings.tif in Resources */,
 				A7285E340A1603D00082642D /* LanguagePreferences.tiff in Resources */,
