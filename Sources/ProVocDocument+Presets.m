@@ -81,11 +81,21 @@
 		return;
 	}
 	
-	[self willChangePresets];
-	[mPresets removeObjectAtIndex:mIndexOfCurrentPresets];
-	mIndexOfCurrentPresets = MIN(mIndexOfCurrentPresets, [mPresets count] - 1);
-	[self presetsDidChange:nil];
-	[self didChangePresets];
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert setMessageText:NSLocalizedString(@"Remove a Training mode", nil)];
+    [alert setInformativeText:NSLocalizedString(@"Do you really want to remove the selected Training mode? This cannot be undone later!", nil)];
+    [alert addButtonWithTitle:NSLocalizedString(@"Yes", nil)];
+    [alert addButtonWithTitle:NSLocalizedString(@"No", nil)];
+    [alert beginSheetModalForWindow:self.window completionHandler:^(NSModalResponse returnCode) {
+        if (returnCode == NSAlertSecondButtonReturn) {
+            return;
+        }
+        [self willChangePresets];
+        [mPresets removeObjectAtIndex:mIndexOfCurrentPresets];
+        mIndexOfCurrentPresets = MIN(mIndexOfCurrentPresets, [mPresets count] - 1);
+        [self presetsDidChange:nil];
+        [self didChangePresets];
+    }];
 }
 
 -(void)addDefaultPresetIfNecessary
