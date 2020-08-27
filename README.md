@@ -26,6 +26,14 @@ it's really a fun and inspiring experience!
 
 -- Arizona Software
 
+## Contributors:
+
+* Arizona Software (Original authors - http://www.arizona-software.ch)
+* Mike Holman (http://github.com/mikecsh/)
+* Myself (http://github.com/lindenstruth/)
+
+Contributions via pull requests or issues are very welcome.
+
 ProVoc 5
 ===========
 
@@ -61,12 +69,3 @@ A vocabulary trainer for Mac OS X, originally written by Arizona Software (www.a
 * More stats
 * iOS port?
 * iCloud syncing?
-
-
-## Contributors:
-
-* Arizona Software (Original authors - http://www.arizona-software.ch)
-* Mike Holman (http://github.com/mikecsh/)
-* Myself (http://github.com/lindenstruth/)
-
-Contributions via pull requests or issues are very welcome.
