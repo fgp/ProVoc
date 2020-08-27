@@ -595,7 +595,7 @@
 		[self didChangeValueForKey:@"mainTab"];
 		[self selectedWordsDidChange:nil];
 	}
-	[[ProVocInspector sharedInspector] setPreferredDisplayState:mMainTab == 1];
+	[[ProVocInspector sharedInspector] setPreferredDisplayState:mMainTab == 0];
     [toolbar setSelectedItemIdentifier:[NSString stringWithFormat:@"%@",@(mMainTab)]];
 }
 
