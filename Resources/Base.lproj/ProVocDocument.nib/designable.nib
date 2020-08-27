@@ -47,7 +47,7 @@
             <rect key="contentRect" x="53" y="333" width="950" height="663"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1200"/>
             <value key="minSize" type="size" width="700" height="400"/>
-            <view key="contentView" misplaced="YES" id="26">
+            <view key="contentView" id="26">
                 <rect key="frame" x="0.0" y="0.0" width="950" height="663"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
@@ -61,13 +61,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="206" height="663"/>
                                     </visualEffectView>
                                     <scrollView focusRingType="none" borderType="none" horizontalLineScroll="26" horizontalPageScroll="10" verticalLineScroll="26" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="748">
-                                        <rect key="frame" x="0.0" y="35" width="206" height="606"/>
+                                        <rect key="frame" x="0.0" y="32" width="206" height="609"/>
                                         <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="3vB-EX-w3c">
-                                            <rect key="frame" x="0.0" y="0.0" width="206" height="606"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="206" height="609"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <outlineView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" selectionHighlightStyle="sourceList" columnReordering="NO" columnResizing="NO" emptySelection="NO" autosaveColumns="NO" rowHeight="24" rowSizeStyle="systemDefault" indentationPerLevel="16" autosaveExpandedItems="YES" autoresizesOutlineColumn="YES" outlineTableColumn="750" id="749" customClass="ProVocOutlineView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="206" height="606"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="206" height="609"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <size key="intercellSpacing" width="3" height="2"/>
                                                     <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -101,7 +101,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                         <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="1373">
-                                            <rect key="frame" x="190" y="0.0" width="16" height="606"/>
+                                            <rect key="frame" x="190" y="0.0" width="16" height="609"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                     </scrollView>
@@ -159,7 +159,7 @@
                                     <constraint firstAttribute="trailing" secondItem="748" secondAttribute="trailing" id="T6N-1Z-guj"/>
                                     <constraint firstItem="747" firstAttribute="leading" secondItem="751" secondAttribute="leading" id="YiF-VB-Jk7"/>
                                     <constraint firstItem="ZS2-Zs-0uM" firstAttribute="top" secondItem="751" secondAttribute="top" id="ZFv-cW-NJf"/>
-                                    <constraint firstAttribute="bottom" secondItem="748" secondAttribute="bottom" constant="35" id="adA-xq-0Om"/>
+                                    <constraint firstAttribute="bottom" secondItem="748" secondAttribute="bottom" constant="32" id="adA-xq-0Om"/>
                                     <constraint firstAttribute="trailing" secondItem="ZS2-Zs-0uM" secondAttribute="trailing" id="bNt-Fa-zAe"/>
                                     <constraint firstItem="ZS2-Zs-0uM" firstAttribute="leading" secondItem="751" secondAttribute="leading" id="mEb-Fv-3Xd"/>
                                     <constraint firstItem="748" firstAttribute="top" secondItem="751" secondAttribute="top" constant="22" id="nMY-J9-GjV"/>
@@ -668,10 +668,10 @@ DQ
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="0th-Ca-ejw">
-                                                    <rect key="frame" x="0.0" y="527" width="743" height="5"/>
+                                                    <rect key="frame" x="0.0" y="583" width="743" height="5"/>
                                                 </box>
                                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="WBj-aB-z8x" userLabel="Header View">
-                                                    <rect key="frame" x="20" y="481" width="703" height="48"/>
+                                                    <rect key="frame" x="20" y="537" width="703" height="48"/>
                                                     <subviews>
                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="259">
                                                             <rect key="frame" x="-2" y="17" width="82" height="14"/>
@@ -738,16 +738,16 @@ DQ
                                                     </constraints>
                                                 </customView>
                                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="998" userLabel="Content View">
-                                                    <rect key="frame" x="0.0" y="-8" width="743" height="489"/>
+                                                    <rect key="frame" x="0.0" y="32" width="743" height="505"/>
                                                     <subviews>
                                                         <scrollView focusRingType="none" borderType="none" autohidesScrollers="YES" horizontalLineScroll="76" horizontalPageScroll="10" verticalLineScroll="76" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="763">
-                                                            <rect key="frame" x="0.0" y="0.0" width="743" height="489"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="743" height="505"/>
                                                             <clipView key="contentView" copiesOnScroll="NO" id="hba-uM-Yao">
-                                                                <rect key="frame" x="0.0" y="0.0" width="743" height="489"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="743" height="505"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" rowHeight="74" headerView="1367" id="764" customClass="ProVocDeletableTableView">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="743" height="466"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="743" height="482"/>
                                                                         <autoresizingMask key="autoresizingMask"/>
                                                                         <size key="intercellSpacing" width="3" height="2"/>
                                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -799,15 +799,15 @@ DQ
                                                     </constraints>
                                                 </customView>
                                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="1aN-OH-ZsQ" userLabel="Footer View">
-                                                    <rect key="frame" x="20" y="-56" width="703" height="48"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="723" height="32"/>
                                                     <subviews>
                                                         <button imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="774" userLabel="Add Button">
-                                                            <rect key="frame" x="0.0" y="13" width="30" height="22"/>
+                                                            <rect key="frame" x="0.0" y="5" width="30" height="22"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="30" id="mxJ-ve-Cdm"/>
                                                                 <constraint firstAttribute="height" constant="22" id="nSZ-z5-IWP"/>
                                                             </constraints>
-                                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSAddTemplate" imagePosition="only" alignment="center" borderStyle="border" inset="2" id="1270">
+                                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSAddTemplate" imagePosition="only" alignment="center" inset="2" id="1270">
                                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                 <font key="font" metaFont="system"/>
                                                             </buttonCell>
@@ -816,17 +816,17 @@ DQ
                                                             </connections>
                                                         </button>
                                                         <popUpButton imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="775" customClass="ProVocActionPopUpButton">
-                                                            <rect key="frame" x="29" y="13" width="35" height="22"/>
+                                                            <rect key="frame" x="30" y="5" width="12" height="22"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="22" id="weM-oM-knT"/>
-                                                                <constraint firstAttribute="width" constant="35" id="xSh-eH-yQ5"/>
+                                                                <constraint firstAttribute="width" constant="12" id="xSh-eH-yQ5"/>
                                                             </constraints>
-                                                            <popUpButtonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" inset="2" pullsDown="YES" preferredEdge="maxY" selectedItem="777" id="1271">
+                                                            <popUpButtonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="left" lineBreakMode="truncatingTail" inset="2" pullsDown="YES" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="777" id="1271">
                                                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                                 <font key="font" metaFont="menu"/>
                                                                 <menu key="menu" title="OtherViews" id="776">
                                                                     <items>
-                                                                        <menuItem image="NSActionTemplate" hidden="YES" id="777"/>
+                                                                        <menuItem hidden="YES" id="777"/>
                                                                         <menuItem title="New…" id="779">
                                                                             <connections>
                                                                                 <action selector="newPreset:" target="-2" id="817"/>
@@ -847,7 +847,7 @@ DQ
                                                             </popUpButtonCell>
                                                         </popUpButton>
                                                         <button imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="870">
-                                                            <rect key="frame" x="643" y="13" width="30" height="22"/>
+                                                            <rect key="frame" x="663" y="5" width="30" height="22"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="22" id="PKh-B8-GUd"/>
                                                                 <constraint firstAttribute="width" constant="30" id="SF3-g2-dqN"/>
@@ -866,7 +866,7 @@ DQ
                                                             </connections>
                                                         </button>
                                                         <button imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="875">
-                                                            <rect key="frame" x="673" y="13" width="30" height="22"/>
+                                                            <rect key="frame" x="693" y="5" width="30" height="22"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="22" id="Mbs-Ci-fj1"/>
                                                                 <constraint firstAttribute="width" constant="30" id="tIs-EG-csr"/>
@@ -890,11 +890,11 @@ DQ
                                                         <constraint firstAttribute="trailing" secondItem="875" secondAttribute="trailing" id="72e-B3-eYJ"/>
                                                         <constraint firstItem="875" firstAttribute="leading" secondItem="870" secondAttribute="trailing" id="Kpl-tV-8aU"/>
                                                         <constraint firstItem="774" firstAttribute="leading" secondItem="1aN-OH-ZsQ" secondAttribute="leading" id="Z9r-XB-393"/>
-                                                        <constraint firstItem="775" firstAttribute="leading" secondItem="774" secondAttribute="trailing" constant="-1" id="bFU-q6-dNo"/>
+                                                        <constraint firstItem="775" firstAttribute="leading" secondItem="774" secondAttribute="trailing" id="bFU-q6-dNo"/>
                                                         <constraint firstItem="870" firstAttribute="centerY" secondItem="1aN-OH-ZsQ" secondAttribute="centerY" id="bZA-vd-9oQ"/>
                                                         <constraint firstItem="775" firstAttribute="centerY" secondItem="1aN-OH-ZsQ" secondAttribute="centerY" id="dbS-xc-fbW"/>
                                                         <constraint firstItem="774" firstAttribute="centerY" secondItem="1aN-OH-ZsQ" secondAttribute="centerY" id="kAj-gh-djL"/>
-                                                        <constraint firstAttribute="height" constant="48" id="zw4-XE-y8D"/>
+                                                        <constraint firstAttribute="height" constant="32" id="zw4-XE-y8D"/>
                                                     </constraints>
                                                 </customView>
                                             </subviews>
@@ -904,7 +904,7 @@ DQ
                                                 <constraint firstAttribute="bottom" secondItem="1aN-OH-ZsQ" secondAttribute="bottom" id="Cuh-mp-8eV"/>
                                                 <constraint firstItem="WBj-aB-z8x" firstAttribute="top" secondItem="82" secondAttribute="top" constant="78" id="EXs-OY-bGZ"/>
                                                 <constraint firstAttribute="trailing" secondItem="1aN-OH-ZsQ" secondAttribute="trailing" constant="20" id="FFA-7p-DIV"/>
-                                                <constraint firstItem="1aN-OH-ZsQ" firstAttribute="leading" secondItem="82" secondAttribute="leading" constant="20" id="MRa-cv-kji"/>
+                                                <constraint firstItem="1aN-OH-ZsQ" firstAttribute="leading" secondItem="82" secondAttribute="leading" id="MRa-cv-kji"/>
                                                 <constraint firstItem="998" firstAttribute="leading" secondItem="82" secondAttribute="leading" id="MVY-wS-PXD"/>
                                                 <constraint firstItem="1aN-OH-ZsQ" firstAttribute="top" secondItem="998" secondAttribute="bottom" id="Rgy-LP-BX2"/>
                                                 <constraint firstAttribute="trailing" secondItem="WBj-aB-z8x" secondAttribute="trailing" constant="20" id="ahE-S5-zOC"/>
@@ -924,17 +924,28 @@ DQ
                                                     <rect key="frame" x="-20" y="583" width="783" height="5"/>
                                                 </box>
                                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="848" customClass="ProVocHistoryView">
-                                                    <rect key="frame" x="0.0" y="48" width="743" height="537"/>
+                                                    <rect key="frame" x="0.0" y="32" width="743" height="553"/>
                                                     <connections>
                                                         <outlet property="mDataSource" destination="-2" id="850"/>
                                                     </connections>
                                                 </customView>
+                                                <button verticalHuggingPriority="750" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="849">
+                                                    <rect key="frame" x="657" y="45" width="72" height="32"/>
+                                                    <buttonCell key="cell" type="push" title="Clear" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="1278">
+                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                    <connections>
+                                                        <action selector="clearHistory:" target="-2" id="852"/>
+                                                        <binding destination="-2" name="enabled" keyPath="canClearHistory" id="853"/>
+                                                    </connections>
+                                                </button>
                                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="AOW-yC-Y1l" userLabel="Footer View">
-                                                    <rect key="frame" x="20" y="0.0" width="703" height="48"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="723" height="32"/>
                                                     <subviews>
-                                                        <popUpButton verticalHuggingPriority="750" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="854">
-                                                            <rect key="frame" x="-2" y="11" width="113" height="25"/>
-                                                            <popUpButtonCell key="cell" type="push" title="Last Months" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="859" id="1279">
+                                                        <popUpButton imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="854">
+                                                            <rect key="frame" x="0.0" y="6" width="102" height="20"/>
+                                                            <popUpButtonCell key="cell" type="bevel" title="Last Months" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="859" id="1279">
                                                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                                 <font key="font" metaFont="menu"/>
                                                                 <menu key="menu" title="OtherViews" id="855">
@@ -950,23 +961,10 @@ DQ
                                                                 <binding destination="860" name="selectedIndex" keyPath="selection.display" id="863"/>
                                                             </connections>
                                                         </popUpButton>
-                                                        <button verticalHuggingPriority="750" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="849">
-                                                            <rect key="frame" x="637" y="7" width="72" height="32"/>
-                                                            <buttonCell key="cell" type="push" title="Clear" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="1278">
-                                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                                <font key="font" metaFont="system"/>
-                                                            </buttonCell>
-                                                            <connections>
-                                                                <action selector="clearHistory:" target="-2" id="852"/>
-                                                                <binding destination="-2" name="enabled" keyPath="canClearHistory" id="853"/>
-                                                            </connections>
-                                                        </button>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="849" secondAttribute="trailing" id="6AB-Od-0fm"/>
-                                                        <constraint firstAttribute="height" constant="48" id="AUm-n8-sDs"/>
+                                                        <constraint firstAttribute="height" constant="32" id="AUm-n8-sDs"/>
                                                         <constraint firstItem="854" firstAttribute="centerY" secondItem="AOW-yC-Y1l" secondAttribute="centerY" id="GgY-ag-jje"/>
-                                                        <constraint firstItem="849" firstAttribute="centerY" secondItem="AOW-yC-Y1l" secondAttribute="centerY" id="jd4-IG-hKK"/>
                                                         <constraint firstItem="854" firstAttribute="leading" secondItem="AOW-yC-Y1l" secondAttribute="leading" id="nlz-Ch-bFe"/>
                                                     </constraints>
                                                 </customView>
@@ -976,8 +974,10 @@ DQ
                                                 <constraint firstItem="848" firstAttribute="top" secondItem="YhR-Hs-7mZ" secondAttribute="bottom" id="1Lw-h3-A34"/>
                                                 <constraint firstItem="YhR-Hs-7mZ" firstAttribute="leading" secondItem="848" secondAttribute="leading" constant="-20" id="2WX-rv-JCN"/>
                                                 <constraint firstAttribute="trailing" secondItem="AOW-yC-Y1l" secondAttribute="trailing" constant="20" id="A0K-HK-O2l"/>
+                                                <constraint firstAttribute="trailing" secondItem="849" secondAttribute="trailing" constant="20" id="HIn-VE-TU0"/>
                                                 <constraint firstItem="YhR-Hs-7mZ" firstAttribute="trailing" secondItem="848" secondAttribute="trailing" constant="20" id="Mst-eO-q1J"/>
-                                                <constraint firstItem="AOW-yC-Y1l" firstAttribute="leading" secondItem="845" secondAttribute="leading" constant="20" id="Txl-Xq-S9Y"/>
+                                                <constraint firstAttribute="bottom" secondItem="849" secondAttribute="bottom" constant="52" id="NkP-kY-PTY"/>
+                                                <constraint firstItem="AOW-yC-Y1l" firstAttribute="leading" secondItem="845" secondAttribute="leading" id="Txl-Xq-S9Y"/>
                                                 <constraint firstAttribute="bottom" secondItem="AOW-yC-Y1l" secondAttribute="bottom" id="WJU-yb-IZN"/>
                                                 <constraint firstItem="AOW-yC-Y1l" firstAttribute="top" secondItem="848" secondAttribute="bottom" id="Y0A-qn-Wlu"/>
                                                 <constraint firstItem="848" firstAttribute="leading" secondItem="845" secondAttribute="leading" id="rOy-QQ-6Ew"/>
@@ -1114,7 +1114,7 @@ DQ
             <connections>
                 <outlet property="initialFirstResponder" destination="111" id="lPW-d1-rs3"/>
             </connections>
-            <point key="canvasLocation" x="139" y="148"/>
+            <point key="canvasLocation" x="285" y="155"/>
         </window>
         <menu title="Menu" id="282" userLabel="SearchMenu">
             <items>
@@ -2194,7 +2194,6 @@ Answers in German.</string>
     </objects>
     <resources>
         <image name="Inspector" width="32" height="32"/>
-        <image name="NSActionTemplate" width="14" height="14"/>
         <image name="NSAddTemplate" width="11" height="11"/>
         <image name="Play" width="29" height="32"/>
         <image name="PlayDown" width="29" height="32"/>
