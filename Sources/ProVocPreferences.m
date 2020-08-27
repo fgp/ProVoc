@@ -520,8 +520,9 @@
 
 -(IBAction)deleteiPodNotes:(id)inSender
 {
-	if (NSRunCriticalAlertPanel(NSLocalizedString(@"Delete All iPod Notes Title", @""), NSLocalizedString(@"Delete All iPod Notes Message", @""), NSLocalizedString(@"Delete All iPod Notes Delete Button", @""), NSLocalizedString(@"Delete All iPod Notes Cancel Button", @""), nil) == NSAlertAlternateReturn)
+    if (NSRunCriticalAlertPanel(NSLocalizedString(@"Delete All iPod Notes Title", @""), NSLocalizedString(@"Delete All iPod Notes Message", @""), NSLocalizedString(@"Delete All iPod Notes Delete Button", @""), NSLocalizedString(@"Delete All iPod Notes Cancel Button", @""), nil) == NSAlertAlternateReturn) {
 		return;
+    }
 	NSString *path = [iPodController iPodNotePath];
 	NSEnumerator *enumerator = [[[NSFileManager defaultManager] directoryContentsAtPath:path] objectEnumerator];
 	NSString *item;

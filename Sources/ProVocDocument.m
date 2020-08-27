@@ -54,7 +54,7 @@
 
 @end
 
-@interface ProVocDocument (Protected) <NSSplitViewDelegate>
+@interface ProVocDocument (Protected) <NSSplitViewDelegate, NSTableViewDelegate>
 
 -(id)labelsToTest;
 -(BOOL)testMCQ;
@@ -272,20 +272,24 @@
     [self performSelector:@selector(sortWordsByColumn:) withObject:[mWordTableView tableColumnWithIdentifier:@"Number"] afterDelay:0.0];
 	
 	state = [mLoadedParameters objectForKey:@"WordTableColumnStatesV2"];
-	if (!state)
+    if (!state) {
 		state = [mLoadedParameters objectForKey:@"WordTableColumnStates"];
-	if (state)
+    }
+    if (state) {
 		[mWordTableView setTableColumnStates:state];
-	else {
+    } else {
 		NSTableColumn *column = [mWordTableView tableColumnWithIdentifier:@"NextReview"];
-		if (column)
+        if (column) {
 			[mWordTableView removeTableColumn:column];
+        }
 		[mWordTableView sizeToFit];
 	}
 	[mLabelTableView setDelegate:self];
+    
 	state = [mLoadedParameters objectForKey:@"MainSplitViewState"];
-	if (state)
+    if (state) {
 		[mMainSplitView setSplitViewState:state];
+    }
     
 	NSBox *presetBoxView = (NSBox *)[mPresetEditView subviewOfClass:[NSBox class]];
 	[presetBoxView setFrameSize:[mPresetSettingsView frame].size];
@@ -2780,4 +2784,16 @@ int SORT_BY_DIFFICULT(id left, id right, void *info)
     }
 }
 
+- (void)tableView:(NSTableView *)tableView didClickTableColumn:(NSTableColumn *)tableColumn {
+
+NSLog(@"tableView:didClickTableColumn: %@, titleString: %@", [tableColumn identifier], [[tableColumn headerCell] stringValue]);
+
+}
+
+
+- (void)tableView:(NSTableView *)tableView mouseDownInHeaderOfTableColumn:(NSTableColumn *)tableColumn {
+
+NSLog(@"tableView:mouseDownInHeaderOfTableColumn: %@, titleString: %@", [tableColumn identifier], [[tableColumn headerCell] stringValue]);
+
+}
 @end

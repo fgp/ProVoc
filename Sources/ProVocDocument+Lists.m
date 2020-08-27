@@ -455,9 +455,10 @@ static NSArray *sDraggedItems = nil;
 			return NO;
 		}
 	}
-    if (inTableView == mWordTableView && ([[inTableColumn identifier] isEqualTo:@"Difficulty"] || [[inTableColumn identifier] isEqualTo:@"Number"] || [[inTableColumn identifier] isEqualTo:@"LastAnswered"] || [[inTableColumn identifier] isEqualTo:@"NextReview"]))
+    if (inTableView == mWordTableView && ([[inTableColumn identifier] isEqualTo:@"Difficulty"] || [[inTableColumn identifier] isEqualTo:@"Number"] || [[inTableColumn identifier] isEqualTo:@"LastAnswered"] || [[inTableColumn identifier] isEqualTo:@"NextReview"])) {
         return NO;
-		
+    }
+
 	return YES;
 }
 
@@ -1044,7 +1045,7 @@ static BOOL sKeepOnDoubleWordSearch = YES;
 
 typedef struct { id identifier; BOOL descending; id determinents; BOOL ignoreCase; BOOL ignoreAccents; } SortContext;
 
-int ORDER_BY_CONTEXT (id left, id right, void *ctxt)
+NSInteger ORDER_BY_CONTEXT (id left, id right, void *ctxt)
 {
 	SortContext *context = (SortContext *)ctxt;
 	int order = 0;
