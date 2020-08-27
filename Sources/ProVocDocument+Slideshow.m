@@ -26,6 +26,21 @@ static BOOL sPlayPause;
 
 @end
 
+@implementation NSWindow (Extern)
+
+-(void)animateAlphaValueFrom:(float)inFrom to:(float)inTo during:(NSTimeInterval)inInterval
+{
+    NSDate *start = [NSDate date];
+    float k = 0;
+    while (k < 1.0) {
+        k = MIN(1.0, -[start timeIntervalSinceNow] / inInterval);
+        [self setAlphaValue:inFrom + k * (inTo - inFrom)];
+    }
+    [self setAlphaValue:inTo];
+}
+
+@end
+
 @interface SlideShowSoundGenerator : NSObject {
 	NSMutableArray *mSoundsToPlay;
 	NSSound *mCurrentSound;
@@ -251,9 +266,12 @@ static QTMovieView *sMovieView = nil;
 {
 	if (self = [super initWithFrame:inFrame]) {
 		NSColor *backGroundColor = [NSUnarchiver unarchiveObjectWithData:[[NSUserDefaults standardUserDefaults] objectForKey:PVTestBackgroundColor]];
-		float r, g, b;
-		[[backGroundColor colorUsingColorSpaceName:NSCalibratedRGBColorSpace] getRed:&r green:&g blue:&b alpha:nil];
-		NSColor *textColor = (r + g + b) / 3 >= 0.5 ? [NSColor blackColor] : [NSColor whiteColor];
+        NSColor *textColor = [NSColor whiteColor];
+        if (backGroundColor) {
+            CGFloat r, g, b;
+            [[backGroundColor colorUsingColorSpaceName:NSCalibratedRGBColorSpace] getRed:&r green:&g blue:&b alpha:nil];
+            textColor = (r + g + b) / 3 >= 0.5 ? [NSColor blackColor] : [NSColor whiteColor];
+        }
 
 		mSwapFonts = inSwapFonts;
 		mFirstIndex = inIndex;

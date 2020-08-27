@@ -58,9 +58,7 @@
 	static NSDictionary *attributes = nil;
 	static NSShadow *shadow = nil;
 	if (!attributes) {
-		attributes = [[NSDictionary alloc] initWithObjectsAndKeys:[NSFont systemFontOfSize:[NSFont smallSystemFontSize]], NSFontAttributeName,
-														[NSColor labelColor], NSForegroundColorAttributeName,
-														nil];
+		attributes = [[NSDictionary alloc] initWithObjectsAndKeys:[NSFont systemFontOfSize:[NSFont smallSystemFontSize]], NSFontAttributeName, [NSColor labelColor], NSForegroundColorAttributeName, nil];
 		shadow = [[NSShadow alloc] init];
 		[shadow setShadowColor:[NSColor colorWithCalibratedWhite:0.0 alpha:0.25]];
 		[shadow setShadowBlurRadius:5.0];
