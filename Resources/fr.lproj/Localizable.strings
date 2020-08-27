@@ -244,8 +244,8 @@
 
 "Homepage URL" = "https://www.github.com/lindenstruth/provoc";
 "Bug Report URL" = "https://www.github.com/lindenstruth/provoc/issues";
-"Download Vocabulary URL (v=%@)" = "http://www.arizona-software.ch/provoc/vocabulary/?from=app&lang=fr&version=%@";
-"Discover Features URL (v=%@)" = "http://www.arizona-software.ch/provoc/features/?from=app&lang=fr&version=%@";
+"Download Vocabulary URL (v=%@)" = "";//"http://www.arizona-software.ch/provoc/vocabulary/?from=app&lang=fr&version=%@";
+"Discover Features URL (v=%@)" = "";//"http://www.arizona-software.ch/provoc/features/?from=app&lang=fr&version=%@";
 
 "Source Language Caption" = "Source:";
 "Target Language Caption" = "Destination:";
@@ -270,13 +270,13 @@
 
 "Default Voice" = "Défaut";
 
-"Install Widget Check URL" = "http://www.arizona-software.ch/provoc/widget/check.php?from=app&action=check";
+"Install Widget Check URL" = "";//"http://www.arizona-software.ch/provoc/widget/check.php?from=app&action=check";
 "Install Widget Title" = "Télécharger le widget ProVoc pour Dashboard";
 "Install Widget Message" = "Le widget companion de ProVoc est à présent disponible. Désirez-vous le télécharger maintenant?";
 "Install Widget Download Button" = "Télécharger";
 "Install Widget Later Button" = "Plus tard";
 "Install Widget Ignore Button" = "Ignorer";
-"Widget Download URL" = "http://www.arizona-software.ch/provoc/widget/?from=app&action=download&lang=fr";
+"Widget Download URL" = "";//"http://www.arizona-software.ch/provoc/widget/?from=app&action=download&lang=fr";
 
 "Font Set Button Title" = "Choisir…";
 "Font Reset Button Title" = "Défaut";
@@ -320,4 +320,4 @@
 "Leopard Only Feature Title" = "Cette version de ProVoc n'offre pas d'enregistrement sonore pour la version actuelle du système.";
 "Leopard Only Feature Message" = "Cette version de ProVoc est optimizée pour Mac OS X 10.5 Leopard, et n'offre pas d'enregistremetn sonore pour les versions antérieurs du système.";
 "Leopard Only Feature Download Button" = "Télécharger ProVoc pour la version actuelle du système";
-"Leopard Only Feature Download URL" = "http://www.arizona-software.ch/provoc/download/?target=tiger";
+"Leopard Only Feature Download URL" = "";//"http://www.arizona-software.ch/provoc/download/?target=tiger";
