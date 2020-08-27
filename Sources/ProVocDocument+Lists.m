@@ -332,7 +332,7 @@ static NSArray *sDraggedItems = nil;
 
 -(void)deleteSelectedRowsInOutlineView:(NSOutlineView *)inOutlineView
 {
-	[self deletePage:nil];
+    [self deletePage:nil];
 }
 
 -(BOOL)outlineView:(NSOutlineView *)inOutlineView shouldSelectItem:(id)inItem
@@ -465,14 +465,30 @@ static NSArray *sDraggedItems = nil;
 
 -(void)deleteSelectedRowsInTableView:(NSTableView *)inTableView
 {
-	if (inTableView == mPresetTableView)
+    if (inTableView == mPresetTableView) {
 		[self removePreset:nil];
-	else if (inTableView == mWordTableView) {
-		NSArray *selectedWords = [self selectedWords];
-		BOOL deselect = [selectedWords count] > 1;
-        [self deleteWords:selectedWords];
-		if (deselect)
-			[mWordTableView deselectAll:nil];
+    } else if (inTableView == mWordTableView) {
+        
+        NSAlert *alert = [[NSAlert alloc] init];
+        [alert setMessageText:NSLocalizedString(@"Remove selection", nil)];
+        if ([[self selectedWords] count] > 1) {
+            [alert setInformativeText:NSLocalizedString(@"Do you really want to remove the selected entries from this dictionary? This cannot be undone later!", nil)];
+        } else {
+            [alert setInformativeText:NSLocalizedString(@"Do you really want to remove the selected entry from this dictionary? This cannot be undone later!", nil)];
+        }
+        [alert addButtonWithTitle:NSLocalizedString(@"Yes", nil)];
+        [alert addButtonWithTitle:NSLocalizedString(@"No", nil)];
+        [alert beginSheetModalForWindow:self.window completionHandler:^(NSModalResponse returnCode) {
+            if (returnCode == NSAlertSecondButtonReturn) {
+                return;
+            }
+            NSArray *selectedWords = [self selectedWords];
+            BOOL deselect = [selectedWords count] > 1;
+            [self deleteWords:selectedWords];
+            if (deselect) {
+                [mWordTableView deselectAll:nil];
+            }
+        }];
 	}
 }
 

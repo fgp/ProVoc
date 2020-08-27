@@ -665,16 +665,21 @@
 		[inItem setTitle:[self stringForLabel:label]];
 		return [self isEditing];
 	}
-	if (action == @selector(revealSelectedWordsInPages:))
+    if (action == @selector(revealSelectedWordsInPages:)) {
 		return [self isEditing] && [[self selectedWords] count] > 0;
-	if (action == @selector(setSearchCategory:))
+    }
+    if (action == @selector(setSearchCategory:)) {
 		[inItem setState:[[NSUserDefaults standardUserDefaults] boolForKey:[self searchCategoryForTag:[inItem tag]]] ? NSOnState : NSOffState];
-	if (action == @selector(submitDocument:))
+    }
+    if (action == @selector(submitDocument:)) {
 		[inItem setTitle:[NSString stringWithFormat:NSLocalizedString(@"Submit %@", @""), [self displayName]]];
-	if (action == @selector(deletePage:))
+    }
+    if (action == @selector(deletePage:)) {
 		return [[[mProVocData rootChapter] children] count] > 0;
-	if (action == @selector(removePreset:))
+    }
+    if (action == @selector(removePreset:)) {
 		return [self canRemovePreset];
+    }
 	return YES;
 }
 
@@ -984,14 +989,27 @@ static ProVocDocument *sCurrentDocument = nil;
 
 -(IBAction)deletePage:(id)inSender
 {
-	[self willChangeData];
-	[mWordTableView abortEditing];
-	NSEnumerator *enumerator = [[self selectedSourceAncestors] objectEnumerator];
-	id source;
-	while (source = [enumerator nextObject])
-		[(ProVocChapter *)[source parent] removeChild:source];
-	[self pagesDidChange];
-	[self didChangeData];
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert setMessageText:NSLocalizedString(@"Remove selection", nil)];
+    //[alert setInformativeText:NSLocalizedString(@"Do you really want to remove the selected lesson from this dictionary? This cannot be undone later!", nil)];
+    [alert setInformativeText:NSLocalizedString(@"Do you really want to remove the selected pages/chapters from this dictionary? This cannot be undone later!", nil)];
+    [alert addButtonWithTitle:NSLocalizedString(@"Yes", nil)];
+    [alert addButtonWithTitle:NSLocalizedString(@"No", nil)];
+    [alert beginSheetModalForWindow:self.window completionHandler:^(NSModalResponse returnCode) {
+        if (returnCode == NSAlertSecondButtonReturn) {
+            return;
+        }
+        [self willChangeData];
+        [mWordTableView abortEditing];
+        NSEnumerator *enumerator = [[self selectedSourceAncestors] objectEnumerator];
+        id source;
+        while (source = [enumerator nextObject]) {
+            [(ProVocChapter *)[source parent] removeChild:source];
+        }
+        [self pagesDidChange];
+        [self didChangeData];
+    }];
+
 }
 
 static int sNewWordLabel = 0;
