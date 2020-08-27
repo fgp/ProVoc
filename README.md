@@ -1,7 +1,7 @@
 ProVoc 5
 ===========
 
-The dev branch contains an updated version of the original version 4.2.4 code base, which has been abandoned about 13 years ago by its original developer and maintainer Arizona Software. That means that the dev branch doesn't contain the changes committed to the master branch by mikecsh, at least not yet. It'll stay there until deemed stable enough to be merged to the master branch.
+The dev branch contains an updated version of the original version 4.2.4 code base, which has been abandoned about 13 years ago by its original developer and maintainer Arizona Software. That means that the dev branch doesn't contain the changes committed to the master branch by Mike Holman (http://github.com/mikecsh/), at least not yet. It'll stay there until deemed stable enough to be merged to the master branch.
 
 More informations about the status of this branch is to be found in the Project's Wiki.
 
@@ -14,15 +14,15 @@ A vocabulary trainer for Mac OS X, originally written by Arizona Software (http:
 
 *Please be aware that this project is currently unstable as I am modernising a large legacy codebase.*
 
-##Screenshots:
+## Screenshots:
 ![alt tag](https://raw.github.com/mikecsh/provoc/master/Screenshots/1.png)
 ![alt tag](https://raw.github.com/mikecsh/provoc/master/Screenshots/2.png)
 ![alt tag](https://raw.github.com/mikecsh/provoc/master/Screenshots/3.png)
 
-##Current abilities:
+## Current abilities:
 * As displayed on http://www.arizona-software.ch
 	
-##WRoadmap:
+## Roadmap:
 * Updating the interface
 * Modernizing the code
 * ARC Compatibility
@@ -35,14 +35,15 @@ A vocabulary trainer for Mac OS X, originally written by Arizona Software (http:
 * iCloud syncing?
 
 
-##Contributors:
+## Contributors:
 
 * Arizona Software (Original authors - http://www.arizona-software.ch)
 * Mike Holman (http://github.com/mikecsh/)
 
 Contributions via pull requests or issues are very welcome.
 
-## Original Readme that Accompanied Source Code When Released By Arizona Software
+Original Readme that Accompanied Source Code When Released By Arizona Software
+===========
 
 
 Thank you for downloading the source code of ProVoc! Please take a moment
