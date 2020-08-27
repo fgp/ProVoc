@@ -140,7 +140,6 @@
 		A7285E3A0A1603D00082642D /* OpenDocument.png in Resources */ = {isa = PBXBuildFile; fileRef = A7285E0C0A1603D00082642D /* OpenDocument.png */; };
 		A7285E3C0A1603D00082642D /* Play.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7285E0E0A1603D00082642D /* Play.tiff */; };
 		A7285E3D0A1603D00082642D /* PlayDown.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7285E0F0A1603D00082642D /* PlayDown.tiff */; };
-		A7285E3E0A1603D00082642D /* Preferences.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7285E100A1603D00082642D /* Preferences.tiff */; };
 		A7285E3F0A1603D00082642D /* Question.tif in Resources */ = {isa = PBXBuildFile; fileRef = A7285E110A1603D00082642D /* Question.tif */; };
 		A7285E410A1603D00082642D /* send.tif in Resources */ = {isa = PBXBuildFile; fileRef = A7285E130A1603D00082642D /* send.tif */; };
 		A7285E420A1603D00082642D /* settings.tif in Resources */ = {isa = PBXBuildFile; fileRef = A7285E140A1603D00082642D /* settings.tif */; };
@@ -569,7 +568,6 @@
 		A7285E0C0A1603D00082642D /* OpenDocument.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OpenDocument.png; sourceTree = "<group>"; };
 		A7285E0E0A1603D00082642D /* Play.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Play.tiff; sourceTree = "<group>"; };
 		A7285E0F0A1603D00082642D /* PlayDown.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = PlayDown.tiff; sourceTree = "<group>"; };
-		A7285E100A1603D00082642D /* Preferences.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Preferences.tiff; sourceTree = "<group>"; };
 		A7285E110A1603D00082642D /* Question.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Question.tif; sourceTree = "<group>"; };
 		A7285E130A1603D00082642D /* send.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = send.tif; sourceTree = "<group>"; };
 		A7285E140A1603D00082642D /* settings.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = settings.tif; sourceTree = "<group>"; };
@@ -994,7 +992,6 @@
 				A75734020A19FA9800E4912F /* Clock.png */,
 				A7285E0E0A1603D00082642D /* Play.tiff */,
 				A7285E0F0A1603D00082642D /* PlayDown.tiff */,
-				A7285E100A1603D00082642D /* Preferences.tiff */,
 				A7285E110A1603D00082642D /* Question.tif */,
 				A7285E130A1603D00082642D /* send.tif */,
 				A7285E140A1603D00082642D /* settings.tif */,
@@ -1231,7 +1228,6 @@
 				A7285E3A0A1603D00082642D /* OpenDocument.png in Resources */,
 				A7285E3C0A1603D00082642D /* Play.tiff in Resources */,
 				A7285E3D0A1603D00082642D /* PlayDown.tiff in Resources */,
-				A7285E3E0A1603D00082642D /* Preferences.tiff in Resources */,
 				A7285E3F0A1603D00082642D /* Question.tif in Resources */,
 				A7285E410A1603D00082642D /* send.tif in Resources */,
 				A7285E420A1603D00082642D /* settings.tif in Resources */,

@@ -345,7 +345,7 @@
                     <autoresizingMask key="autoresizingMask"/>
                     <clipView key="contentView" ambiguous="YES" id="quP-Ni-FjT">
                         <rect key="frame" x="1" y="0.0" width="570" height="207"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" autosaveColumns="NO" headerView="781" id="213" customClass="ProVocTableView">
                                 <rect key="frame" x="0.0" y="0.0" width="570" height="182"/>
@@ -764,7 +764,7 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                         <clipView key="contentView" ambiguous="YES" id="P9M-2C-O9z">
                                             <rect key="frame" x="1" y="1" width="366" height="134"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" autosaveColumns="NO" indentationPerLevel="16" autoresizesOutlineColumn="YES" outlineTableColumn="331" id="330">
                                                     <rect key="frame" x="0.0" y="0.0" width="366" height="134"/>

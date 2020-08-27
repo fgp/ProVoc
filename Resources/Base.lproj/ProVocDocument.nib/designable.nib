@@ -48,8 +48,8 @@
             <rect key="contentRect" x="53" y="333" width="950" height="663"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1200"/>
             <value key="minSize" type="size" width="700" height="400"/>
-            <view key="contentView" id="26">
-                <rect key="frame" x="0.0" y="0.0" width="950" height="719"/>
+            <view key="contentView" misplaced="YES" id="26">
+                <rect key="frame" x="0.0" y="0.0" width="950" height="663"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <splitView autosaveName="" dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="785">
