@@ -499,7 +499,7 @@
                                     <action selector="visitHomepage:" target="209" id="329"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="ProVoc on Github" id="Ugn-i6-tY4">
+                            <menuItem title="ProVoc on GitHub" id="Ugn-i6-tY4">
                                 <connections>
                                     <action selector="visitHomepage:" target="209" id="c9T-KL-ez1"/>
                                 </connections>
