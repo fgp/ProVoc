@@ -15,7 +15,7 @@
 -(void)delete:(id)inSender
 {
     if ([self numberOfSelectedRows] > 0 && [[self dataSource] respondsToSelector:@selector(deleteSelectedRowsInTableView:)])
-        [[self dataSource] deleteSelectedRowsInTableView:self];
+        [[self dataSource] performSelector:@selector(deleteSelectedRowsInTableView:) withObject:self];
 }
 
 -(void)keyDown:(NSEvent *)inEvent
@@ -140,19 +140,21 @@
 	
 	id dataSource = [self dataSource];
 	NSMutableString *text = [NSMutableString string];
-	NSEnumerator *rowEnumerator = [self selectedRowEnumerator];
-	id row;
-	while (row = [rowEnumerator nextObject]) {
-		int rowIndex = [row intValue];
-		NSEnumerator *enumerator = [columns objectEnumerator];
-		id column;
-		while (column = [enumerator nextObject]) {
-			id string = [dataSource tableView:self objectValueForTableColumn:column row:rowIndex];
-			if ([string length] > 0)
-				[text appendFormat:@"%@, ", string];
-		}
-	}
-	
+    
+    if(self.selectedRowIndexes) {
+        NSUInteger rowIndex = [self.selectedRowIndexes firstIndex];
+        while (rowIndex != NSNotFound) {
+            NSEnumerator *enumerator = [columns objectEnumerator];
+            id column;
+            while (column = [enumerator nextObject]) {
+                id string = [dataSource tableView:self objectValueForTableColumn:column row:rowIndex];
+                if ([string length] > 0)
+                    [text appendFormat:@"%@, ", string];
+            }
+            rowIndex = [self.selectedRowIndexes indexGreaterThanIndex:rowIndex];
+        }
+    }
+    
 	[[self speechSynthesizer] stopSpeaking]; // ++++ v4.2.2 ++++
 	[[self speechSynthesizer] startSpeakingString:text];
 }
@@ -196,10 +198,15 @@
 {
     if ([self numberOfSelectedRows] > 0 && [[self dataSource] respondsToSelector:@selector(outlineView:writeItems:toPasteboard:)]) {
 		NSMutableArray *items = [NSMutableArray array];
-		NSEnumerator *enumerator = [self selectedRowEnumerator];
-		NSNumber *row;
-		while (row = [enumerator nextObject])
-			[items addObject:[self itemAtRow:[row intValue]]];
+        
+        if(self.selectedRowIndexes) {
+            NSUInteger rowIndex = [self.selectedRowIndexes firstIndex];
+            while (rowIndex != NSNotFound) {
+                [items addObject:[self itemAtRow:rowIndex]];
+                rowIndex = [self.selectedRowIndexes indexGreaterThanIndex:rowIndex];
+            }
+        }
+        
 		[[self dataSource] outlineView:self writeItems:items toPasteboard:[NSPasteboard generalPasteboard]];
 	}
 }

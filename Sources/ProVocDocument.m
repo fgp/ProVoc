@@ -54,7 +54,7 @@
 
 @end
 
-@interface ProVocDocument (Protected)
+@interface ProVocDocument (Protected) <NSSplitViewDelegate>
 
 -(id)labelsToTest;
 -(BOOL)testMCQ;
@@ -309,7 +309,9 @@
 		[mHistoryView setDisplay:[state intValue]];
 	[mHistoryView reloadData];
 
-	[mMainWindow performSelector:@selector(makeFirstResponder:) withObject:mLoadedParameters ? mPresetTableView : [mMainWindow initialFirstResponder] afterDelay:0.0];
+    if (mMainWindow && !mLoadedParameters) {
+        [mMainWindow performSelector:@selector(makeFirstResponder:) withObject:[mMainWindow initialFirstResponder] afterDelay:0.0];
+    }
 	
 	[[self undoManager] setLevelsOfUndo:20];
 	[self checkWidgetLog];
@@ -321,8 +323,13 @@
 
 -(void)checkOldFormat:(id)inSender
 {
-	if ([[[self fileName] pathExtension] isCaseInsensitiveLike:@"ProVoc"])
-		NSRunAlertPanel(NSLocalizedString(@"Open Old Format Alert Title", @""), NSLocalizedString(@"Open Old Format Alert Message", @""), nil, nil, nil);
+    if ([[[self fileURL] pathExtension] isCaseInsensitiveLike:@"ProVoc"]) {
+        NSAlert *alert = [[NSAlert alloc] init];
+        [alert setMessageText:NSLocalizedString(@"Open Old Format Alert Title", @"")];
+        [alert setInformativeText:NSLocalizedString(@"Open Old Format Alert Message", @"")];
+        [alert runModal];
+        //NSRunAlertPanel(NSLocalizedString(@"Open Old Format Alert Title", @""), NSLocalizedString(@"Open Old Format Alert Message", @""), nil, nil, nil);
+    }
 }
 
 -(NSData *)dataRepresentationOfType:(NSString *)inType
@@ -1188,7 +1195,8 @@ static int sNewWordLabel = 0;
 		searchCategory[category] = [[NSUserDefaults standardUserDefaults] boolForKey:key];
 		[[NSUserDefaults standardUserDefaults] setBool:YES forKey:key];
 	}
-	
+    
+	// FIXME: this logs an error if the window is nil
 	if ([self containsWordMatchingSearchString:inSearchString]) {
 		[NSObject cancelPreviousPerformRequestsWithTarget:mMainWindow selector:@selector(makeFirstResponder:) object:mPresetTableView];
 		[mPageOutlineView selectAll:nil];
@@ -1230,9 +1238,9 @@ static int sNewWordLabel = 0;
 	[mActionController release];
 	mActionController = nil;
 
-	if ([inDoubles count] == 0)
+    if ([inDoubles count] == 0) {
 		NSRunAlertPanel(NSLocalizedString(@"No Doubles Found Title", @""), NSLocalizedString(@"No Doubles Found Message", @""), nil, nil, nil);
-	else {
+    } else {
 		[mWords makeObjectsPerformSelector:@selector(setDouble:) withObject:[NSNumber numberWithBool:NO]];
 		[inDoubles makeObjectsPerformSelector:@selector(setDouble:) withObject:[NSNumber numberWithBool:YES]];
 		mShowDoubles = YES;

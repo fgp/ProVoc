@@ -227,10 +227,15 @@
 {
     if(inTableView == mLanguageTableView) {
         NSMutableArray *languagesToDelete = [NSMutableArray array];
-        NSEnumerator *enumerator = [mLanguageTableView selectedRowEnumerator];
-        NSNumber *row;
-        while (row = [enumerator nextObject])
-            [languagesToDelete addObject:[[self languages] objectAtIndex:[row intValue]]];
+        
+        if (mLanguageTableView.selectedRowIndexes) {
+            NSUInteger rowIndex = [mLanguageTableView.selectedRowIndexes firstIndex];
+            while (rowIndex != NSNotFound) {
+                [languagesToDelete addObject:[[self languages] objectAtIndex:rowIndex]];
+                rowIndex = [mLanguageTableView.selectedRowIndexes indexGreaterThanIndex:rowIndex];
+            }
+        }
+        
         [[self languages] removeObjectsInArray:languagesToDelete];
         [mLanguageTableView reloadData];
         [self saveLanguagePrefs];
@@ -495,14 +500,20 @@
 
 -(IBAction)deleteSelectediPodContent:(id)inSender
 {
-	if (NSRunCriticalAlertPanel(NSLocalizedString(@"Delete Selected iPod Content Title", @""), NSLocalizedString(@"Delete Selected iPod Content Message", @""), NSLocalizedString(@"Delete Selected iPod Content Delete Button", @""), NSLocalizedString(@"Delete Selected iPod Content Cancel Button", @""), nil) == NSAlertAlternateReturn)
+    if (NSRunCriticalAlertPanel(NSLocalizedString(@"Delete Selected iPod Content Title", @""), NSLocalizedString(@"Delete Selected iPod Content Message", @""), NSLocalizedString(@"Delete Selected iPod Content Delete Button", @""), NSLocalizedString(@"Delete Selected iPod Content Cancel Button", @""), nil) == NSAlertAlternateReturn) {
 		return;
-	NSEnumerator *enumerator = [miPodContentsOutlineView selectedRowEnumerator];
-	id row;
-	while (row = [enumerator nextObject]) {
-		NSString *path = [[miPodContentsOutlineView itemAtRow:[row intValue]] path];
-		[[NSFileManager defaultManager] removeFileAtPath:path handler:nil];
-	}
+    }
+    
+    if (miPodContentsOutlineView.selectedRowIndexes) {
+        NSUInteger rowIndex = [miPodContentsOutlineView.selectedRowIndexes firstIndex];
+        while (rowIndex != NSNotFound) {
+            NSString *path = [[miPodContentsOutlineView itemAtRow:rowIndex] path];
+            [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
+            //[[NSFileManager defaultManager] removeFileAtPath:path handler:nil];
+            rowIndex = [miPodContentsOutlineView.selectedRowIndexes indexGreaterThanIndex:rowIndex];
+        }
+    }
+    
 	[iPodController updateiPodIndex];
 	[self iPodDidChange:nil];
 }

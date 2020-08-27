@@ -822,18 +822,21 @@ static NSArray *sSelectedWords = nil;
 -(NSArray *)selectedWords
 {
 	static NSMutableArray *words = nil;
-	if (!words)
+    if (!words) {
 		words = [[NSMutableArray alloc] initWithCapacity:0];
-	else
+    } else {
 		[words removeAllObjects];
-		
-	NSEnumerator *enumerator = [mWordTableView selectedRowEnumerator];
-	id row;
-	while (row = [enumerator nextObject]) {
-		int index = [row intValue];
-		if (index < [mVisibleWords count])
-			[words addObject:[mVisibleWords objectAtIndex:index]];
-	}
+    }
+    if(mWordTableView.selectedRowIndexes) {
+        NSUInteger rowIndex = [mWordTableView.selectedRowIndexes firstIndex];
+        while (rowIndex != NSNotFound) {
+            if (rowIndex < [mVisibleWords count]) {
+                [words addObject:[mVisibleWords objectAtIndex:rowIndex]];
+            }
+            rowIndex = [mWordTableView.selectedRowIndexes indexGreaterThanIndex:rowIndex];
+        }
+    }
+    
 	return [[words copy] autorelease];
 }
 
@@ -1206,20 +1209,27 @@ static NSTimeInterval waitTime = 0;
 -(void)selectedPagesDidChange
 {
 	[mSelectedPages removeAllObjects];
-	NSEnumerator *enumerator = [mPageOutlineView selectedRowEnumerator];
-	id row;
-	while (row = [enumerator nextObject]) {
-		id page = [mPageOutlineView itemAtRow:[row intValue]];
-		if ([page isKindOfClass:[ProVocChapter class]]) {
-			NSEnumerator *enumerator = [[page allPages] objectEnumerator];
-			ProVocPage *subpage;
-			while (subpage = [enumerator nextObject])
-				if (![mSelectedPages containsObject:subpage])
-					[mSelectedPages addObject:subpage];
-		} else if ([page isKindOfClass:[ProVocPage class]])
-			if (![mSelectedPages containsObject:page])
-				[mSelectedPages addObject:page];
-	}
+    
+    if (mPageOutlineView.selectedRowIndexes) {
+        NSUInteger rowIndex = [mPageOutlineView.selectedRowIndexes firstIndex];
+        while (rowIndex != NSNotFound) {
+            id page = [mPageOutlineView itemAtRow:rowIndex];
+            if ([page isKindOfClass:[ProVocChapter class]]) {
+                NSEnumerator *enumerator = [[page allPages] objectEnumerator];
+                ProVocPage *subpage;
+                while (subpage = [enumerator nextObject]) {
+                    if (![mSelectedPages containsObject:subpage]) {
+                        [mSelectedPages addObject:subpage];
+                    }
+                }
+            } else if ([page isKindOfClass:[ProVocPage class]]) {
+                if (![mSelectedPages containsObject:page]) {
+                    [mSelectedPages addObject:page];
+                }
+            }
+            rowIndex = [mPageOutlineView.selectedRowIndexes indexGreaterThanIndex:rowIndex];
+        }
+    }
 
 	[self wordsDidChange];
 	[self willChangeValueForKey:@"canAddWord"];
