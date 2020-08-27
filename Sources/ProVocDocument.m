@@ -2696,6 +2696,10 @@ int SORT_BY_DIFFICULT(id left, id right, void *info)
 
 -(void)setPresetData:(NSData *)inData
 {
+    if (mIndexOfCurrentPresets == NSNotFound) {
+        [mPresetTableView selectRowIndexes:[NSIndexSet indexSet] byExtendingSelection:NO];
+        return;
+    }
 	[self willChangePresets];
 	NSDictionary *info = [PseudoKeyedUnarchiver unarchiveObjectWithData:inData];
 	[mPresets release];
