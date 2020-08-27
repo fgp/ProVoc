@@ -12,7 +12,7 @@ ProVoc 4
 
 A vocabulary trainer for Mac OS X, originally written by Arizona Software (www.arizona-software.ch).
 
-*Please be aware that this project is currently unstable as I am modernising a large legacy codebase.*
+*Please be aware that the codebase of this project is very old and the app may not be working at all.*
 
 ## Screenshots:
 ![alt tag](https://raw.github.com/mikecsh/provoc/master/Screenshots/1.png)
