@@ -32,8 +32,6 @@ it's really a fun and inspiring experience!
 * Mike Holman (http://github.com/mikecsh/)
 * Myself (http://github.com/lindenstruth/)
 
-Contributions via pull requests or issues are very welcome.
-
 ProVoc 5
 ===========
 
