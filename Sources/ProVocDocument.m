@@ -1399,6 +1399,8 @@ int SORT_BY_DIFFICULT(id left, id right, void *info)
 -(IBAction)selectView:(id)inSender
 {
 	[self setMainTab:[inSender tag]];
+    [toolbar setSelectedItemIdentifier:[NSString stringWithFormat:@"%@",@([inSender tag])]];
+
 }
 
 -(IBAction)startSlideshow:(id)inSender

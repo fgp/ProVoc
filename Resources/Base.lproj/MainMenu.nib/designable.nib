@@ -318,19 +318,19 @@
                 <menuItem title="Vocabulary" id="311">
                     <menu key="submenu" title="Vocabulary" id="312">
                         <items>
-                            <menuItem title="Editing" tag="1" keyEquivalent="1" id="314">
+                            <menuItem title="Dictionary" keyEquivalent="1" id="314">
                                 <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                 <connections>
                                     <action selector="selectView:" target="-1" id="320"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Training" keyEquivalent="2" id="313">
+                            <menuItem title="Training" tag="1" keyEquivalent="2" id="313">
                                 <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                 <connections>
                                     <action selector="selectView:" target="-1" id="319"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="History" tag="2" keyEquivalent="3" id="315">
+                            <menuItem title="Your Results" tag="2" keyEquivalent="3" id="315">
                                 <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                 <connections>
                                     <action selector="selectView:" target="-1" id="321"/>
