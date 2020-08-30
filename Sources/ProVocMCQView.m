@@ -267,8 +267,9 @@ static QTMovieView *sMovieView = nil;
 
 -(void)drawRect:(NSRect)inRect
 {
-	if (!mDisplayAnswers)
+	if (!mDisplayAnswers) {
 		return;
+	}
 	NSRect rect = [self bounds];
 	rect.size.height = floor(rect.size.height / [mAnswers count]);
 	NSEnumerator *enumerator = [mAnswers objectEnumerator];
@@ -276,10 +277,11 @@ static QTMovieView *sMovieView = nil;
 	int index = 0;
 	while (answer = [enumerator nextObject]) {
 		NSRect rect = [self rectForChoiceAtIndex:index];
-		if (index == mSolutionIndex && mShowSolution)
+		if (index == mSolutionIndex && mShowSolution) {
 			[self drawSelectionType:1 inRect:rect];
-		else if (index == mSelectedIndex)
+		} else if (index == mSelectedIndex) {
 			[self drawSelectionType:0 inRect:rect];
+		}
 		NSString *string = [mDelegate stringForAnswer:answer];
 		[self drawString:string atIndex:index];
 		index++;

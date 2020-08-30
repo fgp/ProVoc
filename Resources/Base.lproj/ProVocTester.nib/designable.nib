@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -32,13 +32,13 @@
             <windowStyleMask key="styleMask" titled="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="320" y="481" width="474" height="444"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1200"/>
             <value key="minSize" type="size" width="474" height="444"/>
             <view key="contentView" id="8">
                 <rect key="frame" x="0.0" y="0.0" width="474" height="444"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField verticalHuggingPriority="750" id="24">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="24">
                         <rect key="frame" x="20" y="395" width="434" height="29"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Results" id="634">
@@ -47,7 +47,7 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button verticalHuggingPriority="750" imageHugsTitle="YES" id="18">
+                    <button verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="18">
                         <rect key="frame" x="14" y="12" width="187" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="Repeat Incorrect Words" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="632">
@@ -66,7 +66,7 @@ DQ
                             </binding>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" imageHugsTitle="YES" id="20">
+                    <button verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="20">
                         <rect key="frame" x="378" y="12" width="82" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="Done" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="633">
@@ -80,15 +80,15 @@ Gw
                             <action selector="terminateResultPanel:" target="-2" id="40"/>
                         </connections>
                     </button>
-                    <customView id="387" customClass="ProVocResultView">
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="387" customClass="ProVocResultView">
                         <rect key="frame" x="20" y="137" width="434" height="250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </customView>
-                    <customView id="604">
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="604">
                         <rect key="frame" x="0.0" y="40" width="474" height="89"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" id="603">
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="603">
                                 <rect key="frame" x="17" y="72" width="390" height="17"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Before repeating the words that were not answered correctly:" id="638">
@@ -97,7 +97,7 @@ Gw
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button imageHugsTitle="YES" id="602">
+                            <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="602">
                                 <rect key="frame" x="38" y="18" width="189" height="18"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <buttonCell key="cell" type="check" title="Display them as slideshow" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="637">
@@ -108,7 +108,7 @@ Gw
                                     <binding destination="586" name="value" keyPath="values.slideShowWithWrongWords" id="613"/>
                                 </connections>
                             </button>
-                            <popUpButton verticalHuggingPriority="750" imageHugsTitle="YES" id="599">
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="599">
                                 <rect key="frame" x="155" y="38" width="215" height="26"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <popUpButtonCell key="cell" type="push" title="Do not localize" bezelStyle="rounded" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="601" id="636">
@@ -125,7 +125,7 @@ Gw
                                     <binding destination="586" name="enabled" keyPath="values.markWrongWords" id="610"/>
                                 </connections>
                             </popUpButton>
-                            <button imageHugsTitle="YES" id="598">
+                            <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="598">
                                 <rect key="frame" x="38" y="43" width="114" height="18"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <buttonCell key="cell" type="check" title="Label them as:" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="635">
@@ -147,18 +147,19 @@ Gw
                     </customView>
                 </subviews>
             </view>
+            <point key="canvasLocation" x="140" y="147"/>
         </window>
         <window title="ProVoc" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="TestPanel" animationBehavior="default" id="23" userLabel="Normal Test" customClass="ProVocTestPanel">
             <windowStyleMask key="styleMask" titled="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="475" y="371" width="641" height="550"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1200"/>
             <value key="minSize" type="size" width="400" height="325"/>
             <view key="contentView" id="15" customClass="ProVocColoredWindowView">
-                <rect key="frame" x="1" y="9" width="641" height="550"/>
+                <rect key="frame" x="0.0" y="0.0" width="641" height="550"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button verticalHuggingPriority="750" imageHugsTitle="YES" id="9">
+                    <button verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9">
                         <rect key="frame" x="529" y="24" width="98" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="Continue" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="640">
@@ -173,7 +174,7 @@ DQ
                             <binding destination="-2" name="title" keyPath="verifyTitle" id="175"/>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" imageHugsTitle="YES" id="6">
+                    <button verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6">
                         <rect key="frame" x="14" y="24" width="82" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="Abort" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="639">
@@ -188,7 +189,7 @@ Gw
                             <binding destination="-2" name="title" keyPath="abortTitle" id="628"/>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" imageHugsTitle="YES" id="48">
+                    <button verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="48">
                         <rect key="frame" x="406" y="24" width="123" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="Give Solution" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="641">
@@ -207,17 +208,17 @@ Gw
                             <binding destination="-2" name="title" keyPath="giveAnswerTitle" id="386"/>
                         </connections>
                     </button>
-                    <tabView drawsBackground="NO" type="noTabsNoBorder" id="73">
+                    <tabView fixedFrame="YES" drawsBackground="NO" type="noTabsNoBorder" translatesAutoresizingMaskIntoConstraints="NO" id="73">
                         <rect key="frame" x="0.0" y="483" width="641" height="67"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <font key="font" metaFont="system"/>
                         <tabViewItems>
                             <tabViewItem label="Tab" identifier="" id="74">
-                                <view key="view" id="76">
+                                <view key="view" ambiguous="YES" id="76">
                                     <rect key="frame" x="0.0" y="0.0" width="641" height="67"/>
-                                    <autoresizingMask key="autoresizingMask"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <progressIndicator wantsLayer="YES" verticalHuggingPriority="750" maxValue="100" bezeled="NO" style="bar" id="17">
+                                        <progressIndicator wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="17">
                                             <rect key="frame" x="18" y="26" width="534" height="20"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                             <connections>
@@ -226,7 +227,7 @@ Gw
                                                 <binding destination="-2" name="value" keyPath="progressValue" previousBinding="95" id="96"/>
                                             </connections>
                                         </progressIndicator>
-                                        <textField verticalHuggingPriority="750" id="11">
+                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="11">
                                             <rect key="frame" x="555" y="30" width="89" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="999 / 999" id="642">
@@ -246,7 +247,7 @@ Gw
                                     <rect key="frame" x="0.0" y="0.0" width="641" height="67"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <slider verticalHuggingPriority="750" id="78">
+                                        <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="78">
                                             <rect key="frame" x="18" y="23" width="605" height="25"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                             <sliderCell key="cell" alignment="left" maxValue="1" doubleValue="0.5" tickMarkPosition="below" numberOfTickMarks="5" sliderType="linear" id="643">
@@ -256,7 +257,7 @@ Gw
                                                 <binding destination="-2" name="value" keyPath="difficulty" id="166"/>
                                             </connections>
                                         </slider>
-                                        <textField verticalHuggingPriority="750" id="79">
+                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="79">
                                             <rect key="frame" x="17" y="1" width="81" height="14"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Medium" id="644">
@@ -265,7 +266,7 @@ Gw
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField verticalHuggingPriority="750" id="80">
+                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="80">
                                             <rect key="frame" x="543" y="2" width="81" height="13"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Hard" id="645">
@@ -282,7 +283,7 @@ Gw
                             <binding destination="-2" name="selectedIndex" keyPath="mode" id="119"/>
                         </connections>
                     </tabView>
-                    <button toolTip="Mark word" imageHugsTitle="YES" id="83">
+                    <button toolTip="Mark word" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="83">
                         <rect key="frame" x="569" y="455" width="20" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="markAsFlagged" imagePosition="only" alignment="center" alternateImage="unmarkAsFlagged" inset="2" id="646">
@@ -295,7 +296,7 @@ Gw
                             <binding destination="-2" name="value" keyPath="flagged" id="203"/>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" imageHugsTitle="YES" id="260">
+                    <button verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="260">
                         <rect key="frame" x="96" y="24" width="82" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="Pause" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="648">
@@ -309,7 +310,7 @@ Gw
                             <binding destination="-2" name="title" keyPath="pauseTitle" id="382"/>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" tag="1" imageHugsTitle="YES" id="357">
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="1" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="357">
                         <rect key="frame" x="396" y="24" width="133" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="Accept Answer" bezelStyle="rounded" alignment="center" borderStyle="border" tag="1" inset="2" id="649">
@@ -327,20 +328,20 @@ Gw
                             </binding>
                         </connections>
                     </button>
-                    <splitView id="376">
+                    <splitView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="376">
                         <rect key="frame" x="20" y="72" width="601" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <customView id="183">
-                                <rect key="frame" x="0.0" y="0.0" width="601" height="133"/>
+                            <customView fixedFrame="YES" id="183">
+                                <rect key="frame" x="0.0" y="0.0" width="601" height="206"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
-                                    <customView id="454" customClass="ProVocTesterMediaView">
-                                        <rect key="frame" x="365" y="0.0" width="236" height="133"/>
+                                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="454" customClass="ProVocTesterMediaView">
+                                        <rect key="frame" x="365" y="0.0" width="236" height="206"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" heightSizable="YES"/>
                                         <subviews>
-                                            <customView id="462" customClass="ProVocMovieViewContainer">
-                                                <rect key="frame" x="114" y="0.0" width="122" height="133"/>
+                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="462" customClass="ProVocMovieViewContainer">
+                                                <rect key="frame" x="114" y="0.0" width="122" height="206"/>
                                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                                 <connections>
                                                     <binding destination="-2" name="hidden" keyPath="movie" id="465">
@@ -351,8 +352,8 @@ Gw
                                                     <outlet property="mTester" destination="-2" id="466"/>
                                                 </connections>
                                             </customView>
-                                            <imageView id="427" customClass="ProVocTesterImageView">
-                                                <rect key="frame" x="0.0" y="0.0" width="106" height="133"/>
+                                            <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="427" customClass="ProVocTesterImageView">
+                                                <rect key="frame" x="0.0" y="0.0" width="106" height="206"/>
                                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                                 <imageCell key="cell" enabled="NO" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="654"/>
                                                 <connections>
@@ -370,12 +371,12 @@ Gw
                                             <outlet property="mRightView" destination="462" id="467"/>
                                         </connections>
                                     </customView>
-                                    <customView id="438">
-                                        <rect key="frame" x="0.0" y="0.0" width="357" height="133"/>
+                                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="438">
+                                        <rect key="frame" x="0.0" y="0.0" width="357" height="206"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
-                                            <button tag="314" imageHugsTitle="YES" id="399">
-                                                <rect key="frame" x="325" y="101" width="32" height="32"/>
+                                            <button fixedFrame="YES" tag="314" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="399">
+                                                <rect key="frame" x="325" y="174" width="32" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="SpeakerOn" imagePosition="only" alignment="center" tag="314" inset="2" id="653">
                                                     <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
@@ -393,8 +394,8 @@ Gw
                                                     <binding destination="-2" name="image" keyPath="questionAudioImage" id="411"/>
                                                 </connections>
                                             </button>
-                                            <textField verticalHuggingPriority="750" id="55">
-                                                <rect key="frame" x="0.0" y="0.0" width="357" height="57"/>
+                                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="55">
+                                                <rect key="frame" x="0.0" y="0.0" width="357" height="88"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Comment" id="652">
                                                     <font key="font" metaFont="system" size="24"/>
@@ -418,8 +419,8 @@ Gw
                                                     <binding destination="-2" name="hidden" keyPath="hideComment" id="172"/>
                                                 </connections>
                                             </textField>
-                                            <textField verticalHuggingPriority="750" id="53">
-                                                <rect key="frame" x="0.0" y="56" width="326" height="77"/>
+                                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="53">
+                                                <rect key="frame" x="0.0" y="87" width="326" height="119"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="The house" id="651">
                                                     <font key="font" metaFont="system" size="24"/>
@@ -441,8 +442,8 @@ Gw
                                     </customView>
                                 </subviews>
                             </customView>
-                            <textField verticalHuggingPriority="750" id="14">
-                                <rect key="frame" x="0.0" y="142" width="601" height="106"/>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" id="14">
+                                <rect key="frame" x="0.0" y="215" width="601" height="33"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" title="The house" drawsBackground="YES" id="650">
                                     <font key="font" metaFont="system" size="24"/>
@@ -460,11 +461,11 @@ Gw
                                     <binding destination="-2" name="enabled" keyPath="canGiveAnswer" id="174"/>
                                 </connections>
                             </textField>
-                            <customView id="375">
+                            <customView fixedFrame="YES" id="375">
                                 <rect key="frame" x="0.0" y="257" width="601" height="118"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <button tag="314" imageHugsTitle="YES" id="404">
+                                    <button fixedFrame="YES" tag="314" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="404">
                                         <rect key="frame" x="569" y="86" width="32" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="SpeakerOn" imagePosition="only" alignment="center" tag="314" inset="2" id="656">
@@ -483,10 +484,10 @@ Gw
                                             </binding>
                                         </connections>
                                     </button>
-                                    <textField verticalHuggingPriority="750" id="340">
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="340">
                                         <rect key="frame" x="2" y="0.0" width="568" height="118"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="The house" id="655">
+                                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="The house" drawsBackground="YES" id="655">
                                             <font key="font" metaFont="system" size="24"/>
                                             <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -516,7 +517,7 @@ Gw
                             <real value="250"/>
                         </holdingPriorities>
                     </splitView>
-                    <popUpButton imageHugsTitle="YES" id="218">
+                    <popUpButton fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="218">
                         <rect key="frame" x="594" y="451" width="30" height="26"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                         <popUpButtonCell key="cell" type="bevel" title="Item1" bezelStyle="rounded" lineBreakMode="truncatingTail" state="on" borderStyle="bezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="222" id="647">
@@ -535,7 +536,7 @@ Gw
                             <binding destination="-2" name="selectedIndex" keyPath="labelIndex" id="242"/>
                         </connections>
                     </popUpButton>
-                    <textField verticalHuggingPriority="750" id="537">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="537">
                         <rect key="frame" x="17" y="10" width="607" height="14"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Hold option key ⌥ down for more options" id="657">
@@ -544,7 +545,7 @@ Gw
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button tag="-1" imageHugsTitle="YES" id="539">
+                    <button fixedFrame="YES" tag="-1" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="539">
                         <rect key="frame" x="-20" y="295" width="12" height="15"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" alignment="center" tag="-1" inset="2" id="658">
@@ -564,18 +565,19 @@ Gw
                 <outlet property="initialFirstResponder" destination="14" id="379"/>
                 <outlet property="mTester" destination="-2" id="384"/>
             </connections>
+            <point key="canvasLocation" x="821" y="-99"/>
         </window>
         <window title="ProVoc" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="MCQTestPanel" animationBehavior="default" id="120" userLabel="MCQ" customClass="ProVocTestPanel">
             <windowStyleMask key="styleMask" titled="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="135" y="381" width="640" height="550"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1200"/>
             <value key="minSize" type="size" width="400" height="100"/>
             <view key="contentView" id="121" customClass="ProVocColoredWindowView">
-                <rect key="frame" x="1" y="9" width="640" height="550"/>
+                <rect key="frame" x="0.0" y="0.0" width="640" height="550"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button verticalHuggingPriority="750" imageHugsTitle="YES" id="125">
+                    <button verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="125">
                         <rect key="frame" x="528" y="24" width="98" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="Continue" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="659">
@@ -590,7 +592,7 @@ DQ
                             <binding destination="-2" name="title" keyPath="verifyTitle" id="176"/>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" imageHugsTitle="YES" id="136">
+                    <button verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="136">
                         <rect key="frame" x="14" y="24" width="82" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="Abort" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="664">
@@ -605,7 +607,7 @@ Gw
                             <binding destination="-2" name="title" keyPath="abortTitle" id="629"/>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" imageHugsTitle="YES" id="138">
+                    <button verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="138">
                         <rect key="frame" x="405" y="24" width="123" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="Give Solution" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="666">
@@ -623,17 +625,17 @@ Gw
                             </binding>
                         </connections>
                     </button>
-                    <tabView drawsBackground="NO" type="noTabsNoBorder" id="126">
+                    <tabView fixedFrame="YES" drawsBackground="NO" type="noTabsNoBorder" translatesAutoresizingMaskIntoConstraints="NO" id="126">
                         <rect key="frame" x="0.0" y="483" width="640" height="67"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <font key="font" metaFont="system"/>
                         <tabViewItems>
                             <tabViewItem label="Tab" identifier="" id="132">
-                                <view key="view" id="133">
+                                <view key="view" ambiguous="YES" id="133">
                                     <rect key="frame" x="0.0" y="0.0" width="640" height="67"/>
-                                    <autoresizingMask key="autoresizingMask"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <progressIndicator wantsLayer="YES" verticalHuggingPriority="750" maxValue="100" bezeled="NO" style="bar" id="134">
+                                        <progressIndicator wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="134">
                                             <rect key="frame" x="18" y="26" width="533" height="20"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                             <connections>
@@ -642,7 +644,7 @@ Gw
                                                 <binding destination="-2" name="value" keyPath="progressValue" previousBinding="143" id="144"/>
                                             </connections>
                                         </progressIndicator>
-                                        <textField verticalHuggingPriority="750" id="135">
+                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="135">
                                             <rect key="frame" x="554" y="30" width="89" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="999 / 999" id="663">
@@ -662,7 +664,7 @@ Gw
                                     <rect key="frame" x="0.0" y="0.0" width="640" height="67"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <slider verticalHuggingPriority="750" id="130">
+                                        <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="130">
                                             <rect key="frame" x="18" y="23" width="604" height="25"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                             <sliderCell key="cell" alignment="left" maxValue="1" doubleValue="0.5" tickMarkPosition="below" numberOfTickMarks="5" sliderType="linear" id="661">
@@ -672,7 +674,7 @@ Gw
                                                 <binding destination="-2" name="value" keyPath="difficulty" id="164"/>
                                             </connections>
                                         </slider>
-                                        <textField verticalHuggingPriority="750" id="131">
+                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="131">
                                             <rect key="frame" x="17" y="1" width="81" height="14"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Medium" id="662">
@@ -681,7 +683,7 @@ Gw
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField verticalHuggingPriority="750" id="129">
+                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="129">
                                             <rect key="frame" x="542" y="2" width="81" height="13"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Hard" id="660">
@@ -698,7 +700,7 @@ Gw
                             <binding destination="-2" name="selectedIndex" keyPath="mode" id="156"/>
                         </connections>
                     </tabView>
-                    <button toolTip="Mark word" imageHugsTitle="YES" id="137">
+                    <button toolTip="Mark word" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="137">
                         <rect key="frame" x="568" y="455" width="20" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="markAsFlagged" imagePosition="only" alignment="center" alternateImage="unmarkAsFlagged" inset="2" id="665">
@@ -711,7 +713,7 @@ Gw
                             <binding destination="-2" name="value" keyPath="flagged" id="202"/>
                         </connections>
                     </button>
-                    <popUpButton imageHugsTitle="YES" id="233">
+                    <popUpButton fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="233">
                         <rect key="frame" x="593" y="451" width="30" height="26"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                         <popUpButtonCell key="cell" type="bevel" title="Item1" bezelStyle="rounded" lineBreakMode="truncatingTail" state="on" borderStyle="bezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="236" id="667">
@@ -730,7 +732,7 @@ Gw
                             <binding destination="-2" name="selectedIndex" keyPath="labelIndex" id="240"/>
                         </connections>
                     </popUpButton>
-                    <button verticalHuggingPriority="750" imageHugsTitle="YES" id="262">
+                    <button verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="262">
                         <rect key="frame" x="96" y="24" width="82" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="Pause" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="668">
@@ -744,20 +746,20 @@ Gw
                             <binding destination="-2" name="title" keyPath="pauseTitle" id="383"/>
                         </connections>
                     </button>
-                    <splitView id="336">
+                    <splitView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="336">
                         <rect key="frame" x="17" y="72" width="606" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <customView id="335">
-                                <rect key="frame" x="0.0" y="0.0" width="606" height="133"/>
+                            <customView fixedFrame="YES" id="335">
+                                <rect key="frame" x="0.0" y="0.0" width="606" height="135"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <subviews>
-                                    <customView id="457" customClass="ProVocTesterMediaView">
-                                        <rect key="frame" x="366" y="0.0" width="240" height="133"/>
+                                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="457" customClass="ProVocTesterMediaView">
+                                        <rect key="frame" x="366" y="0.0" width="240" height="135"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" heightSizable="YES"/>
                                         <subviews>
-                                            <customView id="468" customClass="ProVocMovieViewContainer">
-                                                <rect key="frame" x="139" y="0.0" width="101" height="133"/>
+                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="468" customClass="ProVocMovieViewContainer">
+                                                <rect key="frame" x="139" y="0.0" width="101" height="135"/>
                                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                                 <connections>
                                                     <binding destination="-2" name="hidden" keyPath="movie" id="472">
@@ -768,8 +770,8 @@ Gw
                                                     <outlet property="mTester" destination="-2" id="470"/>
                                                 </connections>
                                             </customView>
-                                            <imageView tag="314" id="434" customClass="ProVocTesterImageView">
-                                                <rect key="frame" x="0.0" y="0.0" width="119" height="133"/>
+                                            <imageView fixedFrame="YES" tag="314" translatesAutoresizingMaskIntoConstraints="NO" id="434" customClass="ProVocTesterImageView">
+                                                <rect key="frame" x="0.0" y="0.0" width="119" height="135"/>
                                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                                 <imageCell key="cell" enabled="NO" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="672"/>
                                                 <connections>
@@ -787,12 +789,12 @@ Gw
                                             <outlet property="mRightView" destination="468" id="469"/>
                                         </connections>
                                     </customView>
-                                    <customView id="439">
-                                        <rect key="frame" x="0.0" y="0.0" width="362" height="133"/>
+                                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="439">
+                                        <rect key="frame" x="0.0" y="0.0" width="362" height="135"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
-                                            <button tag="314" imageHugsTitle="YES" id="412">
-                                                <rect key="frame" x="330" y="101" width="32" height="32"/>
+                                            <button fixedFrame="YES" tag="314" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="412">
+                                                <rect key="frame" x="330" y="103" width="32" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="SpeakerOn" imagePosition="only" alignment="center" tag="314" inset="2" id="671">
                                                     <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
@@ -810,7 +812,7 @@ Gw
                                                     <binding destination="-2" name="image" keyPath="questionAudioImage" id="416"/>
                                                 </connections>
                                             </button>
-                                            <textField verticalHuggingPriority="750" id="124">
+                                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="124">
                                                 <rect key="frame" x="0.0" y="0.0" width="362" height="57"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Comment" id="670">
@@ -835,8 +837,8 @@ Gw
                                                     <binding destination="-2" name="hidden" keyPath="hideComment" id="178"/>
                                                 </connections>
                                             </textField>
-                                            <textField verticalHuggingPriority="750" id="122">
-                                                <rect key="frame" x="0.0" y="56" width="331" height="77"/>
+                                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="122">
+                                                <rect key="frame" x="0.0" y="56" width="331" height="79"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="The house" id="669">
                                                     <font key="font" metaFont="system" size="24"/>
@@ -858,15 +860,15 @@ Gw
                                     </customView>
                                 </subviews>
                             </customView>
-                            <box title="Title" titlePosition="noTitle" id="158">
-                                <rect key="frame" x="0.0" y="142" width="606" height="233"/>
+                            <box fixedFrame="YES" title="Title" titlePosition="noTitle" id="158">
+                                <rect key="frame" x="-3" y="142" width="612" height="237"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <view key="contentView" id="6Xd-QA-cnP">
-                                    <rect key="frame" x="3" y="3" width="600" height="227"/>
+                                <view key="contentView" ambiguous="YES" id="6Xd-QA-cnP">
+                                    <rect key="frame" x="3" y="3" width="606" height="231"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <customView id="141" customClass="ProVocMCQView">
-                                            <rect key="frame" x="10" y="10" width="582" height="209"/>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="141" customClass="ProVocMCQView">
+                                            <rect key="frame" x="10" y="10" width="588" height="213"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <connections>
                                                 <action selector="verifyTestPanel:" target="-2" id="162"/>
@@ -882,7 +884,7 @@ Gw
                             <real value="250"/>
                         </holdingPriorities>
                     </splitView>
-                    <button verticalHuggingPriority="750" tag="1" imageHugsTitle="YES" id="368">
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="1" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="368">
                         <rect key="frame" x="395" y="24" width="133" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="Accept Answer" bezelStyle="rounded" alignment="center" borderStyle="border" tag="1" inset="2" id="673">
@@ -900,7 +902,7 @@ Gw
                             </binding>
                         </connections>
                     </button>
-                    <textField verticalHuggingPriority="750" id="538">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="538">
                         <rect key="frame" x="17" y="10" width="606" height="14"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Hold option key ⌥ down for more options" id="674">
@@ -909,7 +911,7 @@ Gw
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button tag="-1" imageHugsTitle="YES" id="541">
+                    <button fixedFrame="YES" tag="-1" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="541">
                         <rect key="frame" x="-20" y="405" width="12" height="15"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" alignment="center" tag="-1" inset="2" id="675">
@@ -928,18 +930,19 @@ Gw
                 <outlet property="initialFirstResponder" destination="141" id="180"/>
                 <outlet property="mTester" destination="-2" id="385"/>
             </connections>
+            <point key="canvasLocation" x="778" y="559"/>
         </window>
         <window title="Your answer:" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="BackTranslationHint" animationBehavior="default" id="265" userLabel="Note" customClass="ProVocBackTranslationPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" resizable="YES" utility="YES" nonactivatingPanel="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="5" y="825" width="480" height="180"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1200"/>
             <value key="minSize" type="size" width="93.126000000000005" height="114"/>
             <view key="contentView" id="266">
-                <rect key="frame" x="1" y="1" width="480" height="180"/>
+                <rect key="frame" x="0.0" y="0.0" width="480" height="180"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField verticalHuggingPriority="750" id="269">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="269">
                         <rect key="frame" x="10" y="112" width="460" height="58"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="The house" id="677">
@@ -958,7 +961,7 @@ Gw
                             </binding>
                         </connections>
                     </textField>
-                    <textField verticalHuggingPriority="750" id="268">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="268">
                         <rect key="frame" x="10" y="9" width="439" height="29"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Comment" id="676">
@@ -982,7 +985,7 @@ Gw
                             <binding destination="288" name="value" keyPath="selection.comment" id="294"/>
                         </connections>
                     </textField>
-                    <textField verticalHuggingPriority="750" id="270">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="270">
                         <rect key="frame" x="10" y="46" width="460" height="58"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="The house" id="678">
@@ -1001,7 +1004,7 @@ Gw
                             </binding>
                         </connections>
                     </textField>
-                    <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" id="287">
+                    <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="287">
                         <rect key="frame" x="454" y="9" width="19" height="28"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <stepperCell key="cell" continuous="YES" alignment="left" maxValue="10" valueWraps="YES" id="679"/>
@@ -1017,6 +1020,7 @@ Gw
                     </stepper>
                 </subviews>
             </view>
+            <point key="canvasLocation" x="140" y="554"/>
         </window>
         <arrayController objectClassName="ProVocWord" editable="NO" id="288" userLabel="NoteWords">
             <declaredKeys>

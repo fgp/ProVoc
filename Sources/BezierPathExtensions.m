@@ -7,7 +7,8 @@
 //
 
 #import "BezierPathExtensions.h"
-
+#include <math.h>
+#include <stdio.h>
 
 @implementation NSBezierPath (RoundRect)
 
@@ -42,34 +43,35 @@
 
 @implementation NSBezierPath (Shading)
 
-static void sGetShadingComponents(void *info, const float *inData, float *outData)
+static void sGetShadingComponents(void *info, const CGFloat *inData, CGFloat *outData)
 {
 	NSArray *array = (NSArray *)info;
 	NSColor *color = [[array objectAtIndex:0] blendedColorWithFraction:*inData ofColor:[array objectAtIndex:1]];
     [color getRed:&outData[0] green:&outData[1] blue:&outData[2] alpha:&outData[3]];
 }
 
-static void sGetAquaShadingComponents(void *info, const float *inData, float *outData)
+static void sGetAquaShadingComponents(void *info, const CGFloat *inData, CGFloat *outData)
 {
 	NSColor *color = (NSColor *)info;
-	const float k = *inData;
-	if (k < 0.5)
+	const CGFloat k = *inData;
+	if (k < 0.5) {
 		color = [color blendedColorWithFraction:0.5 * k ofColor:[NSColor whiteColor]];
-	else
+	} else {
 		color = [color blendedColorWithFraction:0.5 * (1.0 - k) ofColor:[NSColor blackColor]];
+	}
     [color getRed:&outData[0] green:&outData[1] blue:&outData[2] alpha:&outData[3]];
 }
 
-static float sRanges[8] = {0, 1, 0, 1, 0, 1, 0, 1};
+static CGFloat sRanges[8] = {0, 1, 0, 1, 0, 1, 0, 1};
 
--(void)fillWithAngleInDegrees:(float)inDegrees info:(void *)inInfo callback:(CGFunctionEvaluateCallback)inCallback
+-(void)fillWithAngleInDegrees:(CGFloat)inDegrees info:(void *)inInfo callback:(CGFunctionEvaluateCallback)inCallback
 {
-    float alpha = inDegrees / 180.0 * pi;
-    float dx = cos(alpha);
-    float dy = sin(alpha);
+    CGFloat alpha = inDegrees / 180.0 * M_PI;
+    CGFloat dx = cos(alpha);
+    CGFloat dy = sin(alpha);
     int i, n = [self elementCount];
     NSPoint points[3];
-    float d, dmin = 0, dmax = 1;
+    CGFloat d, dmin = 0, dmax = 1;
     BOOL first = YES;
     
     for (i = 0; i < n; i++)

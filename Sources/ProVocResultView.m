@@ -55,7 +55,7 @@
 					startAngle:[self positionToDegrees:inFrom] endAngle:[self positionToDegrees:inTo] clockwise:YES];
 			[bezierPath closePath];
 		}
-		NSArray *colors = [NSArray arrayWithObjects:inColor, [inColor blendedColorWithFraction:0.25 ofColor:[NSColor blackColor]], nil];
+		NSArray *colors = [NSArray arrayWithObjects:inColor, [inColor blendedColorWithFraction:0.25 ofColor:[NSColor labelColor]], nil];
 		[bezierPath fillWithColors:colors angleInDegrees:-90];
 		[[NSColor labelColor] set];
 		[bezierPath setLineWidth:2.0];

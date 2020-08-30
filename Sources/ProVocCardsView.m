@@ -270,7 +270,7 @@
 						[backGroundColor set];
 						NSRectFill(cardRect);
 						if (recto && drawFrames) {
-							[[NSColor blackColor] set];
+							[[NSColor labelColor] set];
 							[NSBezierPath strokeRect:cardRect];
 						}
 						ProVocWord *word = [mWords objectAtIndex:card];
