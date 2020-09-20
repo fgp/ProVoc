@@ -32,7 +32,9 @@
 		[self loadWindow];
 
 		mPaneViews = [[NSArray alloc] initWithObjects:mGeneralView, mTrainingView, mLanguageView, mFontView, mLabelView, miPodView, mUpdateView, nil];
-		mPaneImageNames = [[NSArray alloc] initWithObjects:@"Preferences", @"TrainingPreferences", @"LanguagePreferences", @"FontPreferences", @"LabelPreferences", @"iPodPreferences", @"UpdatePreferences", nil];
+		
+		// TODO: use SF Symbols icons for Catalina and later:
+		mPaneImageNames = [[NSArray alloc] initWithObjects:NSImageNamePreferencesGeneral, @"TrainingPreferences", @"LanguagePreferences", NSImageNameFontPanel, @"LabelPreferences", @"iPodPreferences", @"UpdatePreferences", nil];
 		mPaneLabels = [[NSArray alloc] initWithObjects:
 							NSLocalizedString(@"General Preference Pane Label", @""),
 							NSLocalizedString(@"Training Preference Pane Label", @""),
@@ -327,7 +329,11 @@
     
 	[toolbarItem setLabel:inItemIdentifier];
 	int index = [mPaneLabels indexOfObject:inItemIdentifier];
-	[toolbarItem setImage:[NSImage imageNamed:[mPaneImageNames objectAtIndex:index]]];
+	if ([[mPaneImageNames objectAtIndex:index] isKindOfClass:[NSString class]]) {
+		[toolbarItem setImage:[NSImage imageNamed:[mPaneImageNames objectAtIndex:index]]];
+	} else {
+		[toolbarItem setImage:[NSImage imageNamed:NSImageNameAdvanced]];
+	}
 	[toolbarItem setTarget:self];
 	[toolbarItem setAction:@selector(selectPreferences:)];
 	

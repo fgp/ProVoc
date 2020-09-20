@@ -8,5 +8,5 @@
 
 #define DISABLE_QTKIT
 #define DISABLE_SOUNDRECORDER
-#define DISABLE_CHECKFORUPDATES
+#define DISABLE_CHECKFORUPDATES // until the previous implementation has been replaced with Sparkle and the required infrastructure (certificates, appcast feed, etc.) is all set
 #define DISABLE_SUBMITTER

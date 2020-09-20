@@ -307,8 +307,9 @@
 	
 	[self didChangeValueForKey:@"canClearHistory"];
 	state = [mLoadedParameters objectForKey:@"HistoryDisplay"];
-	if (state)
+	if (state) {
 		[mHistoryView setDisplay:[state intValue]];
+	}
 	[mHistoryView reloadData];
 
     if (mMainWindow && !mLoadedParameters) {
@@ -320,6 +321,19 @@
     
     [toolbar setSelectedItemIdentifier:[NSString stringWithFormat:@"%@",@(mMainTab)]];
     mMainSplitView.delegate = self;
+	
+	// localize table columns:
+	for (NSTableColumn *column in [mWordTableView tableColumns]) {
+		// not to localize here: #, Source, Target
+		if ([column.identifier length] > 0 && ![column.identifier isEqualToString:@"#"] && ![column.identifier isEqualToString:@"Source"] && ![column.identifier isEqualToString:@"Target"]) {
+			[column setTitle:NSLocalizedString(column.identifier, nil)];
+		}
+		
+	}
+	//mWordTableView
+	//mPresetTableView
+
+	
     _finishedLoading = YES;
 }
 
