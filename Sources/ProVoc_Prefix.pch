@@ -6,7 +6,11 @@
     #import <Cocoa/Cocoa.h>
 #endif
 
+// please note: the frameworks QTKit and QuickTime had to be removed fromthe project for Xcode 12/macOS 10.15 compatibility
 #define DISABLE_QTKIT
 #define DISABLE_SOUNDRECORDER
+
+// please note: the frameworks ARLeopardSoundRecorder and ARSequenceGrabber had to be removed from the target for Xcode 12/macOS 10.15 compatibility
 #define DISABLE_CHECKFORUPDATES // until the previous implementation has been replaced with Sparkle and the required infrastructure (certificates, appcast feed, etc.) is all set
+
 #define DISABLE_SUBMITTER

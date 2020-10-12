@@ -22,6 +22,7 @@
 #import <ARLeopardSoundRecorder/ARLeopardSoundRecorderController.h>
 #import <ARSequenceGrabber/ARSequenceGrabber.h>
 #endif
+#import <AVFoundation/AVFoundation.h>
 #ifndef DISABLE_QTKIT
 #import <QTKit/QTKit.h>
 #endif
@@ -77,10 +78,17 @@
 -(void)addViews
 {
 	[self addView:mTextView withName:NSLocalizedString(@"Text Inspector View", @"") identifier:@"Text" openByDefault:NO];
+#ifndef DISABLE_SOUNDRECORDER
 	[self addView:mAudioView withName:NSLocalizedString(@"Audio Inspector View", @"") identifier:@"Audio" openByDefault:YES];
+#else
+    mAudioView = nil;
+#endif
 	[self addView:mImageView withName:NSLocalizedString(@"Image Inspector View", @"") identifier:@"Image" openByDefault:YES];
+#ifndef DISABLE_QTKIT
 	[self addView:mMovieView withName:NSLocalizedString(@"Movie Inspector View", @"") identifier:@"Movie" openByDefault:YES];
-		
+#else
+    mMovieView = nil;
+#endif
 	[[NSUserDefaultsController sharedUserDefaultsController] addObserver:self forKeyPath:@"values.sourceFontFamilyName" options:NSKeyValueObservingOptionNew context:nil];
 	[[NSUserDefaultsController sharedUserDefaultsController] addObserver:self forKeyPath:@"values.sourceFontSize" options:NSKeyValueObservingOptionNew context:nil];
 	[[NSUserDefaultsController sharedUserDefaultsController] addObserver:self forKeyPath:@"values.sourceWritingDirection" options:NSKeyValueObservingOptionNew context:nil];
@@ -1086,11 +1094,15 @@ error:
 
 -(id)movieForMedia:(NSString *)inMedia
 {
-	if ([NSApp hasQTKit]) {
+#ifndef DISABLE_QTKIT
+    if ([NSApp hasQTKit]) {
 		NSString *file = [self pathForMediaFile:inMedia];
 		return [QTMovie movieWithFile:file error:nil];
-	} else
+    } else {
 		return nil;
+    }
+#endif
+    return nil;
 }
 
 -(id)movieOfWord:(ProVocWord *)inWord
@@ -1567,7 +1579,11 @@ error:
 
 -(BOOL)canDropFile:(NSString *)inFileName
 {
-	return [QTMovie canInitWithFile:inFileName];
+#ifndef DISABLE_QTKIT
+    return [QTMovie canInitWithFile:inFileName];
+#else
+    return NO;
+#endif
 }
 
 -(void)dropFile:(NSString *)inFileName

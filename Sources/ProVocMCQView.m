@@ -13,6 +13,7 @@
 #import "MenuExtensions.h"
 #import "SpeechSynthesizerExtensions.h"
 
+#import <AVFoundation/AVFoundation.h>
 #ifndef DISABLE_QTKIT
 #import <QTKit/QTKit.h>
 #endif

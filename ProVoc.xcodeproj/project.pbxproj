@@ -26,9 +26,8 @@
 /* Begin PBXBuildFile section */
 		7D4B966524F51AA9005B0617 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D4B966424F51AA9005B0617 /* Images.xcassets */; };
 		7D607B3824F7E29D00843E6C /* PlugIns in Resources */ = {isa = PBXBuildFile; fileRef = A72859E60A1601170082642D /* PlugIns */; };
-		7DDF7ED521886B4D002ECD2B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDF7ED421886B4D002ECD2B /* AVFoundation.framework */; };
-		7DDF7ED721886C3F002ECD2B /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDF7ED621886C3F002ECD2B /* AVKit.framework */; };
-		7DDF7ED921886CD2002ECD2B /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDF7ED821886CD2002ECD2B /* QTKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		7DD7D299253465B5006A6D2B /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD7D297253465A3006A6D2B /* AVKit.framework */; };
+		7DD7D29A253465BC006A6D2B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD7D298253465A6006A6D2B /* AVFoundation.framework */; };
 		7DDF7EDB21887784002ECD2B /* Info.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = A7B125A80A1D50BD003B68B0 /* Info.plist */; };
 		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
 		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -115,7 +114,6 @@
 		A728599E0A1600E30082642D /* ProVocTester.nib in Resources */ = {isa = PBXBuildFile; fileRef = A72859950A1600E30082642D /* ProVocTester.nib */; };
 		A72859E40A16010A0082642D /* ProVoc Help in Resources */ = {isa = PBXBuildFile; fileRef = A72859A30A16010A0082642D /* ProVoc Help */; };
 		A7285B7C0A1601510082642D /* ARCheckForUpdates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7285B7B0A1601510082642D /* ARCheckForUpdates.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		A7285B800A16017B0082642D /* ARSequenceGrabber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7285B7F0A16017B0082642D /* ARSequenceGrabber.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A7285B920A1601AB0082642D /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7285B8D0A1601AB0082642D /* AddressBook.framework */; };
 		A7285B930A1601AB0082642D /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7285B8E0A1601AB0082642D /* Carbon.framework */; };
 		A7285B950A1601AB0082642D /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7285B900A1601AB0082642D /* Quartz.framework */; };
@@ -189,7 +187,6 @@
 		A7B129AB0A1D6DF6003B68B0 /* main.nib in Resources */ = {isa = PBXBuildFile; fileRef = A7B129A80A1D6DF6003B68B0 /* main.nib */; };
 		A7B129AF0A1D6E4D003B68B0 /* main.nib in Resources */ = {isa = PBXBuildFile; fileRef = A7B129AC0A1D6E4D003B68B0 /* main.nib */; };
 		A7B129B30A1D6E69003B68B0 /* main.nib in Resources */ = {isa = PBXBuildFile; fileRef = A7B129B00A1D6E69003B68B0 /* main.nib */; };
-		A7F2CD0D0CDDF4A6003892A7 /* ARLeopardSoundRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F2CCEC0CDDF32B003892A7 /* ARLeopardSoundRecorder.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -406,9 +403,8 @@
 		7DC29F1924F5018500621995 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = Base.lproj/main.nib; sourceTree = "<group>"; };
 		7DC29F1A24F5018500621995 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = Base.lproj/main.nib; sourceTree = "<group>"; };
 		7DC29F1B24F5018500621995 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = Base.lproj/main.nib; sourceTree = "<group>"; };
-		7DDF7ED421886B4D002ECD2B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
-		7DDF7ED621886C3F002ECD2B /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AVKit.framework; sourceTree = DEVELOPER_DIR; };
-		7DDF7ED821886CD2002ECD2B /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/QTKit.framework; sourceTree = DEVELOPER_DIR; };
+		7DD7D297253465A3006A6D2B /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/AVKit.framework; sourceTree = DEVELOPER_DIR; };
+		7DD7D298253465A6006A6D2B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		8D15AC360486D014006FF6A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D15AC370486D014006FF6A4 /* ProVoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProVoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A711DEB20A1E12D600EE7423 /* SpeechSynthesizerExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeechSynthesizerExtensions.h; sourceTree = "<group>"; };
@@ -545,7 +541,6 @@
 		A7285B8E0A1601AB0082642D /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		A7285B8F0A1601AB0082642D /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		A7285B900A1601AB0082642D /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = /System/Library/Frameworks/Quartz.framework; sourceTree = "<absolute>"; };
-		A7285B910A1601AB0082642D /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
 		A7285DF80A1603D00082642D /* ARDisclosureArrowDown.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ARDisclosureArrowDown.tif; sourceTree = "<group>"; };
 		A7285DF90A1603D00082642D /* ARDisclosureArrowRight.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ARDisclosureArrowRight.tif; sourceTree = "<group>"; };
 		A7285DFA0A1603D00082642D /* Both.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Both.tif; sourceTree = "<group>"; };
@@ -622,13 +617,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DDF7ED921886CD2002ECD2B /* QTKit.framework in Frameworks */,
-				7DDF7ED721886C3F002ECD2B /* AVKit.framework in Frameworks */,
-				7DDF7ED521886B4D002ECD2B /* AVFoundation.framework in Frameworks */,
 				8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */,
 				A7285B7C0A1601510082642D /* ARCheckForUpdates.framework in Frameworks */,
-				A7F2CD0D0CDDF4A6003892A7 /* ARLeopardSoundRecorder.framework in Frameworks */,
-				A7285B800A16017B0082642D /* ARSequenceGrabber.framework in Frameworks */,
+				7DD7D29A253465BC006A6D2B /* AVFoundation.framework in Frameworks */,
+				7DD7D299253465B5006A6D2B /* AVKit.framework in Frameworks */,
 				A7285B920A1601AB0082642D /* AddressBook.framework in Frameworks */,
 				A7285B930A1601AB0082642D /* Carbon.framework in Frameworks */,
 				A7285B950A1601AB0082642D /* Quartz.framework in Frameworks */,
@@ -678,6 +670,8 @@
 		1058C7A8FEA54F5311CA2CBB /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7DD7D298253465A6006A6D2B /* AVFoundation.framework */,
+				7DD7D297253465A3006A6D2B /* AVKit.framework */,
 				A7B125FC0A1D559F003B68B0 /* Automator.framework */,
 				A7285B8D0A1601AB0082642D /* AddressBook.framework */,
 				2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */,
@@ -685,7 +679,6 @@
 				2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */,
 				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
 				A7285B900A1601AB0082642D /* Quartz.framework */,
-				A7285B910A1601AB0082642D /* QuickTime.framework */,
 				A7285B8F0A1601AB0082642D /* QTKit.framework */,
 			);
 			name = "Other Frameworks";
@@ -770,9 +763,6 @@
 		2A37F4C3FDCFA73011CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7DDF7ED821886CD2002ECD2B /* QTKit.framework */,
-				7DDF7ED621886C3F002ECD2B /* AVKit.framework */,
-				7DDF7ED421886B4D002ECD2B /* AVFoundation.framework */,
 				1058C7A6FEA54F5311CA2CBB /* Frameworks */,
 				1058C7A8FEA54F5311CA2CBB /* Other Frameworks */,
 			);

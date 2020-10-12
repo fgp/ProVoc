@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
+#import <AVFoundation/AVFoundation.h>
 #ifndef DISABLE_QTKIT
 #import <QTKit/QTKit.h>
 #endif
@@ -25,7 +26,7 @@
 #ifndef DISABLE_QTKIT
 @interface QTMovie (ProVocMovieView)
 #else
-@interface QTMovie
+@interface AVAsset (ProVocMovieView)
 #endif
 
 -(NSSize)imageSize;

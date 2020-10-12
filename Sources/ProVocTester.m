@@ -2420,10 +2420,15 @@ static int sDimCount = 0;
 
 +(void)dimScreensHidingMenuBar:(BOOL)inHideMenuBar
 {
-	if (inHideMenuBar)
+    // FIXME: use a different window level to achieve the same result. These methods were implemented by a framework which had to be removed, since its source code wasn't availabe any more
+    /*
+    if (inHideMenuBar) {
 		HideMenuBar();
-	else
+    } else {
 		ShowMenuBar();
+    }
+    */
+    
 	if (sDimCount++ == 0) {
 		[[ProVocInspector sharedInspector] setInspectorHidden:YES];
 		NSEnumerator *enumerator = [[NSScreen screens] objectEnumerator];
@@ -2433,7 +2438,11 @@ static int sDimCount = 0;
 			NSWindow *window = [[[NSWindow alloc] initWithContentRect:frameRect styleMask:NSBorderlessWindowMask backing:NSBackingStoreBuffered defer:YES] autorelease];
 			NSColor *color = [NSUnarchiver unarchiveObjectWithData:[[NSUserDefaults standardUserDefaults] objectForKey:PVTestBackgroundColor]];
 			[window setBackgroundColor:color];
-			[window setLevel:NSFloatingWindowLevel];
+            if (inHideMenuBar) {
+                [window setLevel:NSMainMenuWindowLevel];
+            } else {
+                [window setLevel:NSFloatingWindowLevel];
+            }
 			[window setHidesOnDeactivate:YES];
 			[window orderFront:nil];
 			if (!sDimWindows)
@@ -2448,7 +2457,7 @@ static int sDimCount = 0;
 	if (--sDimCount == 0) {
 		[sDimWindows makeObjectsPerformSelector:@selector(orderOut:) withObject:nil];
 		[sDimWindows removeAllObjects];
-		ShowMenuBar();
+		//ShowMenuBar();
 		[[ProVocInspector sharedInspector] setInspectorHidden:NO];
 	}
 }

@@ -22,6 +22,7 @@
 #import "ImageExtensions.h"
 #import "ExtendedCell.h"
 
+#import <AVFoundation/AVFoundation.h>
 #ifndef DISABLE_QTKIT
 #import <QTKit/QTKit.h>
 #endif
@@ -540,9 +541,12 @@ static NSArray *sDraggedItems = nil;
 		NSArray *fileNames;
 		if (inOperation == NSTableViewDropOn && inRow < [mVisibleWords count] && (fileNames = [[inInfo draggingPasteboard] propertyListForType:NSFilenamesPboardType])) {
 			if ([fileNames count] == 1) {
+#ifndef DISABLE_QTKIT
 				NSString *fileType = [[fileNames objectAtIndex:0] pathExtension];
-				if ([[NSSound soundUnfilteredFileTypes] containsObject:fileType] || [[NSImage imageUnfilteredFileTypes] containsObject:fileType] || [NSApp hasQTKit] && [[QTMovie movieUnfilteredFileTypes] containsObject:fileType])
+                if ([[NSSound soundUnfilteredFileTypes] containsObject:fileType] || [[NSImage imageUnfilteredFileTypes] containsObject:fileType] || [NSApp hasQTKit] && [[QTMovie movieUnfilteredFileTypes] containsObject:fileType]) {
 					return NSDragOperationCopy;
+                }
+#endif
 			}
 		}
 	}	
@@ -636,10 +640,13 @@ static NSArray *sDraggedItems = nil;
 				if (data) {
 					NSString *fileName = [[[inInfo draggingPasteboard] propertyListForType:NSFilenamesPboardType] objectAtIndex:0];
 					NSString *fileType = [fileName pathExtension];
+#ifndef DISABLE_QTKIT
 					if ([NSApp hasQTKit] && [[QTMovie movieUnfilteredFileTypes] containsObject:fileType]) {
 						[self setMovieFile:fileName ofWord:[mVisibleWords objectAtIndex:inRow]];
 						return YES;
-					} else if ([[NSImage imageUnfilteredFileTypes] containsObject:fileType]) {
+					} else
+#endif
+                    if ([[NSImage imageUnfilteredFileTypes] containsObject:fileType]) {
 						[self setImageFile:fileName ofWord:[mVisibleWords objectAtIndex:inRow]];
 						return YES;
 					} else if ([[NSSound soundUnfilteredFileTypes] containsObject:fileType]) {

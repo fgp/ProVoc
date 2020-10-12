@@ -14,6 +14,7 @@
 #import "ProVocMovieView.h"
 #import "ProVocResultView.h"
 
+#import <AVFoundation/AVFoundation.h>
 #ifndef DISABLE_QTKIT
 #import <QTKit/QTKit.h>
 #endif

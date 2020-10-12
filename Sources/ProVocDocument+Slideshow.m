@@ -257,6 +257,8 @@ static BOOL sPlayPause;
 
 #ifndef DISABLE_QTKIT
 static QTMovieView *sMovieView = nil;
+#else
+static NSView *sMovieView = nil;
 #endif
 	
 -(id)initWithFrame:(NSRect)inFrame strings:(NSArray *)inStrings swapFonts:(BOOL)inSwapFonts

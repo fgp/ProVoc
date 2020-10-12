@@ -24,7 +24,9 @@
 #import "ProVocCardController.h"
 #import "ProVocServiceProvider.h"
 
+#ifndef DISABLE_CHECKFORUPDATES
 #import <ARCheckForUpdates/ARCheckForUpdates.h>
+#endif
 
 @implementation ProVocAppDelegate {
 	BOOL _launched;

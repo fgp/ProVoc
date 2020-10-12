@@ -82,13 +82,22 @@ static BOOL sRunningFullscreen = NO;
 
 -(void)playIfVisible:(id)inSender
 {
-	if (![self isHidden])
-		[self play:inSender];
+    if (![self isHidden]) {
+#ifndef DISABLE_QTKIT
+        [self play:inSender];
+#else
+        [self play:inSender];
+#endif
+    }
 }
 
 @end
 
+#ifndef DISABLE_QTKIT
 @implementation QTMovie (ProVocMovieView)
+#else
+@implementation AVAsset (ProVocMovieView)
+#endif
 
 -(NSSize)imageSize
 {
@@ -122,6 +131,7 @@ static BOOL sRunningFullscreen = NO;
 #ifndef DISABLE_QTKIT
 	QTMovieView *movieView = [[[[ProVocMovieView class] alloc] initWithFrame:NSZeroRect] autorelease];
 	contentRect.size.height += [movieView controllerBarHeight];
+#else
 #endif
 	NSWindow *background = [[NSWindow alloc] initWithContentRect:[NSScreen totalFrame] styleMask:NSBorderlessWindowMask backing:NSBackingStoreBuffered defer:YES];
 	[background setOpaque:NO];
