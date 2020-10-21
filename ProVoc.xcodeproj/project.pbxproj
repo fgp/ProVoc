@@ -267,25 +267,6 @@
 		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32DBCF750370BD2300C91783 /* ProVoc_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProVoc_Prefix.pch; sourceTree = "<group>"; };
 		7D2C167324F3F76500CB5F0B /* buildnumber.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = buildnumber.xcconfig; path = Resources/buildnumber.xcconfig; sourceTree = SOURCE_ROOT; };
-		7D408BD424F5041600566B2C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/ARLocalizable.strings; sourceTree = "<group>"; };
-		7D408BD524F5041600566B2C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = de; path = de.lproj/DefaultPresets.xml; sourceTree = "<group>"; };
-		7D408BD624F5041600566B2C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		7D408BD724F5041600566B2C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
-		7D408BD824F5041700566B2C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/MainMenu.strings; sourceTree = "<group>"; };
-		7D408BD924F5041700566B2C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Preferences.strings; sourceTree = "<group>"; };
-		7D408BDA24F5041700566B2C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/ProVocAction.strings; sourceTree = "<group>"; };
-		7D408BDB24F5041700566B2C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/ProVocBackground.strings; sourceTree = "<group>"; };
-		7D408BDC24F5041700566B2C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/ProVocCardController.strings; sourceTree = "<group>"; };
-		7D408BDD24F5041700566B2C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/ProVocDocument.strings; sourceTree = "<group>"; };
-		7D408BDE24F5041700566B2C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/ProVocInspector.strings; sourceTree = "<group>"; };
-		7D408BDF24F5041700566B2C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/ProVocSpotlighter.strings; sourceTree = "<group>"; };
-		7D408BE024F5041700566B2C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/ProVocStartingPoint.strings; sourceTree = "<group>"; };
-		7D408BE124F5041700566B2C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/ProVocSubmitter.strings; sourceTree = "<group>"; };
-		7D408BE224F5041700566B2C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/ProVocTester.strings; sourceTree = "<group>"; };
-		7D408BE324F5041700566B2C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/ProVocTimer.strings; sourceTree = "<group>"; };
-		7D408BE424F5041700566B2C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/ProVocViewOptions.strings; sourceTree = "<group>"; };
-		7D408BE524F5041700566B2C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/ServicesMenu.strings; sourceTree = "<group>"; };
-		7D408BE624F5041800566B2C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/iPodController.strings; sourceTree = "<group>"; };
 		7D408BE724F504CD00566B2C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7D408BE824F504CD00566B2C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7D408BE924F504CD00566B2C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -296,95 +277,6 @@
 		7D408BEE24F504CE00566B2C /* en */ = {isa = PBXFileReference; lastKnownFileType = folder; name = en; path = "en.lproj/ProVoc Help"; sourceTree = "<group>"; };
 		7D408BEF24F504CE00566B2C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.scriptTerminology; name = en; path = en.lproj/ProVoc.scriptTerminology; sourceTree = "<group>"; };
 		7D408BF024F504CE00566B2C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ServicesMenu.strings; sourceTree = "<group>"; };
-		7D408BF124F504DF00566B2C /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		7D408BF224F504DF00566B2C /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/main.strings; sourceTree = "<group>"; };
-		7D408BF324F504DF00566B2C /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		7D408BF424F504DF00566B2C /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/main.strings; sourceTree = "<group>"; };
-		7D408BF524F504DF00566B2C /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		7D408BF624F504DF00566B2C /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/main.strings; sourceTree = "<group>"; };
-		7D408BF724F504DF00566B2C /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/ARLocalizable.strings; sourceTree = "<group>"; };
-		7D408BF824F504DF00566B2C /* it */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = it; path = it.lproj/DefaultPresets.xml; sourceTree = "<group>"; };
-		7D408BF924F504DF00566B2C /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		7D408BFA24F504DF00566B2C /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
-		7D408BFB24F504E000566B2C /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MainMenu.strings; sourceTree = "<group>"; };
-		7D408BFC24F504E000566B2C /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Preferences.strings; sourceTree = "<group>"; };
-		7D408BFD24F504E000566B2C /* it */ = {isa = PBXFileReference; lastKnownFileType = folder; name = it; path = "it.lproj/ProVoc Help"; sourceTree = "<group>"; };
-		7D408BFE24F504E000566B2C /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/ProVocAction.strings; sourceTree = "<group>"; };
-		7D408BFF24F504E000566B2C /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/ProVocBackground.strings; sourceTree = "<group>"; };
-		7D408C0024F504E000566B2C /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/ProVocCardController.strings; sourceTree = "<group>"; };
-		7D408C0124F504E000566B2C /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/ProVocDocument.strings; sourceTree = "<group>"; };
-		7D408C0224F504E000566B2C /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/ProVocInspector.strings; sourceTree = "<group>"; };
-		7D408C0324F504E000566B2C /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/ProVocSpotlighter.strings; sourceTree = "<group>"; };
-		7D408C0424F504E000566B2C /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/ProVocStartingPoint.strings; sourceTree = "<group>"; };
-		7D408C0524F504E000566B2C /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/ProVocSubmitter.strings; sourceTree = "<group>"; };
-		7D408C0624F504E100566B2C /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/ProVocTester.strings; sourceTree = "<group>"; };
-		7D408C0724F504E100566B2C /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/ProVocTimer.strings; sourceTree = "<group>"; };
-		7D408C0824F504E100566B2C /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/ProVocViewOptions.strings; sourceTree = "<group>"; };
-		7D408C0924F504E100566B2C /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/ServicesMenu.strings; sourceTree = "<group>"; };
-		7D408C0A24F504E100566B2C /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/iPodController.strings; sourceTree = "<group>"; };
-		7D408C0B24F504E600566B2C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		7D408C0C24F504E600566B2C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/main.strings; sourceTree = "<group>"; };
-		7D408C0D24F504E600566B2C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		7D408C0E24F504E700566B2C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/main.strings; sourceTree = "<group>"; };
-		7D408C0F24F504E700566B2C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		7D408C1024F504E700566B2C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/main.strings; sourceTree = "<group>"; };
-		7D408C1124F504E700566B2C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/ARLocalizable.strings; sourceTree = "<group>"; };
-		7D408C1224F504E700566B2C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = fr; path = fr.lproj/DefaultPresets.xml; sourceTree = "<group>"; };
-		7D408C1324F504E700566B2C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		7D408C1424F504E700566B2C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		7D408C1524F504E700566B2C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/MainMenu.strings; sourceTree = "<group>"; };
-		7D408C1624F504E700566B2C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Preferences.strings; sourceTree = "<group>"; };
-		7D408C1724F504E700566B2C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/ProVocAction.strings; sourceTree = "<group>"; };
-		7D408C1824F504E700566B2C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/ProVocBackground.strings; sourceTree = "<group>"; };
-		7D408C1924F504E700566B2C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/ProVocCardController.strings; sourceTree = "<group>"; };
-		7D408C1A24F504E700566B2C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/ProVocDocument.strings; sourceTree = "<group>"; };
-		7D408C1B24F504E800566B2C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/ProVocInspector.strings; sourceTree = "<group>"; };
-		7D408C1C24F504E800566B2C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/ProVocSpotlighter.strings; sourceTree = "<group>"; };
-		7D408C1D24F504E800566B2C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/ProVocStartingPoint.strings; sourceTree = "<group>"; };
-		7D408C1E24F504E800566B2C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/ProVocSubmitter.strings; sourceTree = "<group>"; };
-		7D408C1F24F504E800566B2C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/ProVocTester.strings; sourceTree = "<group>"; };
-		7D408C2024F504E800566B2C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/ProVocTimer.strings; sourceTree = "<group>"; };
-		7D408C2124F504E800566B2C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/ProVocViewOptions.strings; sourceTree = "<group>"; };
-		7D408C2224F504E800566B2C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/ServicesMenu.strings; sourceTree = "<group>"; };
-		7D408C2324F504E800566B2C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/iPodController.strings; sourceTree = "<group>"; };
-		7D408C2424F5052E00566B2C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/ARLocalizable.strings; sourceTree = "<group>"; };
-		7D408C2524F5052E00566B2C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = es; path = es.lproj/DefaultPresets.xml; sourceTree = "<group>"; };
-		7D408C2624F5052E00566B2C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		7D408C2724F5052F00566B2C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
-		7D408C2824F5052F00566B2C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/MainMenu.strings; sourceTree = "<group>"; };
-		7D408C2924F5052F00566B2C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Preferences.strings; sourceTree = "<group>"; };
-		7D408C2A24F5052F00566B2C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/ProVocAction.strings; sourceTree = "<group>"; };
-		7D408C2B24F5052F00566B2C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/ProVocBackground.strings; sourceTree = "<group>"; };
-		7D408C2C24F5052F00566B2C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/ProVocCardController.strings; sourceTree = "<group>"; };
-		7D408C2D24F5052F00566B2C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/ProVocDocument.strings; sourceTree = "<group>"; };
-		7D408C2E24F5052F00566B2C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/ProVocInspector.strings; sourceTree = "<group>"; };
-		7D408C2F24F5052F00566B2C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/ProVocSpotlighter.strings; sourceTree = "<group>"; };
-		7D408C3024F5052F00566B2C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/ProVocStartingPoint.strings; sourceTree = "<group>"; };
-		7D408C3124F5052F00566B2C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/ProVocSubmitter.strings; sourceTree = "<group>"; };
-		7D408C3224F5052F00566B2C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/ProVocTester.strings; sourceTree = "<group>"; };
-		7D408C3324F5052F00566B2C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/ProVocTimer.strings; sourceTree = "<group>"; };
-		7D408C3424F5053000566B2C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/ProVocViewOptions.strings; sourceTree = "<group>"; };
-		7D408C3524F5053000566B2C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/ServicesMenu.strings; sourceTree = "<group>"; };
-		7D408C3624F5053000566B2C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/iPodController.strings; sourceTree = "<group>"; };
-		7D408C3724F5054000566B2C /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/ARLocalizable.strings; sourceTree = "<group>"; };
-		7D408C3824F5054000566B2C /* da */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = da; path = da.lproj/DefaultPresets.xml; sourceTree = "<group>"; };
-		7D408C3924F5054000566B2C /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		7D408C3A24F5054000566B2C /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
-		7D408C3B24F5054000566B2C /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/MainMenu.strings; sourceTree = "<group>"; };
-		7D408C3C24F5054000566B2C /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Preferences.strings; sourceTree = "<group>"; };
-		7D408C3D24F5054000566B2C /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/ProVocAction.strings; sourceTree = "<group>"; };
-		7D408C3E24F5054000566B2C /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/ProVocBackground.strings; sourceTree = "<group>"; };
-		7D408C3F24F5054000566B2C /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/ProVocCardController.strings; sourceTree = "<group>"; };
-		7D408C4024F5054000566B2C /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/ProVocDocument.strings; sourceTree = "<group>"; };
-		7D408C4124F5054000566B2C /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/ProVocInspector.strings; sourceTree = "<group>"; };
-		7D408C4224F5054000566B2C /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/ProVocSpotlighter.strings; sourceTree = "<group>"; };
-		7D408C4324F5054000566B2C /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/ProVocStartingPoint.strings; sourceTree = "<group>"; };
-		7D408C4424F5054100566B2C /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/ProVocSubmitter.strings; sourceTree = "<group>"; };
-		7D408C4524F5054100566B2C /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/ProVocTester.strings; sourceTree = "<group>"; };
-		7D408C4624F5054100566B2C /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/ProVocTimer.strings; sourceTree = "<group>"; };
-		7D408C4724F5054100566B2C /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/ProVocViewOptions.strings; sourceTree = "<group>"; };
-		7D408C4824F5054100566B2C /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/ServicesMenu.strings; sourceTree = "<group>"; };
-		7D408C4924F5054100566B2C /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/iPodController.strings; sourceTree = "<group>"; };
 		7D4B966424F51AA9005B0617 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7DC29F0B24F5018300621995 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = Base.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		7DC29F0C24F5018400621995 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = Base.lproj/ProVocDocument.nib; sourceTree = "<group>"; };
@@ -1144,16 +1036,9 @@
 			};
 			buildConfigurationList = C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "ProVoc" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = en;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				Base,
-				de,
-				en,
-				it,
-				fr,
-				es,
-				da,
 			);
 			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* ProVoc */;
 			projectDirPath = "";
@@ -1485,12 +1370,7 @@
 		089C165FFE840EACC02AAC07 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7D408BD624F5041600566B2C /* de */,
 				7D408BEC24F504CD00566B2C /* en */,
-				7D408BF924F504DF00566B2C /* it */,
-				7D408C1324F504E700566B2C /* fr */,
-				7D408C2624F5052E00566B2C /* es */,
-				7D408C3924F5054000566B2C /* da */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1498,12 +1378,7 @@
 		A72857DE0A1600670082642D /* ARLocalizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7D408BD424F5041600566B2C /* de */,
 				7D408BEA24F504CD00566B2C /* en */,
-				7D408BF724F504DF00566B2C /* it */,
-				7D408C1124F504E700566B2C /* fr */,
-				7D408C2424F5052E00566B2C /* es */,
-				7D408C3724F5054000566B2C /* da */,
 			);
 			name = ARLocalizable.strings;
 			sourceTree = "<group>";
@@ -1512,11 +1387,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				7DC29F0F24F5018400621995 /* Base */,
-				7D408BE624F5041800566B2C /* de */,
-				7D408C0A24F504E100566B2C /* it */,
-				7D408C2324F504E800566B2C /* fr */,
-				7D408C3624F5053000566B2C /* es */,
-				7D408C4924F5054100566B2C /* da */,
 			);
 			name = iPodController.nib;
 			sourceTree = "<group>";
@@ -1524,12 +1394,7 @@
 		A72857E20A1600670082642D /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7D408BD724F5041600566B2C /* de */,
 				7D408BED24F504CE00566B2C /* en */,
-				7D408BFA24F504DF00566B2C /* it */,
-				7D408C1424F504E700566B2C /* fr */,
-				7D408C2724F5052F00566B2C /* es */,
-				7D408C3A24F5054000566B2C /* da */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -1538,11 +1403,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				7DC29F0E24F5018400621995 /* Base */,
-				7D408BD924F5041700566B2C /* de */,
-				7D408BFC24F504E000566B2C /* it */,
-				7D408C1624F504E700566B2C /* fr */,
-				7D408C2924F5052F00566B2C /* es */,
-				7D408C3C24F5054000566B2C /* da */,
 			);
 			name = Preferences.nib;
 			sourceTree = "<group>";
@@ -1551,11 +1411,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				7DC29F1024F5018400621995 /* Base */,
-				7D408BDA24F5041700566B2C /* de */,
-				7D408BFE24F504E000566B2C /* it */,
-				7D408C1724F504E700566B2C /* fr */,
-				7D408C2A24F5052F00566B2C /* es */,
-				7D408C3D24F5054000566B2C /* da */,
 			);
 			name = ProVocAction.nib;
 			sourceTree = "<group>";
@@ -1564,11 +1419,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				7DC29F1124F5018400621995 /* Base */,
-				7D408BDB24F5041700566B2C /* de */,
-				7D408BFF24F504E000566B2C /* it */,
-				7D408C1824F504E700566B2C /* fr */,
-				7D408C2B24F5052F00566B2C /* es */,
-				7D408C3E24F5054000566B2C /* da */,
 			);
 			name = ProVocBackground.nib;
 			sourceTree = "<group>";
@@ -1576,12 +1426,7 @@
 		A72857F80A1600670082642D /* ServicesMenu.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7D408BE524F5041700566B2C /* de */,
 				7D408BF024F504CE00566B2C /* en */,
-				7D408C0924F504E100566B2C /* it */,
-				7D408C2224F504E800566B2C /* fr */,
-				7D408C3524F5053000566B2C /* es */,
-				7D408C4824F5054100566B2C /* da */,
 			);
 			name = ServicesMenu.strings;
 			sourceTree = "<group>";
@@ -1590,11 +1435,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				7DC29F0B24F5018300621995 /* Base */,
-				7D408BD824F5041700566B2C /* de */,
-				7D408BFB24F504E000566B2C /* it */,
-				7D408C1524F504E700566B2C /* fr */,
-				7D408C2824F5052F00566B2C /* es */,
-				7D408C3B24F5054000566B2C /* da */,
 			);
 			name = MainMenu.nib;
 			sourceTree = "<group>";
@@ -1603,11 +1443,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				7DC29F1224F5018400621995 /* Base */,
-				7D408BDC24F5041700566B2C /* de */,
-				7D408C0024F504E000566B2C /* it */,
-				7D408C1924F504E700566B2C /* fr */,
-				7D408C2C24F5052F00566B2C /* es */,
-				7D408C3F24F5054000566B2C /* da */,
 			);
 			name = ProVocCardController.nib;
 			sourceTree = "<group>";
@@ -1616,11 +1451,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				7DC29F0C24F5018400621995 /* Base */,
-				7D408BDD24F5041700566B2C /* de */,
-				7D408C0124F504E000566B2C /* it */,
-				7D408C1A24F504E700566B2C /* fr */,
-				7D408C2D24F5052F00566B2C /* es */,
-				7D408C4024F5054000566B2C /* da */,
 			);
 			name = ProVocDocument.nib;
 			sourceTree = "<group>";
@@ -1629,11 +1459,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				7DC29F1324F5018400621995 /* Base */,
-				7D408BDE24F5041700566B2C /* de */,
-				7D408C0224F504E000566B2C /* it */,
-				7D408C1B24F504E800566B2C /* fr */,
-				7D408C2E24F5052F00566B2C /* es */,
-				7D408C4124F5054000566B2C /* da */,
 			);
 			name = ProVocInspector.nib;
 			sourceTree = "<group>";
@@ -1642,11 +1467,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				7DC29F1424F5018400621995 /* Base */,
-				7D408BE024F5041700566B2C /* de */,
-				7D408C0424F504E000566B2C /* it */,
-				7D408C1D24F504E800566B2C /* fr */,
-				7D408C3024F5052F00566B2C /* es */,
-				7D408C4324F5054000566B2C /* da */,
 			);
 			name = ProVocStartingPoint.nib;
 			sourceTree = "<group>";
@@ -1655,11 +1475,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				7DC29F1524F5018500621995 /* Base */,
-				7D408BE124F5041700566B2C /* de */,
-				7D408C0524F504E000566B2C /* it */,
-				7D408C1E24F504E800566B2C /* fr */,
-				7D408C3124F5052F00566B2C /* es */,
-				7D408C4424F5054100566B2C /* da */,
 			);
 			name = ProVocSubmitter.nib;
 			sourceTree = "<group>";
@@ -1668,11 +1483,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				7DC29F0D24F5018400621995 /* Base */,
-				7D408BE224F5041700566B2C /* de */,
-				7D408C0624F504E100566B2C /* it */,
-				7D408C1F24F504E800566B2C /* fr */,
-				7D408C3224F5052F00566B2C /* es */,
-				7D408C4524F5054100566B2C /* da */,
 			);
 			name = ProVocTester.nib;
 			sourceTree = "<group>";
@@ -1681,7 +1491,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				7D408BEE24F504CE00566B2C /* en */,
-				7D408BFD24F504E000566B2C /* it */,
 			);
 			name = "ProVoc Help";
 			sourceTree = "<group>";
@@ -1690,11 +1499,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				7DC29F1624F5018500621995 /* Base */,
-				7D408BDF24F5041700566B2C /* de */,
-				7D408C0324F504E000566B2C /* it */,
-				7D408C1C24F504E800566B2C /* fr */,
-				7D408C2F24F5052F00566B2C /* es */,
-				7D408C4224F5054000566B2C /* da */,
 			);
 			name = ProVocSpotlighter.nib;
 			sourceTree = "<group>";
@@ -1703,11 +1507,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				7DC29F1724F5018500621995 /* Base */,
-				7D408BE324F5041700566B2C /* de */,
-				7D408C0724F504E100566B2C /* it */,
-				7D408C2024F504E800566B2C /* fr */,
-				7D408C3324F5052F00566B2C /* es */,
-				7D408C4624F5054100566B2C /* da */,
 			);
 			name = ProVocTimer.nib;
 			sourceTree = "<group>";
@@ -1723,12 +1522,7 @@
 		A760E69B0A24B4BA00C6128B /* DefaultPresets.xml */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7D408BD524F5041600566B2C /* de */,
 				7D408BEB24F504CD00566B2C /* en */,
-				7D408BF824F504DF00566B2C /* it */,
-				7D408C1224F504E700566B2C /* fr */,
-				7D408C2524F5052E00566B2C /* es */,
-				7D408C3824F5054000566B2C /* da */,
 			);
 			name = DefaultPresets.xml;
 			sourceTree = "<group>";
@@ -1737,11 +1531,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				7DC29F1824F5018500621995 /* Base */,
-				7D408BE424F5041700566B2C /* de */,
-				7D408C0824F504E100566B2C /* it */,
-				7D408C2124F504E800566B2C /* fr */,
-				7D408C3424F5053000566B2C /* es */,
-				7D408C4724F5054100566B2C /* da */,
 			);
 			name = ProVocViewOptions.nib;
 			sourceTree = "<group>";
@@ -1750,8 +1539,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				7D408BE824F504CD00566B2C /* en */,
-				7D408BF324F504DF00566B2C /* it */,
-				7D408C0D24F504E600566B2C /* fr */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1760,8 +1547,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				7D408BE924F504CD00566B2C /* en */,
-				7D408BF524F504DF00566B2C /* it */,
-				7D408C0F24F504E700566B2C /* fr */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1770,8 +1555,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				7D408BE724F504CD00566B2C /* en */,
-				7D408BF124F504DF00566B2C /* it */,
-				7D408C0B24F504E600566B2C /* fr */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1780,8 +1563,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				7DC29F1B24F5018500621995 /* Base */,
-				7D408BF224F504DF00566B2C /* it */,
-				7D408C0C24F504E600566B2C /* fr */,
 			);
 			name = main.nib;
 			sourceTree = "<group>";
@@ -1790,8 +1571,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				7DC29F1924F5018500621995 /* Base */,
-				7D408BF424F504DF00566B2C /* it */,
-				7D408C0E24F504E700566B2C /* fr */,
 			);
 			name = main.nib;
 			sourceTree = "<group>";
@@ -1800,8 +1579,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				7DC29F1A24F5018500621995 /* Base */,
-				7D408BF624F504DF00566B2C /* it */,
-				7D408C1024F504E700566B2C /* fr */,
 			);
 			name = main.nib;
 			sourceTree = "<group>";

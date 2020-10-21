@@ -1,3 +1,0 @@
-AMName = "Obtenir le contenu du document ProVoc";
-AMDSummary = "Cette action récupère le texte du document ProVoc de premier plan et le transmet à l'action suivante.";
-AMDRequires = "ProVoc en cours d'exécution et un document vocabulaire ouvert.";
