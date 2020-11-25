@@ -26,6 +26,7 @@
 /* Begin PBXBuildFile section */
 		7D4B966524F51AA9005B0617 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D4B966424F51AA9005B0617 /* Images.xcassets */; };
 		7D607B3824F7E29D00843E6C /* PlugIns in Resources */ = {isa = PBXBuildFile; fileRef = A72859E60A1601170082642D /* PlugIns */; };
+		7DCC38E4256E5E5A00B7645E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 7DCC38E3256E5E5A00B7645E /* LICENSE */; };
 		7DD7D299253465B5006A6D2B /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD7D297253465A3006A6D2B /* AVKit.framework */; };
 		7DD7D29A253465BC006A6D2B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD7D298253465A6006A6D2B /* AVFoundation.framework */; };
 		7DDF7EDB21887784002ECD2B /* Info.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = A7B125A80A1D50BD003B68B0 /* Info.plist */; };
@@ -295,6 +296,8 @@
 		7DC29F1924F5018500621995 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = Base.lproj/main.nib; sourceTree = "<group>"; };
 		7DC29F1A24F5018500621995 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = Base.lproj/main.nib; sourceTree = "<group>"; };
 		7DC29F1B24F5018500621995 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = Base.lproj/main.nib; sourceTree = "<group>"; };
+		7DCC38E3256E5E5A00B7645E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		7DCC38EA256E5FD300B7645E /* todo.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = todo.txt; path = ../todo.txt; sourceTree = "<group>"; };
 		7DD7D297253465A3006A6D2B /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/AVKit.framework; sourceTree = DEVELOPER_DIR; };
 		7DD7D298253465A6006A6D2B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		8D15AC360486D014006FF6A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -590,6 +593,7 @@
 		2A37F4AAFDCFA73011CA2CEA /* ProVoc */ = {
 			isa = PBXGroup;
 			children = (
+				7DCC38EA256E5FD300B7645E /* todo.txt */,
 				2A37F4ABFDCFA73011CA2CEA /* Classes */,
 				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,
 				2A37F4B8FDCFA73011CA2CEA /* Resources */,
@@ -626,6 +630,7 @@
 		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7DCC38E3256E5E5A00B7645E /* LICENSE */,
 				7D4B966424F51AA9005B0617 /* Images.xcassets */,
 				A7285DF00A1603C10082642D /* Images */,
 				7D607B3724F7BAF100843E6C /* Interface */,
@@ -1105,6 +1110,7 @@
 				A7285E3F0A1603D00082642D /* Question.tif in Resources */,
 				A7285E410A1603D00082642D /* send.tif in Resources */,
 				A7285E420A1603D00082642D /* settings.tif in Resources */,
+				7DCC38E4256E5E5A00B7645E /* LICENSE in Resources */,
 				A7285E430A1603D00082642D /* SmallBlank.tif in Resources */,
 				A7285E440A1603D00082642D /* SmallImage.tif in Resources */,
 				A7285E450A1603D00082642D /* SmallMovie.tif in Resources */,
