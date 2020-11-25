@@ -102,7 +102,6 @@
 	
     [defaultValues setObject:[NSNumber numberWithBool:YES] forKey:PVDimTestBackground];
     [defaultValues setObject:[NSNumber numberWithBool:NO] forKey:PVFullScreenWithMenuBar];
-    [defaultValues setObject:[NSArchiver archivedDataWithRootObject:[NSColor colorWithCalibratedWhite:0.2 alpha:1.0]] forKey:PVTestBackgroundColor];
 
     [defaultValues setObject:[NSNumber numberWithBool:YES] forKey:PVSearchSources];
     [defaultValues setObject:[NSNumber numberWithBool:YES] forKey:PVSearchTargets];

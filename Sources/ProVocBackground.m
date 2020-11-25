@@ -66,7 +66,7 @@
 	while (key = [enumerator nextObject])
 		if ([key hasPrefix:@"Previous"])
 			[mView setValue:nil forInputKey:key];
-	NSColor *color = [NSUnarchiver unarchiveObjectWithData:[[NSUserDefaults standardUserDefaults] objectForKey:PVTestBackgroundColor]];
+	NSColor *color = [NSColor windowBackgroundColor];
 	[self setValue:color forInputKey:@"Color"];
 	[self setValue:[NSNumber numberWithFloat:((float)(rand() % 30000)) / 30000] forInputKey:@"Random"];
 	[mView startRendering];
@@ -75,7 +75,7 @@
 	frame = NSInsetRect(frame, MAX(0, (frame.size.width - maxSize.width) / 2), MAX(0, (frame.size.height - maxSize.height) / 2));
 	frame.origin.x = round(frame.origin.x);
 	frame.origin.y = round(frame.origin.y);
-	[mWindow setFrame:frame display:NO];
+	[mWindow setFrame:frame display:YES];
 	[mWindow orderFront:nil];
 	if ([mInputsToTrigger count] > 0) {
 		[self triggerInputKeys:mInputsToTrigger];

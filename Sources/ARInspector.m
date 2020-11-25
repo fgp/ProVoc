@@ -179,9 +179,14 @@
 		
 		NSRect topFrame = NSMakeRect(0, NSMaxY([view frame]), size.width, buttonHeight + inset);
 		
-		NSButton *button = [[[NSButton alloc] initWithFrame:NSMakeRect(inset, 0, size.width - 3 * inset, buttonHeight)] autorelease];
+		NSButton *button = [[[NSButton alloc] initWithFrame:NSMakeRect(0, 0, size.width * inset, buttonHeight)] autorelease];
+        
+        button.layer.backgroundColor = NSColor.redColor.CGColor;
+        button.wantsLayer = YES;
+
+
 		[button setButtonType:NSMomentaryChangeButton];
-		[button setBezelStyle:NSShadowlessSquareBezelStyle];
+		[button setBezelStyle:NSRoundedBezelStyle];
 		[button setImagePosition:NSImageLeft];
 		[button setAlignment:NSLeftTextAlignment];
 		[button setImage:[self openImage]];
@@ -192,14 +197,15 @@
 		[button setBordered:NO];
 		[button setFocusRingType:NSFocusRingTypeNone];
 		[button setAutoresizingMask:NSViewWidthSizable];
-		[[button cell] setBackgroundColor:[NSColor clearColor]];
+		[[button cell] setBackgroundColor:[NSColor windowBackgroundColor]];
+        [[button cell] setBezeled:NO];
 		[info setObject:button forKey:kButton];
-
+        
 		NSView *topView = [[[NSView alloc] initWithFrame:topFrame] autorelease];
 		[topView setAutoresizingMask:NSViewWidthSizable | NSViewMinYMargin];
 		NSView *backgroundView = [[[ARInspectorTitleBackgroundView alloc] initWithFrame:NSMakeRect(inset, 0, size.width - 2 * inset, buttonHeight)] autorelease];
 		[backgroundView addSubview:button];
-		[backgroundView setAutoresizingMask:NSViewWidthSizable];		
+		[backgroundView setAutoresizingMask:NSViewWidthSizable];
 		[topView addSubview:backgroundView];
 		
 		NSRect bottomFrame = [view frame];
@@ -207,7 +213,13 @@
 		NSView *bottomView = [[[NSView alloc] initWithFrame:bottomFrame] autorelease];
 		[bottomView setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
 		[bottomView addSubview:view];
-		
+		/*
+        NSBox *hline = [[NSBox alloc] init];
+        [hline setBoxType:NSBoxSeparator];
+        [hline setFrame:NSMakeRect(0.0, 0.0, backgroundView.frame.size.width, 1.0)];
+        [hline setAutoresizingMask:NSViewWidthSizable];
+        [backgroundView addSubview:hline];
+        */
 		NSRect containerFrame = bottomFrame;
 		containerFrame.size.height = NSMaxY(topFrame);
 		containerFrame.origin.y = size.height;
@@ -217,7 +229,7 @@
 		[container addSubview:topView];
 		[container addSubview:bottomView];
 		[info setObject:container forKey:kContainerView];
-		
+        
 		[contentView addSubview:container];
 		[info setObject:[view superview] forKey:kSuperview];
 		[info setObject:[NSNumber numberWithBool:YES] forKey:kOpenState];

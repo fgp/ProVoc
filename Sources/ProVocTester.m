@@ -434,8 +434,9 @@ int SORT_BY_NUMBER(id left, id right, void *info)
 -(void)updateWindowBackgroundColor
 {
 	NSColor *color = nil;
-	if (![self shouldHideLabel] && mColorWindowWithLabel)
+    if (![self shouldHideLabel] && mColorWindowWithLabel) {
 		color = [mProVocDocument colorForLabel:[mCurrentWord label]];
+    }
 	[[[self testPanel] contentView] setColor:color];
 }
 
@@ -501,8 +502,6 @@ int SORT_BY_NUMBER(id left, id right, void *info)
 			if ([word right] <= 0)
 				[newWords addObject:word];
 		if ([newWords count] > 0) {
-			[NSScreen dimScreensHidingMenuBar:YES];
-			mScreenDimmed = YES;
 			[mProVocDocument slideshowWithWords:newWords];
 		}
 	}
@@ -587,14 +586,7 @@ int SORT_BY_NUMBER(id left, id right, void *info)
 	mAutoPlayMedia = [[inParameters objectForKey:@"autoPlayMedia"] boolValue];
 	mImageMCQ = [[inParameters objectForKey:@"imageMCQ"] boolValue] && [[inParameters objectForKey:@"testMCQ"] boolValue];
 	mMediaHideQuestion = [[inParameters objectForKey:@"mediaHideQuestion"] intValue];
-	if ([[NSUserDefaults standardUserDefaults] boolForKey:PVDimTestBackground]) {
-		[NSScreen dimScreensHidingMenuBar:![[NSUserDefaults standardUserDefaults] boolForKey:PVFullScreenWithMenuBar]];
-		[[ProVocBackground sharedBackground] display];
-	}
-	if (mScreenDimmed) {
-		mScreenDimmed = NO;
-		[NSScreen undimScreens];
-	}
+    [[ProVocBackground sharedBackground] display];
 	if (!sCurrentTesters)
 		sCurrentTesters = [[NSMutableArray array] retain];
 	[sCurrentTesters addObject:self];
@@ -609,7 +601,6 @@ int SORT_BY_NUMBER(id left, id right, void *info)
 	[mTimer stop];
 	if ([[NSUserDefaults standardUserDefaults] boolForKey:PVDimTestBackground]) {
 		[[ProVocBackground sharedBackground] hide];
-		[NSScreen undimScreens];
 	}
 	[mProVocDocument willChangeValueForKey:@"canResumeTest"];
     [mProVocDocument testPanelDidClose];
@@ -1745,11 +1736,7 @@ static float sMinDifficulty, sDifficultyFactor, sDifficultyTemperature;
 			if ([[NSUserDefaults standardUserDefaults] boolForKey:PVDimTestBackground])
 				[[ProVocBackground sharedBackground] hide];
 			[mTimer hide];
-			[NSScreen dimScreensHidingMenuBar:YES];
 			[mProVocDocument slideshowWithWords:mWrongWordsArray];
-			[NSScreen dimScreensHidingMenuBar:![[NSUserDefaults standardUserDefaults] boolForKey:PVFullScreenWithMenuBar]];
-			[NSScreen undimScreens];
-			[NSScreen undimScreens];
 			if ([[NSUserDefaults standardUserDefaults] boolForKey:PVDimTestBackground])
 				[[ProVocBackground sharedBackground] display];
 		}
@@ -2409,57 +2396,6 @@ static float sMinDifficulty, sDifficultyFactor, sDifficultyTemperature;
 	[self willChangeValueForKey:@"answerAudioImage"];
 	[self didChangeValueForKey:@"questionAudioImage"];
 	[self didChangeValueForKey:@"answerAudioImage"];
-}
-
-@end
-
-@implementation NSScreen (ProVocTester)
-
-static NSMutableArray *sDimWindows = nil;
-static int sDimCount = 0;
-
-+(void)dimScreensHidingMenuBar:(BOOL)inHideMenuBar
-{
-    // FIXME: use a different window level to achieve the same result. These methods were implemented by a framework which had to be removed, since its source code wasn't availabe any more
-    /*
-    if (inHideMenuBar) {
-		HideMenuBar();
-    } else {
-		ShowMenuBar();
-    }
-    */
-    
-	if (sDimCount++ == 0) {
-		[[ProVocInspector sharedInspector] setInspectorHidden:YES];
-		NSEnumerator *enumerator = [[NSScreen screens] objectEnumerator];
-		NSScreen *screen;
-		while (screen = [enumerator nextObject]) {
-			NSRect frameRect = [screen frame];
-			NSWindow *window = [[[NSWindow alloc] initWithContentRect:frameRect styleMask:NSBorderlessWindowMask backing:NSBackingStoreBuffered defer:YES] autorelease];
-			NSColor *color = [NSUnarchiver unarchiveObjectWithData:[[NSUserDefaults standardUserDefaults] objectForKey:PVTestBackgroundColor]];
-			[window setBackgroundColor:color];
-            if (inHideMenuBar) {
-                [window setLevel:NSMainMenuWindowLevel];
-            } else {
-                [window setLevel:NSFloatingWindowLevel];
-            }
-			[window setHidesOnDeactivate:YES];
-			[window orderFront:nil];
-			if (!sDimWindows)
-				sDimWindows = [[NSMutableArray alloc] initWithCapacity:0];
-			[sDimWindows addObject:window];
-		}
-	}
-}
-
-+(void)undimScreens
-{
-	if (--sDimCount == 0) {
-		[sDimWindows makeObjectsPerformSelector:@selector(orderOut:) withObject:nil];
-		[sDimWindows removeAllObjects];
-		//ShowMenuBar();
-		[[ProVocInspector sharedInspector] setInspectorHidden:NO];
-	}
 }
 
 @end

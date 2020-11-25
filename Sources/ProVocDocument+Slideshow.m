@@ -267,7 +267,7 @@ static NSView *sMovieView = nil;
 	firstIndex:(int)inIndex
 {
 	if (self = [super initWithFrame:inFrame]) {
-		NSColor *backGroundColor = [NSUnarchiver unarchiveObjectWithData:[[NSUserDefaults standardUserDefaults] objectForKey:PVTestBackgroundColor]];
+		NSColor *backGroundColor = [NSColor windowBackgroundColor];
         NSColor *textColor = [NSColor whiteColor];
         if (backGroundColor) {
             CGFloat r, g, b;
@@ -548,7 +548,6 @@ static SlideView *sSecondSlideView = nil;
 	
 	NSArray *words = [[NSUserDefaults standardUserDefaults] boolForKey:PVSlideshowRandom] ? [inWords shuffledArray] : inWords;
 	[NSCursor hide];
-	[NSScreen dimScreensHidingMenuBar:YES];
 
 	NSRect controlRect;
 	controlRect.size = NSMakeSize(180, 100);
@@ -614,7 +613,6 @@ waitAgain:
 	[[self window] nextEventMatchingMask:NSLeftMouseDownMask | NSRightMouseDownMask | NSKeyDownMask
 									untilDate:[NSDate dateWithTimeIntervalSinceNow:0.5]
 									inMode:NSDefaultRunLoopMode dequeue:YES];
-	[NSScreen undimScreens];
 	[NSCursor unhide];
 }
 

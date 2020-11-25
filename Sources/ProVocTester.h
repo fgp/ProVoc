@@ -21,7 +21,6 @@
 
 #define PVDimTestBackground @"dimTestBackground"
 #define PVFullScreenWithMenuBar @"fullScreenWithMenuBar"
-#define PVTestBackgroundColor @"testBackgroundColor"
 
 #define PVMarkWrongWords @"markWrongWords"
 #define PVLabelForWrongWords @"labelForWrongWords"
@@ -123,7 +122,6 @@
 	NSMutableArray *mHistory;
 	BOOL mReplaceLastHistory;
 	BOOL mFreezeHistory;
-	BOOL mScreenDimmed;
 	
 	id mLastMovie;
 	BOOL mMaskMedia;
@@ -221,13 +219,6 @@
 -(BOOL)canPlayAnswerAudio;
 -(IBAction)playQuestionAudio:(id)inSender;
 -(IBAction)playAnswerAudio:(id)inSender;
-
-@end
-
-@interface NSScreen (ProVocTester)
-
-+(void)dimScreensHidingMenuBar:(BOOL)inHideMenuBar;
-+(void)undimScreens;
 
 @end
 
