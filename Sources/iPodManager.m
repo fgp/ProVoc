@@ -44,12 +44,25 @@
 
 -(NSString *)pathOfConnectediPod
 {
+    NSArray *urls = [[NSFileManager defaultManager] mountedVolumeURLsIncludingResourceValuesForKeys:nil options:nil];
+    for (NSURL *url in urls) {
+        if ([self deviceIsiPodAtPath:[url path]]) {
+            return [url path];
+        }
+    }
+    return nil;
+    
+    // old code using deprecated APIs:
+    /*
 	NSEnumerator *enumerator = [[[NSWorkspace sharedWorkspace] mountedRemovableMedia] objectEnumerator];
 	NSString *path;
-	while (path = [enumerator nextObject])
-		if ([self deviceIsiPodAtPath:path])	
+    while (path = [enumerator nextObject]) {
+        if ([self deviceIsiPodAtPath:path])	{
 			break;
+        }
+    }
 	return path;
+    */
 }
 
 -(NSString *)iPodPath
@@ -59,7 +72,7 @@
 
 -(void)setiPodPath:(NSString *)iniPodPath
 {
-	if (![miPodPath isEqualToString:iniPodPath]) {
+	if (iniPodPath != nil && ![miPodPath isEqualToString:iniPodPath]) {
 		[miPodPath release];
 		miPodPath = [iniPodPath retain];
 		[[NSNotificationCenter defaultCenter] postNotificationName:iPodDidChangeNotification object:nil];

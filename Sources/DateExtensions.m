@@ -8,16 +8,32 @@
 
 #import "DateExtensions.h"
 
+#define kCMTimeInterval1Hour 60*60
+#define kCMTimeInterval1Day kCMTimeInterval1Hour*24
+#define kCMTimeInterval2Day kCMTimeInterval1Day*2
+#define kCMTimeInterval1Week kCMTimeInterval1Day*7
+#define kCMTimeInterval2Weeks kCMTimeInterval1Day*14
+
+@implementation NSDate (Extensions_Private)
+
+@end
 
 @implementation NSDate (Extensions)
 
 -(NSDate *)beginningOfDay
 {
+    NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
+    NSDateComponents *components = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:self];
+    return [calendar dateFromComponents:components];
+    
+    // old code using deprecated APIs:
+    /*
 	NSMutableString *description = [[self description] mutableCopy];
 	[description replaceCharactersInRange:NSMakeRange(11, 8) withString:@"00:00:00"];
 	NSDate *date = [NSDate dateWithString:description];
 	[description release];
 	return date;
+    */
 }
 
 -(NSDate *)beginningOfNextDay
@@ -27,12 +43,12 @@
 
 -(NSDate *)previousDay
 {
-	return [self addTimeInterval:-24 * 60 * 60];
+    return [NSDate dateWithTimeIntervalSinceNow:-(kCMTimeInterval1Day)];
 }
 
 -(NSDate *)nextDay
 {
-	return [self addTimeInterval:24 * 60 * 60];
+    return [NSDate dateWithTimeIntervalSinceNow:(kCMTimeInterval1Day)];
 }
 
 -(NSDate *)beginningOfWeek
@@ -47,21 +63,29 @@
 
 -(NSDate *)previousWeek
 {
-	return [self addTimeInterval:-7 * 24 * 60 * 60];
+    return [NSDate dateWithTimeIntervalSinceNow:-(kCMTimeInterval1Week)];
 }
 
 -(NSDate *)nextWeek
 {
-	return [self addTimeInterval:7 * 24 * 60 * 60];
+    return [NSDate dateWithTimeIntervalSinceNow:(kCMTimeInterval1Week)];
 }
 
 -(NSDate *)beginningOfMonth
 {
+    NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
+    NSDateComponents *comp = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth) fromDate:self];
+    [comp setDay:1];
+    return [calendar dateFromComponents:comp];
+    
+    // old code using deprecated APIs:
+    /*
 	NSMutableString *description = [[self description] mutableCopy];
 	[description replaceCharactersInRange:NSMakeRange(8, 11) withString:@"01 03:00:00"];
 	NSDate *date = [NSDate dateWithString:description];
 	[description release];
 	return date;
+    */
 }
 
 -(NSDate *)beginningOfNextMonth
@@ -81,6 +105,13 @@
 
 -(NSDate *)previousMonth
 {
+    NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
+    [dateComponents setMonth:-1];
+    NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
+    return [calendar dateByAddingComponents:dateComponents toDate:self options:0];
+    
+    // old code using deprecated APIs:
+    /*
 	int year = [self year];
 	int month = [self month];
 	if (month > 1)
@@ -95,10 +126,18 @@
 	NSDate *date = [NSDate dateWithString:description];
 	[description release];
 	return date;
+    */
 }
 
 -(NSDate *)nextMonth
 {
+    NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
+    [dateComponents setMonth:+1];
+    NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
+    return [calendar dateByAddingComponents:dateComponents toDate:self options:0];
+    
+    // old code using deprecated APIs:
+    /*
 	int year = [self year];
 	int month = [self month];
 	if (month < 12)
@@ -113,6 +152,7 @@
 	NSDate *date = [NSDate dateWithString:description];
 	[description release];
 	return date;
+    */
 }
 
 -(BOOL)isToday
