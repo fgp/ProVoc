@@ -294,7 +294,7 @@
 				deltaHeight *= -1;
 		} else
 			mask = NSViewMaxYMargin;
-		[[info objectForKey:kContainerView] setAutoresizingMask:mask | NSViewWidthSizable];
+		[(NSView*)[info objectForKey:kContainerView] setAutoresizingMask:mask | NSViewWidthSizable];
 	}
 
 	[self increaseHeightBy:deltaHeight animate:YES];

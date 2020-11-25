@@ -1,7 +1,7 @@
 MACOSX_DEPLOYMENT_TARGET = 10.11
 
 VERSION_NUMBER = 5.0.0
-BUILD_NUMBER = 1702
+BUILD_NUMBER = 102
 
 COPYRIGHT = Copyright © 2008 Arizona Software, © 2020 Alexander Lindenstruth for all modifications since 2020. All rights reserved.
 
