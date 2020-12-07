@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17506" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17506"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -68,14 +68,13 @@
                                             <subviews>
                                                 <outlineView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" selectionHighlightStyle="sourceList" columnReordering="NO" columnResizing="NO" emptySelection="NO" autosaveColumns="NO" indentationPerLevel="16" autosaveExpandedItems="YES" autoresizesOutlineColumn="YES" outlineTableColumn="750" id="749" customClass="ProVocOutlineView">
                                                     <rect key="frame" x="0.0" y="0.0" width="206" height="609"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <size key="intercellSpacing" width="3" height="3"/>
                                                     <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                     <tableColumns>
                                                         <tableColumn width="203" minWidth="38.74951171875" maxWidth="1000" id="750">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Lessons">
-                                                                <font key="font" metaFont="smallSystem"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
                                                             </tableHeaderCell>
@@ -236,6 +235,7 @@
                                                         <constraint firstItem="279" firstAttribute="leading" secondItem="Kdm-Ev-4Lc" secondAttribute="leading" id="aOT-g1-ab7"/>
                                                         <constraint firstItem="224" firstAttribute="leading" secondItem="279" secondAttribute="trailing" constant="8" id="b26-QP-NXk"/>
                                                         <constraint firstItem="940" firstAttribute="centerY" secondItem="Kdm-Ev-4Lc" secondAttribute="centerY" id="jo6-ZX-5lD"/>
+                                                        <constraint firstItem="940" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="224" secondAttribute="trailing" constant="10" id="pEq-Fe-wG2"/>
                                                     </constraints>
                                                 </customView>
                                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="qnM-6F-f8P" userLabel="Content View">
@@ -266,14 +266,13 @@
                                                                         <subviews>
                                                                             <tableView focusRingType="none" verticalHuggingPriority="750" tag="1" allowsExpansionToolTips="YES" alternatingRowBackgroundColors="YES" autosaveColumns="NO" autosaveName="DictionaryOrder" headerView="1364" id="85" customClass="ProVocTableView">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="813" height="326"/>
-                                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                 <size key="intercellSpacing" width="3" height="2"/>
                                                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                                                 <tableColumns>
                                                                                     <tableColumn identifier="Number" width="33" minWidth="30" maxWidth="70" id="803" customClass="ProVocWordTableColumn">
                                                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="#">
-                                                                                            <font key="font" metaFont="smallSystem"/>
                                                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                                             <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                                                         </tableHeaderCell>
@@ -289,7 +288,6 @@
                                                                                     </tableColumn>
                                                                                     <tableColumn identifier="Source" width="179" minWidth="60" maxWidth="1000" id="84" customClass="ProVocWordTableColumn">
                                                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Français">
-                                                                                            <font key="font" metaFont="smallSystem"/>
                                                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                                             <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
                                                                                         </tableHeaderCell>
@@ -307,7 +305,6 @@
                                                                                     </tableColumn>
                                                                                     <tableColumn identifier="Target" width="179" minWidth="60" maxWidth="1000" id="87" customClass="ProVocWordTableColumn">
                                                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Anglais">
-                                                                                            <font key="font" metaFont="smallSystem"/>
                                                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                                             <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
                                                                                         </tableHeaderCell>
@@ -325,7 +322,6 @@
                                                                                     </tableColumn>
                                                                                     <tableColumn identifier="Comment" width="130" minWidth="60" maxWidth="1000" id="804">
                                                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Comment">
-                                                                                            <font key="font" metaFont="smallSystem"/>
                                                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                                             <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                                                         </tableHeaderCell>
@@ -342,7 +338,6 @@
                                                                                     </tableColumn>
                                                                                     <tableColumn identifier="Difficulty" width="60" minWidth="52" maxWidth="120" id="805" customClass="ProVocDifficultyTableColumn">
                                                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Difficulty">
-                                                                                            <font key="font" metaFont="smallSystem"/>
                                                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                                             <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                                                         </tableHeaderCell>
@@ -355,7 +350,6 @@
                                                                                     </tableColumn>
                                                                                     <tableColumn identifier="Mark" width="18" minWidth="18" maxWidth="18" id="806" customClass="ProVocFlaggedTableColumn">
                                                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
-                                                                                            <font key="font" metaFont="smallSystem"/>
                                                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                                             <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                                                         </tableHeaderCell>
@@ -368,7 +362,6 @@
                                                                                     </tableColumn>
                                                                                     <tableColumn identifier="LastAnswered" width="95" minWidth="95" maxWidth="95" id="1200">
                                                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Last Answered">
-                                                                                            <font key="font" metaFont="smallSystem"/>
                                                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                                             <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                                                         </tableHeaderCell>
@@ -381,7 +374,6 @@
                                                                                     </tableColumn>
                                                                                     <tableColumn identifier="NextReview" width="95" minWidth="95" maxWidth="95" id="1246">
                                                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Next Review">
-                                                                                            <font key="font" metaFont="smallSystem"/>
                                                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                                             <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                                                         </tableHeaderCell>
@@ -440,7 +432,7 @@
                                                             <rect key="frame" x="0.0" y="117" width="703" height="26"/>
                                                             <subviews>
                                                                 <popUpButton verticalHuggingPriority="750" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="213">
-                                                                    <rect key="frame" x="-2" y="0.0" width="128" height="26"/>
+                                                                    <rect key="frame" x="-2" y="-2" width="128" height="26"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="123" id="Hd1-rR-3Q8"/>
                                                                     </constraints>
@@ -487,9 +479,8 @@
                                                                 <constraint firstItem="128" firstAttribute="leading" secondItem="213" secondAttribute="trailing" constant="8" symbolic="YES" id="ANC-hf-6Vh"/>
                                                                 <constraint firstItem="128" firstAttribute="top" secondItem="1000" secondAttribute="top" constant="2" id="D7Z-73-dCo"/>
                                                                 <constraint firstItem="128" firstAttribute="centerY" secondItem="1000" secondAttribute="centerY" id="OKe-eu-Fv6"/>
-                                                                <constraint firstAttribute="bottom" secondItem="213" secondAttribute="bottom" constant="3" id="ZD2-Bb-GqM"/>
-                                                                <constraint firstItem="213" firstAttribute="baseline" secondItem="128" secondAttribute="firstBaseline" id="ba6-7h-d3X"/>
-                                                                <constraint firstItem="213" firstAttribute="top" secondItem="1000" secondAttribute="top" constant="1" id="gzQ-kc-z9d"/>
+                                                                <constraint firstAttribute="bottom" secondItem="213" secondAttribute="bottom" constant="1" id="ZD2-Bb-GqM"/>
+                                                                <constraint firstItem="213" firstAttribute="top" secondItem="1000" secondAttribute="top" constant="3" id="gzQ-kc-z9d"/>
                                                                 <constraint firstAttribute="height" constant="26" id="kOd-Ve-T1z"/>
                                                                 <constraint firstItem="213" firstAttribute="leading" secondItem="1000" secondAttribute="leading" id="my9-PY-vbS"/>
                                                             </constraints>
@@ -615,6 +606,7 @@ DQ
                                                                 <constraint firstAttribute="trailing" secondItem="126" secondAttribute="trailing" id="ZIC-ah-hfm"/>
                                                                 <constraint firstAttribute="trailing" secondItem="382" secondAttribute="trailing" id="dl6-iJ-Fbk"/>
                                                                 <constraint firstItem="381" firstAttribute="leading" secondItem="1002" secondAttribute="leading" id="duh-Of-TnJ"/>
+                                                                <constraint firstItem="126" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1002" secondAttribute="leading" id="kW3-rY-OF7"/>
                                                             </constraints>
                                                         </customView>
                                                     </subviews>
@@ -727,6 +719,7 @@ DQ
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="552" firstAttribute="centerY" secondItem="WBj-aB-z8x" secondAttribute="centerY" id="571-rv-15W"/>
+                                                        <constraint firstItem="552" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="259" secondAttribute="trailing" constant="10" id="6AP-rV-EqF"/>
                                                         <constraint firstAttribute="height" constant="48" id="ErK-k2-RNb"/>
                                                         <constraint firstItem="865" firstAttribute="leading" secondItem="552" secondAttribute="trailing" constant="8" id="H5k-Zy-QWe"/>
                                                         <constraint firstItem="865" firstAttribute="centerY" secondItem="WBj-aB-z8x" secondAttribute="centerY" id="LKX-4b-Wtf"/>
@@ -744,18 +737,17 @@ DQ
                                                             <rect key="frame" x="0.0" y="0.0" width="743" height="505"/>
                                                             <clipView key="contentView" copiesOnScroll="NO" id="hba-uM-Yao">
                                                                 <rect key="frame" x="0.0" y="0.0" width="743" height="505"/>
-                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" rowHeight="74" headerView="1367" id="764" customClass="ProVocDeletableTableView">
                                                                         <rect key="frame" x="0.0" y="0.0" width="743" height="482"/>
-                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <size key="intercellSpacing" width="3" height="2"/>
                                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                                         <tableColumns>
                                                                             <tableColumn width="739.56884765625" minWidth="40" maxWidth="1000" id="766" customClass="ProVocPresetTableColumn">
                                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Training modes">
-                                                                                    <font key="font" metaFont="smallSystem"/>
                                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                                     <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
                                                                                 </tableHeaderCell>
@@ -963,6 +955,7 @@ DQ
                                                         </popUpButton>
                                                     </subviews>
                                                     <constraints>
+                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="854" secondAttribute="trailing" id="0oU-RS-Isv"/>
                                                         <constraint firstAttribute="height" constant="32" id="AUm-n8-sDs"/>
                                                         <constraint firstItem="854" firstAttribute="centerY" secondItem="AOW-yC-Y1l" secondAttribute="centerY" id="GgY-ag-jje"/>
                                                         <constraint firstItem="854" firstAttribute="leading" secondItem="AOW-yC-Y1l" secondAttribute="leading" id="nlz-Ch-bFe"/>
@@ -975,6 +968,7 @@ DQ
                                                 <constraint firstItem="YhR-Hs-7mZ" firstAttribute="leading" secondItem="848" secondAttribute="leading" constant="-20" id="2WX-rv-JCN"/>
                                                 <constraint firstAttribute="trailing" secondItem="AOW-yC-Y1l" secondAttribute="trailing" constant="20" id="A0K-HK-O2l"/>
                                                 <constraint firstAttribute="trailing" secondItem="849" secondAttribute="trailing" constant="20" id="HIn-VE-TU0"/>
+                                                <constraint firstItem="849" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="848" secondAttribute="leading" id="IS5-nB-rbG"/>
                                                 <constraint firstItem="YhR-Hs-7mZ" firstAttribute="trailing" secondItem="848" secondAttribute="trailing" constant="20" id="Mst-eO-q1J"/>
                                                 <constraint firstAttribute="bottom" secondItem="849" secondAttribute="bottom" constant="52" id="NkP-kY-PTY"/>
                                                 <constraint firstItem="AOW-yC-Y1l" firstAttribute="leading" secondItem="845" secondAttribute="leading" id="Txl-Xq-S9Y"/>
@@ -1882,20 +1876,19 @@ DQ
                 <scrollView fixedFrame="YES" horizontalLineScroll="16" horizontalPageScroll="10" verticalLineScroll="16" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1049">
                     <rect key="frame" x="197" y="318" width="115" height="83"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                    <clipView key="contentView" ambiguous="YES" id="HfA-Ac-ILA">
+                    <clipView key="contentView" id="HfA-Ac-ILA">
                         <rect key="frame" x="1" y="1" width="99" height="81"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <tableView focusRingType="none" verticalHuggingPriority="750" ambiguous="YES" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" emptySelection="NO" autosaveColumns="NO" rowHeight="14" id="1050">
+                            <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" emptySelection="NO" autosaveColumns="NO" rowHeight="14" id="1050">
                                 <rect key="frame" x="0.0" y="0.0" width="99" height="81"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                 <tableColumns>
                                     <tableColumn width="20" minWidth="20" maxWidth="20" id="1051">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
-                                            <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                         </tableHeaderCell>
@@ -1907,7 +1900,6 @@ DQ
                                     </tableColumn>
                                     <tableColumn editable="NO" width="73" minWidth="4" maxWidth="1000" id="1053">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
-                                            <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                         </tableHeaderCell>
