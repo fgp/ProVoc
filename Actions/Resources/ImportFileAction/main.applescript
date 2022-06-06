@@ -14,7 +14,7 @@ on run {input, parameters}
 	if theFiles is not {} then
 		set theNewDocument to |newDocument| of parameters
 		tell application "ProVoc"
-			import theFiles new document theNewDocument
+--			import theFiles new document theNewDocument
 		end tell
 	end if
 	
