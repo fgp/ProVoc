@@ -877,7 +877,7 @@ error:
 {
 	NSString *path = [inPath ? inPath : [self fileName] stringByAppendingPathComponent:@"Media"];
 	BOOL isDir;
-	if ([[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&isDir] && isDir || [[NSFileManager defaultManager] createDirectoryAtPath:path attributes:nil])
+    if (([[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&isDir] && isDir) || [[NSFileManager defaultManager] createDirectoryAtPath:path attributes:nil])
 		return path;
 	return nil;
 }
@@ -897,7 +897,7 @@ error:
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cleanup:) name:NSApplicationWillTerminateNotification object:nil];
 	}
 	BOOL isDir;
-	if (!([[NSFileManager defaultManager] fileExistsAtPath:directory isDirectory:&isDir] && isDir || [[NSFileManager defaultManager] createDirectoryAtPath:directory attributes:nil]))
+    if (!(([[NSFileManager defaultManager] fileExistsAtPath:directory isDirectory:&isDir] && isDir) || [[NSFileManager defaultManager] createDirectoryAtPath:directory attributes:nil]))
 		[NSException raise:@"ProVocInspectorException" format:@"Error creating path %@", directory];
 	return directory;
 }
