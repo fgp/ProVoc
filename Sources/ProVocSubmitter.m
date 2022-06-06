@@ -215,7 +215,7 @@
 {
 	if (!mAborting)
 		NSRunAlertPanel(NSLocalizedString(@"Submission Error Title", @""),
-					[NSString stringWithFormat:NSLocalizedString(@"Submission Error Message (%@)", @""), inMessage],
+                        @"%@", [NSString stringWithFormat:NSLocalizedString(@"Submission Error Message (%@)", @""), inMessage],
 					nil, nil, nil);
 	[NSApp endSheet:[self window] returnCode:NSCancelButton];
 }

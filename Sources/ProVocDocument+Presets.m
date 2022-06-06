@@ -38,7 +38,7 @@
 
 -(IBAction)newPreset:(id)inSender
 {
-	[self createPresetWithName:[NSString stringWithFormat:NSLocalizedString(@"Preset Default Name %i", @""), [[self presets] count] + 1]];
+    [self createPresetWithName:[NSString stringWithFormat:NSLocalizedString(@"Preset Default Name %lu", @""), [[self presets] count] + 1]];
 /*	[self requestNewName:NSLocalizedString(@"New Preset Prompt", @"")
 			defaultName:[NSString stringWithFormat:NSLocalizedString(@"Preset Default Name %i", @""), [[self presets] count] + 1]
 			callbackSelector:@selector(createPresetWithName:)];*/

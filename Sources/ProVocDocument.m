@@ -1000,7 +1000,7 @@ static ProVocDocument *sCurrentDocument = nil;
 		}
 	}
 	if (!defaultName)
-		defaultName = [NSString stringWithFormat:NSLocalizedString(@"Page Name %i", @""), [[self allPages] count] + 1];
+        defaultName = [NSString stringWithFormat:NSLocalizedString(@"Page Name %lu", @""), [[self allPages] count] + 1];
 	[self requestNewName:NSLocalizedString(@"Enter the name of the new page:", @"")
 			defaultName:defaultName
 			callbackSelector:@selector(createPageWithTitle:)];

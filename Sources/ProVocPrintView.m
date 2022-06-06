@@ -282,7 +282,7 @@
 		[paragraphStyle setAlignment:NSCenterTextAlignment];
 		attributes[NSParagraphStyleAttributeName] = paragraphStyle;
 		[paragraphStyle release];
-		NSAttributedString *string = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:NSLocalizedString(@"Print Page Format %i of %i", @""), [mPages indexOfObjectIdenticalTo:mCurrentPage] + 1, [mPages count]] attributes:attributes];
+        NSAttributedString *string = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:NSLocalizedString(@"Print Page F%lumat %lu of %lu", @""), [mPages indexOfObjectIdenticalTo:mCurrentPage] + 1, (unsigned long)[mPages count]] attributes:attributes];
 		[attributes release];
 		[string drawInRect:NSMakeRect(rect.origin.x, 0, rect.size.width, NSMinY(rect) - 10)];
 		[string release];

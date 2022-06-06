@@ -1970,7 +1970,7 @@ static float sMinDifficulty, sDifficultyFactor, sDifficultyTemperature;
 
 -(NSString *)description
 {
-	return [NSString stringWithFormat:@"<%@ 0x%x (word=%@, dir=%i)>", NSStringFromClass([self class]), self, mWord, mDirection];
+    return [NSString stringWithFormat:@"<%@ 0x%@ (word=%@, dir=%i)>", NSStringFromClass([self class]), self, mWord, mDirection];
 }
 
 @end
@@ -2020,7 +2020,7 @@ static float sMinDifficulty, sDifficultyFactor, sDifficultyTemperature;
 
 -(NSString *)description
 {
-	return [NSString stringWithFormat:@"<%@ 0x%x (word=%@)>", NSStringFromClass([self class]), self, mWord];
+    return [NSString stringWithFormat:@"<%@ 0x%@ (word=%@)>", NSStringFromClass([self class]), self, mWord];
 }
 
 -(void)setSourceWord:(NSString *)inSource
