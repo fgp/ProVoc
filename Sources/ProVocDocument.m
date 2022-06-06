@@ -65,7 +65,6 @@
 
 +(void)initialize
 {
-
 }
 
 +(NSSet *)keyPathsForValuesAffectingValueForKey:(NSString *)key
@@ -137,7 +136,7 @@
 		mSortedWords = [[NSMutableArray alloc] initWithCapacity:0];
 		mVisibleWords = [[NSMutableArray alloc] initWithCapacity:0];
 		mSelectedPages = [[NSMutableArray alloc] initWithCapacity:0];
-		
+
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(languageNamesDidChange:)
 				name:PVLanguageNamesDidChangeNotification object:nil];
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(rightRatioDidChange:)
@@ -321,8 +320,14 @@
 		[mHistories release];
 		mHistories = [histories mutableCopy];
 	}
+    else {
+        mHistories = [[NSMutableArray alloc] initWithCapacity:0];
+    }
 		
 	mSubmissionInfo = [mLoadedParameters[@"SubmissionInfo"] retain];
+    if (!mSubmissionInfo) {
+        mSubmissionInfo = [[NSMutableDictionary alloc] initWithCapacity:0];
+    }
 	
 	[self didChangeValueForKey:@"canClearHistory"];
 	state = mLoadedParameters[@"HistoryDisplay"];
