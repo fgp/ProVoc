@@ -17,6 +17,12 @@
 
 -(IBAction)fullScreen:(id)inSender;
 
+/*
+ * Replace the properties that QTMovieView would provide
+ * to prevent exceptions when the NIB is loaded
+ */
+@property (retain) id movie;
+
 @end
 
 /*

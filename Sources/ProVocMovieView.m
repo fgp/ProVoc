@@ -14,6 +14,8 @@ static BOOL sRunningFullscreen = NO;
 
 @implementation ProVocMovieView
 
+@synthesize movie;
+
 -(NSMenu *)menuForEvent:(NSEvent *)inEvent
 {
 	SEL selector = @selector(fullScreen:);
