@@ -515,9 +515,12 @@ static SlideView *sSecondSlideView = nil;
 {
 	if ([[SlideShowSoundGenerator sharedGenerator] isPlaying])
 		return YES;
+    /*
+     * QTKit was removed
     QTMovie *movie = NULL; //[sMovieView movie];
 	if (movie && [movie rate] != 0)
 		return YES;
+     */
 	return NO;
 }
 

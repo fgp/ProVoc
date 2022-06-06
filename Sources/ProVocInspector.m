@@ -537,6 +537,8 @@ static BOOL sRecording = NO;
 
 -(IBAction)importMovie:(id)inSender
 {
+    /*
+     * TODO: QTKit was removed
 	NSOpenPanel *openPanel = [NSOpenPanel openPanel];
 	if ([openPanel runModalForTypes:[QTMovie movieUnfilteredFileTypes]] == NSOKButton) {
 		NSEnumerator *enumerator = [mSelectedWords objectEnumerator];
@@ -544,6 +546,7 @@ static BOOL sRecording = NO;
 		while (word = [enumerator nextObject])
 			[mDocument setMovieFile:[openPanel filename] ofWord:word];
 	}
+     */
 }
 
 -(IBAction)exportMovie:(id)inSender
