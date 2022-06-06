@@ -115,7 +115,7 @@
 again:
     	event = [[self window] nextEventMatchingMask:NSLeftMouseDownMask | NSRightMouseDownMask | NSKeyDownMask | NSFlagsChangedMask
                             untilDate:date inMode:NSDefaultRunLoopMode dequeue:YES];
-		if (event)
+        if (event) {
 			if ([event type] == NSFlagsChanged) {
 				dir = ([event modifierFlags] & NSCommandKeyMask) != 0 ? 0 : ([event modifierFlags] & NSAlternateKeyMask) == 0 ? 1 : -1;
 				if (([event modifierFlags] & NSShiftKeyMask) != 0)
@@ -123,6 +123,7 @@ again:
 				goto again;
 			} else
 				break;
+        }
         [mCreditsScroll setVerticalScroll:MAX(0, scroll)];
 		scroll += dir * speed * dt;
         date = [date addTimeInterval:dt];

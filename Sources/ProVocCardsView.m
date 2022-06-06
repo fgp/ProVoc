@@ -115,7 +115,7 @@
 	float rightMargin = MIN(maxHorMargin, [defaults floatForKey:@"cardRightMargin"]);
 	float topMargin = MIN(maxVerMargin, [defaults floatForKey:@"cardTopMargin"]);
 	float bottomMargin = MIN(maxVerMargin, [defaults floatForKey:@"cardBottomMargin"]);
-	if (!inRecto)
+    if (!inRecto) {
 		if ([defaults integerForKey:ProVocCardFlipDirection] == 1) {
 			float swap = topMargin;
 			topMargin = bottomMargin;
@@ -127,6 +127,7 @@
 			leftMargin = rightMargin;
 			rightMargin = swap;
 		}
+    }
 	rect.origin.x += leftMargin;
 	rect.size.width -= leftMargin + rightMargin;
 	rect.origin.y += bottomMargin;

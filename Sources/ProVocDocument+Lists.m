@@ -1122,7 +1122,7 @@ static NSTimeInterval waitTime = 0;
 
 -(void)tableView:(NSTableView *)inTableView mouseDownInHeaderOfTableColumn:(NSTableColumn *)inTableColumn
 {
-	if (inTableView == mWordTableView)
+    if (inTableView == mWordTableView) {
 		if (lastColumnClick && [[NSApp currentEvent] clickCount] > 1) {
 			NSPoint point = [inTableView convertPoint:[[NSApp currentEvent] locationInWindow] fromView:nil];
 			point.x -= 10;
@@ -1136,6 +1136,7 @@ static NSTimeInterval waitTime = 0;
 		{
             lastColumnClick = YES;
         }
+    }
 }
 
 @end

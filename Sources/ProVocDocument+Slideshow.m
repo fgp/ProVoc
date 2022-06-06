@@ -352,7 +352,7 @@ static BOOL sPlayPause;
 
 -(void)insertText:(NSString *)inText
 {
-	if ([inText isEqual:@" "])
+    if ([inText isEqual:@" "]) {
 		if (mMovie) {
 			sSlideNumber--;
             /*
@@ -366,6 +366,7 @@ static BOOL sPlayPause;
 			sSlideNumber--;
 			sPlayPause = YES;
 		}
+    }
 }
 
 -(void)doCommandBySelector:(SEL)inSelector
