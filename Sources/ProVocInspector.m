@@ -1100,11 +1100,15 @@ error:
 
 -(id)movieForMedia:(NSString *)inMedia
 {
+    /*
+     * TODO: QTKit has been removed
 	if ([NSApp hasQTKit]) {
 		NSString *file = [self pathForMediaFile:inMedia];
 		return [QTMovie movieWithFile:file error:nil];
 	} else
 		return nil;
+     */
+    return nil;
 }
 
 -(id)movieOfWord:(ProVocWord *)inWord
@@ -1580,7 +1584,11 @@ error:
 
 -(BOOL)canDropFile:(NSString *)inFileName
 {
+    return NO;
+    /*
+     * TODO: QTKit has been removed
 	return [QTMovie canInitWithFile:inFileName];
+     */
 }
 
 -(void)dropFile:(NSString *)inFileName
@@ -1602,7 +1610,11 @@ error:
 	static BOOL initialized = NO;
 	static BOOL hasQTKit;
 	if (!initialized) {
+        /*
+         * TODO: QTKit has been removed
 		hasQTKit = NSClassFromString(@"QTMovie") != Nil;
+         */
+        hasQTKit = NO;
 		initialized = YES;
 	}
 	return hasQTKit;
