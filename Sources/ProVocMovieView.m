@@ -42,9 +42,12 @@ static BOOL sRunningFullscreen = NO;
 -(float)preferredWidthForHeight:(float)inHeight
 {
 	float width = 0;
-	NSSize imageSize = [[self movie] imageSize];
+    NSSize imageSize = CGSizeZero; //[[self movie] imageSize];
+    /*
+     * TODO: Depends on QTKit
 	if (!NSEqualSizes(imageSize, NSZeroSize))
 		width = MIN(imageSize.width, (inHeight - [self controllerBarHeight]) / imageSize.height * imageSize.width);
+     */
 	return width;
 }
 
@@ -86,12 +89,14 @@ static BOOL sRunningFullscreen = NO;
 
 @end
 
+#if 0
+// TODO: Depends on QTKit
 @implementation QTMovie (ProVocMovieView)
 
 -(NSSize)imageSize
 {
 	NSSize size = NSZeroSize;
-	NSValue *sizeValue = [self movieAttributes][QTMovieNaturalSizeAttribute];
+    NSValue *sizeValue = CGSizeZero; // [self movieAttributes][QTMovieNaturalSizeAttribute];
 	[sizeValue getValue:&size];
 	return size;
 }
@@ -105,7 +110,10 @@ static BOOL sRunningFullscreen = NO;
 
 -(void)displayInFullSize
 {
-	NSSize imageSize = [self imageSize];
+    // TODO: Disabled, depends on QTKit which no longer exists
+    return;
+#if 0
+    NSSize imageSize = CGSizeZero; //[self imageSize];
 	if (NSEqualSizes(imageSize, NSZeroSize))
 		return;
 	NSSize maxSize = [[NSScreen mainScreen] frame].size;
@@ -146,6 +154,10 @@ static BOOL sRunningFullscreen = NO;
 	[window close];
 	[background close];
 	sRunningFullscreen = NO;
+#endif
 }
 
 @end
+
+#endif
+

@@ -16,7 +16,7 @@
 #import "ProVocTimer.h"
 
 #import <Carbon/Carbon.h>
-#import <QTKit/QTKit.h>
+// #import <QTKit/QTKit.h>
 
 #import "WindowExtensions.h"
 #import "StringExtensions.h"
@@ -814,8 +814,11 @@ static float sMinDifficulty, sDifficultyFactor, sDifficultyTemperature;
 			NSArray *modes = @[NSDefaultRunLoopMode, NSModalPanelRunLoopMode];
 			[self performSelector:@selector(playQuestionAudio:) withObject:nil afterDelay:0.0 inModes:modes];
 			if ([NSApp hasQTKit]) {
+                /*
+                 * TODO: QTKit no longer exists, find a replacement
 				QTMovieView *movieView = (QTMovieView *)[[[self testPanel] contentView] subviewOfClass:[QTMovieView class]];
 				[movieView performSelector:@selector(playIfVisible:) withObject:nil afterDelay:0.0 inModes:modes];
+                 */
 			}
 		}
 	}
@@ -2411,10 +2414,13 @@ static int sDimCount = 0;
 
 +(void)dimScreensHidingMenuBar:(BOOL)inHideMenuBar
 {
+    /*
+     * TODO: HideMenuBar(), ShowMenuBar() no longer exists, find a replacement
 	if (inHideMenuBar)
 		HideMenuBar();
 	else
 		ShowMenuBar();
+     */
 	if (sDimCount++ == 0) {
 		[[ProVocInspector sharedInspector] setInspectorHidden:YES];
 		NSEnumerator *enumerator = [[NSScreen screens] objectEnumerator];
@@ -2439,7 +2445,10 @@ static int sDimCount = 0;
 	if (--sDimCount == 0) {
 		[sDimWindows makeObjectsPerformSelector:@selector(orderOut:) withObject:nil];
 		[sDimWindows removeAllObjects];
-		ShowMenuBar();
+		/*
+         * TODO: HideMenuBar(), ShowMenuBar() no longer exists, find a replacement
+         ShowMenuBar();
+         */
 		[[ProVocInspector sharedInspector] setInspectorHidden:NO];
 	}
 }

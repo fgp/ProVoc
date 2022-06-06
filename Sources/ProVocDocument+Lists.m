@@ -22,7 +22,7 @@
 #import "ImageExtensions.h"
 #import "ExtendedCell.h"
 
-#import <QTKit/QTKit.h>
+// #import <QTKit/QTKit.h>
 
 static NSArray *sDraggedItems = nil;
 

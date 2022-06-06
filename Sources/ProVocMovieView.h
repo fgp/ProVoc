@@ -8,17 +8,23 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import <QTKit/QTKit.h>
+// Disabled because QTKit no longer exists
+// #import <QTKit/QTKit.h>
 
-@interface ProVocMovieView : QTMovieView
+// Changed base class from QTMovieView to NSView
+// TODO: Find a replacement for QTMovieView
+@interface ProVocMovieView : NSView
 
 -(IBAction)fullScreen:(id)inSender;
 
 @end
 
+/*
 @interface QTMovie (ProVocMovieView)
 
 -(NSSize)imageSize;
 -(void)displayInFullSize;
 
 @end
+*/
+

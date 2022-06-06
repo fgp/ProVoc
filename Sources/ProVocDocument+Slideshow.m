@@ -163,7 +163,7 @@ static BOOL sPlayPause;
 		bounds.origin.x += bounds.size.width;
 	}
 	NSRect rect = bounds;
-	NSSize size = [mMovie imageSize];
+    NSSize size = CGSizeZero; // [mMovie imageSize];
 	float k = MIN(320 / size.width, 240 / size.height);
 	if (k > 1.0) {
 		size.width *= k;
@@ -236,7 +236,10 @@ static BOOL sPlayPause;
 	return attributedString;
 }
 
-static QTMovieView *sMovieView = nil;
+/*
+ * TODO: QTKit no longer exists
+ static QTMovieView *sMovieView = nil;
+ */
 
 -(id)initWithFrame:(NSRect)inFrame strings:(NSArray *)inStrings swapFonts:(BOOL)inSwapFonts
 	image:(NSImage *)inImage movie:(id)inMovie
@@ -283,6 +286,8 @@ static QTMovieView *sMovieView = nil;
 		}
 		
 		if (mMovie) {
+            /*
+             *: TODO: QTKit no longer exists
 			if (!sMovieView) {
 				sMovieView = [[QTMovieView alloc] initWithFrame:NSMakeRect(0, 0, 200, 200)];
 				[sMovieView setPreservesAspectRatio:YES];
@@ -293,6 +298,7 @@ static QTMovieView *sMovieView = nil;
 			[sMovieView setMovie:mMovie];
 			[sMovieView performSelector:@selector(play:) withObject:nil afterDelay:0.0 inModes:@[NSDefaultRunLoopMode, NSModalPanelRunLoopMode, NSEventTrackingRunLoopMode]];
 			[self addSubview:sMovieView];
+             */
 		}
 	}
 	return self;
@@ -349,8 +355,11 @@ static QTMovieView *sMovieView = nil;
 	if ([inText isEqual:@" "])
 		if (mMovie) {
 			sSlideNumber--;
+            /*
+             * TODO: QTKit no longer exists
 			[sMovieView gotoBeginning:nil];
 			[sMovieView play:nil];
+             */
 		}
         else
         {
@@ -484,8 +493,11 @@ static SlideView *sSecondSlideView = nil;
 	}
 	[sSlide orderOut:nil];
 	[sSecondSlide orderOut:nil];
+    /*
+     * TODO: QTKit no longer exists
 	[sMovieView pause:nil];
 	[sMovieView removeFromSuperview];
+     */
 	[sSlideView release];
 	sSlideView = nil;
 	[sSlide setContentView:nil];
@@ -502,7 +514,7 @@ static SlideView *sSecondSlideView = nil;
 {
 	if ([[SlideShowSoundGenerator sharedGenerator] isPlaying])
 		return YES;
-	QTMovie *movie = [sMovieView movie];
+    QTMovie *movie = NULL; //[sMovieView movie];
 	if (movie && [movie rate] != 0)
 		return YES;
 	return NO;

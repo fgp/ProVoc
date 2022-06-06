@@ -13,7 +13,7 @@
 #import "MenuExtensions.h"
 #import "SpeechSynthesizerExtensions.h"
 
-#import <QTKit/QTKit.h>
+// #import <QTKit/QTKit.h>
 
 @interface NSObject (MCQViewDelegate)
 
@@ -62,23 +62,34 @@
 	return alignment;
 }
 
-static QTMovieView *sMovieView = nil;
+/*
+ * QTMovieView belongs to QTKit which no longer exists
+ static QTMovieView *sMovieView = nil;
+ */
 
 -(void)stopMovie
 {
+    /*
+     * Depends on QTKit which no longer exists
 	[sMovieView pause:nil];
 	[sMovieView removeFromSuperview];
+     */
 }
 
 -(void)playMovie:(id)inSender
 {
+    /*
+     * Depends on QTKit which no longer exists
 	if ([sMovieView superview])
 		[sMovieView play:nil];
+     */
 }
 
 -(void)startMovie:(id)inMovie inFrame:(NSRect)inFrame
 {
 	if (inMovie) {
+        /*
+         * TODO: Depends on QTKit which no longer exists
 		[sMovieView pause:nil];
 		if (!sMovieView) {
 			sMovieView = [[QTMovieView alloc] initWithFrame:NSMakeRect(0, 0, 200, 200)];
@@ -90,6 +101,7 @@ static QTMovieView *sMovieView = nil;
 		[sMovieView setFrame:inFrame];
 		[self addSubview:sMovieView];
 		[self performSelector:@selector(playMovie:) withObject:nil afterDelay:0.0 inModes:@[NSDefaultRunLoopMode, NSModalPanelRunLoopMode, NSEventTrackingRunLoopMode]];
+         */
 	} else
 		[self stopMovie];
 }

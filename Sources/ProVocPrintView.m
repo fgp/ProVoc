@@ -218,7 +218,7 @@
 		while (word = [wordEnumerator nextObject]) {
 			float top = [word[@"Top"] floatValue];
 			float height = [word[@"Height"] floatValue];
-			if (top + height >= NSMinY(inRect) || top <= NSMaxY(inRect))
+            if (top + height >= NSMinY(inRect) || top <= NSMaxY(inRect)) {
 				if (word[@"Page Seperator"]) {
 					NSRect r = NSMakeRect(0, top, mPaperSize.width, height + [self interWordMargin]);
 					NSAttributedString *string = [[NSAttributedString alloc] initWithString:word[@"Page Seperator"] attributes:[self stringAttributesForColumn:1]];
@@ -253,6 +253,7 @@
 						}
 					}
 				}
+            }
 		}
 	}
 }

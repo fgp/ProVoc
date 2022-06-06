@@ -108,7 +108,6 @@
 		A7285B930A1601AB0082642D /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7285B8E0A1601AB0082642D /* Carbon.framework */; };
 		A7285B940A1601AB0082642D /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7285B8F0A1601AB0082642D /* QTKit.framework */; };
 		A7285B950A1601AB0082642D /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7285B900A1601AB0082642D /* Quartz.framework */; };
-		A7285B960A1601AB0082642D /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7285B910A1601AB0082642D /* QuickTime.framework */; };
 		A7285E230A1603D00082642D /* action.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7285DF50A1603D00082642D /* action.tiff */; };
 		A7285E240A1603D00082642D /* add.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7285DF60A1603D00082642D /* add.tiff */; };
 		A7285E250A1603D00082642D /* album.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7285DF70A1603D00082642D /* album.tiff */; };
@@ -156,7 +155,7 @@
 		A7285E500A1603D00082642D /* Warning.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7285E220A1603D00082642D /* Warning.tiff */; };
 		A7285E530A1604190082642D /* iPod.scpt in Resources */ = {isa = PBXBuildFile; fileRef = A72857D90A1600000082642D /* iPod.scpt */; };
 		A737D5FB0ADDA1760008C421 /* ProVocSlideshowControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = A737D5F90ADDA1760008C421 /* ProVocSlideshowControlView.m */; };
-		A75018250DED23D400A83E3A /* ProVoc.mdimporter in CopyFiles */ = {isa = PBXBuildFile; fileRef = A750180D0DED23CE00A83E3A /* ProVoc.mdimporter */; };
+		A75018250DED23D400A83E3A /* ProVoc.mdimporter in CopyFiles */ = {isa = PBXBuildFile; fileRef = A750180D0DED23CE00A83E3A /* ProVoc.mdimporter */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		A7572B1A0A187FCB00E4912F /* ProVocSpotlighter.m in Sources */ = {isa = PBXBuildFile; fileRef = A7572B180A187FCB00E4912F /* ProVocSpotlighter.m */; };
 		A7572B230A1880AC00E4912F /* ProVocSpotlighter.nib in Resources */ = {isa = PBXBuildFile; fileRef = A7572B210A1880AC00E4912F /* ProVocSpotlighter.nib */; };
 		A7572E6D0A18CB5100E4912F /* ProVocTimerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7572E6B0A18CB5100E4912F /* ProVocTimerView.m */; };
@@ -173,9 +172,10 @@
 		A760F1C60A288B9B00C6128B /* ProVocViewOptions.nib in Resources */ = {isa = PBXBuildFile; fileRef = A760F1C40A288B9B00C6128B /* ProVocViewOptions.nib */; };
 		A76349B50A16054E00054021 /* ProVoc.icns in Resources */ = {isa = PBXBuildFile; fileRef = A76349B30A16054E00054021 /* ProVoc.icns */; };
 		A76349B60A16054E00054021 /* ProVocFile.icns in Resources */ = {isa = PBXBuildFile; fileRef = A76349B40A16054E00054021 /* ProVocFile.icns */; };
-		A76349DC0A1605ED00054021 /* PlugIns in CopyFiles */ = {isa = PBXBuildFile; fileRef = A72859E60A1601170082642D /* PlugIns */; };
+		A76349DC0A1605ED00054021 /* PlugIns in CopyFiles */ = {isa = PBXBuildFile; fileRef = A72859E60A1601170082642D /* PlugIns */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		A78A62AC0A895A220091CE4C /* ProVocDocument+WidgetLog.m in Sources */ = {isa = PBXBuildFile; fileRef = A78A62AA0A895A220091CE4C /* ProVocDocument+WidgetLog.m */; };
 		E2187E6117A1BCC500D75E78 /* SoundRecorderController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2187E6017A1BB1B00D75E78 /* SoundRecorderController.m */; };
+		F93831B5284E2F0200458F54 /* ProVocMovieView.m in Sources */ = {isa = PBXBuildFile; fileRef = A72857190A15FFA20082642D /* ProVocMovieView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -367,7 +367,6 @@
 		A7285B8E0A1601AB0082642D /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		A7285B8F0A1601AB0082642D /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		A7285B900A1601AB0082642D /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = /System/Library/Frameworks/Quartz.framework; sourceTree = "<absolute>"; };
-		A7285B910A1601AB0082642D /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
 		A7285DF50A1603D00082642D /* action.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = action.tiff; sourceTree = "<group>"; };
 		A7285DF60A1603D00082642D /* add.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = add.tiff; sourceTree = "<group>"; };
 		A7285DF70A1603D00082642D /* album.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = album.tiff; sourceTree = "<group>"; };
@@ -597,7 +596,6 @@
 				A7285B930A1601AB0082642D /* Carbon.framework in Frameworks */,
 				A7285B940A1601AB0082642D /* QTKit.framework in Frameworks */,
 				A7285B950A1601AB0082642D /* Quartz.framework in Frameworks */,
-				A7285B960A1601AB0082642D /* QuickTime.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,7 +619,6 @@
 				2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */,
 				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
 				A7285B900A1601AB0082642D /* Quartz.framework */,
-				A7285B910A1601AB0082642D /* QuickTime.framework */,
 				A7285B8F0A1601AB0082642D /* QTKit.framework */,
 			);
 			name = "Other Frameworks";
@@ -1196,6 +1193,7 @@
 				A72857240A15FFA20082642D /* ProVocHistoryView.m in Sources */,
 				A72857250A15FFA20082642D /* ProVocColoredWindowView.m in Sources */,
 				A72857260A15FFA20082642D /* ParameterBox.m in Sources */,
+				F93831B5284E2F0200458F54 /* ProVocMovieView.m in Sources */,
 				A72857270A15FFA20082642D /* ProVocImageView.m in Sources */,
 				A72857570A15FFB50082642D /* ProVocDocument.m in Sources */,
 				A72857580A15FFB50082642D /* ProVocDocument+Lists.m in Sources */,
@@ -1621,6 +1619,7 @@
 					"-weak_framework",
 					Quartz,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.arizona-software.provoc";
 				PRODUCT_NAME = ProVoc;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
@@ -1643,6 +1642,7 @@
 					"-weak_framework",
 					Quartz,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.arizona-software.provoc";
 				PRODUCT_NAME = ProVoc;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
@@ -1680,6 +1680,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
 			};
 			name = Debug;
 		};
@@ -1713,6 +1714,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
 			};
 			name = Release;
 		};

@@ -26,7 +26,7 @@
 			rect.origin.x = NSMaxX(screen) - rect.size.width - 40;
 			rect.origin.y = NSMaxY(screen) - rect.size.height - 40;
 		}
-		mWindow = [[NSPanel alloc] initWithContentRect:rect styleMask:NSBorderlessWindowMask backing:NSBackingStoreBuffered defer:NO];
+        mWindow = [[NSPanel alloc] initWithContentRect:rect styleMask:NSWindowStyleMaskBorderless backing:NSBackingStoreBuffered defer:NO];
 		rect = [[self window] constrainFrameRect:[mWindow frame] toScreen:[NSScreen mainScreen]];
 		[mWindow setFrame:rect display:NO];
 		[mWindow setLevel:NSModalPanelWindowLevel + 1];
