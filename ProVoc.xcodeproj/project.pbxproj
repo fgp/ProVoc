@@ -434,7 +434,6 @@
 		A76349B40A16054E00054021 /* ProVocFile.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ProVocFile.icns; sourceTree = "<group>"; };
 		A78A62A90A895A220091CE4C /* ProVocDocument+WidgetLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ProVocDocument+WidgetLog.h"; sourceTree = "<group>"; };
 		A78A62AA0A895A220091CE4C /* ProVocDocument+WidgetLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ProVocDocument+WidgetLog.m"; sourceTree = "<group>"; };
-		A7A067CF0A17CCBA007C25C4 /* IMPORTANT README.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = "IMPORTANT README.txt"; sourceTree = "<group>"; };
 		A7B125A80A1D50BD003B68B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7B125FC0A1D559F003B68B0 /* Automator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Automator.framework; path = /System/Library/Frameworks/Automator.framework; sourceTree = "<absolute>"; };
 		A7B126660A1D5700003B68B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -518,7 +517,6 @@
 		2A37F4AAFDCFA73011CA2CEA /* ProVoc */ = {
 			isa = PBXGroup;
 			children = (
-				A7A067CF0A17CCBA007C25C4 /* IMPORTANT README.txt */,
 				2A37F4ABFDCFA73011CA2CEA /* Classes */,
 				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,
 				2A37F4B8FDCFA73011CA2CEA /* Resources */,
