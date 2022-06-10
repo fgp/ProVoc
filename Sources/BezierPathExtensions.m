@@ -61,7 +61,14 @@ static void sGetAquaShadingComponents(void *info, const float *inData, float *ou
 
 static float sRanges[8] = {0, 1, 0, 1, 0, 1, 0, 1};
 
--(void)fillWithAngleInDegrees:(float)inDegrees info:(void *)inInfo callback:(CGFunctionEvaluateCallback)inCallback
+static void infoReleaseCallback(void *info)
+{
+    NSObject* obj = (NSObject*) info;
+    [obj release];
+}
+
+
+-(void)fillWithAngleInDegrees:(float)inDegrees info:(NSObject*)inInfo callback:(CGFunctionEvaluateCallback)inCallback
 {
     float alpha = inDegrees / 180.0 * M_PI;
     float dx = cos(alpha);
@@ -93,7 +100,8 @@ static float sRanges[8] = {0, 1, 0, 1, 0, 1, 0, 1};
     CGFunctionCallbacks callbacks;
     callbacks.version = 0;
     callbacks.evaluate = inCallback;
-    callbacks.releaseInfo = nil;
+    callbacks.releaseInfo = infoReleaseCallback;
+    [inInfo retain];
     CGFunctionRef function = CGFunctionCreate(inInfo, 1, sRanges, 4, sRanges, &callbacks);
 
     CGShadingRef shading = CGShadingCreateAxial(colorSpace, start, end, function, YES, YES);
