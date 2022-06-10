@@ -41,14 +41,14 @@
 
 @implementation NSBezierPath (Shading)
 
-static void sGetShadingComponents(void *info, const float *inData, float *outData)
+static void sGetShadingComponents(void *info, const double *inData, double *outData)
 {
 	NSArray *array = (NSArray *)info;
 	NSColor *color = [array[0] blendedColorWithFraction:*inData ofColor:array[1]];
     [color getRed:&outData[0] green:&outData[1] blue:&outData[2] alpha:&outData[3]];
 }
 
-static void sGetAquaShadingComponents(void *info, const float *inData, float *outData)
+static void sGetAquaShadingComponents(void *info, const double *inData, double *outData)
 {
 	NSColor *color = (NSColor *)info;
 	const float k = *inData;
@@ -59,14 +59,13 @@ static void sGetAquaShadingComponents(void *info, const float *inData, float *ou
     [color getRed:&outData[0] green:&outData[1] blue:&outData[2] alpha:&outData[3]];
 }
 
-static float sRanges[8] = {0, 1, 0, 1, 0, 1, 0, 1};
-
 static void infoReleaseCallback(void *info)
 {
     NSObject* obj = (NSObject*) info;
     [obj release];
 }
 
+static double sRanges[8] = {0, 1, 0, 1, 0, 1, 0, 1};
 
 -(void)fillWithAngleInDegrees:(float)inDegrees info:(NSObject*)inInfo callback:(CGFunctionEvaluateCallback)inCallback
 {
