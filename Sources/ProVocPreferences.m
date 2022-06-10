@@ -313,7 +313,7 @@
     NSToolbarItem *toolbarItem = [[[NSToolbarItem alloc] initWithItemIdentifier:inItemIdentifier] autorelease];
     
 	[toolbarItem setLabel:inItemIdentifier];
-	int index = [mPaneLabels indexOfObject:inItemIdentifier];
+	NSUInteger index = [mPaneLabels indexOfObject:inItemIdentifier];
 	[toolbarItem setImage:[NSImage imageNamed:mPaneImageNames[index]]];
 	[toolbarItem setTarget:self];
 	[toolbarItem setAction:@selector(selectPreferences:)];

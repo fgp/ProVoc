@@ -1061,7 +1061,7 @@ static int sNewWordLabel = 0;
     [currentPage addWord:word];
 	[self wordsDidChange];
     
-	unsigned rowIndex = [mVisibleWords indexOfObject:word];
+	NSUInteger rowIndex = [mVisibleWords indexOfObject:word];
 	if (rowIndex != NSNotFound) {
 //		[mWordTableView selectRow:rowIndex byExtendingSelection:NO];
 		[mWordTableView scrollRowToVisible:rowIndex];
