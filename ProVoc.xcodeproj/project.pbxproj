@@ -106,7 +106,6 @@
 		A72859E40A16010A0082642D /* ProVoc Help in Resources */ = {isa = PBXBuildFile; fileRef = A72859A30A16010A0082642D /* ProVoc Help */; };
 		A7285B920A1601AB0082642D /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7285B8D0A1601AB0082642D /* AddressBook.framework */; };
 		A7285B930A1601AB0082642D /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7285B8E0A1601AB0082642D /* Carbon.framework */; };
-		A7285B940A1601AB0082642D /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7285B8F0A1601AB0082642D /* QTKit.framework */; };
 		A7285B950A1601AB0082642D /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7285B900A1601AB0082642D /* Quartz.framework */; };
 		A7285E230A1603D00082642D /* action.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7285DF50A1603D00082642D /* action.tiff */; };
 		A7285E240A1603D00082642D /* add.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7285DF60A1603D00082642D /* add.tiff */; };
@@ -365,7 +364,6 @@
 		A72859E60A1601170082642D /* PlugIns */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PlugIns; sourceTree = SOURCE_ROOT; };
 		A7285B8D0A1601AB0082642D /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = /System/Library/Frameworks/AddressBook.framework; sourceTree = "<absolute>"; };
 		A7285B8E0A1601AB0082642D /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
-		A7285B8F0A1601AB0082642D /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		A7285B900A1601AB0082642D /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = /System/Library/Frameworks/Quartz.framework; sourceTree = "<absolute>"; };
 		A7285DF50A1603D00082642D /* action.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = action.tiff; sourceTree = "<group>"; };
 		A7285DF60A1603D00082642D /* add.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = add.tiff; sourceTree = "<group>"; };
@@ -481,7 +479,6 @@
 				8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */,
 				A7285B920A1601AB0082642D /* AddressBook.framework in Frameworks */,
 				A7285B930A1601AB0082642D /* Carbon.framework in Frameworks */,
-				A7285B940A1601AB0082642D /* QTKit.framework in Frameworks */,
 				A7285B950A1601AB0082642D /* Quartz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,7 +503,6 @@
 				2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */,
 				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
 				A7285B900A1601AB0082642D /* Quartz.framework */,
-				A7285B8F0A1601AB0082642D /* QTKit.framework */,
 			);
 			name = "Other Frameworks";
 			sourceTree = "<group>";
