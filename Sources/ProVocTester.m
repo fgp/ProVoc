@@ -193,6 +193,8 @@ static NSMutableArray *sCurrentTesters = nil;
 			}
 			break;
 		}
+		/*
+		 * QTKit was removed by Apple
 		case 118: // F4
 		{
 			ProVocMovieView *movieView = (ProVocMovieView *)[[[self testPanel] contentView] subviewOfClass:[ProVocMovieView class]];
@@ -205,6 +207,7 @@ static NSMutableArray *sCurrentTesters = nil;
 			}
 			break;
 		}
+		 */
 		default:
 			break;
 	}
@@ -1190,6 +1193,7 @@ static float sMinDifficulty, sDifficultyFactor, sDifficultyTemperature;
 
 -(BOOL)canGiveAnswer
 {
+    return YES;
 	return mShowingQuestionMedia && !mHidingQuestionText && !mShowingLateComment && !mShowingFullAnswer && !mShowingCorrectAnswer;
 }
 
@@ -1296,7 +1300,7 @@ static float sMinDifficulty, sDifficultyFactor, sDifficultyTemperature;
 
 -(NSMutableDictionary *)peekInfoForLearnedWord:(id)inWord
 {
-	int index = [mLearnedWords indexOfObject:inWord];
+    NSUInteger index = [mLearnedWords indexOfObject:inWord];
 	if (index != NSNotFound)
 		return mLearnedWordsInfo[index];
 	else
@@ -1310,7 +1314,7 @@ static float sMinDifficulty, sDifficultyFactor, sDifficultyTemperature;
 		mLearnedWords = [[NSMutableArray alloc] initWithCapacity:n];
 		mLearnedWordsInfo = [[NSMutableArray alloc] initWithCapacity:n];
 	}
-	int index = [mLearnedWords indexOfObject:inWord];
+    NSUInteger index = [mLearnedWords indexOfObject:inWord];
 	NSMutableDictionary *info;
 	if (index != NSNotFound)
 		info = mLearnedWordsInfo[index];
