@@ -196,7 +196,7 @@ Gw
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="875"/>
             <view key="contentView" autoresizesSubviews="NO" id="15" customClass="ProVocColoredWindowView">
                 <rect key="frame" x="0.0" y="0.0" width="641" height="550"/>
-                <autoresizingMask key="autoresizingMask"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <button verticalHuggingPriority="750" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9">
                         <rect key="frame" x="529" y="24" width="98" height="32"/>
@@ -699,7 +699,7 @@ Gw
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="875"/>
             <view key="contentView" autoresizesSubviews="NO" id="121" customClass="ProVocColoredWindowView">
                 <rect key="frame" x="0.0" y="0.0" width="640" height="550"/>
-                <autoresizingMask key="autoresizingMask"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <button verticalHuggingPriority="750" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="125">
                         <rect key="frame" x="528" y="24" width="98" height="32"/>
