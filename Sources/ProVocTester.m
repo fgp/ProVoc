@@ -2680,6 +2680,8 @@ static int sDimCount = 0;
 
 -(void)awakeFromNib
 {
+	/*
+	 * TODO: QTKit has been removed
 	if ([NSApp hasQTKit]) {
 		NSRect frame = [self bounds];
 		ProVocMovieView *movieView = [[ProVocMovieView alloc] initWithFrame:frame];
@@ -2692,6 +2694,7 @@ static int sDimCount = 0;
 		mMovieView = movieView;
 		[movieView release];
 	}
+	 */
 }
 
 -(float)preferredWidthForHeight:(float)inHeight
@@ -2705,19 +2708,22 @@ static int sDimCount = 0;
 -(void)setHidden:(BOOL)inFlag
 {
 	[super setHidden:inFlag];
+	/*
+	 * TODO: QTKit has been removed
 	if (inFlag)
 		[mMovieView pause:nil];
+	 */
 }
 
 -(void)stopMedia
 {
-	[mMovieView pause:nil];
+	// TODO: QTKit has been removed [mMovieView pause:nil];
 	[super stopMedia];
 }
 
 -(void)dealloc
 {
-	[mMovieView pause:nil];
+	// TODO: QTKit has been removed [mMovieView pause:nil];
 	[super dealloc];
 }
 
