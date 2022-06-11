@@ -34,7 +34,7 @@
 
 @class ProVocTimer;
 
-@interface ProVocTester : NSWindowController {
+@interface ProVocTester : NSWindowController <NSSpeechSynthesizerDelegate> {
     ProVocDocument *mProVocDocument;
 
         // Test du vocabulaire
