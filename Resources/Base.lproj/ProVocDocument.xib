@@ -75,7 +75,7 @@
                                                     <color key="backgroundColor" red="0.87843137250000003" green="0.92549019610000005" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                     <tableColumns>
-                                                        <tableColumn width="175.24951171875" minWidth="38.74951171875" maxWidth="1000" id="750">
+                                                        <tableColumn width="146.24951171875" minWidth="38.74951171875" maxWidth="1000" id="750">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Lessons">
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
@@ -265,7 +265,7 @@
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                                         <tableColumns>
-                                                                            <tableColumn width="354.06884765625" minWidth="40" maxWidth="1000" id="766" customClass="ProVocPresetTableColumn">
+                                                                            <tableColumn width="325.06884765625" minWidth="40" maxWidth="1000" id="766" customClass="ProVocPresetTableColumn">
                                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Training modes">
                                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                                     <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
@@ -484,7 +484,7 @@ DQ
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <clipView key="contentView" id="Ehi-kg-F0l">
                                                                 <rect key="frame" x="1" y="1" width="734" height="483"/>
-                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <tableView focusRingType="none" verticalHuggingPriority="750" tag="1" allowsExpansionToolTips="YES" alternatingRowBackgroundColors="YES" autosaveColumns="NO" headerView="1364" id="85" customClass="ProVocTableView">
                                                                         <rect key="frame" x="0.0" y="0.0" width="822" height="455"/>
@@ -1055,6 +1055,7 @@ DQ
                     </textFieldCell>
                 </textField>
             </subviews>
+            <point key="canvasLocation" x="25" y="-1041"/>
         </customView>
         <arrayController objectClassName="ProVocLabel" editable="NO" id="601" userLabel="Labels">
             <declaredKeys>
@@ -1630,7 +1631,7 @@ DQ
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <clipView key="contentView" id="TjW-Ee-sUZ">
                         <rect key="frame" x="1" y="1" width="102" height="81"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" emptySelection="NO" autosaveColumns="NO" rowHeight="14" id="1050">
                                 <rect key="frame" x="0.0" y="0.0" width="102" height="81"/>
@@ -1650,7 +1651,7 @@ DQ
                                             <binding destination="601" name="value" keyPath="arrangedObjects.image" id="1112"/>
                                         </connections>
                                     </tableColumn>
-                                    <tableColumn editable="NO" width="67" minWidth="4" maxWidth="1000" id="1053">
+                                    <tableColumn editable="NO" width="38" minWidth="4" maxWidth="1000" id="1053">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -1873,13 +1874,13 @@ DQ
                 <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1027">
                     <rect key="frame" x="80" y="638" width="102" height="22"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <popUpButtonCell key="cell" type="push" title="Version" bezelStyle="rounded" alignment="left" controlSize="small" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="1032" id="1304">
+                    <popUpButtonCell key="cell" type="push" title="Forward" bezelStyle="rounded" alignment="left" controlSize="small" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="1032" id="1304">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="smallSystem"/>
                         <menu key="menu" title="OtherViews" id="1028">
                             <items>
-                                <menuItem title="Version" state="on" id="1032"/>
-                                <menuItem title="Theme" tag="1" id="1033"/>
+                                <menuItem title="Forward" state="on" id="1032"/>
+                                <menuItem title="Reverse" tag="1" id="1033"/>
                                 <menuItem title="Both" tag="3" id="1029"/>
                                 <menuItem isSeparatorItem="YES" id="1030">
                                     <modifierMask key="keyEquivalentModifierMask" command="YES"/>
@@ -1933,6 +1934,7 @@ Answers in German.</string>
                     </connections>
                 </textField>
             </subviews>
+            <point key="canvasLocation" x="-405" y="-1085"/>
         </customView>
     </objects>
     <resources>
