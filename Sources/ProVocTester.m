@@ -810,7 +810,9 @@ static float sMinDifficulty, sDifficultyFactor, sDifficultyTemperature;
 
 -(void)displayQuestionMedia
 {
+	[self willChangeValueForKey:@"canGiveAnswer"];
 	mShowingQuestionMedia = YES;
+	[self didChangeValueForKey:@"canGiveAnswer"];
 	if (mMediaHideQuestion != 4 && ([self canPlayQuestionAudio] || [self image] || [self movie])) {
 		mHidingQuestionText = mMediaHideQuestion == 1;
 		if (mAutoPlayMedia) {
@@ -842,6 +844,7 @@ static float sMinDifficulty, sDifficultyFactor, sDifficultyTemperature;
 		[self willChangeValueForKey:@"audio"];
 		[self willChangeValueForKey:@"image"];
 		[self willChangeValueForKey:@"movie"];
+		[self willChangeValueForKey:@"canGiveAnswer"];
 
 		[mCurrentWord release];
 		mCurrentWord = nil;
@@ -869,6 +872,7 @@ static float sMinDifficulty, sDifficultyFactor, sDifficultyTemperature;
 		[self didChangeValueForKey:@"audio"];
 		[self didChangeValueForKey:@"image"];
 		[self didChangeValueForKey:@"movie"];
+		[self didChangeValueForKey:@"canGiveAnswer"];
 
 		[self updateWindowBackgroundColor];
         [mAnswerTextField setStringValue:@""];
@@ -1193,7 +1197,6 @@ static float sMinDifficulty, sDifficultyFactor, sDifficultyTemperature;
 
 -(BOOL)canGiveAnswer
 {
-    return YES;
 	return mShowingQuestionMedia && !mHidingQuestionText && !mShowingLateComment && !mShowingFullAnswer && !mShowingCorrectAnswer;
 }
 
