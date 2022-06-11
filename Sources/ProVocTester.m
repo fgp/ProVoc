@@ -128,26 +128,69 @@ enum {
 
 @implementation ProVocTester
 
+// Dictionary that contains for an observable (computed) key the
+// key paths that this key depends on.
+static NSDictionary* ProVocTesterKeyValueDependencies = nil;
+
 +(void)initialize
 {
+	if (!ProVocTesterKeyValueDependencies) {
+		ProVocTesterKeyValueDependencies = @{
+			@"progressMin": 				@[@"progress"],
+			@"progressMax": 				@[@"progress"],
+			@"progressValue": 				@[@"progress"],
+			@"progressTitle": 				@[@"progress"],
+			@"maxNoteIndex":				@[@"noteWords"],
+			@"multipleNote":				@[@"noteWords"],
+			@"questionFontSize":			@[@"font"],
+			@"answerFontSize":				@[@"font"],
+			@"questionWritingDirection": 	@[@"font"],
+			@"answerWritingDirection": 		@[@"font"],
+			@"sourceFontSize":				@[@"commentFont"],
+			@"targetFontSize":				@[@"commentFont"],
+			@"commentFontSize":				@[@"commentFont"],
+			@"sourceWritingDirection":		@[@"commentFont"],
+			@"targetWritingDirection":		@[@"commentFont"],
+			@"commentWritingDirection":		@[@"commentFont"],
+			@"canPlayQuestionAudio":		@[@"audio"],
+			@"canPlayAnswerAudio":			@[@"audio"],
+			@"questionAudioImage":			@[@"audio"],
+			@"answerAudioImage":			@[@"audio"]
+		};
+		[ProVocTesterKeyValueDependencies retain];
+	}
 }
 
 +(NSSet *)keyPathsForValuesAffectingValueForKey:(NSString *)key
 {
+	NSArray* deps = (NSArray*) [ProVocTesterKeyValueDependencies objectForKey:key];
+	if (deps)
+		return [[NSSet alloc] initWithArray:deps];
+
+	// TODO: Legacy, these seem the (mostly?) be the wrong way around
+
     NSMutableSet *affectedValuesKeyPaths = [NSMutableSet set];
-    
-    if ([key isEqualToString:@"progress"])
+	
+    /* if ([key isEqualToString:@"progress"])
         [affectedValuesKeyPaths addObjectsFromArray:@[@"progressMin",@"progressMax",@"progressValue",@"progressTitle"]];
-    else if ([key isEqualToString:@"displayCorrectAnswer"])
+    else */ if ([key isEqualToString:@"displayCorrectAnswer"])
         [affectedValuesKeyPaths addObjectsFromArray:@[@"canGiveAnswer",@"verifyTitle",@"correctAnswer",@"hideComment", @"hideLabel"]];
+	/*
     else if ([key isEqualToString:@"audio"])
         [affectedValuesKeyPaths addObjectsFromArray:@[@"canPlayQuestionAudio",@"canPlayAnswerAudio",@"questionAudioImage",@"answerAudioImage"]];
+	 */
+	/*
     else if ([key isEqualToString:@"noteWords"])
         [affectedValuesKeyPaths addObjectsFromArray:@[@"maxNoteIndex",@"multipleNote"]];
+	 */
+	/*
     else if ([key isEqualToString:@"font"])
         [affectedValuesKeyPaths addObjectsFromArray:@[@"questionFontSize",@"answerFontSize",@"questionWritingDirection",@"answerWritingDirection"]];
+	 */
+	/*
     else if ([key isEqualToString:@"commentFont"])
         [affectedValuesKeyPaths addObjectsFromArray:@[@"sourceFontSize",@"targetFontSize",@"commentFontSize",@"sourceWritingDirection",@"targetWritingDirection",@"commentWritingDirection"]];
+	 */
     else if ([key isEqualToString:@"movie"])
         [affectedValuesKeyPaths addObject:@"nonNilMovie"];
     else if ([key isEqualToString:@"hideQuestion"])
