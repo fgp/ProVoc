@@ -16,7 +16,7 @@ well-designed UI by the time it was abandoned.
 
 ## Releases
 
-[ProVoc Reboot v0.9 (based on 4.2.3)](https://github.com/fgp/ProVoc/releases/tag/v0.9-4.3.2reboot)
+[ProVoc Reboot v0.91 (based on 4.2.3)](https://github.com/fgp/ProVoc/releases/tag/v0.91-4.2.3reboot)
 
 ## Status
 
