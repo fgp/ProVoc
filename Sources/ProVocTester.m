@@ -128,14 +128,17 @@ enum {
 
 @implementation ProVocTester
 
-// Dictionary that contains for an observable (computed) key the
-// key paths that this key depends on.
-static NSDictionary* ProVocTesterKeyValueDependencies = nil;
-
 +(void)initialize
 {
-	if (!ProVocTesterKeyValueDependencies) {
-		ProVocTesterKeyValueDependencies = @{
+}
+
++(NSSet *)keyPathsForValuesAffectingValueForKey:(NSString *)key
+{
+	// Dictionary that contains for an observable (computed) key the
+	// key paths that this key depends on.
+	static NSDictionary* keyValueDependencies = nil;
+	if (!keyValueDependencies) {
+		keyValueDependencies = @{
 			@"progressMin": 				@[@"progress"],
 			@"progressMax": 				@[@"progress"],
 			@"progressValue": 				@[@"progress"],
@@ -155,54 +158,56 @@ static NSDictionary* ProVocTesterKeyValueDependencies = nil;
 			@"canPlayQuestionAudio":		@[@"audio"],
 			@"canPlayAnswerAudio":			@[@"audio"],
 			@"questionAudioImage":			@[@"audio"],
-			@"answerAudioImage":			@[@"audio"]
+			@"answerAudioImage":			@[@"audio"],
+			@"canGiveAnswer":				@[@"displayCorrectAnswer", @"hideQuestion",
+											  @"verifyTitle", @"hideComment"],
+			@"verifyTitle":					@[@"displayCorrectAnswer", @"hideQuestion",
+											  @"hideComment"],
+			@"correctAnswer":				@[@"displayCorrectAnswer"],
+			@"hideComment":					@[@"displayCorrectAnswer"],
+			@"hideLabel":					@[@"displayCorrectAnswer", @"hideComment"],
+			@"labelIndex":					@[@"flagged"],
+			@"question":					@[@"hideQuestion"]
 		};
-		[ProVocTesterKeyValueDependencies retain];
+		[keyValueDependencies retain];
 	}
-}
 
-+(NSSet *)keyPathsForValuesAffectingValueForKey:(NSString *)key
-{
-	NSArray* deps = (NSArray*) [ProVocTesterKeyValueDependencies objectForKey:key];
+	NSArray* deps = (NSArray*) [keyValueDependencies objectForKey:key];
 	if (deps)
 		return [[NSSet alloc] initWithArray:deps];
+	else
+		return [[NSSet alloc] init];
 
-	// TODO: Legacy, these seem the (mostly?) be the wrong way around
-
+#if 0
+	// Converted into ProVocTesterKeyValueDependencies
+	// NOTE: These seem to have been the wrong way around
     NSMutableSet *affectedValuesKeyPaths = [NSMutableSet set];
 	
-    /* if ([key isEqualToString:@"progress"])
+    if ([key isEqualToString:@"progress"])
         [affectedValuesKeyPaths addObjectsFromArray:@[@"progressMin",@"progressMax",@"progressValue",@"progressTitle"]];
-    else */ if ([key isEqualToString:@"displayCorrectAnswer"])
+    else if ([key isEqualToString:@"displayCorrectAnswer"])
         [affectedValuesKeyPaths addObjectsFromArray:@[@"canGiveAnswer",@"verifyTitle",@"correctAnswer",@"hideComment", @"hideLabel"]];
-	/*
     else if ([key isEqualToString:@"audio"])
         [affectedValuesKeyPaths addObjectsFromArray:@[@"canPlayQuestionAudio",@"canPlayAnswerAudio",@"questionAudioImage",@"answerAudioImage"]];
-	 */
-	/*
     else if ([key isEqualToString:@"noteWords"])
         [affectedValuesKeyPaths addObjectsFromArray:@[@"maxNoteIndex",@"multipleNote"]];
-	 */
-	/*
     else if ([key isEqualToString:@"font"])
         [affectedValuesKeyPaths addObjectsFromArray:@[@"questionFontSize",@"answerFontSize",@"questionWritingDirection",@"answerWritingDirection"]];
-	 */
-	/*
     else if ([key isEqualToString:@"commentFont"])
         [affectedValuesKeyPaths addObjectsFromArray:@[@"sourceFontSize",@"targetFontSize",@"commentFontSize",@"sourceWritingDirection",@"targetWritingDirection",@"commentWritingDirection"]];
-	 */
     else if ([key isEqualToString:@"movie"])
         [affectedValuesKeyPaths addObject:@"nonNilMovie"];
     else if ([key isEqualToString:@"hideQuestion"])
         [affectedValuesKeyPaths addObjectsFromArray:@[@"question", @"canGiveAnswer", @"verifyTitle"]];
     else if ([key isEqualToString:@"flagged"])
         [affectedValuesKeyPaths addObject:@"labelIndex"];
-    else if ([key isEqualToString:@"canGiveAnswer"])
+    else  if ([key isEqualToString:@"canGiveAnswer"])
         [affectedValuesKeyPaths addObject:@"verifyTitle"];
     else if ([key isEqualToString:@"hideComment"])
         [affectedValuesKeyPaths addObjectsFromArray:@[@"hideLabel", @"canGiveAnswer", @"verifyTitle"]];
 
     return affectedValuesKeyPaths;
+#endif
 }
 
 
