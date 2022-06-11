@@ -68,7 +68,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleGetInfoString</key>
-	<string>4.2.3, Copyright 2007 Arizona Software</string>
+	<string>4.2.3 reboot v0.91, Copyright 2007 Arizona Software</string>
 	<key>CFBundleHelpBookFolder</key>
 	<string>ProVoc Help</string>
 	<key>CFBundleHelpBookName</key>
@@ -84,11 +84,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>4.2.3</string>
+	<string>4.2.3-reboot-v0.91</string>
 	<key>CFBundleSignature</key>
 	<string>PVOC</string>
 	<key>CFBundleVersion</key>
-	<string>4.2.3</string>
+	<string>4.2.3 reboot v0.91</string>
 	<key>NSAppleScriptEnabled</key>
 	<string>YES</string>
 	<key>NSHumanReadableCopyright</key>
