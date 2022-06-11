@@ -69,22 +69,60 @@
 
 +(NSSet *)keyPathsForValuesAffectingValueForKey:(NSString *)key
 {
+	// Dictionary that contains for an observable (computed) key the
+	// key paths that this key depends on.
+	static NSDictionary* keyValueDependencies = nil;
+	if (!keyValueDependencies) {
+		keyValueDependencies = @{
+			@"randomTestDirection":				@[@"testDirection"],
+			@"testQuestionDescription":			@[@"testDirection", @"testDirectionProbability",
+												  @"sourceLanguage", @"targetLanguage"],
+			@"testAnswerDescription":			@[@"testDirection", @"testDirectionProbability",
+												  @"sourceLanguage", @"targetLanguage"],
+			@"sourceLanguageCaption":			@[@"sourceLanguage"],
+			@"displayWithSource":				@[@"sourceLanguage"],
+			@"targetLanguageCaption":			@[@"targetLanguage"],
+			@"displayWithTarget":				@[@"targetLanguage"],
+			@"startTestButtonTitle":			@[@"canResumeTest"],
+			@"canModifyTestParameters":			@[@"canResumeTest"],
+			@"hideTimerDuration": 				@[@"timer"],
+			@"selectedVoice":					@[@"voiceIdentifier"],
+			@"labelsDisplayed": 				@[@"displayLabels"],
+			@"pageSelectionTitle": 				@[@"labelsToTest", @"testMarked", @"testWordsToReview"],
+			@"rowHeight": 						@[@"sourceFontFamilyName", @"sourceFontSize", @"targetFontFamilyName",
+												  @"targetFontSize", @"commentFontFamilyName", @"commentFontSize"]
+		};
+		[keyValueDependencies retain];
+	}
+
+	NSArray* deps = (NSArray*) [keyValueDependencies objectForKey:key];
+	if (deps)
+		return [[NSSet alloc] initWithArray:deps];
+	else
+		return [[NSSet alloc] init];
+
+#if 0
+	// Converted into keyValueDependencies
+	// NOTE: These seem to have been the wrong way around
     NSMutableSet *affectedValuesKeyPaths = [NSMutableSet set];
     
     if ([key isEqualToString:@"testDirection"])
         [affectedValuesKeyPaths addObjectsFromArray:@[@"randomTestDirection",@"testQuestionDescription",@"testAnswerDescription"]];
     else if ([key isEqualToString:@"testDirectionProbability"])
         [affectedValuesKeyPaths addObjectsFromArray:@[@"testQuestionDescription",@"testAnswerDescription"]];
+
     else if ([key isEqualToString:@"sourceLanguage"])
         [affectedValuesKeyPaths addObjectsFromArray:@[@"testQuestionDescription",@"testAnswerDescription"]];
     else if ([key isEqualToString:@"targetLanguage"])
         [affectedValuesKeyPaths addObjectsFromArray:@[@"testQuestionDescription",@"testAnswerDescription"]];
+
     else if ([key isEqualToString:@"sourceLanguage"])
         [affectedValuesKeyPaths addObjectsFromArray:@[@"sourceLanguageCaption",@"displayWithSource"]];
     else if ([key isEqualToString:@"targetLanguage"])
         [affectedValuesKeyPaths addObjectsFromArray:@[@"targetLanguageCaption",@"displayWithTarget"]];
     else if ([key isEqualToString:@"canResumeTest"])
         [affectedValuesKeyPaths addObjectsFromArray:@[@"startTestButtonTitle",@"canModifyTestParameters"]];
+
     else if ([key isEqualToString:@"timer"])
         [affectedValuesKeyPaths addObject:@"hideTimerDuration"];
     else if ([key isEqualToString:@"voiceIdentifier"])
@@ -104,6 +142,7 @@
         [affectedValuesKeyPaths addObject:@"rowHeight"];
     
     return affectedValuesKeyPaths;
+#endif
 }
 
 -(id)init
