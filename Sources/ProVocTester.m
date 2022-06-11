@@ -681,7 +681,7 @@ int SORT_BY_NUMBER(id left, id right, void *info)
 
 -(NSString *)question
 {
-	if (mHidingQuestionText || mMediaHideQuestion == 2 && ([self canPlayQuestionAudio] || [self image] || [self movie]))
+	if (mHidingQuestionText || (mMediaHideQuestion == 2 && ([self canPlayQuestionAudio] || [self image] || [self movie])))
 		return @"";
     return !mDirection ? [mCurrentWord sourceWord] : [mCurrentWord targetWord];
 }
@@ -1228,8 +1228,15 @@ static float sMinDifficulty, sDifficultyFactor, sDifficultyTemperature;
 
 -(BOOL)displayComment
 {
-	if ((mLateComments == 1 || mLateComments == 3 && [self currentDirection] == 1 || mLateComments == 4 && [self currentDirection] == 0) && [[mCurrentWord comment] length] > 0 ||
-		(mDisplayLabels == 1 || mDisplayLabels == 3 && [self currentDirection] == 1 || mDisplayLabels == 4 && [self currentDirection] == 0) && [[mCurrentWord comment] length] > 0) {
+	if (   (((mLateComments == 1)
+		      || ((mLateComments == 3) && ([self currentDirection] == 1))
+		      || ((mLateComments == 4) && ([self currentDirection] == 0)))
+	        && ([[mCurrentWord comment] length] > 0))
+		|| (((mDisplayLabels == 1)
+			  || ((mDisplayLabels == 3) && ([self currentDirection] == 1))
+			  || ((mDisplayLabels == 4) && ([self currentDirection] == 0)))
+		    && ([[mCurrentWord comment] length] > 0)))
+	{
 		[self willChangeValueForKey:@"hideComment"];
 		mShowingLateComment = YES;
 		[self didChangeValueForKey:@"hideComment"];
@@ -1598,12 +1605,20 @@ static float sMinDifficulty, sDifficultyFactor, sDifficultyTemperature;
 
 -(BOOL)hideComment
 {
-	return mLateComments == 2 || (mLateComments == 1 || mLateComments == 3 && [self currentDirection] == 1 || mLateComments == 4 && [self currentDirection] == 0) && !mShowingLateComment && !mShowingCorrectAnswer;
+	return mLateComments == 2
+		|| ((mLateComments == 1
+			 || (mLateComments == 3 && [self currentDirection] == 1)
+			 || (mLateComments == 4 && [self currentDirection] == 0))
+			&& !mShowingLateComment && !mShowingCorrectAnswer);
 }
 
 -(BOOL)shouldHideLabel
 {
-	return mDisplayLabels == 2 || (mDisplayLabels == 1 || mDisplayLabels == 3 && [self currentDirection] == 1 || mDisplayLabels == 4 && [self currentDirection] == 0) && !mShowingLateComment && !mShowingCorrectAnswer;
+	return mDisplayLabels == 2
+		|| ((mDisplayLabels == 1
+			 || (mDisplayLabels == 3 && [self currentDirection] == 1)
+			 || (mDisplayLabels == 4 && [self currentDirection] == 0))
+			&& !mShowingLateComment && !mShowingCorrectAnswer);
 }
 
 -(BOOL)hideLabel
@@ -1889,7 +1904,7 @@ static float sMinDifficulty, sDifficultyFactor, sDifficultyTemperature;
 	ProVocWord *currentWord = [mCurrentWord word];
 	NSEnumerator *enumerator = [[self allWordsForNotes] objectEnumerator];
 	ProVocWord *word;
-	while (word = [[enumerator nextObject] word])
+	while ((word = [[enumerator nextObject] word]))
 		if (![currentWord isEqual:word]) {
 			NSString *answer = mDirection ? [word sourceWord] : [word targetWord];
 			if ([self isGenericString:string equalToWord:answer])
@@ -2312,8 +2327,12 @@ static float sMinDifficulty, sDifficultyFactor, sDifficultyTemperature;
 {
 	if (!mUseSpeechSynthesizer)
 		return NO;
-	return ![self currentDirection] && [self canSpeakLanguage:[mProVocDocument sourceLanguage]] && [[mCurrentWord sourceWord] length] > 0 ||
-			[self currentDirection] && [self canSpeakLanguage:[mProVocDocument targetLanguage]] && [[mCurrentWord targetWord] length] > 0;
+	return (![self currentDirection]
+			&& [self canSpeakLanguage:[mProVocDocument sourceLanguage]]
+			&& [[mCurrentWord sourceWord] length] > 0)
+		|| ([self currentDirection]
+			&& [self canSpeakLanguage:[mProVocDocument targetLanguage]]
+			&& [[mCurrentWord targetWord] length] > 0);
 }
 
 -(BOOL)canPlayQuestionAudio
@@ -2330,8 +2349,12 @@ static float sMinDifficulty, sDifficultyFactor, sDifficultyTemperature;
 {
 	if (!mUseSpeechSynthesizer)
 		return NO;
-	return [self currentDirection] && [self canSpeakLanguage:[mProVocDocument sourceLanguage]] && [[mCurrentWord sourceWord] length] > 0 ||
-			![self currentDirection] && [self canSpeakLanguage:[mProVocDocument targetLanguage]] && [[mCurrentWord targetWord] length] > 0;
+	return ([self currentDirection]
+			&& [self canSpeakLanguage:[mProVocDocument sourceLanguage]]
+			&& [[mCurrentWord sourceWord] length] > 0)
+		|| (![self currentDirection]
+			&& [self canSpeakLanguage:[mProVocDocument targetLanguage]]
+			&& [[mCurrentWord targetWord] length] > 0);
 }
 
 -(BOOL)canPlayAnswerAudio
