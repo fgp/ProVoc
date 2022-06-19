@@ -22,7 +22,7 @@ well-designed UI by the time it was abandoned.
 
 The current codebase compiles and runs on mac OS 12.4 Monterey for Intel
 CPUs. The code hasn't been tested on Apple Silicon, but likely compiles and
-runs their as well. Features related to video playback have been disabled,
+runs there as well. Features related to video playback have been disabled,
 because these were implemented through QTKit which has been removed from
 recent versions of mac OS by Apple. 
 
