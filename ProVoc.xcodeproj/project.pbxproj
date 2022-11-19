@@ -1377,6 +1377,7 @@
 				GCC_PREFIX_HEADER = Sources/ProVoc_Prefix.pch;
 				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					Quartz,
@@ -1400,6 +1401,7 @@
 				GCC_PREFIX_HEADER = Sources/ProVoc_Prefix.pch;
 				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					Quartz,
