@@ -46,7 +46,7 @@
 -(id)indexIdentifier
 {
 	if (mParent) {
-		int index = [[mParent children] indexOfObjectIdenticalTo:self];
+		NSUInteger index = [[mParent children] indexOfObjectIdenticalTo:self];
 		return [[mParent indexIdentifier] arrayByAddingObject:@(index)];
 	} else
 		return @[];
@@ -92,7 +92,7 @@
 
 -(id)indexIdentifier
 {
-	int index = [[mPage words] indexOfObjectIdenticalTo:self];
+	NSUInteger index = [[mPage words] indexOfObjectIdenticalTo:self];
 	return [[mPage indexIdentifier] arrayByAddingObject:@(index)];
 }
 

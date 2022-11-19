@@ -11,7 +11,7 @@
 
 @implementation ProVocHistory
 
-+(NSColor *)colorForRepetition:(int)inRepetition
++(NSColor *)colorForRepetition:(NSInteger)inRepetition
 {
 	switch (inRepetition) {
 		case 0:

@@ -14,7 +14,7 @@
 @interface ProVocTester (Extern)
 
 -(BOOL)canGiveAnswer;
--(int)maxNumberOfChoices;
+-(NSUInteger)maxNumberOfChoices;
 -(void)stopSpeaking;
 -(BOOL)canSpeakLanguage:(NSString *)inLanguage;
 -(int)currentDirection;
@@ -212,9 +212,9 @@
 	return mDirection ? mSources : mTargets;
 }
 
--(int)maxNumberOfChoices
+-(NSUInteger)maxNumberOfChoices
 {
-	int n = 0;
+	NSUInteger n = 0;
 	switch (mRequestedDirection) {
 		case 0:
 			n = [mTargets count];

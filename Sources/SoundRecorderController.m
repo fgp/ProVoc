@@ -12,7 +12,12 @@
 
 + (SoundRecorderController *)sharedGrabber;
 {
-    return [[NSObject alloc] init];
+    return [[SoundRecorderController alloc] init];
+}
+
++ (SoundRecorderController *)sharedController;
+{
+	return [[SoundRecorderController alloc] init];
 }
 
 - (NSString *)captureMovie;

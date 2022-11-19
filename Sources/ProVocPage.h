@@ -17,8 +17,8 @@
 
 -(void)addWord:(ProVocWord *)inWord;
 -(void)addWords:(NSArray *)inWords;
--(void)insertWord:(ProVocWord *)inWord atIndex:(int)inIndex;
--(void)insertWords:(NSArray *)inWords atIndex:(int)inIndex;
+-(void)insertWord:(ProVocWord *)inWord atIndex:(NSInteger)inIndex;
+-(void)insertWords:(NSArray *)inWords atIndex:(NSInteger)inIndex;
 
 -(void)removeWord:(ProVocWord *)inWord;
 -(void)removeWords:(NSArray *)inWords;

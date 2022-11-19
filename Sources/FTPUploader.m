@@ -19,7 +19,7 @@
 		mFile = [inFile retain];
 		NSDictionary *fileAttributes = [[NSFileManager defaultManager] fileAttributesAtPath:mFile traverseLink:YES];
 	    NSNumber *fileSize;
-	    if (fileSize = fileAttributes[NSFileSize])
+	    if ((fileSize = fileAttributes[NSFileSize]))
 			mFileSize = [fileSize longLongValue];
 		else {
 			NSLog(@"*** FTPUploader Error: %@ doesn't exist", mFile);
@@ -92,7 +92,7 @@
 
 -(void)countHashIn:(NSString *)inString
 {
-	int i, n = [inString length];
+	NSUInteger i, n = [inString length];
 	int c = 0;
 	for (i = 0; i < n; i++)
 		if ([inString characterAtIndex:i] == '#')

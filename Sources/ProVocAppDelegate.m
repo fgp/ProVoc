@@ -6,6 +6,7 @@
 //  Copyright (c) 2003 Arizona Software. All rights reserved.
 //
 
+#import "ProVocApplication.h"
 #import "ProVocAppDelegate.h"
 #import "ProVocPreferences.h"
 #import "ProVocDocument.h"
@@ -187,7 +188,7 @@
 				&& [[[NSDocumentController sharedDocumentController] recentDocumentURLs] count] > 0) {
 		NSString *check = [NSString stringWithContentsOfURL:[NSURL URLWithString:NSLocalizedString(@"Install Widget Check URL", @"")]];
 		if ([check isEqual:@"OK"]) {
-			int result = NSRunAlertPanel(NSLocalizedString(@"Install Widget Title", @""), NSLocalizedString(@"Install Widget Message", @""),
+			NSInteger result = NSRunAlertPanel(NSLocalizedString(@"Install Widget Title", @""), NSLocalizedString(@"Install Widget Message", @""),
 					NSLocalizedString(@"Install Widget Download Button", @""), NSLocalizedString(@"Install Widget Later Button", @""), NSLocalizedString(@"Install Widget Ignore Button", @""));
 			switch (result) {
 				case NSAlertDefaultReturn:

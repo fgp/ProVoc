@@ -290,7 +290,7 @@
 
 -(int)indexAtPosition:(NSPoint)inPoint
 {
-	int i, n = [mAnswers count];
+	NSUInteger i, n = [mAnswers count];
 	for (i = 0; i < n; i++)
 		if (NSPointInRect(inPoint, [self rectForChoiceAtIndex:i]))
 			return i;
@@ -308,7 +308,7 @@
 -(void)selectIndex:(int)inIndex playSound:(BOOL)inPlaySound
 {
 	BOOL soundPlayed = NO;
-	int index = MAX(0, MIN([mAnswers count] - 1, inIndex));
+	NSUInteger index = MAX(0, MIN([mAnswers count] - 1, inIndex));
 	if (mSelectedIndex != index && [self canSelectIndex:index]) {
 		if (mSelectedIndex >= 0)
 			[self setNeedsDisplayInRect:[self rectForChoiceAtIndex:mSelectedIndex]];

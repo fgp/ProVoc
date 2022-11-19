@@ -49,7 +49,7 @@
 +(NSString *)customBackgroundCompositionPath;
 +(void)setCustomBackgroundCompositionPath:(NSString *)inPath;
 
-+(int)indexOfCurrentBackgroundStyle;
++(NSInteger)indexOfCurrentBackgroundStyle;
 +(void)setIndexOfCurrentBackgroundStyle:(int)inIndex;
 
 +(ProVocBackgroundStyle *)currentBackgroundStyle;

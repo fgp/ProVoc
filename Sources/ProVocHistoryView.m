@@ -147,7 +147,7 @@
 	frame.origin.y += 30;
 	[self drawHorizontalGridInRect:frame];
 
-	int i, n = [mBins count];
+	NSUInteger i, n = [mBins count];
 	
 	static NSDictionary *attributes = nil;
 	if (!attributes) {
@@ -185,7 +185,7 @@
 			[transform concat];
 			NSDate *date = [bin date];
 			NSString *format = @"";
-			int ago = n - 1 - i;
+			NSInteger ago = n - 1 - i;
 			switch (mDisplay) {
 				case 0:
 					if ([date isToday])
@@ -193,7 +193,7 @@
 					else if ([date isYersterday])
 						format = NSLocalizedString(@"Yesterday Test Label Format", @"");
 					else
-						format = [NSString stringWithFormat:NSLocalizedString(@"%i Days Ago Test Label Format", @""), ago];
+						format = [NSString stringWithFormat:NSLocalizedString(@"%ld Days Ago Test Label Format", @""), (long)ago];
 					break;
 				case 1:
 					ago += floor(-[referenceDate timeIntervalSinceNow] / (24 * 60 * 60));
@@ -202,7 +202,7 @@
 					else if (ago == 1)
 						format = NSLocalizedString(@"Yesterday Day Label Format", @"");
 					else
-						format = [NSString stringWithFormat:NSLocalizedString(@"%i Days Ago Day Label Format", @""), ago];
+						format = [NSString stringWithFormat:NSLocalizedString(@"%ld Days Ago Day Label Format", @""), (long)ago];
 					break;
 				case 2:
 					ago += floor(-[referenceDate timeIntervalSinceNow] / (7 * 24 * 60 * 60));
@@ -211,7 +211,7 @@
 					else if (ago == 1)
 						format = NSLocalizedString(@"Last Week Week Label Format", @"");
 					else
-						format = [NSString stringWithFormat:NSLocalizedString(@"%i Weeks Ago Week Label Format", @""), ago];
+						format = [NSString stringWithFormat:NSLocalizedString(@"%ld Weeks Ago Week Label Format", @""), (long)ago];
 					break;
 				case 3:
 					ago += ([now year] * 12 + [now month]) - ([referenceDate year] * 12 + [referenceDate month]);
@@ -220,7 +220,7 @@
 					else if (ago == 1)
 						format = NSLocalizedString(@"Last Month Month Label Format", @"");
 					else
-						format = [NSString stringWithFormat:NSLocalizedString(@"%i Months Ago Month Label Format", @""), ago];
+						format = [NSString stringWithFormat:NSLocalizedString(@"%ld Months Ago Month Label Format", @""), (long)ago];
 					break;
 			}
 			NSString *label = [date descriptionWithCalendarFormat:format timeZone:nil locale:[[NSUserDefaults standardUserDefaults] dictionaryRepresentation]];
@@ -352,7 +352,7 @@
 	[NSGraphicsContext restoreGraphicsState];
 	int from = 0;
 	rect.size.height = 0;
-	int i, n = [mRepetitions count];
+	NSUInteger i, n = [mRepetitions count];
 	for (i = 0; i < n; i++) {
 		int count = [mRepetitions[i] intValue];
 		if (count > 0) {

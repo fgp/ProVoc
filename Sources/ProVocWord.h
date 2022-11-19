@@ -39,7 +39,7 @@
 -(int)mark;
 -(void)setMark:(int)inMark;
 -(int)label;
--(void)setLabel:(int)inLabel;
+-(void)setLabel:(NSInteger)inLabel;
 
 -(void)swapSourceAndTarget:(id)inSender;
 

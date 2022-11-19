@@ -17,6 +17,6 @@
 
 @interface NSImage (Badge)
 
-+(NSImage *)badgeImageWithNumber:(int)inNumber;
++(NSImage *)badgeImageWithNumber:(NSInteger)inNumber;
 
 @end

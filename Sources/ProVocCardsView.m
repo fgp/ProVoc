@@ -73,7 +73,7 @@
     return YES;
 }
 
--(NSRect)rectForPage:(int)inPage
+-(NSRect)rectForPage:(NSInteger)inPage
 {
 	NSRect rect = NSZeroRect;
 	rect.origin.y = (inPage - 1) * mPaperSize.height;
@@ -284,7 +284,8 @@
 							[string replaceCharactersInRange:NSMakeRange(0, [string length]) withString:recto ? [word sourceWord] : [word targetWord]];
 							[[self class] drawCardString:string withFontFamilyName:fontFamilyName fontSize:fontSize forRecto:recto ofWord:word ofDocument:mDocument inRect:cardRect];
 						} else {
-							for (recto = 0; recto < 2; recto++) {
+							for (int recto_i = 0; recto_i < 2; recto_i++) {
+								recto = (recto_i > 0);
 								NSMutableAttributedString *string = recto ? sourceString : targetString;
 								NSString *fontFamilyName = recto ? sourceFontFamilyName : targetFontFamilyName;
 								float fontSize = recto ? sourceFontSize : targetFontSize;
@@ -310,7 +311,7 @@
 										[path moveToPoint:NSMakePoint(NSMinX(cardRect), NSMidY(cardRect))];
 										[path relativeLineToPoint:NSMakePoint(cardRect.size.width, 0)];
 									}
-									const float pattern[2] = {4, 4};
+									const double pattern[2] = {4, 4};
 									[path setLineDash:pattern count:2 phase:0];
 									[path stroke];
 								}

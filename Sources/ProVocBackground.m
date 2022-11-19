@@ -156,7 +156,7 @@
     while (currPath = [searchPathEnum nextObject]) {
         NSDirectoryEnumerator *bundleEnum;
         NSString *currBundlePath;
-        if (bundleEnum = [[NSFileManager defaultManager] enumeratorAtPath:currPath])
+        if ((bundleEnum = [[NSFileManager defaultManager] enumeratorAtPath:currPath]))
             while (currBundlePath = [bundleEnum nextObject])
                 if ([[currBundlePath pathExtension] isEqualToString:@"qtz"] && [currBundlePath rangeOfString:@".pvback/"].location == NSNotFound)
 					[allBundles addObject:[currPath stringByAppendingPathComponent:currBundlePath]];
@@ -183,7 +183,7 @@
     while (currPath = [searchPathEnum nextObject]) {
         NSDirectoryEnumerator *bundleEnum;
         NSString *currBundlePath;
-        if (bundleEnum = [[NSFileManager defaultManager] enumeratorAtPath:currPath])
+        if ((bundleEnum = [[NSFileManager defaultManager] enumeratorAtPath:currPath]))
             while (currBundlePath = [bundleEnum nextObject])
                 if ([[currBundlePath pathExtension] isEqualToString:@"pvback"])
 					[allBundles addObject:[currPath stringByAppendingPathComponent:currBundlePath]];
@@ -241,7 +241,7 @@
 		[[ProVocBackground sharedBackground] setCompositionPath:path];
 }
 
-+(int)indexOfCurrentBackgroundStyle
++(NSInteger)indexOfCurrentBackgroundStyle
 {
 	return [[self availableBackgroundStyles] indexOfObjectIdenticalTo:[self currentBackgroundStyle]];
 }

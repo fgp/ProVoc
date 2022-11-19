@@ -629,12 +629,12 @@
 	mDisplayPages = inDisplay;
 }
 
--(int)mainTab
+-(NSInteger)mainTab
 {
 	return mMainTab;
 }
 
--(void)setMainTab:(int)inTab
+-(void)setMainTab:(NSInteger)inTab
 {
 	if (mMainTab != inTab) {
 		[self willChangeValueForKey:@"mainTab"];
@@ -745,7 +745,7 @@
 	if (action == @selector(modifyDifficulty:))
 		return [self isEditing] && [[self selectedWords] count] > 0;
 	if (action == @selector(setLabel:)) {
-		int label = [inItem tag];
+		NSInteger label = [inItem tag];
 		[inItem setImage:[self imageForLabel:label]];
 		[inItem setTitle:[self stringForLabel:label]];
 		return [self isEditing];
@@ -962,8 +962,8 @@ static ProVocDocument *sCurrentDocument = nil;
 {
 	[self willChangeData];
 	ProVocChapter *chapter = [mProVocData rootChapter];
-	int index = -1;
-	int row = [[mPageOutlineView selectedRowIndexes] lastIndex];
+	NSInteger index = -1;
+	NSUInteger row = [[mPageOutlineView selectedRowIndexes] lastIndex];
 	id selection = [mPageOutlineView itemAtRow:row];
 	if (selection) {
 		if ([selection isKindOfClass:[ProVocChapter class]])
@@ -1079,7 +1079,7 @@ static ProVocDocument *sCurrentDocument = nil;
 	[self didChangeData];
 }
 
-static int sNewWordLabel = 0;
+static NSInteger sNewWordLabel = 0;
 
 -(IBAction)addNewWord:(id)inSender
 {
@@ -1125,7 +1125,7 @@ static int sNewWordLabel = 0;
 	[self visibleWordsDidChange];
 }
 
--(NSString *)searchCategoryForTag:(int)inTag
+-(NSString *)searchCategoryForTag:(NSInteger)inTag
 {
 	switch (inTag) {
 		case 0:
@@ -1182,7 +1182,7 @@ static int sNewWordLabel = 0;
 
 -(IBAction)setLabel:(id)inSender
 {
-	int label = [inSender tag];
+	NSInteger label = [inSender tag];
 	NSArray *words = [self selectedWords];
 	if ([words count] > 0) {
 		[self willChangeData];
@@ -1357,7 +1357,7 @@ static int sNewWordLabel = 0;
 
 #pragma mark -
 
-int SORT_BY_DIFFICULT(id left, id right, void *info)
+NSInteger SORT_BY_DIFFICULT(id left, id right, void *info)
 {
 	float diffA = [left difficulty];
 	float diffB = [right difficulty];
@@ -1412,7 +1412,7 @@ int SORT_BY_DIFFICULT(id left, id right, void *info)
 				[wordsToTest sortUsingFunction:SORT_BY_DIFFICULT context:nil];
 				break;
 		}
-		int n = MAX(1, mTestLimitNumber);
+		NSInteger n = MAX(1, mTestLimitNumber);
 		n = MIN(n, [wordsToTest count]);
 		wordsToTest = [wordsToTest objectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, n)]];
 	}
@@ -1466,7 +1466,7 @@ int SORT_BY_DIFFICULT(id left, id right, void *info)
 	NSArray *words = [self wordsToBeTested];
     if ([words count] == 0) {
 		if ([[self allWords] count] == 0) {
-			int returnCode = NSRunAlertPanel(NSLocalizedString(@"No Word To Test Empty Document Alert Title", @""),
+			NSInteger returnCode = NSRunAlertPanel(NSLocalizedString(@"No Word To Test Empty Document Alert Title", @""),
 											NSLocalizedString(@"No Word To Test Empty Document Alert Message", @""),
 											NSLocalizedString(@"No Word To Test Empty Document OK Button", @""),
 											NSLocalizedString(@"No Word To Test Empty Document Help Button", @""),
@@ -1634,7 +1634,7 @@ int SORT_BY_DIFFICULT(id left, id right, void *info)
 	return mTestDirection == 2;
 }
 
--(int)numberOfRetries
+-(NSInteger)numberOfRetries
 {
 	return mNumberOfRetries;
 }
@@ -1828,9 +1828,9 @@ int SORT_BY_DIFFICULT(id left, id right, void *info)
 	return voices;
 }
 
--(int)selectedVoice
+-(NSInteger)selectedVoice
 {
-	int index = [[self availableVoiceIdentifiers] indexOfObject:[self voiceIdentifier]];
+	NSInteger index = [[self availableVoiceIdentifiers] indexOfObject:[self voiceIdentifier]];
 	if (index == NSNotFound)
 		return 0;
 	else
@@ -2336,7 +2336,7 @@ int SORT_BY_DIFFICULT(id left, id right, void *info)
 -(void)setSourceWritingDirection:(NSWritingDirection)inDirection
 {
 	[self willChangeValueForKey:@"sourceWritingDirection"];
-	mGlobalPreferences[@"sourceWritingDirection"] = [NSNumber numberWithInt:inDirection];
+	mGlobalPreferences[@"sourceWritingDirection"] = [NSNumber numberWithLong:inDirection];
 	[self didChangeValueForKey:@"sourceWritingDirection"];
 	[self documentParameterDidChange:nil];
 	[self writingDirectionDidChange];
@@ -2403,7 +2403,7 @@ int SORT_BY_DIFFICULT(id left, id right, void *info)
 -(void)setTargetWritingDirection:(NSWritingDirection)inDirection
 {
 	[self willChangeValueForKey:@"targetWritingDirection"];
-	mGlobalPreferences[@"targetWritingDirection"] = [NSNumber numberWithInt:inDirection];
+	mGlobalPreferences[@"targetWritingDirection"] = [NSNumber numberWithLong:inDirection];
 	[self didChangeValueForKey:@"targetWritingDirection"];
 	[self documentParameterDidChange:nil];
 	[self writingDirectionDidChange];
@@ -2470,7 +2470,7 @@ int SORT_BY_DIFFICULT(id left, id right, void *info)
 -(void)setCommentWritingDirection:(NSWritingDirection)inDirection
 {
 	[self willChangeValueForKey:@"commentWritingDirection"];
-	mGlobalPreferences[@"commentWritingDirection"] = [NSNumber numberWithInt:inDirection];
+	mGlobalPreferences[@"commentWritingDirection"] = [NSNumber numberWithLong:inDirection];
 	[self didChangeValueForKey:@"commentWritingDirection"];
 	[self documentParameterDidChange:nil];
 	[self writingDirectionDidChange];
@@ -2609,7 +2609,7 @@ int SORT_BY_DIFFICULT(id left, id right, void *info)
 	[self didChangeHistories];
 }
 
--(int)numberOfHistories
+-(NSInteger)numberOfHistories
 {
 	return [mHistories count];
 }

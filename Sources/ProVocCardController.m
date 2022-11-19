@@ -72,7 +72,7 @@
 	[self setValue:@0 forKey:inKey];
 }
 
--(int)wordCount
+-(NSInteger)wordCount
 {
 	return [mWords count];
 }
@@ -97,7 +97,7 @@
 	NSString *frame = [[NSUserDefaults standardUserDefaults] objectForKey:@"CardControllerWindowFrameV2"];
 	if (frame)
 		[[self window] setFrame:NSRectFromString(frame) display:NO];
-	int returnCode = [NSApp runModalForWindow:[self window]];
+	NSModalResponse returnCode = [NSApp runModalForWindow:[self window]];
 	[[self window] orderOut:nil];
 	[[NSUserDefaults standardUserDefaults] setObject:NSStringFromRect([[self window] frame]) forKey:@"CardControllerWindowFrameV2"];
 	return returnCode == NSOKButton;
@@ -318,7 +318,7 @@
 			[path moveToPoint:NSMakePoint(NSMinX(rect), floor(NSMidY(rect)) + 0.5)];
 			[path relativeLineToPoint:NSMakePoint(rect.size.width, 0)];
 		}
-		const float pattern[2] = {4, 4};
+		const double pattern[2] = {4, 4};
 		[path setLineDash:pattern count:2 phase:0];
 		if ([[NSUserDefaults standardUserDefaults] boolForKey:ProVocCardDisplayFrames])
 			[path stroke];

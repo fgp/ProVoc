@@ -105,7 +105,7 @@
 			[mWordTableView sizeToFit];
 	} else {
 		BOOL found = NO;
-		int previousColumn = -1;
+		NSInteger previousColumn = -1;
 		NSEnumerator *enumerator = [[self togglableColumnIdentifiers] reverseObjectEnumerator];
 		NSString *identifier;
 		while (identifier = [enumerator nextObject])

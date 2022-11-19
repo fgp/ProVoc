@@ -16,8 +16,8 @@
 
 -(void)addChild:(id)inChild;
 -(void)addChildren:(NSArray *)inChildren;
--(void)insertChild:(id)inChild atIndex:(int)inIndex;
--(void)insertChildren:(NSArray *)inChildren atIndex:(int)inIndex;
+-(void)insertChild:(id)inChild atIndex:(NSUInteger)inIndex;
+-(void)insertChildren:(NSArray *)inChildren atIndex:(NSUInteger)inIndex;
 -(void)removeChild:(id)inChild;
 
 -(NSArray *)children;

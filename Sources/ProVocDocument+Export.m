@@ -34,7 +34,7 @@
 
 @interface ProVocDocument (Extern)
 
--(void)insertChildren:(NSArray *)inChildren item:(id)inItem atIndex:(int)inIndex;
+-(void)insertChildren:(NSArray *)inChildren item:(id)inItem atIndex:(NSInteger)inIndex;
 
 @end
 
@@ -262,13 +262,13 @@
 {
 	NSArray *pages = nil;
 	if ([inFile isKindOfClass:[ProVocText class]])
-		if (pages = [self pagesFromString:[(ProVocText *)inFile contents] defaultName:NSLocalizedString(@"Imported Lesson Default Name", @"")])
+		if ((pages = [self pagesFromString:[(ProVocText *)inFile contents] defaultName:NSLocalizedString(@"Imported Lesson Default Name", @"")]))
 			return pages;
-	if (pages = [self pagesFromProVocFile:inFile])
+	if ((pages = [self pagesFromProVocFile:inFile]))
 		return pages;
-	if (pages = [self pagesFromCSVFile:inFile])
+	if ((pages = [self pagesFromCSVFile:inFile]))
 		return pages;
-	if (pages = [self pagesFromTextFile:inFile])
+	if ((pages = [self pagesFromTextFile:inFile]))
 		return pages;
 	return nil;
 }
@@ -325,7 +325,7 @@
 		NSRunInformationalAlertPanel(NSLocalizedString(@"No Word To Submit Title", @""), NSLocalizedString(@"No Word To Submit Message", @""), nil, nil, nil);
 		return;
 	}
-	int returnCode = NSAlertOtherReturn;
+	NSInteger returnCode = NSAlertOtherReturn;
 	if ([self isDocumentEdited])
 		returnCode = NSRunInformationalAlertPanel(NSLocalizedString(@"Submit Modified Title", @""), NSLocalizedString(@"Submit Modified Message", @""), NSLocalizedString(@"Submit Save Button", @""), NSLocalizedString(@"Submit Cancel Button", @""), nil);
 	else if (![self fileName])

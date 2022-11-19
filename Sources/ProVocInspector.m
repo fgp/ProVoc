@@ -439,7 +439,7 @@
 {
 	if ([NSApp systemVersion] < 0x1050)
     {
-		int result = NSRunAlertPanel(NSLocalizedString(@"Leopard Only Feature Title", @""), NSLocalizedString(@"Leopard Only Feature Message", @""), NSLocalizedString(@"OK", @""), NSLocalizedString(@"Leopard Only Feature Download Button", @""), nil);
+		NSInteger result = NSRunAlertPanel(NSLocalizedString(@"Leopard Only Feature Title", @""), NSLocalizedString(@"Leopard Only Feature Message", @""), NSLocalizedString(@"OK", @""), NSLocalizedString(@"Leopard Only Feature Download Button", @""), nil);
 		if (result == NSAlertAlternateReturn) {
 			[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:NSLocalizedString(@"Leopard Only Feature Download URL", @"")]];
 		}

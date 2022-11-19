@@ -49,12 +49,12 @@
 	[self insertChildren:inChildren atIndex:[[self children] count]];
 }
 
--(void)insertChild:(id)inChild atIndex:(int)inIndex
+-(void)insertChild:(id)inChild atIndex:(NSUInteger)inIndex
 {
 	[self insertChildren:@[inChild] atIndex:inIndex];
 }
 
--(void)insertChildren:(NSArray *)inChildren atIndex:(int)inIndex
+-(void)insertChildren:(NSArray *)inChildren atIndex:(NSUInteger)inIndex
 {
 	NSEnumerator *enumerator = [inChildren reverseObjectEnumerator];
 	id child;

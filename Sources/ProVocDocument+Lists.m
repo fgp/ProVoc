@@ -45,7 +45,7 @@ static NSArray *sDraggedItems = nil;
 		return nil;
 }
 
--(int)outlineView:(NSOutlineView *)inOutlineView numberOfChildrenOfItem:(id)inItem
+-(NSInteger)outlineView:(NSOutlineView *)inOutlineView numberOfChildrenOfItem:(id)inItem
 {
 	id item = [self itemForOutlineView:inOutlineView item:inItem];
 	if ([item respondsToSelector:@selector(children)])
@@ -200,7 +200,7 @@ static NSArray *sDraggedItems = nil;
 	return NO;
 }
 
--(void)insertChildren:(NSArray *)inChildren item:(id)inItem atIndex:(int)inIndex
+-(void)insertChildren:(NSArray *)inChildren item:(id)inItem atIndex:(NSInteger)inIndex
 {
 	[self willChangeData];
 	[inItem insertChildren:inChildren atIndex:inIndex];
@@ -209,7 +209,7 @@ static NSArray *sDraggedItems = nil;
 	NSEnumerator *enumerator = [inChildren objectEnumerator];
 	BOOL extend = NO;
 	id item;
-	int row = -1;
+	NSInteger row = -1;
 	while (item = [enumerator nextObject]) {
 		[mPageOutlineView selectRow:row = [mPageOutlineView rowForItem:item] byExtendingSelection:extend];
 		extend = YES;
@@ -218,7 +218,7 @@ static NSArray *sDraggedItems = nil;
 	[self didChangeData];
 }
 
--(BOOL)outlineView:(NSOutlineView *)inOutlineView acceptDrop:(id <NSDraggingInfo>)inInfo item:(id)inItem childIndex:(int)inIndex
+-(BOOL)outlineView:(NSOutlineView *)inOutlineView acceptDrop:(id <NSDraggingInfo>)inInfo item:(id)inItem childIndex:(NSInteger)inIndex
 {
 	id draggedItems = [sDraggedItems autorelease];
 	sDraggedItems = nil;
@@ -228,7 +228,7 @@ static NSArray *sDraggedItems = nil;
 
 	if ([[inInfo draggingPasteboard] availableTypeFromArray:@[ProVocSourcesType, ProVocSelfSourcesType]]) {
 		id item = inItem ? inItem : [mProVocData rootChapter];
-		int index = inIndex >= 0 ? inIndex : [[item children] count];
+		NSInteger index = inIndex >= 0 ? inIndex : [[item children] count];
 		
 		if (!copy && [[inInfo draggingPasteboard] availableTypeFromArray:@[ProVocSelfSourcesType]]) {
 			NSEnumerator *enumerator = [draggedItems reverseObjectEnumerator];
@@ -282,7 +282,7 @@ static NSArray *sDraggedItems = nil;
 				[chapter insertChild:page atIndex:[[chapter children] count]];
 				[self pagesDidChange];
 				[mPageOutlineView expandItem:page];
-				int row = [mPageOutlineView rowForItem:page];
+				NSInteger row = [mPageOutlineView rowForItem:page];
 				[mPageOutlineView selectRow:row byExtendingSelection:NO];
 				[mPageOutlineView scrollRowToVisible:row];
 			}
@@ -312,7 +312,7 @@ static NSArray *sDraggedItems = nil;
 		id item = [inOutlineView itemAtRow:[inOutlineView selectedRow]];
 		if (!item)
 			item = [mProVocData rootChapter];
-		int index;
+		NSInteger index;
 		if ([item isKindOfClass:[ProVocChapter class]])
 			index = [[item children] count];
 		else {
@@ -343,7 +343,7 @@ static NSArray *sDraggedItems = nil;
 	return [self showingAllWords] && [self canAddWord];
 }
 
--(int)numberOfRowsInTableView:(NSTableView *)inTableView
+-(NSInteger)numberOfRowsInTableView:(NSTableView *)inTableView
 {
 	if (inTableView == mPresetTableView)
 		return [[self presets] count];
@@ -506,15 +506,15 @@ static NSArray *sDraggedItems = nil;
 		return NO;
 }
 
--(void)insertWords:(NSArray *)inWords row:(int)inRow
+-(void)insertWords:(NSArray *)inWords row:(NSInteger)inRow
 {
-	int index;
+	NSInteger index;
 	ProVocPage *page;
 	if ([mVisibleWords count] == 0) {
 		page = [self currentPage];
 		index = 0;
 	} else {
-		int row = inRow;
+		NSInteger row = inRow;
 		BOOL above = YES;
 		if (row == [mVisibleWords count]) {
 			row--;
@@ -534,7 +534,7 @@ static NSArray *sDraggedItems = nil;
 
 	NSEnumerator *enumerator = [inWords objectEnumerator];
 	BOOL extend = NO;
-	int row = -1;
+	NSInteger row = -1;
 	ProVocWord *word;
 	while (word = [enumerator nextObject]) {
 		[mWordTableView selectRow:row = [mVisibleWords indexOfObjectIdenticalTo:word] byExtendingSelection:extend];
@@ -593,7 +593,7 @@ static NSArray *sDraggedItems = nil;
 						[self setImageFile:fileName ofWord:mVisibleWords[inRow]];
 						return YES;
 					} else if ([[NSSound soundUnfilteredFileTypes] containsObject:fileType]) {
-						int column = [mWordTableView columnAtPoint:[mWordTableView convertPoint:[inInfo draggingLocation] fromView:nil]];
+						NSInteger column = [mWordTableView columnAtPoint:[mWordTableView convertPoint:[inInfo draggingLocation] fromView:nil]];
 						if (column >= 0) {
 							NSString *columnIdentifier = [[mWordTableView tableColumns][column] identifier];
 							if ([columnIdentifier isEqual:@"Source"] || [columnIdentifier isEqual:@"Target"]) {
@@ -620,7 +620,7 @@ static NSArray *sDraggedItems = nil;
 
 -(void)tableView:(NSTableView *)inTableView pasteFromPasteboard:(NSPasteboard *)inPasteboard
 {
-	unsigned row = [[inTableView selectedRowIndexes] lastIndex];
+	NSUInteger row = [[inTableView selectedRowIndexes] lastIndex];
 	if (row == NSNotFound)
 		row = [mVisibleWords count];
 	else
@@ -668,7 +668,7 @@ static NSArray *sDraggedItems = nil;
 
 -(NSImage *)tableView:(NSTableView *)inTableView dragImageBadgeForRowIndexes:(NSIndexSet *)inIndexSet
 {
-	int n = [inIndexSet count];
+	NSInteger n = [inIndexSet count];
 	if ([self displayExtraRowInTableView:inTableView] && [inIndexSet containsIndex:[self numberOfRowsInTableView:inTableView] - 1])
 		n--;
 	return n > 1 ? [NSImage badgeImageWithNumber:n] : nil;
@@ -676,7 +676,7 @@ static NSArray *sDraggedItems = nil;
 
 -(NSMenu *)tableView:(NSTableView *)inTableView menuForEvent:(NSEvent *)inEvent
 {
-	int row = [inTableView rowAtPoint:[inTableView convertPoint:[inEvent locationInWindow] fromView:nil]];
+	NSInteger row = [inTableView rowAtPoint:[inTableView convertPoint:[inEvent locationInWindow] fromView:nil]];
 	if (row >= 0 && row < [mVisibleWords count] && ![[inTableView selectedRowIndexes] containsIndex:row])
 		[inTableView selectRow:row byExtendingSelection:([inEvent modifierFlags] & NSShiftKeyMask) != 0];
 	NSMenu *menu = [[[NSMenu alloc] initWithTitle:@""] autorelease];
@@ -709,12 +709,12 @@ static NSArray *sSelectedWords = nil;
 	if (!sSelectedWords)
 		return;
 		
-	unsigned firstRow = NSNotFound, lastRow = NSNotFound;
+	NSUInteger firstRow = NSNotFound, lastRow = NSNotFound;
 	BOOL extend = NO;
 	NSEnumerator *enumerator = [sSelectedWords objectEnumerator];
 	id word;
 	while (word = [enumerator nextObject]) {
-		unsigned row = [mVisibleWords indexOfObjectIdenticalTo:word];
+		NSUInteger row = [mVisibleWords indexOfObjectIdenticalTo:word];
 		if (row != NSNotFound) {
 			[mWordTableView selectRow:row byExtendingSelection:extend];
 			lastRow = row;
@@ -866,16 +866,16 @@ static NSArray *sSelectedWords = nil;
 -(NSString *)wordSelectionTitle
 {
 	NSString *title;
-	int total = [mWords count];
+	NSInteger total = [mWords count];
 	if (total == 0)
 		title = NSLocalizedString(@"No word", @"");
 	else if (total == 1)
-		title = [NSString stringWithFormat:NSLocalizedString(@"%i word", @""), total];
+		title = [NSString stringWithFormat:NSLocalizedString(@"%ld word", @""), (long)total];
 	else
-		title = [NSString stringWithFormat:NSLocalizedString(@"%i words", @""), total];
-	int visible = [mVisibleWords count];
+		title = [NSString stringWithFormat:NSLocalizedString(@"%ld words", @""), (long)total];
+	NSInteger visible = [mVisibleWords count];
 	if (visible != total)
-		title = [NSString stringWithFormat:NSLocalizedString(@"%i of %@", @""), visible, title];
+		title = [NSString stringWithFormat:NSLocalizedString(@"%ld of %@", @""), (long)visible, title];
 	return title;
 }
 
@@ -903,8 +903,8 @@ static BOOL sKeepOnDoubleWordSearch = YES;
 	NSMutableSet *doubles = [NSMutableSet set];
 	ProVocSilentTester *tester = [[[ProVocSilentTester alloc] initWithDocument:self] autorelease];
 	
-	int pass, i, j, n = [inWords count];
-	int count = 0, total = n * (n - 1);
+	NSInteger pass, i, j, n = [inWords count];
+	NSInteger count = 0, total = n * (n - 1);
 	for (pass = 0; pass < 2 && sKeepOnDoubleWordSearch; pass++) {
 		[tester setLanguage:pass == 0 ? [self sourceLanguage] : [self targetLanguage]];
 		for (i = 0; i < n && sKeepOnDoubleWordSearch; i++) {
@@ -980,7 +980,7 @@ static BOOL sKeepOnDoubleWordSearch = YES;
 	while (word = [enumerator nextObject]) {
 		NSMutableArray *itemsToExpand = [NSMutableArray array];
 		id item = [word page];
-		int index;
+		NSInteger index;
 		for (;;) {
 			index = [mPageOutlineView rowForItem:item];
 			if (index >= 0)
@@ -1007,10 +1007,10 @@ static BOOL sKeepOnDoubleWordSearch = YES;
 
 typedef struct { id identifier; BOOL descending; id determinents; BOOL ignoreCase; BOOL ignoreAccents; } SortContext;
 
-int ORDER_BY_CONTEXT (id left, id right, void *ctxt)
+NSInteger ORDER_BY_CONTEXT (id left, id right, void *ctxt)
 {
 	SortContext *context = (SortContext *)ctxt;
-	int order = 0;
+	NSInteger order = 0;
 	id identifier = context->identifier;
 	if (identifier) {
 		id first, second;
@@ -1131,7 +1131,7 @@ static NSTimeInterval waitTime = 0;
 			NSPoint point = [inTableView convertPoint:[[NSApp currentEvent] locationInWindow] fromView:nil];
 			point.x -= 10;
 			point.y = 0;
-			int columnIndex = [inTableView columnAtPoint:point];
+			NSInteger columnIndex = [inTableView columnAtPoint:point];
 			NSTableColumn *column = columnIndex >= 0 ? [inTableView tableColumns][columnIndex] : inTableColumn;
 			[self tableView:inTableView autoSizeTableColumn:column];
 			waitTime = [NSDate timeIntervalSinceReferenceDate] + 0.1;
@@ -1238,25 +1238,25 @@ static NSTimeInterval waitTime = 0;
 -(NSString *)pageSelectionTitle
 {
 	NSString *pages;
-	int n = [mSelectedPages count];
+	NSInteger n = [mSelectedPages count];
     if (n <= 1)
-        pages = [NSString stringWithFormat:NSLocalizedString(@"%i page selected", @""), n];
+        pages = [NSString stringWithFormat:NSLocalizedString(@"%ld page selected", @""), (long)n];
     else
-        pages = [NSString stringWithFormat:NSLocalizedString(@"%i pages selected", @""), n];
+        pages = [NSString stringWithFormat:NSLocalizedString(@"%ld pages selected", @""), (long)n];
 	
-	int words = [mWords count];
-	int wordsToTest = [[self wordsToBeTested] count];
+	NSInteger words = [mWords count];
+	NSInteger wordsToTest = [[self wordsToBeTested] count];
 	NSString *wordsCaption;
 	if (words <= 1) {
 		if (wordsToTest == words)
-	        wordsCaption = [NSString stringWithFormat:NSLocalizedString(@"%i word to test", @""), words];
+	        wordsCaption = [NSString stringWithFormat:NSLocalizedString(@"%ld word to test", @""), (long)words];
 		else
-	        wordsCaption = [NSString stringWithFormat:NSLocalizedString(@"%i of %i word to test", @""), wordsToTest, words];
+	        wordsCaption = [NSString stringWithFormat:NSLocalizedString(@"%ld of %ld word to test", @""), (long)wordsToTest, (long)words];
 	} else {
 		if (wordsToTest == words)
-	        wordsCaption = [NSString stringWithFormat:NSLocalizedString(@"%i words to test", @""), words];
+	        wordsCaption = [NSString stringWithFormat:NSLocalizedString(@"%ld words to test", @""), (long)words];
 		else
-	        wordsCaption = [NSString stringWithFormat:NSLocalizedString(@"%i of %i words to test", @""), wordsToTest, words];
+	        wordsCaption = [NSString stringWithFormat:NSLocalizedString(@"%ld of %ld words to test", @""), (long)wordsToTest, (long)words];
 	}
 		
 	return [NSString stringWithFormat:NSLocalizedString(@"pages: %@ and words: %@", @""), pages, wordsCaption];
@@ -1349,7 +1349,7 @@ static NSTimeInterval waitTime = 0;
 {
     NSString *language = [mProVocData sourceLanguage];
     NSArray *languages = [[self class] languageNamesIncluding:language];
-    int index = [mSourceLanguagePopUp indexOfItem:inSender];
+    NSInteger index = [mSourceLanguagePopUp indexOfItem:inSender];
 	if (index >= [languages count]) {
 	    [mSourceLanguagePopUp selectItemAtIndex:[languages indexOfObject:[mProVocData sourceLanguage]]];
 		[[ProVocPreferences sharedPreferences] openLanguageView:nil];
@@ -1366,7 +1366,7 @@ static NSTimeInterval waitTime = 0;
 {
     NSString *language = [mProVocData targetLanguage];
     NSArray *languages = [[self class] languageNamesIncluding:language];
-    int index = [mTargetLanguagePopUp indexOfItem:inSender];
+    NSInteger index = [mTargetLanguagePopUp indexOfItem:inSender];
 	if (index >= [languages count]) {
 	    [mTargetLanguagePopUp selectItemAtIndex:[languages indexOfObject:[mProVocData targetLanguage]]];
 		[[ProVocPreferences sharedPreferences] openLanguageView:nil];
@@ -1403,7 +1403,7 @@ static NSTimeInterval waitTime = 0;
 		NSStringEncoding *myEncodings = encodings;
 		const NSStringEncoding *encodings = [NSString availableStringEncodings];
 		NSStringEncoding encoding;
-		while (encoding = *encodings++)
+		while ((encoding = *encodings++))
 			if (encoding <= 30)
 				*myEncodings++ = encoding;
 		*myEncodings = nil;
@@ -1417,7 +1417,7 @@ static NSTimeInterval waitTime = 0;
 	[names addObject:NSLocalizedString(@"Default String Encoding Menu Title", @"")];
 	const NSStringEncoding *encodings = [self availableStringEncodings];
 	NSStringEncoding encoding;
-	while (encoding = *encodings++)
+	while ((encoding = *encodings++))
 		[names addObject:[NSString localizedNameOfStringEncoding:encoding]];
 	return names;
 }
@@ -1444,7 +1444,7 @@ static NSTimeInterval waitTime = 0;
 	[[NSUserDefaults standardUserDefaults] setBool:custom forKey:@"CustomStringEncoding"];
 	if (custom) {
 		NSStringEncoding encoding = [self availableStringEncodings][inIndex - 1];
-		[[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithUnsignedInt:encoding] forKey:@"ExportStringEncoding"];
+		[[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithUnsignedLong:encoding] forKey:@"ExportStringEncoding"];
 	}
 }
 
@@ -1452,25 +1452,25 @@ static NSTimeInterval waitTime = 0;
 
 @implementation ProVocDocument (Labels)
 
-+(NSColor *)colorForLabel:(int)inLabel
++(NSColor *)colorForLabel:(NSInteger)inLabel
 {
 	if (inLabel == 0)
 		return [NSColor colorWithCalibratedWhite:1.0 alpha:0.0];
 	else {
 		NSArray *labels = [[NSUserDefaults standardUserDefaults] objectForKey:PVLabels];
-		int index = MIN([labels count] - 1, inLabel - 1);
+		NSUInteger index = MIN([labels count] - 1, inLabel - 1);
 		return [NSUnarchiver unarchiveObjectWithData:labels[index][PVLabelColorData]];
 	}
 }
 
--(NSColor *)colorForLabel:(int)inLabel
+-(NSColor *)colorForLabel:(NSInteger)inLabel
 {
 	return [[self class] colorForLabel:inLabel];
 }
 
 static NSMutableDictionary *sCachedImages = nil;
 
-+(NSImage *)imageForLabel:(int)inLabel
++(NSImage *)imageForLabel:(NSInteger)inLabel
 {
 	NSColor *color = [self colorForLabel:inLabel];
 	NSImage *image = sCachedImages[color];
@@ -1513,14 +1513,14 @@ static NSMutableDictionary *sCachedImages = nil;
 	return image;
 }
 
--(NSImage *)imageForLabel:(int)inLabel
+-(NSImage *)imageForLabel:(NSInteger)inLabel
 {
 	return [[self class] imageForLabel:inLabel];
 }
 
 static NSMutableDictionary *sCachedFlaggedImages[2] = {nil, nil};
 
--(NSImage *)imageForLabel:(int)inLabel flagged:(BOOL)inFlagged
+-(NSImage *)imageForLabel:(NSInteger)inLabel flagged:(BOOL)inFlagged
 {
 	NSColor *color = [self colorForLabel:inLabel];
 	NSImage *image = sCachedFlaggedImages[inFlagged][color];
@@ -1567,13 +1567,13 @@ static NSMutableDictionary *sCachedFlaggedImages[2] = {nil, nil};
 	return image;
 }
 
--(NSString *)stringForLabel:(int)inLabel
+-(NSString *)stringForLabel:(NSInteger)inLabel
 {
 	if (inLabel == 0)
 		return NSLocalizedString(@"None Label Title", @"");
 	else {
 		NSArray *labels = [[NSUserDefaults standardUserDefaults] objectForKey:PVLabels];
-		int index = MIN([labels count] - 1, inLabel - 1);
+		NSUInteger index = MIN([labels count] - 1, inLabel - 1);
 		return labels[index][PVLabelTitle];
 	}
 }

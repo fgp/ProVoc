@@ -28,7 +28,7 @@
 
 @implementation NSImage (Badge)
 
-+(NSImage *)badgeImageWithNumber:(int)inNumber
++(NSImage *)badgeImageWithNumber:(NSInteger)inNumber
 {
 	static NSMutableAttributedString *string = nil;
 	if (!string) {

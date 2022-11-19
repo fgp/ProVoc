@@ -11,7 +11,7 @@
 @class ProVocTester, ProVocActionController, ProVocHistoryView, ProVocHistory;
 @class ProVocWord;
 
-@interface ProVocDocument : NSDocument {
+@interface ProVocDocument : NSDocument <NSTableViewDelegate> {
 	NSDictionary *mLoadedParameters;
 	NSMutableDictionary *mGlobalPreferences;
 	ProVocData *mProVocData;
@@ -24,7 +24,7 @@
 	float mMinDifficulty;
 	float mMaxDifficulty;
 	
-	int mNumberOfRetries;
+	NSInteger mNumberOfRetries;
 	int mTestDirection;
 	BOOL mDontShuffleWords;
 	float mTestDirectionProbability;
@@ -86,7 +86,7 @@
 	IBOutlet NSView *mCommentInputView;
 	IBOutlet NSView *mAboveInputView;
 	
-	int mMainTab;
+	NSInteger mMainTab;
 	BOOL mEditingPreset;
 	
 	IBOutlet NSSplitView *mMainSplitView;
@@ -123,7 +123,7 @@
 	BOOL mShowDoubles;
 	
 	NSMutableArray *mPresets;
-	unsigned mIndexOfCurrentPresets;
+	NSUInteger mIndexOfCurrentPresets;
 	
 	NSMutableArray *mHistories;
 	IBOutlet ProVocHistoryView *mHistoryView;
@@ -142,7 +142,7 @@
 
 -(NSWindow *)window;
 
--(void)setMainTab:(int)inTab;
+-(void)setMainTab:(NSInteger)inTab;
 -(void)setEditingPreset:(BOOL)inEdit;
 
 @end
@@ -177,7 +177,7 @@
 
 -(IBAction)search:(id)inSender;
 -(IBAction)setSearchCategory:(id)inSender;
--(NSString *)searchCategoryForTag:(int)inTag;
+-(NSString *)searchCategoryForTag:(NSInteger)inTag;
 -(void)setSpotlightSearch:(NSString *)inSearchString;
 
 -(IBAction)startSlideshow:(id)inSender;
@@ -229,7 +229,7 @@
 
 @interface ProVocDocument (Settings)
 
--(int)numberOfRetries;
+-(NSInteger)numberOfRetries;
 -(int)testDirection;
 -(float)testDirectionProbability;
 -(BOOL)testWordsToReview;

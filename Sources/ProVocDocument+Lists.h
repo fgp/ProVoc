@@ -16,9 +16,9 @@
 #define PVSearchComments @"PVSearchComments"
 
 #define ProVocSourcesType @"ProVocSourcesType"
-#define ProVocSelfSourcesType [NSString stringWithFormat:@"ProVocSelfSourcesType%i", (int)self]
+#define ProVocSelfSourcesType [NSString stringWithFormat:@"ProVocSelfSourcesType%ld", (unsigned long)self]
 #define ProVocWordsType @"ProVocWordsType"
-#define ProVocSelfWordsType [NSString stringWithFormat:@"ProVocSelfWordsType%i", (int)self]
+#define ProVocSelfWordsType [NSString stringWithFormat:@"ProVocSelfWordsType%ld", (unsigned long)self]
 
 @interface ProVocDocument (Words)
 
@@ -102,11 +102,11 @@
 
 @interface ProVocDocument (Labels)
 
--(NSColor *)colorForLabel:(int)inLabel;
-+(NSImage *)imageForLabel:(int)inLabel;
--(NSImage *)imageForLabel:(int)inLabel;
--(NSImage *)imageForLabel:(int)inLabel flagged:(BOOL)inFlagged;
--(NSString *)stringForLabel:(int)inLabel;
+-(NSColor *)colorForLabel:(NSInteger)inLabel;
++(NSImage *)imageForLabel:(NSInteger)inLabel;
+-(NSImage *)imageForLabel:(NSInteger)inLabel;
+-(NSImage *)imageForLabel:(NSInteger)inLabel flagged:(BOOL)inFlagged;
+-(NSString *)stringForLabel:(NSInteger)inLabel;
 
 +(void)labelColorsDidChange;
 +(void)labelTitlesDidChange;

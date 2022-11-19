@@ -60,12 +60,12 @@
 	[self insertWords:inWords atIndex:[[self words] count]];
 }
 
--(void)insertWord:(ProVocWord *)inWord atIndex:(int)inIndex
+-(void)insertWord:(ProVocWord *)inWord atIndex:(NSInteger)inIndex
 {
 	[self insertWords:@[inWord] atIndex:inIndex];
 }
 
--(void)insertWords:(NSArray *)inWords atIndex:(int)inIndex
+-(void)insertWords:(NSArray *)inWords atIndex:(NSInteger)inIndex
 {
 	NSEnumerator *enumerator = [inWords reverseObjectEnumerator];
 	ProVocWord *word;

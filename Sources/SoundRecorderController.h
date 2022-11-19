@@ -11,6 +11,7 @@
 @interface SoundRecorderController : NSObject
 
 + (SoundRecorderController *)sharedGrabber;
++ (SoundRecorderController *)sharedController;
 - (NSString *)captureMovie;
 - (NSImage *)captureImage;
 

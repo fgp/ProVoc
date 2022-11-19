@@ -38,7 +38,7 @@
 -(void)addViews;
 -(void)setupViews;
 
--(void)toggleViewAtIndex:(int)inIndex;
+-(void)toggleViewAtIndex:(NSUInteger)inIndex;
 
 @end
 
@@ -249,11 +249,11 @@
 		[self toggle];
 }
 
--(void)toggleViewAtIndex:(int)inIndex
+-(void)toggleViewAtIndex:(NSUInteger)inIndex
 {
 	NSView *obsoleteView = nil;
 	float deltaHeight = 0;
-	int i, n = [mViews count];
+	NSUInteger i, n = [mViews count];
 	for (i = 0; i < n; i++) {
 		NSMutableDictionary *info = mViews[i];
 		unsigned int mask;

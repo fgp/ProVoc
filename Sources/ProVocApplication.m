@@ -105,7 +105,7 @@
 
 -(long)systemVersion
 {
-	static long systemVersion = 0;
+	static SInt32 systemVersion = 0;
 	if (systemVersion == 0)
 		Gestalt(gestaltSystemVersion, &systemVersion);
 	return systemVersion;

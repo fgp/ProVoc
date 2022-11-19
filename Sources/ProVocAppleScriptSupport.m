@@ -90,7 +90,7 @@
 	NSArray *pages = selectionOnly ? [document selectedPages] : [document allPages];
 	
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-	int prevFormat = [defaults integerForKey:PVExportFormat];
+	NSInteger prevFormat = [defaults integerForKey:PVExportFormat];
 	[defaults setInteger:0 forKey:PVExportFormat];
 	BOOL prevIncludeComments = [defaults integerForKey:PVExportComments];
 	[defaults setBool:includeComments forKey:PVExportComments];

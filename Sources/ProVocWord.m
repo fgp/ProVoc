@@ -122,7 +122,7 @@
     return mLabel;
 }
 
--(void)setLabel:(int)inLabel
+-(void)setLabel:(NSInteger)inLabel
 {
     mLabel = inLabel;
 }

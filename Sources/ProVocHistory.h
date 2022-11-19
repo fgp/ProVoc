@@ -16,7 +16,7 @@
 	NSMutableArray *mRepetitions;
 }
 
-+(NSColor *)colorForRepetition:(int)inRepetition;
++(NSColor *)colorForRepetition:(NSInteger)inRepetition;
 
 -(void)setDate:(NSDate *)inDate;
 -(void)setMode:(int)inMode;

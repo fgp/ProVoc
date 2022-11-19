@@ -27,7 +27,7 @@
 
 @interface ProVocCardsView : NSView {
 	ProVocDocument *mDocument;
-	int mPaperSides;
+	NSInteger mPaperSides;
 	float mFontSizeFactor;
 	BOOL mFlipVertically;
 	NSArray *mWords;

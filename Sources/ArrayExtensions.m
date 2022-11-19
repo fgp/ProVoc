@@ -24,9 +24,9 @@
 		[shuffled removeAllObjects];
 	}
 	
-	unsigned i, n = [self count];
+	NSUInteger i, n = [self count];
 	for (i = 0; i < n; i++) {
-		NSNumber *index = [[NSNumber alloc] initWithUnsignedInt:i];
+		NSNumber *index = [[NSNumber alloc] initWithUnsignedLong:i];
 		[indices addObject:index];
 		[index release];
 	}

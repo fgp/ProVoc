@@ -6,6 +6,7 @@
 //  Copyright 2006 Arizona Software. All rights reserved.
 //
 
+#import "ProVocApplication.h"
 #import "ProVocDocument+Slideshow.h"
 #import "ProVocTester.h"
 #import "StringExtensions.h"
@@ -39,7 +40,7 @@ static BOOL sPlayPause;
 @end
 
 @interface SlideView : NSView {
-	int mNumberOfRegions;
+	NSInteger mNumberOfRegions;
 	NSMutableArray *mAttributedStrings;
 	NSImage *mImage;
 	NSArray *mSounds;
@@ -197,7 +198,7 @@ static BOOL sPlayPause;
 {
 	NSFont *font = [NSFont systemFontOfSize:inSize];
 	NSString *key = @"sourceFontFamilyName";
-	if (inIndex == 1 && !mSwapFonts || inIndex == 0 && mSwapFonts)
+	if ((inIndex == 1 && !mSwapFonts) || (inIndex == 0 && mSwapFonts))
 		key = @"targetFontFamilyName";
 	if (inIndex == 2)
 		key = @"commentFontFamilyName";
@@ -248,7 +249,7 @@ static BOOL sPlayPause;
 {
 	if (self = [super initWithFrame:inFrame]) {
 		NSColor *backGroundColor = [NSUnarchiver unarchiveObjectWithData:[[NSUserDefaults standardUserDefaults] objectForKey:PVTestBackgroundColor]];
-		float r, g, b;
+		CGFloat r, g, b;
 		[[backGroundColor colorUsingColorSpaceName:NSCalibratedRGBColorSpace] getRed:&r green:&g blue:&b alpha:nil];
 		NSColor *textColor = (r + g + b) / 3 >= 0.5 ? [NSColor blackColor] : [NSColor whiteColor];
 
@@ -550,7 +551,7 @@ static SlideView *sSecondSlideView = nil;
 	[controlPanel setLevel:NSFloatingWindowLevel + 2];
 	[controlPanel orderFront:nil];
 
-	int n = [words count];
+	NSUInteger n = [words count];
 	sSlideNumber = -1;
 	while (sSlideNumber >= -1) {
 		NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
