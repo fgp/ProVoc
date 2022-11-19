@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -337,8 +337,8 @@ Gw
                             <binding destination="-2" name="selectedIndex" keyPath="mode" id="119"/>
                         </connections>
                     </tabView>
-                    <button toolTip="Mark word" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="83">
-                        <rect key="frame" x="569" y="455" width="20" height="20"/>
+                    <button toolTip="Mark word" misplaced="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="83">
+                        <rect key="frame" x="600" y="455" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="9fj-eD-TRI"/>
                         </constraints>
@@ -604,27 +604,6 @@ Gw
                             <real value="250"/>
                         </holdingPriorities>
                     </splitView>
-                    <popUpButton imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="218">
-                        <rect key="frame" x="594" y="451" width="30" height="26"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="25" id="lwG-4z-daH"/>
-                        </constraints>
-                        <popUpButtonCell key="cell" type="bevel" title="Item1" bezelStyle="rounded" lineBreakMode="truncatingTail" state="on" borderStyle="bezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="222" id="647">
-                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="menu"/>
-                            <menu key="menu" title="OtherViews" id="219">
-                                <items>
-                                    <menuItem title="Item1" state="on" id="222"/>
-                                    <menuItem title="Item2" id="221"/>
-                                    <menuItem title="Item3" id="220"/>
-                                </items>
-                            </menu>
-                        </popUpButtonCell>
-                        <connections>
-                            <binding destination="-2" name="hidden" keyPath="hideLabel" id="389"/>
-                            <binding destination="-2" name="selectedIndex" keyPath="labelIndex" id="242"/>
-                        </connections>
-                    </popUpButton>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="537">
                         <rect key="frame" x="17" y="10" width="607" height="14"/>
                         <constraints>
@@ -651,6 +630,24 @@ Gw
                             <action selector="cancelTestPanel:" target="-2" id="540"/>
                         </connections>
                     </button>
+                    <popUpButton misplaced="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="218">
+                        <rect key="frame" x="539" y="452" width="53" height="26"/>
+                        <popUpButtonCell key="cell" type="bevel" title="Item1" bezelStyle="rounded" lineBreakMode="truncatingTail" state="on" borderStyle="bezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="222" id="647">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="menu"/>
+                            <menu key="menu" title="OtherViews" id="219">
+                                <items>
+                                    <menuItem title="Item1" state="on" id="222"/>
+                                    <menuItem title="Item2" id="221"/>
+                                    <menuItem title="Item3" id="220"/>
+                                </items>
+                            </menu>
+                        </popUpButtonCell>
+                        <connections>
+                            <binding destination="-2" name="hidden" keyPath="hideLabel" id="389"/>
+                            <binding destination="-2" name="selectedIndex" keyPath="labelIndex" id="242"/>
+                        </connections>
+                    </popUpButton>
                 </subviews>
                 <constraints>
                     <constraint firstItem="73" firstAttribute="top" secondItem="15" secondAttribute="top" id="3WP-r7-dY6"/>
@@ -659,6 +656,7 @@ Gw
                     <constraint firstItem="357" firstAttribute="baseline" secondItem="48" secondAttribute="baseline" id="D3F-Qg-cff"/>
                     <constraint firstItem="376" firstAttribute="centerX" secondItem="537" secondAttribute="centerX" id="D9f-Kw-RKV"/>
                     <constraint firstAttribute="bottom" secondItem="537" secondAttribute="bottom" constant="10" id="KRe-7X-fAt"/>
+                    <constraint firstItem="218" firstAttribute="leading" secondItem="83" secondAttribute="trailing" constant="5" id="MyK-Md-UQ7"/>
                     <constraint firstItem="218" firstAttribute="leading" secondItem="83" secondAttribute="trailing" constant="10" id="ROy-Ll-LHO"/>
                     <constraint firstItem="73" firstAttribute="leading" secondItem="15" secondAttribute="leading" id="Tbo-rX-kMu"/>
                     <constraint firstItem="6" firstAttribute="leading" secondItem="15" secondAttribute="leading" constant="21" id="WIt-sy-UwA"/>
@@ -839,8 +837,8 @@ Gw
                             <binding destination="-2" name="selectedIndex" keyPath="mode" id="156"/>
                         </connections>
                     </tabView>
-                    <button toolTip="Mark word" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="137">
-                        <rect key="frame" x="568" y="455" width="20" height="20"/>
+                    <button toolTip="Mark word" misplaced="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="137">
+                        <rect key="frame" x="601" y="458" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="aPQ-6p-TsN"/>
                         </constraints>
@@ -854,27 +852,6 @@ Gw
                             <binding destination="-2" name="value" keyPath="flagged" id="202"/>
                         </connections>
                     </button>
-                    <popUpButton imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="233">
-                        <rect key="frame" x="593" y="451" width="30" height="26"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="25" id="uTF-CZ-lZM"/>
-                        </constraints>
-                        <popUpButtonCell key="cell" type="bevel" title="Item1" bezelStyle="rounded" lineBreakMode="truncatingTail" state="on" borderStyle="bezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="236" id="667">
-                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="menu"/>
-                            <menu key="menu" title="OtherViews" id="234">
-                                <items>
-                                    <menuItem title="Item1" state="on" id="236"/>
-                                    <menuItem title="Item2" id="237"/>
-                                    <menuItem title="Item3" id="235"/>
-                                </items>
-                            </menu>
-                        </popUpButtonCell>
-                        <connections>
-                            <binding destination="-2" name="hidden" keyPath="hideLabel" id="390"/>
-                            <binding destination="-2" name="selectedIndex" keyPath="labelIndex" id="240"/>
-                        </connections>
-                    </popUpButton>
                     <button verticalHuggingPriority="750" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="262">
                         <rect key="frame" x="96" y="24" width="82" height="32"/>
                         <constraints>
@@ -1091,26 +1068,49 @@ Gw
                             <action selector="cancelTestPanel:" target="-2" id="542"/>
                         </connections>
                     </button>
+                    <popUpButton misplaced="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="233">
+                        <rect key="frame" x="540" y="455" width="53" height="26"/>
+                        <popUpButtonCell key="cell" type="bevel" title="Item1" bezelStyle="rounded" lineBreakMode="truncatingTail" state="on" borderStyle="bezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="236" id="667">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="menu"/>
+                            <menu key="menu" title="OtherViews" id="234">
+                                <items>
+                                    <menuItem title="Item1" state="on" id="236"/>
+                                    <menuItem title="Item2" id="237"/>
+                                    <menuItem title="Item3" id="235"/>
+                                </items>
+                            </menu>
+                        </popUpButtonCell>
+                        <connections>
+                            <binding destination="-2" name="hidden" keyPath="hideLabel" id="390"/>
+                            <binding destination="-2" name="selectedIndex" keyPath="labelIndex" id="240"/>
+                        </connections>
+                    </popUpButton>
                 </subviews>
                 <constraints>
                     <constraint firstItem="336" firstAttribute="centerX" secondItem="538" secondAttribute="centerX" id="0VH-8C-AO4"/>
                     <constraint firstItem="136" firstAttribute="leading" secondItem="121" secondAttribute="leading" constant="21" id="1wj-No-hke"/>
                     <constraint firstItem="137" firstAttribute="top" secondItem="126" secondAttribute="bottom" constant="8" symbolic="YES" id="2nH-bA-Nu6"/>
                     <constraint firstAttribute="trailing" secondItem="125" secondAttribute="trailing" constant="21" id="30C-3U-eZU"/>
+                    <constraint firstItem="137" firstAttribute="leading" secondItem="233" secondAttribute="trailing" constant="46" id="6T2-XI-z1x"/>
                     <constraint firstAttribute="trailing" secondItem="126" secondAttribute="trailing" id="8os-fz-kSV"/>
                     <constraint firstItem="136" firstAttribute="top" secondItem="336" secondAttribute="bottom" constant="21" id="9NT-n3-flU"/>
                     <constraint firstItem="541" firstAttribute="leading" secondItem="121" secondAttribute="leading" constant="-20" id="Ah3-uE-SNL"/>
+                    <constraint firstItem="137" firstAttribute="leading" secondItem="233" secondAttribute="trailing" constant="8" id="AqU-yp-rc4"/>
                     <constraint firstItem="138" firstAttribute="baseline" secondItem="125" secondAttribute="baseline" id="B9b-YJ-HQI"/>
                     <constraint firstItem="541" firstAttribute="top" secondItem="121" secondAttribute="top" constant="130" id="BiM-rh-WHw"/>
                     <constraint firstItem="336" firstAttribute="top" secondItem="137" secondAttribute="bottom" constant="8" symbolic="YES" id="GTZ-wS-T9a"/>
+                    <constraint firstItem="137" firstAttribute="leading" secondItem="233" secondAttribute="trailing" constant="8" id="HVL-BU-Qcd"/>
                     <constraint firstItem="233" firstAttribute="top" secondItem="126" secondAttribute="bottom" constant="6" id="J5D-DR-ePh"/>
                     <constraint firstItem="126" firstAttribute="top" secondItem="121" secondAttribute="top" id="JbJ-7S-7YI"/>
+                    <constraint firstItem="137" firstAttribute="leading" secondItem="233" secondAttribute="trailing" constant="8" id="MSu-xy-CeW"/>
                     <constraint firstItem="538" firstAttribute="top" secondItem="136" secondAttribute="bottom" constant="7" id="MYo-Fk-PHN"/>
                     <constraint firstAttribute="trailing" secondItem="233" secondAttribute="trailing" constant="17" id="R3Y-rL-Xkp"/>
                     <constraint firstItem="233" firstAttribute="leading" secondItem="137" secondAttribute="trailing" constant="10" id="UDH-0U-H6M"/>
                     <constraint firstAttribute="bottom" secondItem="538" secondAttribute="bottom" constant="10" id="VTt-DK-Gad"/>
                     <constraint firstItem="126" firstAttribute="leading" secondItem="121" secondAttribute="leading" id="WZq-kX-Ulj"/>
                     <constraint firstItem="538" firstAttribute="leading" secondItem="121" secondAttribute="leading" constant="19" id="WrC-ad-WKO"/>
+                    <constraint firstItem="137" firstAttribute="leading" secondItem="233" secondAttribute="trailing" constant="8" id="Wya-5i-4dn"/>
                     <constraint firstItem="262" firstAttribute="leading" secondItem="136" secondAttribute="trailing" constant="14" id="ZhA-LP-ehx"/>
                     <constraint firstItem="336" firstAttribute="top" secondItem="233" secondAttribute="bottom" constant="4" id="bxR-V3-Ed2"/>
                     <constraint firstItem="336" firstAttribute="leading" secondItem="541" secondAttribute="trailing" constant="25" id="eGa-mK-Eu0"/>
